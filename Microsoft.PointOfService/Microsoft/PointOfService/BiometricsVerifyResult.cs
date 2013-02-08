@@ -2,7 +2,7 @@ namespace Microsoft.PointOfService
 {
     public class BiometricsVerifyResult
     {
-        public BiometricsVerifyResult(System.Boolean param_param_result, System.Int32 param_param_falseAcceptRateAchieved, System.Int32 param_param_falseRejectRateAchieved, Microsoft.PointOfService.BiometricsInformationRecord param_param_adaptedBir, System.Byte[] param_param_payload)
+        public BiometricsVerifyResult(System.Boolean result, System.Int32 falseAcceptRateAchieved, System.Int32 falseRejectRateAchieved, Microsoft.PointOfService.BiometricsInformationRecord adaptedBir, System.Byte[] payload)
         {
         }
         protected BiometricsVerifyResult()

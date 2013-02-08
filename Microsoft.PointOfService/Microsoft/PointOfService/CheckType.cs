@@ -2,8 +2,8 @@ namespace Microsoft.PointOfService
 {
     public enum CheckType
     {
-        Personal,
-        Business,
-        Unknown,
+        Personal = 1,
+        Business = 2,
+        Unknown = 99,
     }
 }

@@ -2,16 +2,16 @@ namespace Microsoft.PointOfService
 {
     public class PosControlException : Microsoft.PointOfService.PosException, System.Runtime.Serialization.ISerializable, System.Runtime.InteropServices._Exception
     {
-        public PosControlException(System.String param_param_message, Microsoft.PointOfService.ErrorCode param_param_errorCode)
+        public PosControlException(System.String message, Microsoft.PointOfService.ErrorCode errorCode)
         {
         }
-        public PosControlException(System.String param_param_message, Microsoft.PointOfService.ErrorCode param_param_errorCode, System.Int32 param_param_errorCodeExtended)
+        public PosControlException(System.String message, Microsoft.PointOfService.ErrorCode errorCode, System.Int32 errorCodeExtended)
         {
         }
-        public PosControlException(System.String param_param_message, Microsoft.PointOfService.ErrorCode param_param_errorCode, System.Exception param_param_e)
+        public PosControlException(System.String message, Microsoft.PointOfService.ErrorCode errorCode, System.Exception e)
         {
         }
-        public PosControlException(System.String param_param_message, Microsoft.PointOfService.ErrorCode param_param_errorCode, System.Int32 param_param_errorCodeExtended, System.Exception param_param_e)
+        public PosControlException(System.String message, Microsoft.PointOfService.ErrorCode errorCode, System.Int32 errorCodeExtended, System.Exception e)
         {
         }
         protected PosControlException()

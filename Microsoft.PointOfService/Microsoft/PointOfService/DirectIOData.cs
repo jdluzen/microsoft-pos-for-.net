@@ -2,7 +2,7 @@ namespace Microsoft.PointOfService
 {
     public struct DirectIOData
     {
-        public DirectIOData(System.Int32 param_param_data, System.Object param_param_obj)
+        public DirectIOData(System.Int32 data, System.Object obj)
         {
         }
         public System.Int32 Data
@@ -13,23 +13,23 @@ namespace Microsoft.PointOfService
         {
             get { return null; }
         }
-        public System.Boolean Equals(Microsoft.PointOfService.DirectIOData param_param_d)
+        public System.Boolean Equals(Microsoft.PointOfService.DirectIOData d)
         {
             return false;
         }
-        public override System.Boolean Equals(System.Object param_param_obj)
+        public override System.Boolean Equals(System.Object obj)
         {
             return false;
         }
-        public static System.Boolean Equals(Microsoft.PointOfService.DirectIOData param_param_a, Microsoft.PointOfService.DirectIOData param_param_b)
+        public static System.Boolean Equals(Microsoft.PointOfService.DirectIOData a, Microsoft.PointOfService.DirectIOData b)
         {
             return false;
         }
-        public static System.Boolean operator ==(Microsoft.PointOfService.DirectIOData param_param_a, System.Object param_param_b)
+        public static System.Boolean operator ==(Microsoft.PointOfService.DirectIOData a, System.Object b)
         {
             return false;
         }
-        public static System.Boolean operator !=(Microsoft.PointOfService.DirectIOData param_param_a, System.Object param_param_b)
+        public static System.Boolean operator !=(Microsoft.PointOfService.DirectIOData a, System.Object b)
         {
             return false;
         }

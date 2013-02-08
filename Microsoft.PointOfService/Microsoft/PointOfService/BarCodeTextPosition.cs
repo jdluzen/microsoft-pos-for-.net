@@ -2,8 +2,8 @@ namespace Microsoft.PointOfService
 {
     public enum BarCodeTextPosition
     {
-        None,
-        Above,
-        Below,
+        None = -11,
+        Above = -12,
+        Below = -13,
     }
 }

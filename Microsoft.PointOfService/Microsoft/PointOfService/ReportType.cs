@@ -2,8 +2,8 @@ namespace Microsoft.PointOfService
 {
     public enum ReportType
     {
-        Ordinal,
-        Date,
-        EndOfDayOrdinal,
+        Ordinal = 1,
+        Date = 2,
+        EndOfDayOrdinal = 3,
     }
 }

@@ -2,7 +2,7 @@ namespace Microsoft.PointOfService
 {
     public enum CardDetectionControl
     {
-        Device,
-        Application,
+        Device = 1,
+        Application = 2,
     }
 }

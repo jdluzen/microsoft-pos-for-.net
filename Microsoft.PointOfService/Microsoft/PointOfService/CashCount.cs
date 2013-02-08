@@ -2,7 +2,7 @@ namespace Microsoft.PointOfService
 {
     public struct CashCount
     {
-        public CashCount(Microsoft.PointOfService.CashCountType param_param_type, System.Int32 param_param_nominalValue, System.Int32 param_param_count)
+        public CashCount(Microsoft.PointOfService.CashCountType type, System.Int32 nominalValue, System.Int32 count)
         {
         }
         public System.Int32 NominalValue
@@ -17,23 +17,23 @@ namespace Microsoft.PointOfService
         {
             get { return Microsoft.PointOfService.CashCountType.Coin; }
         }
-        public System.Boolean Equals(Microsoft.PointOfService.CashCount param_param_count)
+        public System.Boolean Equals(Microsoft.PointOfService.CashCount count)
         {
             return false;
         }
-        public override System.Boolean Equals(System.Object param_param_obj)
+        public override System.Boolean Equals(System.Object obj)
         {
             return false;
         }
-        public static System.Boolean Equals(Microsoft.PointOfService.CashCount param_param_a, Microsoft.PointOfService.CashCount param_param_b)
+        public static System.Boolean Equals(Microsoft.PointOfService.CashCount a, Microsoft.PointOfService.CashCount b)
         {
             return false;
         }
-        public static System.Boolean operator ==(Microsoft.PointOfService.CashCount param_param_a, System.Object param_param_b)
+        public static System.Boolean operator ==(Microsoft.PointOfService.CashCount a, System.Object b)
         {
             return false;
         }
-        public static System.Boolean operator !=(Microsoft.PointOfService.CashCount param_param_a, System.Object param_param_b)
+        public static System.Boolean operator !=(Microsoft.PointOfService.CashCount a, System.Object b)
         {
             return false;
         }

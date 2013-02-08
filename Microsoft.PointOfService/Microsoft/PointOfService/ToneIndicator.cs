@@ -73,7 +73,7 @@ namespace Microsoft.PointOfService
         public virtual void ClearOutput()
         {
         }
-        public virtual void Sound(System.Int32 param_param_numberOfCycles, System.Int32 param_param_interSoundWait)
+        public virtual void Sound(System.Int32 numberOfCycles, System.Int32 interSoundWait)
         {
         }
         public virtual void SoundImmediate()

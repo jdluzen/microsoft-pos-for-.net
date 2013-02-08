@@ -2,7 +2,7 @@ namespace Microsoft.PointOfService
 {
     public class DirectIOEventArgs : Microsoft.PointOfService.PosEventArgs
     {
-        public DirectIOEventArgs(System.Int32 param_param_eventNumber, System.Int32 param_param_data, System.Object param_param_obj)
+        public DirectIOEventArgs(System.Int32 eventNumber, System.Int32 data, System.Object obj)
         {
         }
         protected DirectIOEventArgs()

@@ -2,8 +2,8 @@ namespace Microsoft.PointOfService
 {
     public enum PrinterErrorLevel
     {
-        None,
-        Recoverable,
-        Fatal,
+        None = 1,
+        Recoverable = 2,
+        Fatal = 3,
     }
 }

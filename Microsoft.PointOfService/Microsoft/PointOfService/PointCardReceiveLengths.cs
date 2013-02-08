@@ -2,7 +2,7 @@ namespace Microsoft.PointOfService
 {
     public struct PointCardReceiveLengths
     {
-        public PointCardReceiveLengths(System.Int32 param_param_track1, System.Int32 param_param_track2, System.Int32 param_param_track3, System.Int32 param_param_track4, System.Int32 param_param_track5, System.Int32 param_param_track6)
+        public PointCardReceiveLengths(System.Int32 track1, System.Int32 track2, System.Int32 track3, System.Int32 track4, System.Int32 track5, System.Int32 track6)
         {
         }
         public System.Int32 Track1
@@ -29,23 +29,23 @@ namespace Microsoft.PointOfService
         {
             get { return 0; }
         }
-        public System.Boolean Equals(Microsoft.PointOfService.PointCardReceiveLengths param_param_lengths)
+        public System.Boolean Equals(Microsoft.PointOfService.PointCardReceiveLengths lengths)
         {
             return false;
         }
-        public override System.Boolean Equals(System.Object param_param_obj)
+        public override System.Boolean Equals(System.Object obj)
         {
             return false;
         }
-        public static System.Boolean Equals(Microsoft.PointOfService.PointCardReceiveLengths param_param_a, Microsoft.PointOfService.PointCardReceiveLengths param_param_b)
+        public static System.Boolean Equals(Microsoft.PointOfService.PointCardReceiveLengths a, Microsoft.PointOfService.PointCardReceiveLengths b)
         {
             return false;
         }
-        public static System.Boolean operator ==(Microsoft.PointOfService.PointCardReceiveLengths param_param_a, System.Object param_param_b)
+        public static System.Boolean operator ==(Microsoft.PointOfService.PointCardReceiveLengths a, System.Object b)
         {
             return false;
         }
-        public static System.Boolean operator !=(Microsoft.PointOfService.PointCardReceiveLengths param_param_a, System.Object param_param_b)
+        public static System.Boolean operator !=(Microsoft.PointOfService.PointCardReceiveLengths a, System.Object b)
         {
             return false;
         }

@@ -529,16 +529,16 @@ namespace Microsoft.PointOfService.BaseServiceObjects
         {
             get { return 0; }
         }
-        public override void BeginInsertion(System.Int32 param_timeout)
+        public override void BeginInsertion(System.Int32 timeout)
         {
         }
-        public override void BeginRemoval(System.Int32 param_timeout)
+        public override void BeginRemoval(System.Int32 timeout)
         {
         }
-        public override void ChangePrintSide(Microsoft.PointOfService.PrinterSide param_side)
+        public override void ChangePrintSide(Microsoft.PointOfService.PrinterSide side)
         {
         }
-        public override void CutPaper(System.Int32 param_percentage)
+        public override void CutPaper(System.Int32 percentage)
         {
         }
         public override void EndInsertion()
@@ -547,46 +547,46 @@ namespace Microsoft.PointOfService.BaseServiceObjects
         public override void EndRemoval()
         {
         }
-        public override void MarkFeed(Microsoft.PointOfService.PrinterMarkFeeds param_type)
+        public override void MarkFeed(Microsoft.PointOfService.PrinterMarkFeeds type)
         {
         }
-        public override void PrintBarCode(Microsoft.PointOfService.PrinterStation param_station, System.String param_data, Microsoft.PointOfService.BarCodeSymbology param_symbology, System.Int32 param_height, System.Int32 param_width, System.Int32 param_alignment, Microsoft.PointOfService.BarCodeTextPosition param_textPosition)
+        public override void PrintBarCode(Microsoft.PointOfService.PrinterStation station, System.String data, Microsoft.PointOfService.BarCodeSymbology symbology, System.Int32 height, System.Int32 width, System.Int32 alignment, Microsoft.PointOfService.BarCodeTextPosition textPosition)
         {
         }
-        public override void PrintBitmap(Microsoft.PointOfService.PrinterStation param_station, System.String param_fileName, System.Int32 param_width, System.Int32 param_alignment)
+        public override void PrintBitmap(Microsoft.PointOfService.PrinterStation station, System.String fileName, System.Int32 width, System.Int32 alignment)
         {
         }
-        public override void PrintMemoryBitmap(Microsoft.PointOfService.PrinterStation param_station, System.Drawing.Bitmap param_data, System.Int32 param_width, System.Int32 param_alignment)
+        public override void PrintMemoryBitmap(Microsoft.PointOfService.PrinterStation station, System.Drawing.Bitmap data, System.Int32 width, System.Int32 alignment)
         {
         }
-        public override void PrintImmediate(Microsoft.PointOfService.PrinterStation param_station, System.String param_data)
+        public override void PrintImmediate(Microsoft.PointOfService.PrinterStation station, System.String data)
         {
         }
-        public override void PrintNormal(Microsoft.PointOfService.PrinterStation param_station, System.String param_data)
+        public override void PrintNormal(Microsoft.PointOfService.PrinterStation station, System.String data)
         {
         }
-        public override void PrintTwoNormal(Microsoft.PointOfService.PrinterStation param_stations, System.String param_data1, System.String param_data2)
+        public override void PrintTwoNormal(Microsoft.PointOfService.PrinterStation stations, System.String data1, System.String data2)
         {
         }
-        public override void RotatePrint(Microsoft.PointOfService.PrinterStation param_station, Microsoft.PointOfService.PrintRotation param_rotation)
+        public override void RotatePrint(Microsoft.PointOfService.PrinterStation station, Microsoft.PointOfService.PrintRotation rotation)
         {
         }
-        public override void SetBitmap(System.Int32 param_bitmapNumber, Microsoft.PointOfService.PrinterStation param_station, System.String param_fileName, System.Int32 param_width, System.Int32 param_alignment)
+        public override void SetBitmap(System.Int32 bitmapNumber, Microsoft.PointOfService.PrinterStation station, System.String fileName, System.Int32 width, System.Int32 alignment)
         {
         }
-        public override void SetLogo(Microsoft.PointOfService.PrinterLogoLocation param_location, System.String param_data)
+        public override void SetLogo(Microsoft.PointOfService.PrinterLogoLocation location, System.String data)
         {
         }
-        public override void TransactionPrint(Microsoft.PointOfService.PrinterStation param_station, Microsoft.PointOfService.PrinterTransactionControl param_control)
+        public override void TransactionPrint(Microsoft.PointOfService.PrinterStation station, Microsoft.PointOfService.PrinterTransactionControl control)
         {
         }
-        public override void ValidateData(Microsoft.PointOfService.PrinterStation param_station, System.String param_data)
+        public override void ValidateData(Microsoft.PointOfService.PrinterStation station, System.String data)
         {
         }
         public override void ClearPrintArea()
         {
         }
-        public override void PageModePrint(Microsoft.PointOfService.PageModePrintControl param_control)
+        public override void PageModePrint(Microsoft.PointOfService.PageModePrintControl control)
         {
         }
         public override void ClearOutput()

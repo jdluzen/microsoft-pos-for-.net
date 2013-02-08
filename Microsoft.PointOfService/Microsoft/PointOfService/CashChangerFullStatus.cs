@@ -2,8 +2,8 @@ namespace Microsoft.PointOfService
 {
     public enum CashChangerFullStatus
     {
-        OK,
-        Full,
-        NearFull,
+        OK = 0,
+        Full = 21,
+        NearFull = 22,
     }
 }

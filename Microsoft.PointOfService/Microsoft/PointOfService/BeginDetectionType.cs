@@ -2,7 +2,7 @@ namespace Microsoft.PointOfService
 {
     public enum BeginDetectionType
     {
-        Any,
-        Specific,
+        Any = 1,
+        Specific = 2,
     }
 }

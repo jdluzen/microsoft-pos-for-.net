@@ -2,7 +2,7 @@ namespace Microsoft.PointOfService
 {
     public struct CashUnits
     {
-        public CashUnits(System.Int32[] param_param_coins, System.Int32[] param_param_bills)
+        public CashUnits(System.Int32[] coins, System.Int32[] bills)
         {
         }
         public System.Int32[] Coins
@@ -13,23 +13,23 @@ namespace Microsoft.PointOfService
         {
             get { return null; }
         }
-        public System.Boolean Equals(Microsoft.PointOfService.CashUnits param_param_units)
+        public System.Boolean Equals(Microsoft.PointOfService.CashUnits units)
         {
             return false;
         }
-        public override System.Boolean Equals(System.Object param_param_obj)
+        public override System.Boolean Equals(System.Object obj)
         {
             return false;
         }
-        public static System.Boolean Equals(Microsoft.PointOfService.CashUnits param_param_a, Microsoft.PointOfService.CashUnits param_param_b)
+        public static System.Boolean Equals(Microsoft.PointOfService.CashUnits a, Microsoft.PointOfService.CashUnits b)
         {
             return false;
         }
-        public static System.Boolean operator ==(Microsoft.PointOfService.CashUnits param_param_a, System.Object param_param_b)
+        public static System.Boolean operator ==(Microsoft.PointOfService.CashUnits a, System.Object b)
         {
             return false;
         }
-        public static System.Boolean operator !=(Microsoft.PointOfService.CashUnits param_param_a, System.Object param_param_b)
+        public static System.Boolean operator !=(Microsoft.PointOfService.CashUnits a, System.Object b)
         {
             return false;
         }

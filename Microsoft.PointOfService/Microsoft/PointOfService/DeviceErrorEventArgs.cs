@@ -2,7 +2,7 @@ namespace Microsoft.PointOfService
 {
     public class DeviceErrorEventArgs : Microsoft.PointOfService.PosEventArgs
     {
-        public DeviceErrorEventArgs(Microsoft.PointOfService.ErrorCode param_param_errorCode, System.Int32 param_param_errorCodeExtended, Microsoft.PointOfService.ErrorLocus param_param_errorLocus, Microsoft.PointOfService.ErrorResponse param_param_errorResponse)
+        public DeviceErrorEventArgs(Microsoft.PointOfService.ErrorCode errorCode, System.Int32 errorCodeExtended, Microsoft.PointOfService.ErrorLocus errorLocus, Microsoft.PointOfService.ErrorResponse errorResponse)
         {
         }
         protected DeviceErrorEventArgs()

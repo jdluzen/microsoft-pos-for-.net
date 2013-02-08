@@ -2,7 +2,7 @@ namespace Microsoft.PointOfService
 {
     public enum PrinterCartridgeNotify
     {
-        Disabled,
-        Enabled,
+        Disabled = 0,
+        Enabled = 1,
     }
 }

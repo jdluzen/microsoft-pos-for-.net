@@ -2,8 +2,8 @@ namespace Microsoft.PointOfService
 {
     public enum HealthCheckLevel
     {
-        Internal,
-        External,
-        Interactive,
+        Internal = 1,
+        External = 2,
+        Interactive = 3,
     }
 }

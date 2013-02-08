@@ -2,8 +2,8 @@ namespace Microsoft.PointOfService
 {
     public enum RemoteOrderDisplayEventTypes
     {
-        TouchUp,
-        TouchDown,
-        TouchMove,
+        TouchUp = 1,
+        TouchDown = 2,
+        TouchMove = 4,
     }
 }

@@ -207,53 +207,53 @@ namespace Microsoft.PointOfService
         public virtual void ClearText()
         {
         }
-        public virtual void DisplayText(System.String param_param_data, Microsoft.PointOfService.DisplayTextMode param_param_attribute)
+        public virtual void DisplayText(System.String data, Microsoft.PointOfService.DisplayTextMode attribute)
         {
         }
-        public virtual void DisplayText(System.String param_param_data)
+        public virtual void DisplayText(System.String data)
         {
         }
-        public virtual void DisplayTextAt(System.Int32 param_param_row, System.Int32 param_param_column, System.String param_param_data, Microsoft.PointOfService.DisplayTextMode param_param_attribute)
+        public virtual void DisplayTextAt(System.Int32 row, System.Int32 column, System.String data, Microsoft.PointOfService.DisplayTextMode attribute)
         {
         }
-        public virtual void DisplayTextAt(System.Int32 param_param_row, System.Int32 param_param_column, System.String param_param_data)
+        public virtual void DisplayTextAt(System.Int32 row, System.Int32 column, System.String data)
         {
         }
-        public virtual void ScrollText(Microsoft.PointOfService.DisplayScrollText param_param_direction, System.Int32 param_param_units)
+        public virtual void ScrollText(Microsoft.PointOfService.DisplayScrollText direction, System.Int32 units)
         {
         }
         public virtual void ClearDescriptors()
         {
         }
-        public virtual void SetDescriptor(System.Int32 param_param_descriptor, Microsoft.PointOfService.DisplaySetDescriptor param_param_attribute)
+        public virtual void SetDescriptor(System.Int32 descriptor, Microsoft.PointOfService.DisplaySetDescriptor attribute)
         {
         }
-        public virtual void CreateWindow(System.Int32 param_param_viewportRow, System.Int32 param_param_viewportColumn, System.Int32 param_param_viewportHeight, System.Int32 param_param_viewportWidth, System.Int32 param_param_windowHeight, System.Int32 param_param_windowWidth)
+        public virtual void CreateWindow(System.Int32 viewportRow, System.Int32 viewportColumn, System.Int32 viewportHeight, System.Int32 viewportWidth, System.Int32 windowHeight, System.Int32 windowWidth)
         {
         }
         public virtual void DestroyWindow()
         {
         }
-        public virtual void RefreshWindow(System.Int32 param_param_window)
+        public virtual void RefreshWindow(System.Int32 window)
         {
         }
-        public virtual void DefineGlyph(System.Int32 param_param_glyphCode, System.Byte[] param_param_glyph)
+        public virtual void DefineGlyph(System.Int32 glyphCode, System.Byte[] glyph)
         {
         }
         public virtual System.Int32 ReadCharacterAtCursor()
         {
             return 0;
         }
-        public virtual void DisplayBitmap(System.String param_param_fileName, System.Int32 param_param_width, System.Int32 param_param_alignmentX, System.Int32 param_param_alignmentY)
+        public virtual void DisplayBitmap(System.String fileName, System.Int32 width, System.Int32 alignmentX, System.Int32 alignmentY)
         {
         }
-        public virtual void DisplayBitmap(System.String param_param_fileName, System.Int32 param_param_alignmentX, System.Int32 param_param_alignmentY)
+        public virtual void DisplayBitmap(System.String fileName, System.Int32 alignmentX, System.Int32 alignmentY)
         {
         }
-        public virtual void SetBitmap(System.Int32 param_param_bitmapNumber, System.String param_param_fileName, System.Int32 param_param_width, System.Int32 param_param_alignmentX, System.Int32 param_param_alignmentY)
+        public virtual void SetBitmap(System.Int32 bitmapNumber, System.String fileName, System.Int32 width, System.Int32 alignmentX, System.Int32 alignmentY)
         {
         }
-        public virtual void SetBitmap(System.Int32 param_param_bitmapNumber, System.String param_param_fileName, System.Int32 param_param_alignmentX, System.Int32 param_param_alignmentY)
+        public virtual void SetBitmap(System.Int32 bitmapNumber, System.String fileName, System.Int32 alignmentX, System.Int32 alignmentY)
         {
         }
     }

@@ -2,7 +2,7 @@ namespace Microsoft.PointOfService
 {
     public struct EVRWResult
     {
-        public EVRWResult(System.Int32 param_param_data, System.Object param_param_obj)
+        public EVRWResult(System.Int32 data, System.Object obj)
         {
         }
         public System.Int32 Data

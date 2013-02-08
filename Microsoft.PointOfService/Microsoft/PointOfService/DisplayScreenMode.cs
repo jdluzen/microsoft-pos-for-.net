@@ -2,7 +2,7 @@ namespace Microsoft.PointOfService
 {
     public class DisplayScreenMode
     {
-        public DisplayScreenMode(System.Int32 param_param_rows, System.Int32 param_param_columns)
+        public DisplayScreenMode(System.Int32 rows, System.Int32 columns)
         {
         }
         protected DisplayScreenMode()

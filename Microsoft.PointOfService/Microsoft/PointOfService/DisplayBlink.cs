@@ -2,8 +2,8 @@ namespace Microsoft.PointOfService
 {
     public enum DisplayBlink
     {
-        None,
-        All,
-        Each,
+        None = 0,
+        All = 1,
+        Each = 2,
     }
 }

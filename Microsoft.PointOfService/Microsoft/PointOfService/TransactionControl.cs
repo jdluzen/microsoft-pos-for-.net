@@ -2,7 +2,7 @@ namespace Microsoft.PointOfService
 {
     public enum TransactionControl
     {
-        Transaction,
-        Normal,
+        Transaction = 11,
+        Normal = 12,
     }
 }

@@ -211,10 +211,10 @@ namespace Microsoft.PointOfService.BaseServiceObjects
         public override void ClearInputProperties()
         {
         }
-        public override void WriteTracks(System.Byte[] param_track1Data, System.Byte[] param_track2Data, System.Byte[] param_track3Data, System.Byte[] param_track4Data, System.Int32 param_timeout)
+        public override void WriteTracks(System.Byte[] track1Data, System.Byte[] track2Data, System.Byte[] track3Data, System.Byte[] track4Data, System.Int32 timeout)
         {
         }
-        public override System.String RetrieveCardProperty(System.String param_name)
+        public override System.String RetrieveCardProperty(System.String name)
         {
             return null;
         }

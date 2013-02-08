@@ -2,9 +2,9 @@ namespace Microsoft.PointOfService
 {
     public enum WeightUnit
     {
-        Gram,
-        Kilogram,
-        Ounce,
-        Pound,
+        Gram = 1,
+        Kilogram = 2,
+        Ounce = 3,
+        Pound = 4,
     }
 }

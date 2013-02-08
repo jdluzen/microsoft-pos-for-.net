@@ -2,7 +2,7 @@ namespace Microsoft.PointOfService
 {
     public enum MsrErrorReporting
     {
-        Card,
-        Track,
+        Card = 0,
+        Track = 1,
     }
 }

@@ -2,7 +2,7 @@ namespace Microsoft.PointOfService
 {
     public enum FiscalReceiptStation
     {
-        Receipt,
-        Slip,
+        Receipt = 1,
+        Slip = 2,
     }
 }

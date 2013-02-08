@@ -2,10 +2,10 @@ namespace Microsoft.PointOfService
 {
     public enum PinEntryStatus
     {
-        Success,
-        Cancel,
-        Timeout,
-        BadKey,
-        Error,
+        Success = 1,
+        Cancel = 2,
+        Timeout = 3,
+        BadKey = 201,
+        Error = 100,
     }
 }

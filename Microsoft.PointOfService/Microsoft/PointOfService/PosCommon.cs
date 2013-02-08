@@ -116,11 +116,11 @@ namespace Microsoft.PointOfService
             add { }
             remove { }
         }
-        public virtual System.String CheckHealth(Microsoft.PointOfService.HealthCheckLevel param_param_level)
+        public virtual System.String CheckHealth(Microsoft.PointOfService.HealthCheckLevel level)
         {
             return null;
         }
-        public virtual void Claim(System.Int32 param_param_timeout)
+        public virtual void Claim(System.Int32 timeout)
         {
         }
         public virtual void Close()
@@ -129,7 +129,7 @@ namespace Microsoft.PointOfService
         public virtual void Open()
         {
         }
-        public virtual Microsoft.PointOfService.DirectIOData DirectIO(System.Int32 param_param_command, System.Int32 param_param_data, System.Object param_param_obj)
+        public virtual Microsoft.PointOfService.DirectIOData DirectIO(System.Int32 command, System.Int32 data, System.Object obj)
         {
             return new Microsoft.PointOfService.DirectIOData();
         }
@@ -139,45 +139,45 @@ namespace Microsoft.PointOfService
         public virtual void ResetStatistics()
         {
         }
-        public virtual void ResetStatistics(Microsoft.PointOfService.StatisticCategories param_param_statistics)
+        public virtual void ResetStatistics(Microsoft.PointOfService.StatisticCategories statistics)
         {
         }
-        public virtual void ResetStatistics(System.String[] param_param_statistics)
+        public virtual void ResetStatistics(System.String[] statistics)
         {
         }
-        public virtual void ResetStatistic(System.String param_param_statistic)
+        public virtual void ResetStatistic(System.String statistic)
         {
         }
         public virtual System.String RetrieveStatistics()
         {
             return null;
         }
-        public virtual System.String RetrieveStatistics(Microsoft.PointOfService.StatisticCategories param_param_statistics)
+        public virtual System.String RetrieveStatistics(Microsoft.PointOfService.StatisticCategories statistics)
         {
             return null;
         }
-        public virtual System.String RetrieveStatistics(System.String[] param_param_statistics)
+        public virtual System.String RetrieveStatistics(System.String[] statistics)
         {
             return null;
         }
-        public virtual System.String RetrieveStatistic(System.String param_param_statistic)
+        public virtual System.String RetrieveStatistic(System.String statistic)
         {
             return null;
         }
-        public virtual void UpdateStatistic(System.String param_param_name, System.Object param_param_value)
+        public virtual void UpdateStatistic(System.String name, System.Object value)
         {
         }
-        public virtual void UpdateStatistics(Microsoft.PointOfService.Statistic[] param_param_statistics)
+        public virtual void UpdateStatistics(Microsoft.PointOfService.Statistic[] statistics)
         {
         }
-        public virtual void UpdateStatistics(Microsoft.PointOfService.StatisticCategories param_param_statistics, System.Object param_param_value)
+        public virtual void UpdateStatistics(Microsoft.PointOfService.StatisticCategories statistics, System.Object value)
         {
         }
-        public virtual Microsoft.PointOfService.CompareFirmwareResult CompareFirmwareVersion(System.String param_param_firmwareFileName)
+        public virtual Microsoft.PointOfService.CompareFirmwareResult CompareFirmwareVersion(System.String firmwareFileName)
         {
             return Microsoft.PointOfService.CompareFirmwareResult.Older;
         }
-        public virtual void UpdateFirmware(System.String param_param_firmwareFileName)
+        public virtual void UpdateFirmware(System.String firmwareFileName)
         {
         }
     }

@@ -2,9 +2,9 @@ namespace Microsoft.PointOfService.BaseServiceObjects
 {
     public enum CellType
     {
-        Empty,
-        Character,
-        Glyph,
-        Bitmap,
+        Empty = 0,
+        Character = 1,
+        Glyph = 2,
+        Bitmap = 3,
     }
 }

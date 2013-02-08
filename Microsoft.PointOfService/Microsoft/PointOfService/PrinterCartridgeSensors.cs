@@ -2,10 +2,10 @@ namespace Microsoft.PointOfService
 {
     public enum PrinterCartridgeSensors
     {
-        None,
-        Removed,
-        Empty,
-        NearEnd,
-        Cleaning,
+        None = 0,
+        Removed = 1,
+        Empty = 2,
+        NearEnd = 4,
+        Cleaning = 8,
     }
 }

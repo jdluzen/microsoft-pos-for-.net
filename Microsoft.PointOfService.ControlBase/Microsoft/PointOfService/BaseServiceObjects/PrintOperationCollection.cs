@@ -13,7 +13,7 @@ namespace Microsoft.PointOfService.BaseServiceObjects
         {
             get { return Microsoft.PointOfService.PrinterStation.None; }
         }
-        public void CopyTo(Microsoft.PointOfService.BaseServiceObjects.PrintOperation[] param_array, System.Int32 param_index)
+        public void CopyTo(Microsoft.PointOfService.BaseServiceObjects.PrintOperation[] array, System.Int32 index)
         {
         }
     }

@@ -2,8 +2,8 @@ namespace Microsoft.PointOfService
 {
     public enum ErrorResponse
     {
-        Retry,
-        Clear,
-        ContinueInput,
+        Retry = 11,
+        Clear = 12,
+        ContinueInput = 13,
     }
 }

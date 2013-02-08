@@ -2,7 +2,7 @@ namespace Microsoft.PointOfService
 {
     public struct FiscalDataItem
     {
-        public FiscalDataItem(System.String param_param_data, System.Int32 param_param_itemOption)
+        public FiscalDataItem(System.String data, System.Int32 itemOption)
         {
         }
         public System.String Data
@@ -13,23 +13,23 @@ namespace Microsoft.PointOfService
         {
             get { return 0; }
         }
-        public System.Boolean Equals(Microsoft.PointOfService.FiscalDataItem param_param_fiscalDataItem)
+        public System.Boolean Equals(Microsoft.PointOfService.FiscalDataItem fiscalDataItem)
         {
             return false;
         }
-        public override System.Boolean Equals(System.Object param_param_obj)
+        public override System.Boolean Equals(System.Object obj)
         {
             return false;
         }
-        public static System.Boolean Equals(Microsoft.PointOfService.FiscalDataItem param_param_a, Microsoft.PointOfService.FiscalDataItem param_param_b)
+        public static System.Boolean Equals(Microsoft.PointOfService.FiscalDataItem a, Microsoft.PointOfService.FiscalDataItem b)
         {
             return false;
         }
-        public static System.Boolean operator ==(Microsoft.PointOfService.FiscalDataItem param_param_a, System.Object param_param_b)
+        public static System.Boolean operator ==(Microsoft.PointOfService.FiscalDataItem a, System.Object b)
         {
             return false;
         }
-        public static System.Boolean operator !=(Microsoft.PointOfService.FiscalDataItem param_param_a, System.Object param_param_b)
+        public static System.Boolean operator !=(Microsoft.PointOfService.FiscalDataItem a, System.Object b)
         {
             return false;
         }

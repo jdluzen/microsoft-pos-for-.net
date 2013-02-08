@@ -124,7 +124,7 @@ namespace Microsoft.PointOfService
         public virtual void ClearInputProperties()
         {
         }
-        public virtual void BeginEnrollCapture(Microsoft.PointOfService.BiometricsInformationRecord param_param_referenceBir, System.Byte[] param_param_payload)
+        public virtual void BeginEnrollCapture(Microsoft.PointOfService.BiometricsInformationRecord referenceBir, System.Byte[] payload)
         {
         }
         public virtual void BeginVerifyCapture()
@@ -133,23 +133,23 @@ namespace Microsoft.PointOfService
         public virtual void EndCapture()
         {
         }
-        public virtual System.Int32[] Identify(System.Int32 param_param_maximumFalseAcceptRateRequested, System.Int32 param_param_maximumFalseRejectRateRequested, System.Boolean param_param_falseAcceptRatePrecedence, System.Collections.Generic.IEnumerable<Microsoft.PointOfService.BiometricsInformationRecord> param_param_referenceBirPopulation, System.Int32 param_param_timeout)
+        public virtual System.Int32[] Identify(System.Int32 maximumFalseAcceptRateRequested, System.Int32 maximumFalseRejectRateRequested, System.Boolean falseAcceptRatePrecedence, System.Collections.Generic.IEnumerable<Microsoft.PointOfService.BiometricsInformationRecord> referenceBirPopulation, System.Int32 timeout)
         {
             return null;
         }
-        public virtual System.Int32[] IdentifyMatch(System.Int32 param_param_maximumFalseAcceptRateRequested, System.Int32 param_param_maximumFalseRejectRateRequested, System.Boolean param_param_falseAcceptRatePrecedence, Microsoft.PointOfService.BiometricsInformationRecord param_param_sampleBir, System.Collections.Generic.IEnumerable<Microsoft.PointOfService.BiometricsInformationRecord> param_param_referenceBirPopulation)
+        public virtual System.Int32[] IdentifyMatch(System.Int32 maximumFalseAcceptRateRequested, System.Int32 maximumFalseRejectRateRequested, System.Boolean falseAcceptRatePrecedence, Microsoft.PointOfService.BiometricsInformationRecord sampleBir, System.Collections.Generic.IEnumerable<Microsoft.PointOfService.BiometricsInformationRecord> referenceBirPopulation)
         {
             return null;
         }
-        public virtual Microsoft.PointOfService.BiometricsInformationRecord ProcessPrematchData(Microsoft.PointOfService.BiometricsInformationRecord param_param_sampleBir, Microsoft.PointOfService.BiometricsInformationRecord param_param_prematchDataBir)
+        public virtual Microsoft.PointOfService.BiometricsInformationRecord ProcessPrematchData(Microsoft.PointOfService.BiometricsInformationRecord sampleBir, Microsoft.PointOfService.BiometricsInformationRecord prematchDataBir)
         {
             return null;
         }
-        public virtual Microsoft.PointOfService.BiometricsVerifyResult Verify(System.Int32 param_param_maximumFalseAcceptRateRequested, System.Int32 param_param_maximumFalseRejectRateRequested, System.Boolean param_param_falseAcceptRatePrecedence, Microsoft.PointOfService.BiometricsInformationRecord param_param_referenceBir, System.Boolean param_param_adaptBir, System.Int32 param_param_timeout)
+        public virtual Microsoft.PointOfService.BiometricsVerifyResult Verify(System.Int32 maximumFalseAcceptRateRequested, System.Int32 maximumFalseRejectRateRequested, System.Boolean falseAcceptRatePrecedence, Microsoft.PointOfService.BiometricsInformationRecord referenceBir, System.Boolean adaptBir, System.Int32 timeout)
         {
             return null;
         }
-        public virtual Microsoft.PointOfService.BiometricsVerifyResult VerifyMatch(System.Int32 param_param_maximumFalseAcceptRateRequested, System.Int32 param_param_maximumFalseRejectRateRequested, System.Boolean param_param_falseAcceptRatePrecedence, Microsoft.PointOfService.BiometricsInformationRecord param_param_sampleBir, Microsoft.PointOfService.BiometricsInformationRecord param_param_referenceBir, System.Boolean param_param_adaptBir)
+        public virtual Microsoft.PointOfService.BiometricsVerifyResult VerifyMatch(System.Int32 maximumFalseAcceptRateRequested, System.Int32 maximumFalseRejectRateRequested, System.Boolean falseAcceptRatePrecedence, Microsoft.PointOfService.BiometricsInformationRecord sampleBir, Microsoft.PointOfService.BiometricsInformationRecord referenceBir, System.Boolean adaptBir)
         {
             return null;
         }

@@ -111,19 +111,19 @@ namespace Microsoft.PointOfService
         {
             get { return false; }
         }
-        public virtual void AdjustItemCount(Microsoft.PointOfService.BeltDirection param_param_direction, System.Int32 param_param_count)
+        public virtual void AdjustItemCount(Microsoft.PointOfService.BeltDirection direction, System.Int32 count)
         {
         }
-        public virtual void MoveBackward(System.Int32 param_param_speed)
+        public virtual void MoveBackward(System.Int32 speed)
         {
         }
-        public virtual void MoveForward(System.Int32 param_param_speed)
+        public virtual void MoveForward(System.Int32 speed)
         {
         }
         public virtual void ResetBelt()
         {
         }
-        public virtual void ResetItemCount(Microsoft.PointOfService.BeltDirection param_param_direction)
+        public virtual void ResetItemCount(Microsoft.PointOfService.BeltDirection direction)
         {
         }
         public virtual void StopBelt()

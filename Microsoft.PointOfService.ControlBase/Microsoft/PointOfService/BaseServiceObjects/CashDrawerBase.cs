@@ -31,7 +31,7 @@ namespace Microsoft.PointOfService.BaseServiceObjects
         public override void OpenDrawer()
         {
         }
-        public override void WaitForDrawerClose(System.Int32 param_beepTimeout, System.Int32 param_beepFrequency, System.Int32 param_beepDuration, System.Int32 param_beepDelay)
+        public override void WaitForDrawerClose(System.Int32 beepTimeout, System.Int32 beepFrequency, System.Int32 beepDuration, System.Int32 beepDelay)
         {
         }
     }

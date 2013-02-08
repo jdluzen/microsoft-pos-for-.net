@@ -172,7 +172,7 @@ namespace Microsoft.PointOfService
         public virtual void ClearOutput()
         {
         }
-        public virtual void AddMarker(System.String param_param_marker)
+        public virtual void AddMarker(System.String marker)
         {
         }
         public virtual void CancelPrintContent()
@@ -184,16 +184,16 @@ namespace Microsoft.PointOfService
         public virtual void EraseMedium()
         {
         }
-        public virtual void InitializeMedium(System.String param_param_mediumId)
+        public virtual void InitializeMedium(System.String mediumId)
         {
         }
-        public virtual void PrintContent(System.String param_param_fromMarker, System.String param_param_toMarker)
+        public virtual void PrintContent(System.String fromMarker, System.String toMarker)
         {
         }
-        public virtual void PrintContentFile(System.String param_param_fileName)
+        public virtual void PrintContentFile(System.String fileName)
         {
         }
-        public virtual void QueryContent(System.String param_param_fileName, System.String param_param_fromMarker, System.String param_param_toMarker)
+        public virtual void QueryContent(System.String fileName, System.String fromMarker, System.String toMarker)
         {
         }
         public virtual void ResumePrintContent()
@@ -202,19 +202,19 @@ namespace Microsoft.PointOfService
         public virtual void ResumeQueryContent()
         {
         }
-        public virtual System.String RetrieveCurrentMarker(Microsoft.PointOfService.MarkerType param_param_markerType)
+        public virtual System.String RetrieveCurrentMarker(Microsoft.PointOfService.MarkerType markerType)
         {
             return null;
         }
-        public virtual System.String RetrieveMarker(Microsoft.PointOfService.MarkerType param_param_markerType, System.Int32 param_param_sessionNumber, System.Int32 param_param_documentNumber)
+        public virtual System.String RetrieveMarker(Microsoft.PointOfService.MarkerType markerType, System.Int32 sessionNumber, System.Int32 documentNumber)
         {
             return null;
         }
-        public virtual System.String RetrieveMarkerByDateTime(Microsoft.PointOfService.MarkerType param_param_markerType, System.String param_param_dateTime, System.String param_param_markerNumber)
+        public virtual System.String RetrieveMarkerByDateTime(Microsoft.PointOfService.MarkerType markerType, System.String dateTime, System.String markerNumber)
         {
             return null;
         }
-        public virtual System.String RetrieveMarkersDateTime(System.String param_param_marker)
+        public virtual System.String RetrieveMarkersDateTime(System.String marker)
         {
             return null;
         }

@@ -2,11 +2,11 @@ namespace Microsoft.PointOfService
 {
     public enum PinPadSystem
     {
-        MasterSession,
-        Dukpt,
-        Apacs40,
-        AS2805,
-        Hgepos,
-        Jdebit2,
+        MasterSession = 1,
+        Dukpt = 2,
+        Apacs40 = 3,
+        AS2805 = 4,
+        Hgepos = 5,
+        Jdebit2 = 6,
     }
 }

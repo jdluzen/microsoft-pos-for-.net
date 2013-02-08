@@ -17,22 +17,22 @@ namespace Microsoft.PointOfService
         public static void Close()
         {
         }
-        public static void Error(System.String param_param_caller, System.String param_param_message, System.Exception param_param_e)
+        public static void Error(System.String caller, System.String message, System.Exception e)
         {
         }
-        public static void Error(System.String param_param_caller, System.String param_param_message)
+        public static void Error(System.String caller, System.String message)
         {
         }
-        public static void Warn(System.String param_param_caller, System.String param_param_message)
+        public static void Warn(System.String caller, System.String message)
         {
         }
-        public static void Warn(System.String param_param_caller, System.String param_param_message, System.Boolean param_param_eventLog)
+        public static void Warn(System.String caller, System.String message, System.Boolean eventLog)
         {
         }
-        public static void Info(System.String param_param_caller, System.String param_param_message)
+        public static void Info(System.String caller, System.String message)
         {
         }
-        public static void Info(System.String param_param_caller, System.String param_param_message, System.Boolean param_param_eventLog)
+        public static void Info(System.String caller, System.String message, System.Boolean eventLog)
         {
         }
     }

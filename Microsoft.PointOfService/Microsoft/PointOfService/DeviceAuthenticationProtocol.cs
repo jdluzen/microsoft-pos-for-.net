@@ -2,7 +2,7 @@ namespace Microsoft.PointOfService
 {
     public enum DeviceAuthenticationProtocol
     {
-        None,
-        ChallengeResponse,
+        None = 0,
+        ChallengeResponse = 1,
     }
 }

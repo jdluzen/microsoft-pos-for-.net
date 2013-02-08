@@ -33,13 +33,13 @@ namespace Microsoft.PointOfService
         {
             get { return 0; }
         }
-        public virtual void AdjustItemCount(System.Int32 param_param_itemCount, System.Int32 param_param_slotNumber)
+        public virtual void AdjustItemCount(System.Int32 itemCount, System.Int32 slotNumber)
         {
         }
-        public virtual void DispenseItem(System.Int32 param_param_numItem, System.Int32 param_param_slotNumber)
+        public virtual void DispenseItem(System.Int32 numItem, System.Int32 slotNumber)
         {
         }
-        public virtual System.Int32 ReadItemCount(System.Int32 param_param_slotNumber)
+        public virtual System.Int32 ReadItemCount(System.Int32 slotNumber)
         {
             return 0;
         }

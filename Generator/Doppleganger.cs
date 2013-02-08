@@ -337,7 +337,7 @@ namespace utils
                 }
 
                 // Mangle the parameter name to avoid reserved word conflicts
-                paramSig += formatTypeName(paramInfo.ParameterType) + " param_" + paramInfo.Name;
+                paramSig += formatTypeName(paramInfo.ParameterType) + " " + paramInfo.Name;
                 paramNum++;
             }
 
@@ -351,7 +351,7 @@ namespace utils
 
             foreach (ParameterInfo paramInfo in outParams)
             {
-                outParamSig += indentFormat + "param_" + paramInfo.Name + " = " + getDefaultValue(paramInfo.ParameterType.GetElementType()) + ";\n";
+                outParamSig += indentFormat + paramInfo.Name + " = " + getDefaultValue(paramInfo.ParameterType.GetElementType()) + ";\n";
             }
 
             return outParamSig;
@@ -613,7 +613,12 @@ namespace utils
                 string fieldSig = "";
 
                 if (type.IsEnum)
-                    fieldSig += fieldInfo.Name + ",";
+                {
+                    object enumValue = Enum.Parse(fieldInfo.FieldType, fieldInfo.Name);
+                    Type uType = Enum.GetUnderlyingType(fieldInfo.FieldType);
+                    object value = Convert.ChangeType(enumValue, uType);
+                    fieldSig += string.Format("{0} = {1},", fieldInfo.Name, value);
+                }
                 else
                 {
                     fieldSig += "public ";
@@ -1210,7 +1215,7 @@ namespace utils
             // Load the assembly in reflection only mode.
             if (null != assembly)
             {
-                reflectedAssembly = Assembly.ReflectionOnlyLoadFrom(assembly.Location);
+                reflectedAssembly = Assembly.LoadFrom(assembly.Location);
             }
 
             return reflectedAssembly;
@@ -1223,7 +1228,7 @@ namespace utils
         public void generate(DopplegangerConfiguration config)
         {
             padWithTabs = config.UseTabs;
-            Assembly importlib = Assembly.ReflectionOnlyLoadFrom(config.AssemblyPath);
+            Assembly importlib = Assembly.LoadFrom(config.AssemblyPath);
 
             // Capture any assembly resolve problems and dynamically load the dependent assembly.
             AppDomain.CurrentDomain.ReflectionOnlyAssemblyResolve += reflectionOnlyAssemblyResolveHandler;

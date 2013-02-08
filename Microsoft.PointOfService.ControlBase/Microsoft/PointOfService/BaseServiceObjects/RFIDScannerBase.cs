@@ -66,7 +66,7 @@ namespace Microsoft.PointOfService.BaseServiceObjects
         public override void Open()
         {
         }
-        public override void ReadTags(Microsoft.PointOfService.RFIDReadOptions param_cmd, System.Byte[] param_filterId, System.Byte[] param_filterMask, System.Int32 param_start, System.Int32 param_length, System.Int32 param_timeout, System.Byte[] param_password)
+        public override void ReadTags(Microsoft.PointOfService.RFIDReadOptions cmd, System.Byte[] filterId, System.Byte[] filterMask, System.Int32 start, System.Int32 length, System.Int32 timeout, System.Byte[] password)
         {
         }
         public override void FirstTag()
@@ -78,23 +78,23 @@ namespace Microsoft.PointOfService.BaseServiceObjects
         public override void PreviousTag()
         {
         }
-        public override void StartReadTags(Microsoft.PointOfService.RFIDReadOptions param_cmd, System.Byte[] param_filterId, System.Byte[] param_filterMask, System.Int32 param_start, System.Int32 param_length, System.Byte[] param_password)
+        public override void StartReadTags(Microsoft.PointOfService.RFIDReadOptions cmd, System.Byte[] filterId, System.Byte[] filterMask, System.Int32 start, System.Int32 length, System.Byte[] password)
         {
         }
-        public override void StopReadTags(System.Byte[] param_password)
+        public override void StopReadTags(System.Byte[] password)
         {
         }
-        public override System.String CheckHealth(Microsoft.PointOfService.HealthCheckLevel param_level)
+        public override System.String CheckHealth(Microsoft.PointOfService.HealthCheckLevel level)
         {
             return null;
         }
         public override void ClearInputProperties()
         {
         }
-        public override void WriteTagData(System.Byte[] param_tagId, System.Byte[] param_userData, System.Int32 param_start, System.Int32 param_timeout, System.Byte[] param_password)
+        public override void WriteTagData(System.Byte[] tagId, System.Byte[] userData, System.Int32 start, System.Int32 timeout, System.Byte[] password)
         {
         }
-        public virtual void WriteTagDataImpl(System.Byte[] param_tagId, System.Byte[] param_userData, System.Int32 param_start, System.Int32 param_timeout, System.Byte[] param_password, System.DateTime param_startTime)
+        public virtual void WriteTagDataImpl(System.Byte[] tagId, System.Byte[] userData, System.Int32 start, System.Int32 timeout, System.Byte[] password, System.DateTime startTime)
         {
         }
     }

@@ -108,10 +108,10 @@ namespace Microsoft.PointOfService
         public virtual void ClearInput()
         {
         }
-        public virtual void DisplayText(System.String param_param_data)
+        public virtual void DisplayText(System.String data)
         {
         }
-        public virtual System.Decimal ReadWeight(System.Int32 param_param_timeout)
+        public virtual System.Decimal ReadWeight(System.Int32 timeout)
         {
             return new System.Decimal();
         }

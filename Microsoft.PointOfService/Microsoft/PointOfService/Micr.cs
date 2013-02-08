@@ -88,10 +88,10 @@ namespace Microsoft.PointOfService
         public virtual void ClearInputProperties()
         {
         }
-        public virtual void BeginInsertion(System.Int32 param_param_timeout)
+        public virtual void BeginInsertion(System.Int32 timeout)
         {
         }
-        public virtual void BeginRemoval(System.Int32 param_param_timeout)
+        public virtual void BeginRemoval(System.Int32 timeout)
         {
         }
         public virtual void EndInsertion()

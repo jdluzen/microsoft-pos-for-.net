@@ -24,7 +24,7 @@ namespace Microsoft.PointOfService
         public virtual void OpenDrawer()
         {
         }
-        public virtual void WaitForDrawerClose(System.Int32 param_param_beepTimeout, System.Int32 param_param_beepFrequency, System.Int32 param_param_beepDuration, System.Int32 param_param_beepDelay)
+        public virtual void WaitForDrawerClose(System.Int32 beepTimeout, System.Int32 beepFrequency, System.Int32 beepDuration, System.Int32 beepDelay)
         {
         }
     }

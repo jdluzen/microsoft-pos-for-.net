@@ -305,24 +305,24 @@ namespace Microsoft.PointOfService
         public virtual void ClearInputProperties()
         {
         }
-        public virtual void UpdateKey(System.String param_param_key, System.String param_param_keyName)
+        public virtual void UpdateKey(System.String key, System.String keyName)
         {
         }
-        public virtual void AuthenticateDevice(System.Byte[] param_param_responseToken)
+        public virtual void AuthenticateDevice(System.Byte[] responseToken)
         {
         }
-        public virtual void DeauthenticateDevice(System.Byte[] param_param_responseToken)
+        public virtual void DeauthenticateDevice(System.Byte[] responseToken)
         {
         }
         public virtual System.Byte[] RetrieveDeviceAuthenticationData()
         {
             return null;
         }
-        public virtual System.String RetrieveCardProperty(System.String param_param_name)
+        public virtual System.String RetrieveCardProperty(System.String name)
         {
             return null;
         }
-        public virtual void WriteTracks(System.Byte[] param_param_track1Data, System.Byte[] param_param_track2Data, System.Byte[] param_param_track3Data, System.Byte[] param_param_track4Data, System.Int32 param_param_timeout)
+        public virtual void WriteTracks(System.Byte[] track1Data, System.Byte[] track2Data, System.Byte[] track3Data, System.Byte[] track4Data, System.Int32 timeout)
         {
         }
     }

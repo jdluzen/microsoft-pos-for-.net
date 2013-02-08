@@ -5,10 +5,10 @@ namespace Microsoft.PointOfService.BaseServiceObjects
         public MsrFieldData()
         {
         }
-        public MsrFieldData(System.String param_accountNumber, System.String param_expirationDate, System.String param_firstName, System.String param_middleInitial, System.String param_serviceCode, System.String param_suffix, System.String param_surname, System.String param_title, System.Byte[] param_track1DiscretionaryData, System.Byte[] param_track2DiscretionaryData)
+        public MsrFieldData(System.String accountNumber, System.String expirationDate, System.String firstName, System.String middleInitial, System.String serviceCode, System.String suffix, System.String surname, System.String title, System.Byte[] track1DiscretionaryData, System.Byte[] track2DiscretionaryData)
         {
         }
-        public MsrFieldData(System.String param_address, System.String param_birthDate, System.String param_endorsements, System.String param_expirationDate, System.String param_eyeColor, System.String param_firstName, System.String param_gender, System.String param_hairColor, System.String param_height, System.String param_licenseNumber, System.String param_postalCode, System.String param_restrictions, System.String param_state, System.String param_suffix, System.String param_surname, System.String param_weight, System.String param__class, System.String param_city)
+        public MsrFieldData(System.String address, System.String birthDate, System.String endorsements, System.String expirationDate, System.String eyeColor, System.String firstName, System.String gender, System.String hairColor, System.String height, System.String licenseNumber, System.String postalCode, System.String restrictions, System.String state, System.String suffix, System.String surname, System.String weight, System.String _class, System.String city)
         {
         }
         public System.Byte[] Track1DiscretionaryData

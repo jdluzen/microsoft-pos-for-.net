@@ -2,7 +2,7 @@ namespace Microsoft.PointOfService
 {
     public enum EncryptionAlgorithm
     {
-        None,
-        TripleDeaDukpt,
+        None = 1,
+        TripleDeaDukpt = 2,
     }
 }

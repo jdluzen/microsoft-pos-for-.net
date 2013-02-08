@@ -195,28 +195,28 @@ namespace Microsoft.PointOfService.BaseServiceObjects
         public override void ClearText()
         {
         }
-        public override void CreateWindow(System.Int32 param_viewportRow, System.Int32 param_viewportColumn, System.Int32 param_viewportHeight, System.Int32 param_viewportWidth, System.Int32 param_windowHeight, System.Int32 param_windowWidth)
+        public override void CreateWindow(System.Int32 viewportRow, System.Int32 viewportColumn, System.Int32 viewportHeight, System.Int32 viewportWidth, System.Int32 windowHeight, System.Int32 windowWidth)
         {
         }
-        public override void DefineGlyph(System.Int32 param_glyphCode, System.Byte[] param_glyph)
+        public override void DefineGlyph(System.Int32 glyphCode, System.Byte[] glyph)
         {
         }
-        public override void DisplayText(System.String param_data)
+        public override void DisplayText(System.String data)
         {
         }
-        public override void DisplayText(System.String param_data, Microsoft.PointOfService.DisplayTextMode param_attribute)
+        public override void DisplayText(System.String data, Microsoft.PointOfService.DisplayTextMode attribute)
         {
         }
-        public override void RefreshWindow(System.Int32 param_window)
+        public override void RefreshWindow(System.Int32 window)
         {
         }
-        public override void DisplayTextAt(System.Int32 param_row, System.Int32 param_column, System.String param_data)
+        public override void DisplayTextAt(System.Int32 row, System.Int32 column, System.String data)
         {
         }
-        public override void DisplayTextAt(System.Int32 param_row, System.Int32 param_column, System.String param_data, Microsoft.PointOfService.DisplayTextMode param_attribute)
+        public override void DisplayTextAt(System.Int32 row, System.Int32 column, System.String data, Microsoft.PointOfService.DisplayTextMode attribute)
         {
         }
-        public override void ScrollText(Microsoft.PointOfService.DisplayScrollText param_direction, System.Int32 param_units)
+        public override void ScrollText(Microsoft.PointOfService.DisplayScrollText direction, System.Int32 units)
         {
         }
         public override void DestroyWindow()
@@ -225,23 +225,23 @@ namespace Microsoft.PointOfService.BaseServiceObjects
         public override void ClearDescriptors()
         {
         }
-        public override void SetDescriptor(System.Int32 param_descriptor, Microsoft.PointOfService.DisplaySetDescriptor param_attribute)
+        public override void SetDescriptor(System.Int32 descriptor, Microsoft.PointOfService.DisplaySetDescriptor attribute)
         {
         }
         public override System.Int32 ReadCharacterAtCursor()
         {
             return 0;
         }
-        public override void DisplayBitmap(System.String param_fileName, System.Int32 param_alignmentX, System.Int32 param_alignmentY)
+        public override void DisplayBitmap(System.String fileName, System.Int32 alignmentX, System.Int32 alignmentY)
         {
         }
-        public override void DisplayBitmap(System.String param_fileName, System.Int32 param_width, System.Int32 param_alignmentX, System.Int32 param_alignmentY)
+        public override void DisplayBitmap(System.String fileName, System.Int32 width, System.Int32 alignmentX, System.Int32 alignmentY)
         {
         }
-        public override void SetBitmap(System.Int32 param_bitmapNumber, System.String param_fileName, System.Int32 param_alignmentX, System.Int32 param_alignmentY)
+        public override void SetBitmap(System.Int32 bitmapNumber, System.String fileName, System.Int32 alignmentX, System.Int32 alignmentY)
         {
         }
-        public override void SetBitmap(System.Int32 param_bitmapNumber, System.String param_fileName, System.Int32 param_width, System.Int32 param_alignmentX, System.Int32 param_alignmentY)
+        public override void SetBitmap(System.Int32 bitmapNumber, System.String fileName, System.Int32 width, System.Int32 alignmentX, System.Int32 alignmentY)
         {
         }
         public override void Open()

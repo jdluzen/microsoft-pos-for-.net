@@ -2,7 +2,7 @@ namespace Microsoft.PointOfService
 {
     public class Device
     {
-        public Device(System.String param_param_name, System.String param_param_description, System.String param_param_devicePath)
+        public Device(System.String name, System.String description, System.String devicePath)
         {
         }
         protected Device()

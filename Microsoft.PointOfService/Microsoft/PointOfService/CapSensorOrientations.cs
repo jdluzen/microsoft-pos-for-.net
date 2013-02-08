@@ -2,10 +2,10 @@ namespace Microsoft.PointOfService
 {
     public enum CapSensorOrientations
     {
-        None,
-        Normal,
-        Right,
-        Inverted,
-        Left,
+        None = 0,
+        Normal = 1,
+        Right = 2,
+        Inverted = 4,
+        Left = 8,
     }
 }

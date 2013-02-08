@@ -2,11 +2,11 @@ namespace Microsoft.PointOfService
 {
     public enum LightColors
     {
-        Primary,
-        Custom1,
-        Custom2,
-        Custom3,
-        Custom4,
-        Custom5,
+        Primary = 1,
+        Custom1 = 65536,
+        Custom2 = 131072,
+        Custom3 = 262144,
+        Custom4 = 524288,
+        Custom5 = 1048576,
     }
 }

@@ -2,9 +2,9 @@ namespace Microsoft.PointOfService
 {
     public enum ControlState
     {
-        Closed,
-        Idle,
-        Busy,
-        Error,
+        Closed = 1,
+        Idle = 2,
+        Busy = 3,
+        Error = 4,
     }
 }

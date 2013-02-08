@@ -2,8 +2,8 @@ namespace Microsoft.PointOfService
 {
     public enum LogState
     {
-        Ok,
-        NearFull,
-        Full,
+        Ok = 1,
+        NearFull = 2,
+        Full = 3,
     }
 }

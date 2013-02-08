@@ -2,7 +2,7 @@ namespace Microsoft.PointOfService
 {
     public enum DisplayMarqueeFormat
     {
-        Walk,
-        Place,
+        Walk = 0,
+        Place = 1,
     }
 }

@@ -116,23 +116,23 @@ namespace Microsoft.PointOfService.BaseServiceObjects
         public override void ClearInputProperties()
         {
         }
-        public override void BeginEftTransaction(Microsoft.PointOfService.PinPadSystem param_pinpadSystem, System.Int32 param_transactionHost)
+        public override void BeginEftTransaction(Microsoft.PointOfService.PinPadSystem pinpadSystem, System.Int32 transactionHost)
         {
         }
-        public override System.String ComputeMac(System.String param_inMsg)
+        public override System.String ComputeMac(System.String inMsg)
         {
             return null;
         }
         public override void EnablePinEntry()
         {
         }
-        public override void EndEftTransaction(Microsoft.PointOfService.EftTransactionCompletion param_completionCode)
+        public override void EndEftTransaction(Microsoft.PointOfService.EftTransactionCompletion completionCode)
         {
         }
-        public override void UpdateKey(System.Int32 param_keyNumber, System.String param_key)
+        public override void UpdateKey(System.Int32 keyNumber, System.String key)
         {
         }
-        public override void VerifyMac(System.String param_message)
+        public override void VerifyMac(System.String message)
         {
         }
     }

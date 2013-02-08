@@ -2,6 +2,6 @@ namespace Microsoft.PointOfService
 {
     public enum EndDepositAction
     {
-        Complete,
+        Complete = 11,
     }
 }

@@ -2,7 +2,7 @@ namespace Microsoft.PointOfService
 {
     public enum EftTransactionCompletion
     {
-        Normal,
-        Abnormal,
+        Normal = 1,
+        Abnormal = 2,
     }
 }

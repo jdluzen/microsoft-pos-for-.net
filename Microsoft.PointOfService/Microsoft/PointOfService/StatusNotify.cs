@@ -2,7 +2,7 @@ namespace Microsoft.PointOfService
 {
     public enum StatusNotify
     {
-        Disabled,
-        Enabled,
+        Disabled = 1,
+        Enabled = 2,
     }
 }

@@ -2,7 +2,7 @@ namespace Microsoft.PointOfService.BaseServiceObjects
 {
     public class DeviceStatistics : System.IDisposable
     {
-        public DeviceStatistics(System.String param_deviceName, System.String param_devicePath, System.String param_deviceType)
+        public DeviceStatistics(System.String deviceName, System.String devicePath, System.String deviceType)
         {
         }
         protected DeviceStatistics()
@@ -26,38 +26,38 @@ namespace Microsoft.PointOfService.BaseServiceObjects
         public void ResetStatistics()
         {
         }
-        public void ResetStatistics(Microsoft.PointOfService.StatisticCategories param_statistics)
+        public void ResetStatistics(Microsoft.PointOfService.StatisticCategories statistics)
         {
         }
-        public void ResetStatistics(System.String[] param_statistics)
+        public void ResetStatistics(System.String[] statistics)
         {
         }
-        public void ResetStatistic(System.String param_statistic)
+        public void ResetStatistic(System.String statistic)
         {
         }
         public System.String RetrieveStatistics()
         {
             return null;
         }
-        public System.String RetrieveStatistics(Microsoft.PointOfService.StatisticCategories param_statistics)
+        public System.String RetrieveStatistics(Microsoft.PointOfService.StatisticCategories statistics)
         {
             return null;
         }
-        public System.String RetrieveStatistics(System.String[] param_statistics)
+        public System.String RetrieveStatistics(System.String[] statistics)
         {
             return null;
         }
-        public System.String RetrieveStatistic(System.String param_statistic)
+        public System.String RetrieveStatistic(System.String statistic)
         {
             return null;
         }
-        public void UpdateStatistic(System.String param_name, System.Object param_value)
+        public void UpdateStatistic(System.String name, System.Object value)
         {
         }
-        public void UpdateStatistics(Microsoft.PointOfService.Statistic[] param_statistics)
+        public void UpdateStatistics(Microsoft.PointOfService.Statistic[] statistics)
         {
         }
-        public void UpdateStatistics(Microsoft.PointOfService.StatisticCategories param_statistics, System.Object param_value)
+        public void UpdateStatistics(Microsoft.PointOfService.StatisticCategories statistics, System.Object value)
         {
         }
         public void Close()
@@ -71,26 +71,26 @@ namespace Microsoft.PointOfService.BaseServiceObjects
         {
             return false;
         }
-        public void SetStatisticValue(System.String param_name, System.Object param_value)
+        public void SetStatisticValue(System.String name, System.Object value)
         {
         }
-        public void IncrementStatistic(System.String param_name)
+        public void IncrementStatistic(System.String name)
         {
         }
-        public void IncrementStatistic(System.String param_name, System.Int32 param_increment)
+        public void IncrementStatistic(System.String name, System.Int32 increment)
         {
         }
-        public System.String GetStatisticValue(System.String param_name)
+        public System.String GetStatisticValue(System.String name)
         {
             return null;
         }
-        public void CreateStatistic(System.String param_statisticName, System.Boolean param_resettable)
+        public void CreateStatistic(System.String statisticName, System.Boolean resettable)
         {
         }
-        public void CreateStatistic(System.String param_statisticName, System.Boolean param_resettable, System.String param_unitOfMeasure)
+        public void CreateStatistic(System.String statisticName, System.Boolean resettable, System.String unitOfMeasure)
         {
         }
-        public void SetStatisticHandlers(System.String param_statisticName, Microsoft.PointOfService.BaseServiceObjects.GetStatistic param_getStatistic, Microsoft.PointOfService.BaseServiceObjects.SetStatistic param_setStatistic)
+        public void SetStatisticHandlers(System.String statisticName, Microsoft.PointOfService.BaseServiceObjects.GetStatistic getStatistic, Microsoft.PointOfService.BaseServiceObjects.SetStatistic setStatistic)
         {
         }
         public virtual void Dispose()

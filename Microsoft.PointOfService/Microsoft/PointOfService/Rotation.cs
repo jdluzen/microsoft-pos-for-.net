@@ -2,9 +2,9 @@ namespace Microsoft.PointOfService
 {
     public enum Rotation
     {
-        Normal,
-        Right90,
-        Left90,
-        Rotate180,
+        Normal = 1,
+        Right90 = 257,
+        Left90 = 258,
+        Rotate180 = 259,
     }
 }

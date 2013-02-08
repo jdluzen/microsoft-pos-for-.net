@@ -2,7 +2,7 @@ namespace Microsoft.PointOfService
 {
     public enum KeyEvent
     {
-        Down,
-        Up,
+        Down = 1,
+        Up = 2,
     }
 }

@@ -2,10 +2,10 @@ namespace Microsoft.PointOfService
 {
     public class RangeOfCharacters
     {
-        public RangeOfCharacters(System.Char param_param_singleCharacter)
+        public RangeOfCharacters(System.Char singleCharacter)
         {
         }
-        public RangeOfCharacters(System.Char param_param_fromCharacter, System.Char param_param_toCharacter)
+        public RangeOfCharacters(System.Char fromCharacter, System.Char toCharacter)
         {
         }
         protected RangeOfCharacters()

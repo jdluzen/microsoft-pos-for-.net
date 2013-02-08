@@ -2,8 +2,8 @@ namespace Microsoft.PointOfService
 {
     public enum CheckImageLocate
     {
-        FileId,
-        FileIndex,
-        ImageTagData,
+        FileId = 1,
+        FileIndex = 2,
+        ImageTagData = 3,
     }
 }

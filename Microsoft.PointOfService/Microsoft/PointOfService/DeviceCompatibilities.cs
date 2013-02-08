@@ -2,8 +2,8 @@ namespace Microsoft.PointOfService
 {
     public enum DeviceCompatibilities
     {
-        Opos,
-        CompatibilityLevel1,
-        OposAndCompatibilityLevel1,
+        Opos = 1,
+        CompatibilityLevel1 = 2,
+        OposAndCompatibilityLevel1 = 3,
     }
 }

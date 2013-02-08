@@ -13,15 +13,15 @@ namespace Microsoft.PointOfService
         {
             get { return null; }
         }
-        public System.Int32 IndexOf(Microsoft.PointOfService.DeviceInfo param_param_value)
+        public System.Int32 IndexOf(Microsoft.PointOfService.DeviceInfo value)
         {
             return 0;
         }
-        public System.Boolean Contains(Microsoft.PointOfService.DeviceInfo param_param_value)
+        public System.Boolean Contains(Microsoft.PointOfService.DeviceInfo value)
         {
             return false;
         }
-        public void CopyTo(Microsoft.PointOfService.DeviceInfo[] param_param_array, System.Int32 param_param_index)
+        public void CopyTo(Microsoft.PointOfService.DeviceInfo[] array, System.Int32 index)
         {
         }
     }

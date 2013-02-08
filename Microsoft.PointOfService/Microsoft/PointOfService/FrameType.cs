@@ -2,7 +2,7 @@ namespace Microsoft.PointOfService
 {
     public enum FrameType
     {
-        Still,
-        Video,
+        Still = 1,
+        Video = 2,
     }
 }

@@ -2,7 +2,7 @@ namespace Microsoft.PointOfService
 {
     public enum SmartCardTransmissionProtocols
     {
-        T0,
-        T1,
+        T0 = 1,
+        T1 = 2,
     }
 }

@@ -2,9 +2,9 @@ namespace Microsoft.PointOfService
 {
     public enum SmartCardInterfaceModes
     {
-        Transaction,
-        Block,
-        Apdu,
-        Xml,
+        Transaction = 1,
+        Block = 2,
+        Apdu = 4,
+        Xml = 8,
     }
 }

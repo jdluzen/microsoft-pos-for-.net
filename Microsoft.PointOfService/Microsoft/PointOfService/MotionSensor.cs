@@ -17,7 +17,7 @@ namespace Microsoft.PointOfService
             get { return 0; }
             set { }
         }
-        public virtual void WaitForMotion(System.Int32 param_param_timeout)
+        public virtual void WaitForMotion(System.Int32 timeout)
         {
         }
     }

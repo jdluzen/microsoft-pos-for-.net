@@ -5,13 +5,13 @@ namespace Microsoft.PointOfService.BaseServiceObjects
         public MsrTrackData()
         {
         }
-        public MsrTrackData(System.Byte[] param_track1Data, System.Byte[] param_track2Data, System.Byte[] param_track3Data, System.Byte[] param_track4Data)
+        public MsrTrackData(System.Byte[] track1Data, System.Byte[] track2Data, System.Byte[] track3Data, System.Byte[] track4Data)
         {
         }
-        public MsrTrackData(System.Byte[] param_track1EncryptedData, System.Int32 param_track1EncryptedDataLength, System.Byte[] param_track2EncryptedData, System.Int32 param_track2EncryptedDataLength, System.Byte[] param_track3EncryptedData, System.Int32 param_track3EncryptedDataLength, System.Byte[] param_track4EncryptedData, System.Int32 param_track4EncryptedDataLength)
+        public MsrTrackData(System.Byte[] track1EncryptedData, System.Int32 track1EncryptedDataLength, System.Byte[] track2EncryptedData, System.Int32 track2EncryptedDataLength, System.Byte[] track3EncryptedData, System.Int32 track3EncryptedDataLength, System.Byte[] track4EncryptedData, System.Int32 track4EncryptedDataLength)
         {
         }
-        public MsrTrackData(System.Byte[] param_track1Data, System.Byte[] param_track2Data, System.Byte[] param_track3Data, System.Byte[] param_track4Data, System.Byte[] param_track1EncryptedData, System.Int32 param_track1EncryptedDataLength, System.Byte[] param_track2EncryptedData, System.Int32 param_track2EncryptedDataLength, System.Byte[] param_track3EncryptedData, System.Int32 param_track3EncryptedDataLength, System.Byte[] param_track4EncryptedData, System.Int32 param_track4EncryptedDataLength)
+        public MsrTrackData(System.Byte[] track1Data, System.Byte[] track2Data, System.Byte[] track3Data, System.Byte[] track4Data, System.Byte[] track1EncryptedData, System.Int32 track1EncryptedDataLength, System.Byte[] track2EncryptedData, System.Int32 track2EncryptedDataLength, System.Byte[] track3EncryptedData, System.Int32 track3EncryptedDataLength, System.Byte[] track4EncryptedData, System.Int32 track4EncryptedDataLength)
         {
         }
         public System.Byte[] Track1Data

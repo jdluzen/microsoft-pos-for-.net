@@ -2,9 +2,9 @@ namespace Microsoft.PointOfService
 {
     public enum GateStatus
     {
-        Closed,
-        Open,
-        Blocked,
-        Malfunction,
+        Closed = 1,
+        Open = 2,
+        Blocked = 3,
+        Malfunction = 4,
     }
 }

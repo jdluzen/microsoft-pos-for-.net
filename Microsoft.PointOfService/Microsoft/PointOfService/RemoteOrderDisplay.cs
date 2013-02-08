@@ -167,52 +167,52 @@ namespace Microsoft.PointOfService
         public virtual void ClearOutput()
         {
         }
-        public virtual void ClearVideo(Microsoft.PointOfService.DeviceUnits param_param_units, Microsoft.PointOfService.VideoAttributes param_param_attribute)
+        public virtual void ClearVideo(Microsoft.PointOfService.DeviceUnits units, Microsoft.PointOfService.VideoAttributes attribute)
         {
         }
-        public virtual void ClearVideoRegion(System.Int32 param_param_row, System.Int32 param_param_column, System.Int32 param_param_height, System.Int32 param_param_width, Microsoft.PointOfService.VideoAttributes param_param_attribute)
+        public virtual void ClearVideoRegion(System.Int32 row, System.Int32 column, System.Int32 height, System.Int32 width, Microsoft.PointOfService.VideoAttributes attribute)
         {
         }
-        public virtual void ControlClock(Microsoft.PointOfService.DeviceUnits param_param_units, Microsoft.PointOfService.ClockFunction param_param_clockFunction, System.Int32 param_param_clockId, System.Int32 param_param_hours, System.Int32 param_param_minutes, System.Int32 param_param_seconds, System.Int32 param_param_row, System.Int32 param_param_column, Microsoft.PointOfService.VideoAttributes param_param_attribute, Microsoft.PointOfService.ClockMode param_param_mode)
+        public virtual void ControlClock(Microsoft.PointOfService.DeviceUnits units, Microsoft.PointOfService.ClockFunction clockFunction, System.Int32 clockId, System.Int32 hours, System.Int32 minutes, System.Int32 seconds, System.Int32 row, System.Int32 column, Microsoft.PointOfService.VideoAttributes attribute, Microsoft.PointOfService.ClockMode mode)
         {
         }
-        public virtual void ControlCursor(Microsoft.PointOfService.DeviceUnits param_param_units, Microsoft.PointOfService.VideoCursorType param_param_cursorType)
+        public virtual void ControlCursor(Microsoft.PointOfService.DeviceUnits units, Microsoft.PointOfService.VideoCursorType cursorType)
         {
         }
-        public virtual void CopyVideoRegion(Microsoft.PointOfService.DeviceUnits param_param_units, System.Int32 param_param_row, System.Int32 param_param_column, System.Int32 param_param_height, System.Int32 param_param_width, System.Int32 param_param_targetRow, System.Int32 param_param_targetColumn)
+        public virtual void CopyVideoRegion(Microsoft.PointOfService.DeviceUnits units, System.Int32 row, System.Int32 column, System.Int32 height, System.Int32 width, System.Int32 targetRow, System.Int32 targetColumn)
         {
         }
-        public virtual void DisplayData(Microsoft.PointOfService.DeviceUnits param_param_units, System.Int32 param_param_row, System.Int32 param_param_column, Microsoft.PointOfService.VideoAttributes param_param_attribute, System.String param_param_data)
+        public virtual void DisplayData(Microsoft.PointOfService.DeviceUnits units, System.Int32 row, System.Int32 column, Microsoft.PointOfService.VideoAttributes attribute, System.String data)
         {
         }
-        public virtual void DrawBox(Microsoft.PointOfService.DeviceUnits param_param_units, System.Int32 param_param_row, System.Int32 param_param_column, System.Int32 param_param_height, System.Int32 param_param_width, Microsoft.PointOfService.VideoAttributes param_param_attribute, Microsoft.PointOfService.BorderType param_param_borderType)
+        public virtual void DrawBox(Microsoft.PointOfService.DeviceUnits units, System.Int32 row, System.Int32 column, System.Int32 height, System.Int32 width, Microsoft.PointOfService.VideoAttributes attribute, Microsoft.PointOfService.BorderType borderType)
         {
         }
-        public virtual void FreeVideoRegion(Microsoft.PointOfService.DeviceUnits param_param_units, System.Int32 param_param_bufferId)
+        public virtual void FreeVideoRegion(Microsoft.PointOfService.DeviceUnits units, System.Int32 bufferId)
         {
         }
-        public virtual void ResetVideo(Microsoft.PointOfService.DeviceUnits param_param_units)
+        public virtual void ResetVideo(Microsoft.PointOfService.DeviceUnits units)
         {
         }
-        public virtual void RestoreVideoRegion(Microsoft.PointOfService.DeviceUnits param_param_units, System.Int32 param_param_targetRow, System.Int32 param_param_targetColumn, System.Int32 param_param_bufferId)
+        public virtual void RestoreVideoRegion(Microsoft.PointOfService.DeviceUnits units, System.Int32 targetRow, System.Int32 targetColumn, System.Int32 bufferId)
         {
         }
-        public virtual void SaveVideoRegion(Microsoft.PointOfService.DeviceUnits param_param_units, System.Int32 param_param_row, System.Int32 param_param_column, System.Int32 param_param_height, System.Int32 param_param_width, System.Int32 param_param_bufferId)
+        public virtual void SaveVideoRegion(Microsoft.PointOfService.DeviceUnits units, System.Int32 row, System.Int32 column, System.Int32 height, System.Int32 width, System.Int32 bufferId)
         {
         }
-        public virtual void SelectCharacterSet(Microsoft.PointOfService.DeviceUnits param_param_units, System.Int32 param_param_characterSet)
+        public virtual void SelectCharacterSet(Microsoft.PointOfService.DeviceUnits units, System.Int32 characterSet)
         {
         }
-        public virtual void SetCursor(Microsoft.PointOfService.DeviceUnits param_param_units, System.Int32 param_param_row, System.Int32 param_param_column)
+        public virtual void SetCursor(Microsoft.PointOfService.DeviceUnits units, System.Int32 row, System.Int32 column)
         {
         }
-        public virtual void TransactionDisplay(Microsoft.PointOfService.DeviceUnits param_param_units, Microsoft.PointOfService.RemoteOrderDisplayTransaction param_param_transactionFunction)
+        public virtual void TransactionDisplay(Microsoft.PointOfService.DeviceUnits units, Microsoft.PointOfService.RemoteOrderDisplayTransaction transactionFunction)
         {
         }
-        public virtual void UpdateVideoRegionAttribute(Microsoft.PointOfService.DeviceUnits param_param_units, Microsoft.PointOfService.VideoAttributeCommand param_param_attributeFunction, System.Int32 param_param_column, System.Int32 param_param_height, System.Int32 param_param_width, Microsoft.PointOfService.VideoAttributes param_param_attribute)
+        public virtual void UpdateVideoRegionAttribute(Microsoft.PointOfService.DeviceUnits units, Microsoft.PointOfService.VideoAttributeCommand attributeFunction, System.Int32 column, System.Int32 height, System.Int32 width, Microsoft.PointOfService.VideoAttributes attribute)
         {
         }
-        public virtual void VideoSound(Microsoft.PointOfService.DeviceUnits param_param_units, System.Int32 param_param_frequency, System.Int32 param_param_duration, System.Int32 param_param_numberOfCycles, System.Int32 param_param_interSoundWait)
+        public virtual void VideoSound(Microsoft.PointOfService.DeviceUnits units, System.Int32 frequency, System.Int32 duration, System.Int32 numberOfCycles, System.Int32 interSoundWait)
         {
         }
     }

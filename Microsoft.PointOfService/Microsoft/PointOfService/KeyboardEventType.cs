@@ -2,7 +2,7 @@ namespace Microsoft.PointOfService
 {
     public enum KeyboardEventType
     {
-        Down,
-        DownUp,
+        Down = 1,
+        DownUp = 2,
     }
 }

@@ -140,23 +140,23 @@ namespace Microsoft.PointOfService
         public virtual void ClearInputProperties()
         {
         }
-        public virtual void BeginEftTransaction(Microsoft.PointOfService.PinPadSystem param_param_pinpadSystem, System.Int32 param_param_transactionHost)
+        public virtual void BeginEftTransaction(Microsoft.PointOfService.PinPadSystem pinpadSystem, System.Int32 transactionHost)
         {
         }
-        public virtual System.String ComputeMac(System.String param_param_inMsg)
+        public virtual System.String ComputeMac(System.String inMsg)
         {
             return null;
         }
         public virtual void EnablePinEntry()
         {
         }
-        public virtual void EndEftTransaction(Microsoft.PointOfService.EftTransactionCompletion param_param_completionCode)
+        public virtual void EndEftTransaction(Microsoft.PointOfService.EftTransactionCompletion completionCode)
         {
         }
-        public virtual void UpdateKey(System.Int32 param_param_keyNumber, System.String param_param_key)
+        public virtual void UpdateKey(System.Int32 keyNumber, System.String key)
         {
         }
-        public virtual void VerifyMac(System.String param_param_message)
+        public virtual void VerifyMac(System.String message)
         {
         }
     }

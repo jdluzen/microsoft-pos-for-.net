@@ -112,10 +112,10 @@ namespace Microsoft.PointOfService
         public virtual void RestartPos()
         {
         }
-        public virtual void StandbyPos(Microsoft.PointOfService.SystemStateChangeReason param_param_reason)
+        public virtual void StandbyPos(Microsoft.PointOfService.SystemStateChangeReason reason)
         {
         }
-        public virtual void SuspendPos(Microsoft.PointOfService.SystemStateChangeReason param_param_reason)
+        public virtual void SuspendPos(Microsoft.PointOfService.SystemStateChangeReason reason)
         {
         }
     }

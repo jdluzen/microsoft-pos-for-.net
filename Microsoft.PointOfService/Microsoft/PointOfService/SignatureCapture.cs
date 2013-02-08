@@ -72,7 +72,7 @@ namespace Microsoft.PointOfService
         public virtual void ClearInputProperties()
         {
         }
-        public virtual void BeginCapture(System.String param_param_formName)
+        public virtual void BeginCapture(System.String formName)
         {
         }
         public virtual void EndCapture()

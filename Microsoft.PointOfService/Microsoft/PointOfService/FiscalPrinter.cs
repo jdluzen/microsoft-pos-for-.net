@@ -525,7 +525,7 @@ namespace Microsoft.PointOfService
             add { }
             remove { }
         }
-        public virtual void BeginRemoval(System.Int32 param_param_timeout)
+        public virtual void BeginRemoval(System.Int32 timeout)
         {
         }
         public virtual void BeginTraining()
@@ -537,7 +537,7 @@ namespace Microsoft.PointOfService
         public virtual void EndFiscalDocument()
         {
         }
-        public virtual void EndFiscalReceipt(System.Boolean param_param_printHeader)
+        public virtual void EndFiscalReceipt(System.Boolean printHeader)
         {
         }
         public virtual void EndFixedOutput()
@@ -558,7 +558,7 @@ namespace Microsoft.PointOfService
         public virtual void EndTraining()
         {
         }
-        public virtual Microsoft.PointOfService.FiscalDataItem GetData(Microsoft.PointOfService.FiscalData param_param_dataItem, System.Int32 param_param_optArgs)
+        public virtual Microsoft.PointOfService.FiscalDataItem GetData(Microsoft.PointOfService.FiscalData dataItem, System.Int32 optArgs)
         {
             return new Microsoft.PointOfService.FiscalDataItem();
         }
@@ -566,90 +566,90 @@ namespace Microsoft.PointOfService
         {
             return new System.DateTime();
         }
-        public virtual System.String GetTotalizer(System.Int32 param_param_vatId, Microsoft.PointOfService.FiscalTotalizer param_param_optArgs)
+        public virtual System.String GetTotalizer(System.Int32 vatId, Microsoft.PointOfService.FiscalTotalizer optArgs)
         {
             return null;
         }
-        public virtual System.Int32 GetVatEntry(System.Int32 param_param_vatId, System.Int32 param_param_optArgs)
+        public virtual System.Int32 GetVatEntry(System.Int32 vatId, System.Int32 optArgs)
         {
             return 0;
         }
         public virtual void PrintDuplicateReceipt()
         {
         }
-        public virtual void PrintFiscalDocumentLine(System.String param_param_documentLine)
+        public virtual void PrintFiscalDocumentLine(System.String documentLine)
         {
         }
-        public virtual void PrintFixedOutput(System.Int32 param_param_documentType, System.Int32 param_param_lineNumber, System.String param_param_data)
+        public virtual void PrintFixedOutput(System.Int32 documentType, System.Int32 lineNumber, System.String data)
         {
         }
-        public virtual void PrintNormal(Microsoft.PointOfService.FiscalPrinterStations param_param_station, System.String param_param_data)
+        public virtual void PrintNormal(Microsoft.PointOfService.FiscalPrinterStations station, System.String data)
         {
         }
-        public virtual void PrintPeriodicTotalsReport(System.DateTime param_param_startingDate, System.DateTime param_param_endingDate)
+        public virtual void PrintPeriodicTotalsReport(System.DateTime startingDate, System.DateTime endingDate)
         {
         }
         public virtual void PrintPowerLossReport()
         {
         }
-        public virtual void PrintRecCash(System.Decimal param_param_amount)
+        public virtual void PrintRecCash(System.Decimal amount)
         {
         }
-        public virtual void PrintRecItem(System.String param_param_description, System.Decimal param_param_price, System.Int32 param_param_quantity, System.Int32 param_param_vatInfo, System.Decimal param_param_unitPrice, System.String param_param_unitName)
+        public virtual void PrintRecItem(System.String description, System.Decimal price, System.Int32 quantity, System.Int32 vatInfo, System.Decimal unitPrice, System.String unitName)
         {
         }
-        public virtual void PrintRecItemAdjustment(Microsoft.PointOfService.FiscalAdjustment param_param_adjustmentType, System.String param_param_description, System.Decimal param_param_amount, System.Int32 param_param_vatInfo)
+        public virtual void PrintRecItemAdjustment(Microsoft.PointOfService.FiscalAdjustment adjustmentType, System.String description, System.Decimal amount, System.Int32 vatInfo)
         {
         }
-        public virtual void PrintRecItemAdjustmentVoid(Microsoft.PointOfService.FiscalAdjustment param_param_adjustmentType, System.String param_param_description, System.Decimal param_param_amount, System.Int32 param_param_vatInfo)
+        public virtual void PrintRecItemAdjustmentVoid(Microsoft.PointOfService.FiscalAdjustment adjustmentType, System.String description, System.Decimal amount, System.Int32 vatInfo)
         {
         }
-        public virtual void PrintRecItemFuel(System.String param_param_description, System.Decimal param_param_price, System.Int32 param_param_quantity, System.Int32 param_param_vatInfo, System.Decimal param_param_unitPrice, System.String param_param_unitName, System.Decimal param_param_specialTax, System.String param_param_specialTaxName)
+        public virtual void PrintRecItemFuel(System.String description, System.Decimal price, System.Int32 quantity, System.Int32 vatInfo, System.Decimal unitPrice, System.String unitName, System.Decimal specialTax, System.String specialTaxName)
         {
         }
-        public virtual void PrintRecItemFuelVoid(System.String param_param_description, System.Decimal param_param_price, System.Int32 param_param_vatInfo, System.Decimal param_param_specialTax)
+        public virtual void PrintRecItemFuelVoid(System.String description, System.Decimal price, System.Int32 vatInfo, System.Decimal specialTax)
         {
         }
-        public virtual void PrintRecItemVoid(System.String param_param_description, System.Decimal param_param_price, System.Int32 param_param_quantity, System.Int32 param_param_vatInfo, System.Decimal param_param_unitPrice, System.String param_param_unitName)
+        public virtual void PrintRecItemVoid(System.String description, System.Decimal price, System.Int32 quantity, System.Int32 vatInfo, System.Decimal unitPrice, System.String unitName)
         {
         }
-        public virtual void PrintRecMessage(System.String param_param_message)
+        public virtual void PrintRecMessage(System.String message)
         {
         }
-        public virtual void PrintRecNotPaid(System.String param_param_description, System.Decimal param_param_amount)
+        public virtual void PrintRecNotPaid(System.String description, System.Decimal amount)
         {
         }
-        public virtual void PrintRecPackageAdjustment(Microsoft.PointOfService.FiscalAdjustmentType param_param_adjustmentType, System.String param_param_description, System.Collections.Generic.IEnumerable<Microsoft.PointOfService.VatInfo> param_param_vatAdjustments)
+        public virtual void PrintRecPackageAdjustment(Microsoft.PointOfService.FiscalAdjustmentType adjustmentType, System.String description, System.Collections.Generic.IEnumerable<Microsoft.PointOfService.VatInfo> vatAdjustments)
         {
         }
-        public virtual void PrintRecPackageAdjustVoid(Microsoft.PointOfService.FiscalAdjustmentType param_param_adjustmentType, System.Collections.Generic.IEnumerable<Microsoft.PointOfService.VatInfo> param_param_vatAdjustments)
+        public virtual void PrintRecPackageAdjustVoid(Microsoft.PointOfService.FiscalAdjustmentType adjustmentType, System.Collections.Generic.IEnumerable<Microsoft.PointOfService.VatInfo> vatAdjustments)
         {
         }
-        public virtual void PrintRecRefund(System.String param_param_description, System.Decimal param_param_amount, System.Int32 param_param_vatInfo)
+        public virtual void PrintRecRefund(System.String description, System.Decimal amount, System.Int32 vatInfo)
         {
         }
-        public virtual void PrintRecRefundVoid(System.String param_param_description, System.Decimal param_param_amount, System.Int32 param_param_vatInfo)
+        public virtual void PrintRecRefundVoid(System.String description, System.Decimal amount, System.Int32 vatInfo)
         {
         }
-        public virtual void PrintRecSubtotal(System.Decimal param_param_amount)
+        public virtual void PrintRecSubtotal(System.Decimal amount)
         {
         }
-        public virtual void PrintRecSubtotalAdjustment(Microsoft.PointOfService.FiscalAdjustment param_param_adjustmentType, System.String param_param_description, System.Decimal param_param_amount)
+        public virtual void PrintRecSubtotalAdjustment(Microsoft.PointOfService.FiscalAdjustment adjustmentType, System.String description, System.Decimal amount)
         {
         }
-        public virtual void PrintRecSubtotalAdjustVoid(Microsoft.PointOfService.FiscalAdjustment param_param_adjustmentType, System.Decimal param_param_amount)
+        public virtual void PrintRecSubtotalAdjustVoid(Microsoft.PointOfService.FiscalAdjustment adjustmentType, System.Decimal amount)
         {
         }
-        public virtual void PrintRecTaxId(System.String param_param_taxId)
+        public virtual void PrintRecTaxId(System.String taxId)
         {
         }
-        public virtual void PrintRecTotal(System.Decimal param_param_total, System.Decimal param_param_payment, System.String param_param_description)
+        public virtual void PrintRecTotal(System.Decimal total, System.Decimal payment, System.String description)
         {
         }
-        public virtual void PrintRecVoid(System.String param_param_description)
+        public virtual void PrintRecVoid(System.String description)
         {
         }
-        public virtual void PrintReport(Microsoft.PointOfService.ReportType param_param_reportType, System.String param_param_startNum, System.String param_param_endNum)
+        public virtual void PrintReport(Microsoft.PointOfService.ReportType reportType, System.String startNum, System.String endNum)
         {
         }
         public virtual void PrintXReport()
@@ -661,55 +661,55 @@ namespace Microsoft.PointOfService
         public virtual void ResetPrinter()
         {
         }
-        public virtual void SetCurrency(Microsoft.PointOfService.FiscalCurrency param_param_newCurrency)
+        public virtual void SetCurrency(Microsoft.PointOfService.FiscalCurrency newCurrency)
         {
         }
-        public virtual void SetDate(System.DateTime param_param_newDate)
+        public virtual void SetDate(System.DateTime newDate)
         {
         }
-        public virtual void SetHeaderLine(System.Int32 param_param_lineNumber, System.String param_param_text, System.Boolean param_param_doubleWidth)
+        public virtual void SetHeaderLine(System.Int32 lineNumber, System.String text, System.Boolean doubleWidth)
         {
         }
-        public virtual void SetPosId(System.String param_param_posId, System.String param_param_cashierId)
+        public virtual void SetPosId(System.String posId, System.String cashierId)
         {
         }
-        public virtual void SetStoreFiscalId(System.String param_param_id)
+        public virtual void SetStoreFiscalId(System.String id)
         {
         }
-        public virtual void SetTrailerLine(System.Int32 param_param_lineNumber, System.String param_param_text, System.Boolean param_param_doubleWidth)
+        public virtual void SetTrailerLine(System.Int32 lineNumber, System.String text, System.Boolean doubleWidth)
         {
         }
         public virtual void SetVatTable()
         {
         }
-        public virtual void SetVatValue(System.Int32 param_param_vatId, System.String param_param_vatValue)
+        public virtual void SetVatValue(System.Int32 vatId, System.String vatValue)
         {
         }
-        public virtual void VerifyItem(System.String param_param_itemName, System.Int32 param_param_vatId)
+        public virtual void VerifyItem(System.String itemName, System.Int32 vatId)
         {
         }
-        public virtual void PrintRecItemRefund(System.String param_param_description, System.Decimal param_param_amount, System.Int32 param_param_quantity, System.Int32 param_param_vatInfo, System.Decimal param_param_unitAmount, System.String param_param_unitName)
+        public virtual void PrintRecItemRefund(System.String description, System.Decimal amount, System.Int32 quantity, System.Int32 vatInfo, System.Decimal unitAmount, System.String unitName)
         {
         }
-        public virtual void PrintRecItemRefundVoid(System.String param_param_description, System.Decimal param_param_amount, System.Int32 param_param_quantity, System.Int32 param_param_vatInfo, System.Decimal param_param_unitAmount, System.String param_param_unitName)
+        public virtual void PrintRecItemRefundVoid(System.String description, System.Decimal amount, System.Int32 quantity, System.Int32 vatInfo, System.Decimal unitAmount, System.String unitName)
         {
         }
         public virtual void ClearOutput()
         {
         }
-        public virtual void BeginFiscalDocument(System.Int32 param_param_documentAmount)
+        public virtual void BeginFiscalDocument(System.Int32 documentAmount)
         {
         }
-        public virtual void BeginFiscalReceipt(System.Boolean param_param_printHeader)
+        public virtual void BeginFiscalReceipt(System.Boolean printHeader)
         {
         }
-        public virtual void BeginFixedOutput(Microsoft.PointOfService.FiscalReceiptStation param_param_station, System.Int32 param_param_documentType)
+        public virtual void BeginFixedOutput(Microsoft.PointOfService.FiscalReceiptStation station, System.Int32 documentType)
         {
         }
-        public virtual void BeginInsertion(System.Int32 param_param_timeout)
+        public virtual void BeginInsertion(System.Int32 timeout)
         {
         }
-        public virtual void BeginItemList(System.Int32 param_param_vatId)
+        public virtual void BeginItemList(System.Int32 vatId)
         {
         }
         public virtual void BeginNonFiscal()

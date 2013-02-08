@@ -20,7 +20,7 @@ namespace Microsoft.PointOfService
         public virtual void OpenGate()
         {
         }
-        public virtual void WaitForGateClose(System.Int32 param_param_timeout)
+        public virtual void WaitForGateClose(System.Int32 timeout)
         {
         }
     }

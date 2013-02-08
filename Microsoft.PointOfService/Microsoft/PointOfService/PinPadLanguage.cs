@@ -2,9 +2,9 @@ namespace Microsoft.PointOfService
 {
     public enum PinPadLanguage
     {
-        None,
-        One,
-        PinRestricted,
-        Unrestricted,
+        None = 1,
+        One = 2,
+        PinRestricted = 3,
+        Unrestricted = 4,
     }
 }

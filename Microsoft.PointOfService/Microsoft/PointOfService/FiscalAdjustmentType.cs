@@ -2,7 +2,7 @@ namespace Microsoft.PointOfService
 {
     public enum FiscalAdjustmentType
     {
-        Discount,
-        Surcharge,
+        Discount = 1,
+        Surcharge = 2,
     }
 }

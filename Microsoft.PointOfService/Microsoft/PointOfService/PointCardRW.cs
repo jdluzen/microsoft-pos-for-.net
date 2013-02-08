@@ -270,25 +270,25 @@ namespace Microsoft.PointOfService
         public virtual void ClearOutput()
         {
         }
-        public virtual void BeginInsertion(System.Int32 param_param_timeout)
+        public virtual void BeginInsertion(System.Int32 timeout)
         {
         }
-        public virtual void BeginRemoval(System.Int32 param_param_timeout)
+        public virtual void BeginRemoval(System.Int32 timeout)
         {
         }
         public virtual void CleanCard()
         {
         }
-        public virtual void ClearPrintWrite(Microsoft.PointOfService.PointCardAreas param_param_kind, System.Int32 param_param_horizontalPosition, System.Int32 param_param_verticalPosition, System.Int32 param_param_width, System.Int32 param_param_height)
+        public virtual void ClearPrintWrite(Microsoft.PointOfService.PointCardAreas kind, System.Int32 horizontalPosition, System.Int32 verticalPosition, System.Int32 width, System.Int32 height)
         {
         }
-        public virtual void PrintWrite(Microsoft.PointOfService.PointCardAreas param_param_kind, System.Int32 param_param_horizontalPosition, System.Int32 param_param_verticalPosition, System.String param_param_data)
+        public virtual void PrintWrite(Microsoft.PointOfService.PointCardAreas kind, System.Int32 horizontalPosition, System.Int32 verticalPosition, System.String data)
         {
         }
-        public virtual void RotatePrint(Microsoft.PointOfService.Rotation param_param_rotation)
+        public virtual void RotatePrint(Microsoft.PointOfService.Rotation rotation)
         {
         }
-        public virtual void ValidateData(System.String param_param_data)
+        public virtual void ValidateData(System.String data)
         {
         }
         public virtual void EndInsertion()

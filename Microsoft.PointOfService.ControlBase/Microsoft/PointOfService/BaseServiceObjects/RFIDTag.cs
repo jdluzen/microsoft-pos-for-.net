@@ -5,19 +5,19 @@ namespace Microsoft.PointOfService.BaseServiceObjects
         public RFIDTag()
         {
         }
-        public RFIDTag(System.Byte[] param_id)
+        public RFIDTag(System.Byte[] id)
         {
         }
-        public RFIDTag(System.Byte[] param_id, System.Byte[] param_data)
+        public RFIDTag(System.Byte[] id, System.Byte[] data)
         {
         }
-        public RFIDTag(System.Byte[] param_id, System.DateTime param_time)
+        public RFIDTag(System.Byte[] id, System.DateTime time)
         {
         }
-        public RFIDTag(System.Byte[] param_id, System.Byte[] param_data, System.DateTime param_time)
+        public RFIDTag(System.Byte[] id, System.Byte[] data, System.DateTime time)
         {
         }
-        public RFIDTag(Microsoft.PointOfService.BaseServiceObjects.RFIDTag param_tag)
+        public RFIDTag(Microsoft.PointOfService.BaseServiceObjects.RFIDTag tag)
         {
         }
         public System.Byte[] TagId

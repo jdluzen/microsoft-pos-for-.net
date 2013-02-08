@@ -245,23 +245,23 @@ namespace Microsoft.PointOfService
         public virtual void ClearInputProperties()
         {
         }
-        public virtual void AccessLog(System.Int32 param_param_sequenceNumber, Microsoft.PointOfService.TransactionLogType param_param_type, System.Int32 param_param_timeout)
+        public virtual void AccessLog(System.Int32 sequenceNumber, Microsoft.PointOfService.TransactionLogType type, System.Int32 timeout)
         {
         }
-        public virtual Microsoft.PointOfService.EVRWResult ActivateService(System.Int32 param_param_data, System.Object param_param_obj)
+        public virtual Microsoft.PointOfService.EVRWResult ActivateService(System.Int32 data, System.Object obj)
         {
             return new Microsoft.PointOfService.EVRWResult();
         }
-        public virtual void AddValue(System.Int32 param_param_sequenceNumber, System.Int32 param_param_timeout)
+        public virtual void AddValue(System.Int32 sequenceNumber, System.Int32 timeout)
         {
         }
-        public virtual void BeginDetection(Microsoft.PointOfService.BeginDetectionType param_param_type, System.Int32 param_param_timeout)
+        public virtual void BeginDetection(Microsoft.PointOfService.BeginDetectionType type, System.Int32 timeout)
         {
         }
-        public virtual void BeginRemoval(System.Int32 param_param_timeout)
+        public virtual void BeginRemoval(System.Int32 timeout)
         {
         }
-        public virtual void CancelValue(System.Int32 param_param_sequenceNumber, System.Int32 param_param_timeout)
+        public virtual void CancelValue(System.Int32 sequenceNumber, System.Int32 timeout)
         {
         }
         public virtual void CaptureCard()
@@ -279,23 +279,23 @@ namespace Microsoft.PointOfService
         public virtual void LockTerminal()
         {
         }
-        public virtual void ReadValue(System.Int32 param_param_sequenceNumber, System.Int32 param_param_timeout)
+        public virtual void ReadValue(System.Int32 sequenceNumber, System.Int32 timeout)
         {
         }
-        public virtual void SubtractValue(System.Int32 param_param_sequenceNumber, System.Int32 param_param_timeout)
+        public virtual void SubtractValue(System.Int32 sequenceNumber, System.Int32 timeout)
         {
         }
-        public virtual void TransactionAccess(Microsoft.PointOfService.TransactionControl param_param_control)
+        public virtual void TransactionAccess(Microsoft.PointOfService.TransactionControl control)
         {
         }
         public virtual void UnlockTerminal()
         {
         }
-        public virtual Microsoft.PointOfService.EVRWResult UpdateKey(System.Int32 param_param_data, System.Object param_param_obj)
+        public virtual Microsoft.PointOfService.EVRWResult UpdateKey(System.Int32 data, System.Object obj)
         {
             return new Microsoft.PointOfService.EVRWResult();
         }
-        public virtual void WriteValue(System.Int32 param_param_sequenceNumber, System.Int32 param_param_timeout)
+        public virtual void WriteValue(System.Int32 sequenceNumber, System.Int32 timeout)
         {
         }
     }

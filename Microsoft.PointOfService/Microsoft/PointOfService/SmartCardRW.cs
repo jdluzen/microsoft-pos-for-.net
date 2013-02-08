@@ -102,10 +102,10 @@ namespace Microsoft.PointOfService
         public virtual void ClearOutput()
         {
         }
-        public virtual void BeginInsertion(System.Int32 param_param_timeout)
+        public virtual void BeginInsertion(System.Int32 timeout)
         {
         }
-        public virtual void BeginRemoval(System.Int32 param_param_timeout)
+        public virtual void BeginRemoval(System.Int32 timeout)
         {
         }
         public virtual void EndInsertion()
@@ -114,11 +114,11 @@ namespace Microsoft.PointOfService
         public virtual void EndRemoval()
         {
         }
-        public virtual System.Byte[] ReadData(Microsoft.PointOfService.SmartCardReadAction param_param_action, System.Byte[] param_param_data)
+        public virtual System.Byte[] ReadData(Microsoft.PointOfService.SmartCardReadAction action, System.Byte[] data)
         {
             return null;
         }
-        public virtual void WriteData(Microsoft.PointOfService.SmartCardWriteAction param_param_action, System.Byte[] param_param_data)
+        public virtual void WriteData(Microsoft.PointOfService.SmartCardWriteAction action, System.Byte[] data)
         {
         }
     }

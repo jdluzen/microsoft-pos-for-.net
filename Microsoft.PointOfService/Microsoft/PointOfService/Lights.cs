@@ -21,10 +21,10 @@ namespace Microsoft.PointOfService
         {
             get { return 0; }
         }
-        public virtual void SwitchOff(System.Int32 param_param_lightNumber)
+        public virtual void SwitchOff(System.Int32 lightNumber)
         {
         }
-        public virtual void SwitchOn(System.Int32 param_param_lightNumber, System.Int32 param_param_blinkOnCycle, System.Int32 param_param_blinkOffCycle, Microsoft.PointOfService.LightColors param_param_color, Microsoft.PointOfService.LightAlarms param_param_alarm)
+        public virtual void SwitchOn(System.Int32 lightNumber, System.Int32 blinkOnCycle, System.Int32 blinkOffCycle, Microsoft.PointOfService.LightColors color, Microsoft.PointOfService.LightAlarms alarm)
         {
         }
     }

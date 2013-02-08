@@ -25,10 +25,10 @@ namespace Microsoft.PointOfService
         {
             get { return Microsoft.PointOfService.CoinDispenserStatus.OK; }
         }
-        public virtual void AdjustCashCounts(System.Collections.Generic.IEnumerable<Microsoft.PointOfService.CashCount> param_param_cashCounts)
+        public virtual void AdjustCashCounts(System.Collections.Generic.IEnumerable<Microsoft.PointOfService.CashCount> cashCounts)
         {
         }
-        public virtual void DispenseChange(System.Int32 param_param_amount)
+        public virtual void DispenseChange(System.Int32 amount)
         {
         }
         public virtual Microsoft.PointOfService.CashCounts ReadCashCounts()

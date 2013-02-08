@@ -5,10 +5,10 @@ namespace Microsoft.PointOfService
         public PosManagementException()
         {
         }
-        public PosManagementException(System.String param_param_message)
+        public PosManagementException(System.String message)
         {
         }
-        public PosManagementException(System.String param_param_message, System.Exception param_param_e)
+        public PosManagementException(System.String message, System.Exception e)
         {
         }
     }

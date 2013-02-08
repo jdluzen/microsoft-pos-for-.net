@@ -2,9 +2,9 @@ namespace Microsoft.PointOfService
 {
     public enum CoinDispenserStatus
     {
-        OK,
-        Empty,
-        NearEmpty,
-        Jam,
+        OK = 1,
+        Empty = 2,
+        NearEmpty = 3,
+        Jam = 4,
     }
 }

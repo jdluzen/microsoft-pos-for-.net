@@ -2,9 +2,9 @@ namespace Microsoft.PointOfService
 {
     public enum DisplayTextMode
     {
-        Normal,
-        Blink,
-        Reverse,
-        BlinkReverse,
+        Normal = 0,
+        Blink = 1,
+        Reverse = 2,
+        BlinkReverse = 3,
     }
 }

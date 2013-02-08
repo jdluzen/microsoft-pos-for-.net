@@ -2,7 +2,7 @@ namespace Microsoft.PointOfService.BaseServiceObjects
 {
     public class LineDisplayScreenMode : Microsoft.PointOfService.DisplayScreenMode
     {
-        public LineDisplayScreenMode(System.Int32 param_deviceColumns, System.Int32 param_deviceRows, System.Int32 param_glyphWidth, System.Int32 param_glyphHeight)
+        public LineDisplayScreenMode(System.Int32 deviceColumns, System.Int32 deviceRows, System.Int32 glyphWidth, System.Int32 glyphHeight)
         {
         }
         protected LineDisplayScreenMode()

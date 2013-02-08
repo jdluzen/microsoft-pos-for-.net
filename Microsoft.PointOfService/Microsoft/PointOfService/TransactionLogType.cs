@@ -2,7 +2,7 @@ namespace Microsoft.PointOfService
 {
     public enum TransactionLogType
     {
-        Reporting,
-        Settlement,
+        Reporting = 1,
+        Settlement = 2,
     }
 }

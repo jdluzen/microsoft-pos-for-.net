@@ -2,10 +2,10 @@ namespace Microsoft.PointOfService
 {
     public enum PinPadDisplay
     {
-        Unrestricted,
-        PinRestricted,
-        RestrictedList,
-        RestrictedOrder,
-        None,
+        Unrestricted = 1,
+        PinRestricted = 2,
+        RestrictedList = 3,
+        RestrictedOrder = 4,
+        None = 5,
     }
 }

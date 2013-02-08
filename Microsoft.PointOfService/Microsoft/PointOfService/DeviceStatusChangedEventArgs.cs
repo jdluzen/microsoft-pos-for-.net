@@ -2,7 +2,7 @@ namespace Microsoft.PointOfService
 {
     public class DeviceStatusChangedEventArgs : System.EventArgs
     {
-        public DeviceStatusChangedEventArgs(Microsoft.PointOfService.Device param_param_device)
+        public DeviceStatusChangedEventArgs(Microsoft.PointOfService.Device device)
         {
         }
         protected DeviceStatusChangedEventArgs()

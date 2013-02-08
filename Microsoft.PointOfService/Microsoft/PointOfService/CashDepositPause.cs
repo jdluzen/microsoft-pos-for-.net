@@ -2,7 +2,7 @@ namespace Microsoft.PointOfService
 {
     public enum CashDepositPause
     {
-        Pause,
-        Restart,
+        Pause = 11,
+        Restart = 12,
     }
 }

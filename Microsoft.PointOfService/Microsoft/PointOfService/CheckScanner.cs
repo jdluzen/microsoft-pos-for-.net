@@ -179,16 +179,16 @@ namespace Microsoft.PointOfService
         public virtual void ClearInputProperties()
         {
         }
-        public virtual void BeginInsertion(System.Int32 param_param_timeout)
+        public virtual void BeginInsertion(System.Int32 timeout)
         {
         }
-        public virtual void BeginRemoval(System.Int32 param_param_timeout)
+        public virtual void BeginRemoval(System.Int32 timeout)
         {
         }
-        public virtual void ClearImage(Microsoft.PointOfService.CheckImageClear param_param_by)
+        public virtual void ClearImage(Microsoft.PointOfService.CheckImageClear by)
         {
         }
-        public virtual void DefineCropArea(System.Int32 param_param_cropAreaId, System.Int32 param_param_x, System.Int32 param_param_y, System.Int32 param_param_width, System.Int32 param_param_height)
+        public virtual void DefineCropArea(System.Int32 cropAreaId, System.Int32 x, System.Int32 y, System.Int32 width, System.Int32 height)
         {
         }
         public virtual void EndInsertion()
@@ -197,13 +197,13 @@ namespace Microsoft.PointOfService
         public virtual void EndRemoval()
         {
         }
-        public virtual void RetrieveImage(System.Int32 param_param_cropAreaId)
+        public virtual void RetrieveImage(System.Int32 cropAreaId)
         {
         }
-        public virtual void RetrieveMemory(Microsoft.PointOfService.CheckImageLocate param_param_by)
+        public virtual void RetrieveMemory(Microsoft.PointOfService.CheckImageLocate by)
         {
         }
-        public virtual void StoreImage(System.Int32 param_param_cropAreaId)
+        public virtual void StoreImage(System.Int32 cropAreaId)
         {
         }
     }

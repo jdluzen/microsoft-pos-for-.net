@@ -2,7 +2,7 @@ namespace Microsoft.PointOfService
 {
     public enum FiscalSlipSelection
     {
-        FullLength,
-        Validation,
+        FullLength = 1,
+        Validation = 2,
     }
 }

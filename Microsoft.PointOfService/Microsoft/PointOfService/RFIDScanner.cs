@@ -114,19 +114,19 @@ namespace Microsoft.PointOfService
         public virtual void ClearInputProperties()
         {
         }
-        public virtual void DisableTag(System.Byte[] param_param_tagId, System.Int32 param_param_timeout, System.Byte[] param_param_password)
+        public virtual void DisableTag(System.Byte[] tagId, System.Int32 timeout, System.Byte[] password)
         {
         }
-        public virtual void ReadTags(Microsoft.PointOfService.RFIDReadOptions param_param_cmd, System.Byte[] param_param_filterId, System.Byte[] param_param_filterMask, System.Int32 param_param_start, System.Int32 param_param_length, System.Int32 param_param_timeout, System.Byte[] param_param_password)
+        public virtual void ReadTags(Microsoft.PointOfService.RFIDReadOptions cmd, System.Byte[] filterId, System.Byte[] filterMask, System.Int32 start, System.Int32 length, System.Int32 timeout, System.Byte[] password)
         {
         }
-        public virtual void WriteTagData(System.Byte[] param_param_tagId, System.Byte[] param_param_userData, System.Int32 param_param_start, System.Int32 param_param_timeout, System.Byte[] param_param_password)
+        public virtual void WriteTagData(System.Byte[] tagId, System.Byte[] userData, System.Int32 start, System.Int32 timeout, System.Byte[] password)
         {
         }
-        public virtual void WriteTagId(System.Byte[] param_param_sourceTagId, System.Byte[] param_param_destinationTagId, System.Int32 param_param_timeout, System.Byte[] param_param_password)
+        public virtual void WriteTagId(System.Byte[] sourceTagId, System.Byte[] destinationTagId, System.Int32 timeout, System.Byte[] password)
         {
         }
-        public virtual void LockTag(System.Byte[] param_param_tagId, System.Int32 param_param_timeout, System.Byte[] param_param_password)
+        public virtual void LockTag(System.Byte[] tagId, System.Int32 timeout, System.Byte[] password)
         {
         }
         public virtual void FirstTag()
@@ -138,10 +138,10 @@ namespace Microsoft.PointOfService
         public virtual void PreviousTag()
         {
         }
-        public virtual void StartReadTags(Microsoft.PointOfService.RFIDReadOptions param_param_cmd, System.Byte[] param_param_filterId, System.Byte[] param_param_filterMask, System.Int32 param_param_start, System.Int32 param_param_length, System.Byte[] param_param_password)
+        public virtual void StartReadTags(Microsoft.PointOfService.RFIDReadOptions cmd, System.Byte[] filterId, System.Byte[] filterMask, System.Int32 start, System.Int32 length, System.Byte[] password)
         {
         }
-        public virtual void StopReadTags(System.Byte[] param_param_password)
+        public virtual void StopReadTags(System.Byte[] password)
         {
         }
     }

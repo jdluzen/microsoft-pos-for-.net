@@ -2,9 +2,9 @@ namespace Microsoft.PointOfService
 {
     public enum MapMode
     {
-        Dots,
-        Twips,
-        English,
-        Metric,
+        Dots = 1,
+        Twips = 2,
+        English = 3,
+        Metric = 4,
     }
 }

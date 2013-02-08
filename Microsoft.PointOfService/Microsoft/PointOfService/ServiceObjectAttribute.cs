@@ -2,7 +2,7 @@ namespace Microsoft.PointOfService
 {
     public class ServiceObjectAttribute : System.Attribute, System.Runtime.InteropServices._Attribute
     {
-        public ServiceObjectAttribute(System.String param_param_type, System.String param_param_name, System.String param_param_description, System.Int32 param_param_uposVersionMajor, System.Int32 param_param_uposVersionMinor)
+        public ServiceObjectAttribute(System.String type, System.String name, System.String description, System.Int32 uposVersionMajor, System.Int32 uposVersionMinor)
         {
         }
         protected ServiceObjectAttribute()

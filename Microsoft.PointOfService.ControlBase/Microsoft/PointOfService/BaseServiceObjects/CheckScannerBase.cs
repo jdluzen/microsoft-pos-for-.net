@@ -147,16 +147,16 @@ namespace Microsoft.PointOfService.BaseServiceObjects
         public override void ClearInputProperties()
         {
         }
-        public override void BeginInsertion(System.Int32 param_timeout)
+        public override void BeginInsertion(System.Int32 timeout)
         {
         }
-        public override void BeginRemoval(System.Int32 param_timeout)
+        public override void BeginRemoval(System.Int32 timeout)
         {
         }
-        public override void ClearImage(Microsoft.PointOfService.CheckImageClear param_by)
+        public override void ClearImage(Microsoft.PointOfService.CheckImageClear by)
         {
         }
-        public override void DefineCropArea(System.Int32 param_cropAreaId, System.Int32 param_x, System.Int32 param_y, System.Int32 param_width, System.Int32 param_height)
+        public override void DefineCropArea(System.Int32 cropAreaId, System.Int32 x, System.Int32 y, System.Int32 width, System.Int32 height)
         {
         }
         public override void EndInsertion()
@@ -165,13 +165,13 @@ namespace Microsoft.PointOfService.BaseServiceObjects
         public override void EndRemoval()
         {
         }
-        public override void RetrieveImage(System.Int32 param_cropAreaId)
+        public override void RetrieveImage(System.Int32 cropAreaId)
         {
         }
-        public override void RetrieveMemory(Microsoft.PointOfService.CheckImageLocate param_by)
+        public override void RetrieveMemory(Microsoft.PointOfService.CheckImageLocate by)
         {
         }
-        public override void StoreImage(System.Int32 param_cropAreaId)
+        public override void StoreImage(System.Int32 cropAreaId)
         {
         }
     }

@@ -2,8 +2,8 @@ namespace Microsoft.PointOfService
 {
     public enum ErrorLocus
     {
-        Output,
-        Input,
-        InputData,
+        Output = 1,
+        Input = 2,
+        InputData = 3,
     }
 }

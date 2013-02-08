@@ -2,7 +2,7 @@ namespace Microsoft.PointOfService
 {
     public enum BeltDirection
     {
-        Backward,
-        Forward,
+        Backward = 1,
+        Forward = 2,
     }
 }

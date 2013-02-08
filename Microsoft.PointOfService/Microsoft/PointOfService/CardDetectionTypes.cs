@@ -2,8 +2,8 @@ namespace Microsoft.PointOfService
 {
     public enum CardDetectionTypes
     {
-        Entry,
-        Detect,
-        Capture,
+        Entry = 1,
+        Detect = 2,
+        Capture = 4,
     }
 }

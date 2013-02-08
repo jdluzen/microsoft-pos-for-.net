@@ -2,7 +2,7 @@ namespace Microsoft.PointOfService
 {
     public enum CashCountType
     {
-        Coin,
-        Bill,
+        Coin = 1,
+        Bill = 2,
     }
 }

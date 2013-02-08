@@ -2,7 +2,7 @@ namespace Microsoft.PointOfService
 {
     public class Statistic
     {
-        public Statistic(System.String param_param_name, System.Object param_param_value)
+        public Statistic(System.String name, System.Object value)
         {
         }
         protected Statistic()

@@ -72,7 +72,7 @@ namespace Microsoft.PointOfService.BasicServiceObjects
         public event Microsoft.PointOfService.DirectIOEventHandler DirectIOEvent;
         #pragma warning disable 67
         public event Microsoft.PointOfService.StatusUpdateEventHandler StatusUpdateEvent;
-        public override void Claim(System.Int32 param_timeout)
+        public override void Claim(System.Int32 timeout)
         {
         }
         public override void Close()
@@ -84,38 +84,38 @@ namespace Microsoft.PointOfService.BasicServiceObjects
         public override void ResetStatistics()
         {
         }
-        public override void ResetStatistics(Microsoft.PointOfService.StatisticCategories param_statistics)
+        public override void ResetStatistics(Microsoft.PointOfService.StatisticCategories statistics)
         {
         }
-        public override void ResetStatistics(System.String[] param_statistics)
+        public override void ResetStatistics(System.String[] statistics)
         {
         }
-        public override void ResetStatistic(System.String param_statistic)
+        public override void ResetStatistic(System.String statistic)
         {
         }
         public override System.String RetrieveStatistics()
         {
             return null;
         }
-        public override System.String RetrieveStatistics(Microsoft.PointOfService.StatisticCategories param_statistics)
+        public override System.String RetrieveStatistics(Microsoft.PointOfService.StatisticCategories statistics)
         {
             return null;
         }
-        public override System.String RetrieveStatistics(System.String[] param_statistics)
+        public override System.String RetrieveStatistics(System.String[] statistics)
         {
             return null;
         }
-        public override System.String RetrieveStatistic(System.String param_statistic)
+        public override System.String RetrieveStatistic(System.String statistic)
         {
             return null;
         }
-        public override void UpdateStatistic(System.String param_name, System.Object param_value)
+        public override void UpdateStatistic(System.String name, System.Object value)
         {
         }
-        public override void UpdateStatistics(Microsoft.PointOfService.Statistic[] param_statistics)
+        public override void UpdateStatistics(Microsoft.PointOfService.Statistic[] statistics)
         {
         }
-        public override void UpdateStatistics(Microsoft.PointOfService.StatisticCategories param_statistics, System.Object param_value)
+        public override void UpdateStatistics(Microsoft.PointOfService.StatisticCategories statistics, System.Object value)
         {
         }
         public virtual void Dispose()

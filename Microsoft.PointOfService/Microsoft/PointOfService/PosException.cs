@@ -5,7 +5,7 @@ namespace Microsoft.PointOfService
         protected PosException()
         {
         }
-        public override void GetObjectData(System.Runtime.Serialization.SerializationInfo param_param_info, System.Runtime.Serialization.StreamingContext param_param_context)
+        public override void GetObjectData(System.Runtime.Serialization.SerializationInfo info, System.Runtime.Serialization.StreamingContext context)
         {
         }
     }

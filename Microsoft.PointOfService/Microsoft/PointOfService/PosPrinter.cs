@@ -622,19 +622,19 @@ namespace Microsoft.PointOfService
         public virtual void ClearPrintArea()
         {
         }
-        public virtual void PageModePrint(Microsoft.PointOfService.PageModePrintControl param_param_control)
+        public virtual void PageModePrint(Microsoft.PointOfService.PageModePrintControl control)
         {
         }
-        public virtual void BeginInsertion(System.Int32 param_param_timeout)
+        public virtual void BeginInsertion(System.Int32 timeout)
         {
         }
-        public virtual void BeginRemoval(System.Int32 param_param_timeout)
+        public virtual void BeginRemoval(System.Int32 timeout)
         {
         }
-        public virtual void ChangePrintSide(Microsoft.PointOfService.PrinterSide param_param_side)
+        public virtual void ChangePrintSide(Microsoft.PointOfService.PrinterSide side)
         {
         }
-        public virtual void CutPaper(System.Int32 param_param_percentage)
+        public virtual void CutPaper(System.Int32 percentage)
         {
         }
         public virtual void EndInsertion()
@@ -643,40 +643,40 @@ namespace Microsoft.PointOfService
         public virtual void EndRemoval()
         {
         }
-        public virtual void MarkFeed(Microsoft.PointOfService.PrinterMarkFeeds param_param_type)
+        public virtual void MarkFeed(Microsoft.PointOfService.PrinterMarkFeeds type)
         {
         }
-        public virtual void PrintBarCode(Microsoft.PointOfService.PrinterStation param_param_station, System.String param_param_data, Microsoft.PointOfService.BarCodeSymbology param_param_symbology, System.Int32 param_param_height, System.Int32 param_param_width, System.Int32 param_param_alignment, Microsoft.PointOfService.BarCodeTextPosition param_param_textPosition)
+        public virtual void PrintBarCode(Microsoft.PointOfService.PrinterStation station, System.String data, Microsoft.PointOfService.BarCodeSymbology symbology, System.Int32 height, System.Int32 width, System.Int32 alignment, Microsoft.PointOfService.BarCodeTextPosition textPosition)
         {
         }
-        public virtual void PrintBitmap(Microsoft.PointOfService.PrinterStation param_param_station, System.String param_param_fileName, System.Int32 param_param_width, System.Int32 param_param_alignment)
+        public virtual void PrintBitmap(Microsoft.PointOfService.PrinterStation station, System.String fileName, System.Int32 width, System.Int32 alignment)
         {
         }
-        public virtual void PrintImmediate(Microsoft.PointOfService.PrinterStation param_param_station, System.String param_param_data)
+        public virtual void PrintImmediate(Microsoft.PointOfService.PrinterStation station, System.String data)
         {
         }
-        public virtual void PrintNormal(Microsoft.PointOfService.PrinterStation param_param_station, System.String param_param_data)
+        public virtual void PrintNormal(Microsoft.PointOfService.PrinterStation station, System.String data)
         {
         }
-        public virtual void PrintTwoNormal(Microsoft.PointOfService.PrinterStation param_param_stations, System.String param_param_data1, System.String param_param_data2)
+        public virtual void PrintTwoNormal(Microsoft.PointOfService.PrinterStation stations, System.String data1, System.String data2)
         {
         }
-        public virtual void RotatePrint(Microsoft.PointOfService.PrinterStation param_param_station, Microsoft.PointOfService.PrintRotation param_param_rotation)
+        public virtual void RotatePrint(Microsoft.PointOfService.PrinterStation station, Microsoft.PointOfService.PrintRotation rotation)
         {
         }
-        public virtual void SetBitmap(System.Int32 param_param_bitmapNumber, Microsoft.PointOfService.PrinterStation param_param_station, System.String param_param_fileName, System.Int32 param_param_width, System.Int32 param_param_alignment)
+        public virtual void SetBitmap(System.Int32 bitmapNumber, Microsoft.PointOfService.PrinterStation station, System.String fileName, System.Int32 width, System.Int32 alignment)
         {
         }
-        public virtual void SetLogo(Microsoft.PointOfService.PrinterLogoLocation param_param_location, System.String param_param_data)
+        public virtual void SetLogo(Microsoft.PointOfService.PrinterLogoLocation location, System.String data)
         {
         }
-        public virtual void TransactionPrint(Microsoft.PointOfService.PrinterStation param_param_station, Microsoft.PointOfService.PrinterTransactionControl param_param_control)
+        public virtual void TransactionPrint(Microsoft.PointOfService.PrinterStation station, Microsoft.PointOfService.PrinterTransactionControl control)
         {
         }
-        public virtual void ValidateData(Microsoft.PointOfService.PrinterStation param_param_station, System.String param_param_data)
+        public virtual void ValidateData(Microsoft.PointOfService.PrinterStation station, System.String data)
         {
         }
-        public virtual void PrintMemoryBitmap(Microsoft.PointOfService.PrinterStation param_param_station, System.Drawing.Bitmap param_param_data, System.Int32 param_param_width, System.Int32 param_param_alignment)
+        public virtual void PrintMemoryBitmap(Microsoft.PointOfService.PrinterStation station, System.Drawing.Bitmap data, System.Int32 width, System.Int32 alignment)
         {
         }
         public virtual void ClearOutput()

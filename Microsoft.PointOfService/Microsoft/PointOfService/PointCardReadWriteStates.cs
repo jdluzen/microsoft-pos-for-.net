@@ -2,7 +2,7 @@ namespace Microsoft.PointOfService
 {
     public struct PointCardReadWriteStates
     {
-        public PointCardReadWriteStates(Microsoft.PointOfService.PointCardReadWriteState param_param_track1, Microsoft.PointOfService.PointCardReadWriteState param_param_track2, Microsoft.PointOfService.PointCardReadWriteState param_param_track3, Microsoft.PointOfService.PointCardReadWriteState param_param_track4, Microsoft.PointOfService.PointCardReadWriteState param_param_track5, Microsoft.PointOfService.PointCardReadWriteState param_param_track6)
+        public PointCardReadWriteStates(Microsoft.PointOfService.PointCardReadWriteState track1, Microsoft.PointOfService.PointCardReadWriteState track2, Microsoft.PointOfService.PointCardReadWriteState track3, Microsoft.PointOfService.PointCardReadWriteState track4, Microsoft.PointOfService.PointCardReadWriteState track5, Microsoft.PointOfService.PointCardReadWriteState track6)
         {
         }
         public Microsoft.PointOfService.PointCardReadWriteState Track1
@@ -29,23 +29,23 @@ namespace Microsoft.PointOfService
         {
             get { return Microsoft.PointOfService.PointCardReadWriteState.Success; }
         }
-        public System.Boolean Equals(Microsoft.PointOfService.PointCardReadWriteStates param_param_states)
+        public System.Boolean Equals(Microsoft.PointOfService.PointCardReadWriteStates states)
         {
             return false;
         }
-        public override System.Boolean Equals(System.Object param_param_obj)
+        public override System.Boolean Equals(System.Object obj)
         {
             return false;
         }
-        public static System.Boolean Equals(Microsoft.PointOfService.PointCardReadWriteStates param_param_a, Microsoft.PointOfService.PointCardReadWriteStates param_param_b)
+        public static System.Boolean Equals(Microsoft.PointOfService.PointCardReadWriteStates a, Microsoft.PointOfService.PointCardReadWriteStates b)
         {
             return false;
         }
-        public static System.Boolean operator ==(Microsoft.PointOfService.PointCardReadWriteStates param_param_a, System.Object param_param_b)
+        public static System.Boolean operator ==(Microsoft.PointOfService.PointCardReadWriteStates a, System.Object b)
         {
             return false;
         }
-        public static System.Boolean operator !=(Microsoft.PointOfService.PointCardReadWriteStates param_param_a, System.Object param_param_b)
+        public static System.Boolean operator !=(Microsoft.PointOfService.PointCardReadWriteStates a, System.Object b)
         {
             return false;
         }

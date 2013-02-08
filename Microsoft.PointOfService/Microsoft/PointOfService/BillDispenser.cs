@@ -71,10 +71,10 @@ namespace Microsoft.PointOfService
         {
             get { return new Microsoft.PointOfService.CashUnits(); }
         }
-        public virtual void AdjustCashCounts(System.Collections.Generic.IEnumerable<Microsoft.PointOfService.CashCount> param_param_cashCounts)
+        public virtual void AdjustCashCounts(System.Collections.Generic.IEnumerable<Microsoft.PointOfService.CashCount> cashCounts)
         {
         }
-        public virtual void DispenseCash(System.Collections.Generic.IEnumerable<Microsoft.PointOfService.CashCount> param_param_cashCounts)
+        public virtual void DispenseCash(System.Collections.Generic.IEnumerable<Microsoft.PointOfService.CashCount> cashCounts)
         {
         }
         public virtual Microsoft.PointOfService.CashCounts ReadCashCounts()

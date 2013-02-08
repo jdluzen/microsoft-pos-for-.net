@@ -2,7 +2,7 @@ namespace Microsoft.PointOfService
 {
     public struct ServiceIndex
     {
-        public ServiceIndex(System.Int32 param_param_indexOfCoinAcceptor, System.Int32 param_param_indexOfCoinDispenser, System.Int32 param_param_indexOfBillAcceptor, System.Int32 param_param_indexOfBillDispenser)
+        public ServiceIndex(System.Int32 indexOfCoinAcceptor, System.Int32 indexOfCoinDispenser, System.Int32 indexOfBillAcceptor, System.Int32 indexOfBillDispenser)
         {
         }
         public System.Int32 IndexOfCoinAcceptor

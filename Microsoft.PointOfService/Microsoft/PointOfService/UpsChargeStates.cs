@@ -2,9 +2,9 @@ namespace Microsoft.PointOfService
 {
     public enum UpsChargeStates
     {
-        Full,
-        Warning,
-        Low,
-        Critical,
+        Full = 1,
+        Warning = 2,
+        Low = 4,
+        Critical = 8,
     }
 }

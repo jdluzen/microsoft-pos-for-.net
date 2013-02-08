@@ -53,7 +53,7 @@ namespace Microsoft.PointOfService
         {
             get { return false; }
         }
-        public System.Boolean IsDeviceInfoOf(Microsoft.PointOfService.PosCommon param_param_serviceObject)
+        public System.Boolean IsDeviceInfoOf(Microsoft.PointOfService.PosCommon serviceObject)
         {
             return false;
         }

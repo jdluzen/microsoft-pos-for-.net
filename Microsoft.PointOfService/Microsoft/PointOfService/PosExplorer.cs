@@ -5,7 +5,7 @@ namespace Microsoft.PointOfService
         public PosExplorer()
         {
         }
-        public PosExplorer(System.ComponentModel.ISynchronizeInvoke param_param_synchronizingObject)
+        public PosExplorer(System.ComponentModel.ISynchronizeInvoke synchronizingObject)
         {
         }
         public System.ComponentModel.ISynchronizeInvoke SynchronizingObject
@@ -28,11 +28,11 @@ namespace Microsoft.PointOfService
         public void Refresh()
         {
         }
-        public Microsoft.PointOfService.DeviceCollection GetDevices(System.String param_param_type)
+        public Microsoft.PointOfService.DeviceCollection GetDevices(System.String type)
         {
             return null;
         }
-        public Microsoft.PointOfService.DeviceCollection GetDevices(System.String param_param_type, Microsoft.PointOfService.DeviceCompatibilities param_param_compatibility)
+        public Microsoft.PointOfService.DeviceCollection GetDevices(System.String type, Microsoft.PointOfService.DeviceCompatibilities compatibility)
         {
             return null;
         }
@@ -40,19 +40,19 @@ namespace Microsoft.PointOfService
         {
             return null;
         }
-        public Microsoft.PointOfService.DeviceCollection GetDevices(Microsoft.PointOfService.DeviceCompatibilities param_param_compatibility)
+        public Microsoft.PointOfService.DeviceCollection GetDevices(Microsoft.PointOfService.DeviceCompatibilities compatibility)
         {
             return null;
         }
-        public Microsoft.PointOfService.DeviceInfo GetDevice(System.String param_param_type)
+        public Microsoft.PointOfService.DeviceInfo GetDevice(System.String type)
         {
             return null;
         }
-        public Microsoft.PointOfService.DeviceInfo GetDevice(System.String param_param_type, System.String param_param_logicalName)
+        public Microsoft.PointOfService.DeviceInfo GetDevice(System.String type, System.String logicalName)
         {
             return null;
         }
-        public Microsoft.PointOfService.PosDevice CreateInstance(Microsoft.PointOfService.DeviceInfo param_param_device)
+        public Microsoft.PointOfService.PosDevice CreateInstance(Microsoft.PointOfService.DeviceInfo device)
         {
             return null;
         }

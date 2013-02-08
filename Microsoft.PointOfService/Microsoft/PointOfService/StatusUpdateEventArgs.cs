@@ -2,7 +2,7 @@ namespace Microsoft.PointOfService
 {
     public class StatusUpdateEventArgs : Microsoft.PointOfService.PosEventArgs
     {
-        public StatusUpdateEventArgs(System.Int32 param_param_status)
+        public StatusUpdateEventArgs(System.Int32 status)
         {
         }
         protected StatusUpdateEventArgs()

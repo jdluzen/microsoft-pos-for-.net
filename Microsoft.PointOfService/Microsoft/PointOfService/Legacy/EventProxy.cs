@@ -5,21 +5,21 @@ namespace Microsoft.PointOfService.Legacy
         public EventProxy()
         {
         }
-        public System.Int32 ErrorEventBase(System.Int32 param_param_errorCode, System.Int32 param_param_errorCodeExtended, System.Int32 param_param_errorLocus, System.Int32 param_param_errorResponse)
+        public System.Int32 ErrorEventBase(System.Int32 errorCode, System.Int32 errorCodeExtended, System.Int32 errorLocus, System.Int32 errorResponse)
         {
             return 0;
         }
-        public void DataEventBase(System.Int32 param_param_data)
+        public void DataEventBase(System.Int32 data)
         {
         }
-        public void StatusUpdateEventBase(System.Int32 param_param_data)
+        public void StatusUpdateEventBase(System.Int32 data)
         {
         }
-        public Microsoft.PointOfService.DirectIOEventArgs DirectIOEventBase(Microsoft.PointOfService.DirectIOEventArgs param_param_ioEvent)
+        public Microsoft.PointOfService.DirectIOEventArgs DirectIOEventBase(Microsoft.PointOfService.DirectIOEventArgs ioEvent)
         {
             return null;
         }
-        public void OutputCompleteEventBase(System.Int32 param_param_outputId)
+        public void OutputCompleteEventBase(System.Int32 outputId)
         {
         }
     }

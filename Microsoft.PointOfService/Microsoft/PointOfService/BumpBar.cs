@@ -105,10 +105,10 @@ namespace Microsoft.PointOfService
         public virtual void ClearOutput()
         {
         }
-        public virtual void BumpBarSound(Microsoft.PointOfService.DeviceUnits param_param_units, System.Int32 param_param_frequency, System.Int32 param_param_duration, System.Int32 param_param_numberOfCycles, System.Int32 param_param_interSoundWait)
+        public virtual void BumpBarSound(Microsoft.PointOfService.DeviceUnits units, System.Int32 frequency, System.Int32 duration, System.Int32 numberOfCycles, System.Int32 interSoundWait)
         {
         }
-        public virtual void SetKeyTranslation(Microsoft.PointOfService.DeviceUnits param_param_units, System.Int32 param_param_scanCode, System.Int32 param_param_logicalKey)
+        public virtual void SetKeyTranslation(Microsoft.PointOfService.DeviceUnits units, System.Int32 scanCode, System.Int32 logicalKey)
         {
         }
     }

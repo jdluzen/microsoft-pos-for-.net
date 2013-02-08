@@ -38,50 +38,50 @@ namespace Microsoft.PointOfService
         public virtual void BeginTrans()
         {
         }
-        public virtual void ClaimFile(System.Int32 param_param_handle, System.Int32 param_param_timeout)
+        public virtual void ClaimFile(System.Int32 handle, System.Int32 timeout)
         {
         }
         public virtual void CommitTrans()
         {
         }
-        public virtual System.Int32 Create(System.String param_param_fileName, System.Int32 param_param_size, System.Boolean param_param_errorDetection)
+        public virtual System.Int32 Create(System.String fileName, System.Int32 size, System.Boolean errorDetection)
         {
             return 0;
         }
-        public virtual void Delete(System.String param_param_fileName)
+        public virtual void Delete(System.String fileName)
         {
         }
-        public virtual Microsoft.PointOfService.TotalsFileInfo Find(System.String param_param_fileName)
+        public virtual Microsoft.PointOfService.TotalsFileInfo Find(System.String fileName)
         {
             return new Microsoft.PointOfService.TotalsFileInfo();
         }
-        public virtual System.String FindByIndex(System.Int32 param_param_index)
+        public virtual System.String FindByIndex(System.Int32 index)
         {
             return null;
         }
-        public virtual System.Byte[] Read(System.Int32 param_param_handle, System.Int32 param_param_offset, System.Int32 param_param_count)
+        public virtual System.Byte[] Read(System.Int32 handle, System.Int32 offset, System.Int32 count)
         {
             return null;
         }
-        public virtual void RecalculateValidationData(System.Int32 param_param_handle)
+        public virtual void RecalculateValidationData(System.Int32 handle)
         {
         }
-        public virtual void ReleaseFile(System.Int32 param_param_handle)
+        public virtual void ReleaseFile(System.Int32 handle)
         {
         }
-        public virtual void Rename(System.Int32 param_param_handle, System.String param_param_newName)
+        public virtual void Rename(System.Int32 handle, System.String newName)
         {
         }
         public virtual void Rollback()
         {
         }
-        public virtual void SetAll(System.Int32 param_param_handle, System.Byte param_param_targetValue)
+        public virtual void SetAll(System.Int32 handle, System.Byte targetValue)
         {
         }
-        public virtual void ValidateData(System.Int32 param_param_handle)
+        public virtual void ValidateData(System.Int32 handle)
         {
         }
-        public virtual void Write(System.Int32 param_param_handle, System.Byte[] param_param_data, System.Int32 param_param_offset)
+        public virtual void Write(System.Int32 handle, System.Byte[] data, System.Int32 offset)
         {
         }
     }

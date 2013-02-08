@@ -2,10 +2,10 @@ namespace Microsoft.PointOfService
 {
     public class HardwareIdAttribute : System.Attribute, System.Runtime.InteropServices._Attribute
     {
-        public HardwareIdAttribute(System.String param_param_fromId, System.String param_param_toId)
+        public HardwareIdAttribute(System.String fromId, System.String toId)
         {
         }
-        public HardwareIdAttribute(System.String param_param_id)
+        public HardwareIdAttribute(System.String id)
         {
         }
         protected HardwareIdAttribute()

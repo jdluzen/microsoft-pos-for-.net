@@ -2,8 +2,8 @@ namespace Microsoft.PointOfService
 {
     public enum BorderType
     {
-        Single,
-        Double,
-        Solid,
+        Single = 1,
+        Double = 2,
+        Solid = 3,
     }
 }

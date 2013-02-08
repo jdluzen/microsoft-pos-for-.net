@@ -2,9 +2,9 @@ namespace Microsoft.PointOfService
 {
     public enum ClockMode
     {
-        Short,
-        Normal,
-        Hours12,
-        Hours24,
+        Short = 1,
+        Normal = 2,
+        Hours12 = 3,
+        Hours24 = 4,
     }
 }

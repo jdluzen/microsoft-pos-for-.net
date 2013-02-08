@@ -2,7 +2,7 @@ namespace Microsoft.PointOfService
 {
     public class OutputCompleteEventArgs : Microsoft.PointOfService.PosEventArgs
     {
-        public OutputCompleteEventArgs(System.Int32 param_param_outputId)
+        public OutputCompleteEventArgs(System.Int32 outputId)
         {
         }
         protected OutputCompleteEventArgs()

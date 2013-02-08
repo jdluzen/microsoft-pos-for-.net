@@ -86,19 +86,19 @@ namespace Microsoft.PointOfService
         public virtual void ClearInput()
         {
         }
-        public virtual void AdjustCashCounts(System.Collections.Generic.IEnumerable<Microsoft.PointOfService.CashCount> param_param_cashCounts)
+        public virtual void AdjustCashCounts(System.Collections.Generic.IEnumerable<Microsoft.PointOfService.CashCount> cashCounts)
         {
         }
         public virtual void BeginDeposit()
         {
         }
-        public virtual void EndDeposit(Microsoft.PointOfService.EndDepositAction param_param_success)
+        public virtual void EndDeposit(Microsoft.PointOfService.EndDepositAction success)
         {
         }
         public virtual void FixDeposit()
         {
         }
-        public virtual void PauseDeposit(Microsoft.PointOfService.CashDepositPause param_param_control)
+        public virtual void PauseDeposit(Microsoft.PointOfService.CashDepositPause control)
         {
         }
         public virtual Microsoft.PointOfService.CashCounts ReadCashCounts()

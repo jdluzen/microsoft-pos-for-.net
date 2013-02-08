@@ -2,7 +2,7 @@ namespace Microsoft.PointOfService
 {
     public enum DisplayReadBack
     {
-        None,
-        Single,
+        None = 0,
+        Single = 1,
     }
 }

@@ -2,7 +2,7 @@ namespace Microsoft.PointOfService.BaseServiceObjects
 {
     public class CheckScannerImage
     {
-        public CheckScannerImage(System.Drawing.Bitmap param_imageData, System.String param_fileId, System.Int32 param_fileIndex, System.String param_imageTagData)
+        public CheckScannerImage(System.Drawing.Bitmap imageData, System.String fileId, System.Int32 fileIndex, System.String imageTagData)
         {
         }
         protected CheckScannerImage()

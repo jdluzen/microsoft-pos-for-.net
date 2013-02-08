@@ -2,8 +2,8 @@ namespace Microsoft.PointOfService
 {
     public enum PowerReporting
     {
-        None,
-        Standard,
-        Advanced,
+        None = 0,
+        Standard = 1,
+        Advanced = 2,
     }
 }

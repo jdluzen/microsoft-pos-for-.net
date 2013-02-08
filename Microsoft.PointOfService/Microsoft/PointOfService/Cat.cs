@@ -179,31 +179,31 @@ namespace Microsoft.PointOfService
         public virtual void ClearOutput()
         {
         }
-        public virtual void AccessDailyLog(System.Int32 param_param_sequenceNumber, Microsoft.PointOfService.CatLogs param_param_type, System.Int32 param_param_timeout)
+        public virtual void AccessDailyLog(System.Int32 sequenceNumber, Microsoft.PointOfService.CatLogs type, System.Int32 timeout)
         {
         }
-        public virtual void AuthorizeCompletion(System.Int32 param_param_sequenceNumber, System.Decimal param_param_amount, System.Decimal param_param_taxOthers, System.Int32 param_param_timeout)
+        public virtual void AuthorizeCompletion(System.Int32 sequenceNumber, System.Decimal amount, System.Decimal taxOthers, System.Int32 timeout)
         {
         }
-        public virtual void AuthorizePreSales(System.Int32 param_param_sequenceNumber, System.Decimal param_param_amount, System.Decimal param_param_taxOthers, System.Int32 param_param_timeout)
+        public virtual void AuthorizePreSales(System.Int32 sequenceNumber, System.Decimal amount, System.Decimal taxOthers, System.Int32 timeout)
         {
         }
-        public virtual void AuthorizeRefund(System.Int32 param_param_sequenceNumber, System.Decimal param_param_amount, System.Decimal param_param_taxOthers, System.Int32 param_param_timeout)
+        public virtual void AuthorizeRefund(System.Int32 sequenceNumber, System.Decimal amount, System.Decimal taxOthers, System.Int32 timeout)
         {
         }
-        public virtual void AuthorizeSales(System.Int32 param_param_sequenceNumber, System.Decimal param_param_amount, System.Decimal param_param_taxOthers, System.Int32 param_param_timeout)
+        public virtual void AuthorizeSales(System.Int32 sequenceNumber, System.Decimal amount, System.Decimal taxOthers, System.Int32 timeout)
         {
         }
-        public virtual void AuthorizeVoid(System.Int32 param_param_sequenceNumber, System.Decimal param_param_amount, System.Decimal param_param_taxOthers, System.Int32 param_param_timeout)
+        public virtual void AuthorizeVoid(System.Int32 sequenceNumber, System.Decimal amount, System.Decimal taxOthers, System.Int32 timeout)
         {
         }
-        public virtual void AuthorizeVoidPreSales(System.Int32 param_param_sequenceNumber, System.Decimal param_param_amount, System.Decimal param_param_taxOthers, System.Int32 param_param_timeout)
+        public virtual void AuthorizeVoidPreSales(System.Int32 sequenceNumber, System.Decimal amount, System.Decimal taxOthers, System.Int32 timeout)
         {
         }
-        public virtual void CheckCard(System.Int32 param_param_sequenceNumber, System.Int32 param_param_timeout)
+        public virtual void CheckCard(System.Int32 sequenceNumber, System.Int32 timeout)
         {
         }
-        public virtual void CashDeposit(System.Int32 param_param_sequenceNumber, System.Decimal param_param_amount, System.Int32 param_param_timeout)
+        public virtual void CashDeposit(System.Int32 sequenceNumber, System.Decimal amount, System.Int32 timeout)
         {
         }
         public virtual void LockTerminal()

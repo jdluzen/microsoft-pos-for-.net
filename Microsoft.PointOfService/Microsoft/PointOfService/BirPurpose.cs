@@ -2,12 +2,12 @@ namespace Microsoft.PointOfService
 {
     public enum BirPurpose
     {
-        Unspecified,
-        Verify,
-        Identify,
-        Enroll,
-        EnrollForVerificationOnly,
-        EnrollForIdentificationOnly,
-        Audit,
+        Unspecified = 0,
+        Verify = 1,
+        Identify = 2,
+        Enroll = 3,
+        EnrollForVerificationOnly = 4,
+        EnrollForIdentificationOnly = 5,
+        Audit = 6,
     }
 }

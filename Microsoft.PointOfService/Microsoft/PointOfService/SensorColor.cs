@@ -2,11 +2,11 @@ namespace Microsoft.PointOfService
 {
     public enum SensorColor
     {
-        None,
-        Mono,
-        Grayscale,
-        Color16,
-        Color256,
-        Full,
+        None = 0,
+        Mono = 1,
+        Grayscale = 2,
+        Color16 = 3,
+        Color256 = 4,
+        Full = 5,
     }
 }

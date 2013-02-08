@@ -2,10 +2,10 @@ namespace Microsoft.PointOfService
 {
     public class BiometricsInformationRecord : System.Xml.Serialization.IXmlSerializable
     {
-        public BiometricsInformationRecord(System.Version param_param_version, Microsoft.PointOfService.BirDataTypes param_param_dataType, System.Int32 param_param_formatOwner, System.Int32 param_param_formatId, Microsoft.PointOfService.BirPurpose param_param_purpose, Microsoft.PointOfService.SensorType param_param_sensorType, System.Byte[] param_param_biometricDataBlock)
+        public BiometricsInformationRecord(System.Version version, Microsoft.PointOfService.BirDataTypes dataType, System.Int32 formatOwner, System.Int32 formatId, Microsoft.PointOfService.BirPurpose purpose, Microsoft.PointOfService.SensorType sensorType, System.Byte[] biometricDataBlock)
         {
         }
-        public BiometricsInformationRecord(Microsoft.PointOfService.BiometricsInformationRecord param_param_bir)
+        public BiometricsInformationRecord(Microsoft.PointOfService.BiometricsInformationRecord bir)
         {
         }
         protected BiometricsInformationRecord()
@@ -55,10 +55,10 @@ namespace Microsoft.PointOfService
         {
             return null;
         }
-        public virtual void ReadXml(System.Xml.XmlReader param_param_reader)
+        public virtual void ReadXml(System.Xml.XmlReader reader)
         {
         }
-        public virtual void WriteXml(System.Xml.XmlWriter param_param_writer)
+        public virtual void WriteXml(System.Xml.XmlWriter writer)
         {
         }
     }

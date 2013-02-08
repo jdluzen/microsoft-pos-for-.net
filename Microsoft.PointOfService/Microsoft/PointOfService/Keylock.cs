@@ -27,7 +27,7 @@ namespace Microsoft.PointOfService
         {
             get { return null; }
         }
-        public virtual void WaitForKeylockChange(System.Int32 param_param_keyPosition, System.Int32 param_param_timeout)
+        public virtual void WaitForKeylockChange(System.Int32 keyPosition, System.Int32 timeout)
         {
         }
     }
