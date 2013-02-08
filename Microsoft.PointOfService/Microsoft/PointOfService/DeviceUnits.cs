@@ -1,0 +1,38 @@
+namespace Microsoft.PointOfService
+{
+    public enum DeviceUnits
+    {
+        Unit1,
+        Unit2,
+        Unit3,
+        Unit4,
+        Unit5,
+        Unit6,
+        Unit7,
+        Unit8,
+        Unit9,
+        Unit10,
+        Unit11,
+        Unit12,
+        Unit13,
+        Unit14,
+        Unit15,
+        Unit16,
+        Unit17,
+        Unit18,
+        Unit19,
+        Unit20,
+        Unit21,
+        Unit22,
+        Unit23,
+        Unit24,
+        Unit25,
+        Unit26,
+        Unit27,
+        Unit28,
+        Unit29,
+        Unit30,
+        Unit31,
+        Unit32,
+    }
+}

@@ -1,0 +1,145 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>8.0.30703</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{D840D717-C382-4ED5-B4E3-7B650A0CA7CD}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Microsoft.PointOfService.ControlBase</RootNamespace>
+    <AssemblyName>Microsoft.PointOfService.ControlBase</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>..\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>..\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Microsoft\PointOfService\BaseServiceObjects\CardType.cs" />
+    <Compile Include="Microsoft\PointOfService\BaseServiceObjects\CashDrawerBase.cs" />
+    <Compile Include="Microsoft\PointOfService\BaseServiceObjects\CashDrawerProperties.cs" />
+    <Compile Include="Microsoft\PointOfService\BaseServiceObjects\Cell.cs" />
+    <Compile Include="Microsoft\PointOfService\BaseServiceObjects\CellType.cs" />
+    <Compile Include="Microsoft\PointOfService\BaseServiceObjects\CheckScannerBase.cs" />
+    <Compile Include="Microsoft\PointOfService\BaseServiceObjects\CheckScannerImage.cs" />
+    <Compile Include="Microsoft\PointOfService\BaseServiceObjects\CheckScannerProperties.cs" />
+    <Compile Include="Microsoft\PointOfService\BaseServiceObjects\ClearPrintAreaOperation.cs" />
+    <Compile Include="Microsoft\PointOfService\BaseServiceObjects\CutPaperOperation.cs" />
+    <Compile Include="Microsoft\PointOfService\BaseServiceObjects\DeviceStatistics.cs" />
+    <Compile Include="Microsoft\PointOfService\BaseServiceObjects\DrawerStateChangedEventArgs.cs" />
+    <Compile Include="Microsoft\PointOfService\BaseServiceObjects\DrawerStateChangedEventHandler.cs" />
+    <Compile Include="Microsoft\PointOfService\BaseServiceObjects\GetStatistic.cs" />
+    <Compile Include="Microsoft\PointOfService\BaseServiceObjects\LineDisplayBase.cs" />
+    <Compile Include="Microsoft\PointOfService\BaseServiceObjects\LineDisplayBitmap.cs" />
+    <Compile Include="Microsoft\PointOfService\BaseServiceObjects\LineDisplayProperties.cs" />
+    <Compile Include="Microsoft\PointOfService\BaseServiceObjects\LineDisplayScreenMode.cs" />
+    <Compile Include="Microsoft\PointOfService\BaseServiceObjects\MarkFeedOperation.cs" />
+    <Compile Include="Microsoft\PointOfService\BaseServiceObjects\MsrBase.cs" />
+    <Compile Include="Microsoft\PointOfService\BaseServiceObjects\MsrFieldData.cs" />
+    <Compile Include="Microsoft\PointOfService\BaseServiceObjects\MsrProperties.cs" />
+    <Compile Include="Microsoft\PointOfService\BaseServiceObjects\MsrTrackData.cs" />
+    <Compile Include="Microsoft\PointOfService\BaseServiceObjects\PageModePrintCollection.cs" />
+    <Compile Include="Microsoft\PointOfService\BaseServiceObjects\PageModePrintOperation.cs" />
+    <Compile Include="Microsoft\PointOfService\BaseServiceObjects\PinPadBase.cs" />
+    <Compile Include="Microsoft\PointOfService\BaseServiceObjects\PinPadProperties.cs" />
+    <Compile Include="Microsoft\PointOfService\BaseServiceObjects\PosKeyboardBase.cs" />
+    <Compile Include="Microsoft\PointOfService\BaseServiceObjects\PosKeyboardProperties.cs" />
+    <Compile Include="Microsoft\PointOfService\BaseServiceObjects\PosPrinterBase.cs" />
+    <Compile Include="Microsoft\PointOfService\BaseServiceObjects\PrintBarCodeOperation.cs" />
+    <Compile Include="Microsoft\PointOfService\BaseServiceObjects\PrintBitmapOperation.cs" />
+    <Compile Include="Microsoft\PointOfService\BaseServiceObjects\PrinterProperties.cs" />
+    <Compile Include="Microsoft\PointOfService\BaseServiceObjects\PrinterState.cs" />
+    <Compile Include="Microsoft\PointOfService\BaseServiceObjects\PrintMemoryBitmapOperation.cs" />
+    <Compile Include="Microsoft\PointOfService\BaseServiceObjects\PrintNormalOperation.cs" />
+    <Compile Include="Microsoft\PointOfService\BaseServiceObjects\PrintOperation.cs" />
+    <Compile Include="Microsoft\PointOfService\BaseServiceObjects\PrintOperationCollection.cs" />
+    <Compile Include="Microsoft\PointOfService\BaseServiceObjects\PrintResults.cs" />
+    <Compile Include="Microsoft\PointOfService\BaseServiceObjects\PrintTwoNormalOperation.cs" />
+    <Compile Include="Microsoft\PointOfService\BaseServiceObjects\RFIDDataEventArgs.cs" />
+    <Compile Include="Microsoft\PointOfService\BaseServiceObjects\RFIDScannerBase.cs" />
+    <Compile Include="Microsoft\PointOfService\BaseServiceObjects\RFIDScannerProperties.cs" />
+    <Compile Include="Microsoft\PointOfService\BaseServiceObjects\RFIDTag.cs" />
+    <Compile Include="Microsoft\PointOfService\BaseServiceObjects\RotatePrintCollection.cs" />
+    <Compile Include="Microsoft\PointOfService\BaseServiceObjects\RotatePrintOperation.cs" />
+    <Compile Include="Microsoft\PointOfService\BaseServiceObjects\ScannerBase.cs" />
+    <Compile Include="Microsoft\PointOfService\BaseServiceObjects\ScannerProperties.cs" />
+    <Compile Include="Microsoft\PointOfService\BaseServiceObjects\SetStatistic.cs" />
+    <Compile Include="Microsoft\PointOfService\BasicServiceObjects\BeltBasic.cs" />
+    <Compile Include="Microsoft\PointOfService\BasicServiceObjects\BillAcceptorBasic.cs" />
+    <Compile Include="Microsoft\PointOfService\BasicServiceObjects\BillDispenserBasic.cs" />
+    <Compile Include="Microsoft\PointOfService\BasicServiceObjects\BiometricsBasic.cs" />
+    <Compile Include="Microsoft\PointOfService\BasicServiceObjects\BumpBarBasic.cs" />
+    <Compile Include="Microsoft\PointOfService\BasicServiceObjects\CashChangerBasic.cs" />
+    <Compile Include="Microsoft\PointOfService\BasicServiceObjects\CashDrawerBasic.cs" />
+    <Compile Include="Microsoft\PointOfService\BasicServiceObjects\CatBasic.cs" />
+    <Compile Include="Microsoft\PointOfService\BasicServiceObjects\CheckScannerBasic.cs" />
+    <Compile Include="Microsoft\PointOfService\BasicServiceObjects\CoinAcceptorBasic.cs" />
+    <Compile Include="Microsoft\PointOfService\BasicServiceObjects\CoinDispenserBasic.cs" />
+    <Compile Include="Microsoft\PointOfService\BasicServiceObjects\CommonProperties.cs" />
+    <Compile Include="Microsoft\PointOfService\BasicServiceObjects\ElectronicJournalBasic.cs" />
+    <Compile Include="Microsoft\PointOfService\BasicServiceObjects\ElectronicValueRWBasic.cs" />
+    <Compile Include="Microsoft\PointOfService\BasicServiceObjects\FiscalPrinterBasic.cs" />
+    <Compile Include="Microsoft\PointOfService\BasicServiceObjects\GateBasic.cs" />
+    <Compile Include="Microsoft\PointOfService\BasicServiceObjects\HardTotalsBasic.cs" />
+    <Compile Include="Microsoft\PointOfService\BasicServiceObjects\ImageScannerBasic.cs" />
+    <Compile Include="Microsoft\PointOfService\BasicServiceObjects\ItemDispenserBasic.cs" />
+    <Compile Include="Microsoft\PointOfService\BasicServiceObjects\KeylockBasic.cs" />
+    <Compile Include="Microsoft\PointOfService\BasicServiceObjects\LightsBasic.cs" />
+    <Compile Include="Microsoft\PointOfService\BasicServiceObjects\LineDisplayBasic.cs" />
+    <Compile Include="Microsoft\PointOfService\BasicServiceObjects\MicrBasic.cs" />
+    <Compile Include="Microsoft\PointOfService\BasicServiceObjects\MotionSensorBasic.cs" />
+    <Compile Include="Microsoft\PointOfService\BasicServiceObjects\MsrBasic.cs" />
+    <Compile Include="Microsoft\PointOfService\BasicServiceObjects\PinPadBasic.cs" />
+    <Compile Include="Microsoft\PointOfService\BasicServiceObjects\PointCardRWBasic.cs" />
+    <Compile Include="Microsoft\PointOfService\BasicServiceObjects\PosKeyboardBasic.cs" />
+    <Compile Include="Microsoft\PointOfService\BasicServiceObjects\PosPowerBasic.cs" />
+    <Compile Include="Microsoft\PointOfService\BasicServiceObjects\PosPrinterBasic.cs" />
+    <Compile Include="Microsoft\PointOfService\BasicServiceObjects\RemoteOrderDisplayBasic.cs" />
+    <Compile Include="Microsoft\PointOfService\BasicServiceObjects\RFIDScannerBasic.cs" />
+    <Compile Include="Microsoft\PointOfService\BasicServiceObjects\ScaleBasic.cs" />
+    <Compile Include="Microsoft\PointOfService\BasicServiceObjects\ScannerBasic.cs" />
+    <Compile Include="Microsoft\PointOfService\BasicServiceObjects\SignatureCaptureBasic.cs" />
+    <Compile Include="Microsoft\PointOfService\BasicServiceObjects\SmartCardRWBasic.cs" />
+    <Compile Include="Microsoft\PointOfService\BasicServiceObjects\ToneIndicatorBasic.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Microsoft.PointOfService\Microsoft.PointOfService.csproj">
+      <Project>{DFB1EB90-5F3A-4C31-BEF6-7966DA3AE57D}</Project>
+      <Name>Microsoft.PointOfService</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup />
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

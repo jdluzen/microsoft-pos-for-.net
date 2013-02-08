@@ -20,6 +20,7 @@ using System.Collections.Generic;
 using System.Diagnostics;
 using System.IO;
 using System.Reflection;
+using System.Runtime.Versioning;
 
 namespace utils
 {
@@ -897,7 +898,18 @@ namespace utils
             delegatesig += formatTypeName(delegateinfo.ReturnType) + " " + type.Name + "(";
             delegatesig += formatParams(delegateinfo.GetParameters(), out outParams);
             delegatesig += ");";
+            Action<string> output = (s) =>
+            {
+                foreach (string line in this.output(s))
+                    writer.Write(line);
+            };
+            outputLevel--;
+            output(string.Format("namespace {0}\n{{", type.Namespace));
+            outputLevel++;
             output(delegatesig);
+            outputLevel--;
+            output("}");
+            outputLevel++;
         }
 
         /// <summary>
@@ -1038,7 +1050,8 @@ namespace utils
                 || attributeType == typeof(AssemblyKeyFileAttribute)
                 || attributeType == typeof(AssemblyKeyNameAttribute)
                 || attributeType == typeof(AssemblyDelaySignAttribute)
-                || attributeType == typeof(DebuggableAttribute))
+                || attributeType == typeof(DebuggableAttribute)
+                || attributeType == typeof(TargetFrameworkAttribute))//duplicate?
             {
                 return false;
             }
@@ -1104,14 +1117,14 @@ namespace utils
                             {
                                 if (argument.Value != null)
                                 {
-                                    foreach (object val in Enum.GetValues(argument.ArgumentType))
+                                    try
                                     {
-                                        if (val == argument.Value)
-                                        {
-                                            string name = Enum.GetName(argument.ArgumentType, val);
-
-                                            attributeSig += argument.ArgumentType + name;
-                                        }
+                                        object o = Enum.Parse(argument.ArgumentType, argument.Value.ToString());
+                                        attributeSig += argument.ArgumentType + "." + Enum.GetName(argument.ArgumentType, o);
+                                    }
+                                    catch (Exception ex)
+                                    {
+                                        //FIXME: log
                                     }
                                 }
                             }
@@ -1132,6 +1145,14 @@ namespace utils
 
                             attributeSig += fieldDelim;
                             argumentIndex++;
+                        }
+                        if (attribute.NamedArguments.Count > 0)
+                            attributeSig += ", ";
+                        for (int i = 0; i < attribute.NamedArguments.Count; i++)
+                        {
+                            attributeSig += string.Format("{0} = \"{1}\"", attribute.NamedArguments[i].MemberInfo.Name, attribute.NamedArguments[i].TypedValue.Value);//TODO: check enum and quotes
+                            if (i < attribute.NamedArguments.Count - 1)
+                                attributeSig += ", ";
                         }
 
                         attributeSig += ")";

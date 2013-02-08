@@ -1,0 +1,34 @@
+namespace Microsoft.PointOfService
+{
+    public enum FiscalData
+    {
+        CurrentTotal,
+        DailyTotal,
+        ReceiptNumber,
+        Refund,
+        NotPaid,
+        NumberOfVoidedReceipts,
+        ZReport,
+        GrandTotal,
+        PrinterId,
+        Firmware,
+        Restart,
+        RefundVoid,
+        NumberOfConfigurationBlocks,
+        NumberOfCurrencyBlocks,
+        NumberOfHeaderBlocks,
+        NumberOfResetBlocks,
+        NumberOfVatBlocks,
+        FiscalDocument,
+        FiscalDocumentVoid,
+        FiscalReceipt,
+        FiscalReceiptVoid,
+        NonFiscalDocument,
+        NonFiscalDocumentVoid,
+        NonFiscalReceipt,
+        SimplifiedInvoice,
+        Tender,
+        LineCount,
+        DescriptionLength,
+    }
+}

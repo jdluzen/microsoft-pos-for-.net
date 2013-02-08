@@ -1,0 +1,288 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>8.0.30703</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{DFB1EB90-5F3A-4C31-BEF6-7966DA3AE57D}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Microsoft.PointOfService</RootNamespace>
+    <AssemblyName>Microsoft.PointOfService</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>..\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>..\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Microsoft\PointOfService\BarCodeSymbology.cs" />
+    <Compile Include="Microsoft\PointOfService\BarCodeTextPosition.cs" />
+    <Compile Include="Microsoft\PointOfService\BeginDetectionType.cs" />
+    <Compile Include="Microsoft\PointOfService\Belt.cs" />
+    <Compile Include="Microsoft\PointOfService\BeltDirection.cs" />
+    <Compile Include="Microsoft\PointOfService\BeltMotionStatus.cs" />
+    <Compile Include="Microsoft\PointOfService\BillAcceptor.cs" />
+    <Compile Include="Microsoft\PointOfService\BillDispenser.cs" />
+    <Compile Include="Microsoft\PointOfService\BinaryConversion.cs" />
+    <Compile Include="Microsoft\PointOfService\Biometrics.cs" />
+    <Compile Include="Microsoft\PointOfService\BiometricsInformationRecord.cs" />
+    <Compile Include="Microsoft\PointOfService\BiometricsVerifyResult.cs" />
+    <Compile Include="Microsoft\PointOfService\BirDataTypes.cs" />
+    <Compile Include="Microsoft\PointOfService\BirPurpose.cs" />
+    <Compile Include="Microsoft\PointOfService\BorderType.cs" />
+    <Compile Include="Microsoft\PointOfService\BumpBar.cs" />
+    <Compile Include="Microsoft\PointOfService\CapSensorColors.cs" />
+    <Compile Include="Microsoft\PointOfService\CapSensorOrientations.cs" />
+    <Compile Include="Microsoft\PointOfService\CapSensorTypes.cs" />
+    <Compile Include="Microsoft\PointOfService\CardDetectionControl.cs" />
+    <Compile Include="Microsoft\PointOfService\CardDetectionTypes.cs" />
+    <Compile Include="Microsoft\PointOfService\CashChanger.cs" />
+    <Compile Include="Microsoft\PointOfService\CashChangerFullStatus.cs" />
+    <Compile Include="Microsoft\PointOfService\CashChangerStatus.cs" />
+    <Compile Include="Microsoft\PointOfService\CashCount.cs" />
+    <Compile Include="Microsoft\PointOfService\CashCounts.cs" />
+    <Compile Include="Microsoft\PointOfService\CashCountType.cs" />
+    <Compile Include="Microsoft\PointOfService\CashDepositAction.cs" />
+    <Compile Include="Microsoft\PointOfService\CashDepositPause.cs" />
+    <Compile Include="Microsoft\PointOfService\CashDepositStatus.cs" />
+    <Compile Include="Microsoft\PointOfService\CashDrawer.cs" />
+    <Compile Include="Microsoft\PointOfService\CashUnits.cs" />
+    <Compile Include="Microsoft\PointOfService\Cat.cs" />
+    <Compile Include="Microsoft\PointOfService\CatLogs.cs" />
+    <Compile Include="Microsoft\PointOfService\CharacterSetCapability.cs" />
+    <Compile Include="Microsoft\PointOfService\CheckColors.cs" />
+    <Compile Include="Microsoft\PointOfService\CheckCountryCode.cs" />
+    <Compile Include="Microsoft\PointOfService\CheckImageClear.cs" />
+    <Compile Include="Microsoft\PointOfService\CheckImageFormats.cs" />
+    <Compile Include="Microsoft\PointOfService\CheckImageLocate.cs" />
+    <Compile Include="Microsoft\PointOfService\CheckScanner.cs" />
+    <Compile Include="Microsoft\PointOfService\CheckType.cs" />
+    <Compile Include="Microsoft\PointOfService\ClockFunction.cs" />
+    <Compile Include="Microsoft\PointOfService\ClockMode.cs" />
+    <Compile Include="Microsoft\PointOfService\CoinAcceptor.cs" />
+    <Compile Include="Microsoft\PointOfService\CoinDispenser.cs" />
+    <Compile Include="Microsoft\PointOfService\CoinDispenserStatus.cs" />
+    <Compile Include="Microsoft\PointOfService\CompareFirmwareResult.cs" />
+    <Compile Include="Microsoft\PointOfService\ControlState.cs" />
+    <Compile Include="Microsoft\PointOfService\CreditTransactionType.cs" />
+    <Compile Include="Microsoft\PointOfService\DataEventArgs.cs" />
+    <Compile Include="Microsoft\PointOfService\DataEventHandler.cs" />
+    <Compile Include="Microsoft\PointOfService\DealingLogStatus.cs" />
+    <Compile Include="Microsoft\PointOfService\DepositStatus.cs" />
+    <Compile Include="Microsoft\PointOfService\DetectionState.cs" />
+    <Compile Include="Microsoft\PointOfService\Device.cs" />
+    <Compile Include="Microsoft\PointOfService\DeviceAuthenticationLevel.cs" />
+    <Compile Include="Microsoft\PointOfService\DeviceAuthenticationProtocol.cs" />
+    <Compile Include="Microsoft\PointOfService\DeviceChangedEventArgs.cs" />
+    <Compile Include="Microsoft\PointOfService\DeviceChangedEventHandler.cs" />
+    <Compile Include="Microsoft\PointOfService\DeviceCollection.cs" />
+    <Compile Include="Microsoft\PointOfService\DeviceCompatibilities.cs" />
+    <Compile Include="Microsoft\PointOfService\DeviceErrorEventArgs.cs" />
+    <Compile Include="Microsoft\PointOfService\DeviceErrorEventHandler.cs" />
+    <Compile Include="Microsoft\PointOfService\DeviceInfo.cs" />
+    <Compile Include="Microsoft\PointOfService\DevicePlugAndPlay.cs" />
+    <Compile Include="Microsoft\PointOfService\DeviceStatusChangedEventArgs.cs" />
+    <Compile Include="Microsoft\PointOfService\DeviceStatusChangedEventHandler.cs" />
+    <Compile Include="Microsoft\PointOfService\DeviceType.cs" />
+    <Compile Include="Microsoft\PointOfService\DeviceUnits.cs" />
+    <Compile Include="Microsoft\PointOfService\DirectIOData.cs" />
+    <Compile Include="Microsoft\PointOfService\DirectIOEventArgs.cs" />
+    <Compile Include="Microsoft\PointOfService\DirectIOEventHandler.cs" />
+    <Compile Include="Microsoft\PointOfService\DisplayBlink.cs" />
+    <Compile Include="Microsoft\PointOfService\DisplayCursors.cs" />
+    <Compile Include="Microsoft\PointOfService\DisplayMarqueeFormat.cs" />
+    <Compile Include="Microsoft\PointOfService\DisplayMarqueeType.cs" />
+    <Compile Include="Microsoft\PointOfService\DisplayReadBack.cs" />
+    <Compile Include="Microsoft\PointOfService\DisplayReverse.cs" />
+    <Compile Include="Microsoft\PointOfService\DisplayScreenMode.cs" />
+    <Compile Include="Microsoft\PointOfService\DisplayScrollText.cs" />
+    <Compile Include="Microsoft\PointOfService\DisplaySetDescriptor.cs" />
+    <Compile Include="Microsoft\PointOfService\DisplayTextMode.cs" />
+    <Compile Include="Microsoft\PointOfService\EftTransactionCompletion.cs" />
+    <Compile Include="Microsoft\PointOfService\EftTransactionType.cs" />
+    <Compile Include="Microsoft\PointOfService\ElectronicJournal.cs" />
+    <Compile Include="Microsoft\PointOfService\ElectronicJournalStations.cs" />
+    <Compile Include="Microsoft\PointOfService\ElectronicValueRW.cs" />
+    <Compile Include="Microsoft\PointOfService\EncryptionAlgorithm.cs" />
+    <Compile Include="Microsoft\PointOfService\EndDepositAction.cs" />
+    <Compile Include="Microsoft\PointOfService\ErrorCode.cs" />
+    <Compile Include="Microsoft\PointOfService\ErrorLocus.cs" />
+    <Compile Include="Microsoft\PointOfService\ErrorResponse.cs" />
+    <Compile Include="Microsoft\PointOfService\EVRWResult.cs" />
+    <Compile Include="Microsoft\PointOfService\FiscalAdjustment.cs" />
+    <Compile Include="Microsoft\PointOfService\FiscalAdjustmentType.cs" />
+    <Compile Include="Microsoft\PointOfService\FiscalContractorId.cs" />
+    <Compile Include="Microsoft\PointOfService\FiscalCountryCodes.cs" />
+    <Compile Include="Microsoft\PointOfService\FiscalCurrency.cs" />
+    <Compile Include="Microsoft\PointOfService\FiscalData.cs" />
+    <Compile Include="Microsoft\PointOfService\FiscalDataItem.cs" />
+    <Compile Include="Microsoft\PointOfService\FiscalDateType.cs" />
+    <Compile Include="Microsoft\PointOfService\FiscalErrorLevel.cs" />
+    <Compile Include="Microsoft\PointOfService\FiscalMessageType.cs" />
+    <Compile Include="Microsoft\PointOfService\FiscalPrinter.cs" />
+    <Compile Include="Microsoft\PointOfService\FiscalPrinterState.cs" />
+    <Compile Include="Microsoft\PointOfService\FiscalPrinterStations.cs" />
+    <Compile Include="Microsoft\PointOfService\FiscalReceiptStation.cs" />
+    <Compile Include="Microsoft\PointOfService\FiscalReceiptType.cs" />
+    <Compile Include="Microsoft\PointOfService\FiscalSlipSelection.cs" />
+    <Compile Include="Microsoft\PointOfService\FiscalTotalizer.cs" />
+    <Compile Include="Microsoft\PointOfService\FiscalTotalizerType.cs" />
+    <Compile Include="Microsoft\PointOfService\FrameType.cs" />
+    <Compile Include="Microsoft\PointOfService\Gate.cs" />
+    <Compile Include="Microsoft\PointOfService\GateStatus.cs" />
+    <Compile Include="Microsoft\PointOfService\HardTotals.cs" />
+    <Compile Include="Microsoft\PointOfService\HardwareIdAttribute.cs" />
+    <Compile Include="Microsoft\PointOfService\HealthCheckLevel.cs" />
+    <Compile Include="Microsoft\PointOfService\IDeviceEnumeration.cs" />
+    <Compile Include="Microsoft\PointOfService\IDeviceEnumerationPnp.cs" />
+    <Compile Include="Microsoft\PointOfService\ILegacyControlObject.cs" />
+    <Compile Include="Microsoft\PointOfService\ImageMemoryStatus.cs" />
+    <Compile Include="Microsoft\PointOfService\ImageMode.cs" />
+    <Compile Include="Microsoft\PointOfService\ImageQuality.cs" />
+    <Compile Include="Microsoft\PointOfService\ImageScanner.cs" />
+    <Compile Include="Microsoft\PointOfService\ItemDispenser.cs" />
+    <Compile Include="Microsoft\PointOfService\ItemDispenserStatus.cs" />
+    <Compile Include="Microsoft\PointOfService\KeyboardEventType.cs" />
+    <Compile Include="Microsoft\PointOfService\KeyEvent.cs" />
+    <Compile Include="Microsoft\PointOfService\Keylock.cs" />
+    <Compile Include="Microsoft\PointOfService\KeylockType.cs" />
+    <Compile Include="Microsoft\PointOfService\Legacy\EventProxy.cs" />
+    <Compile Include="Microsoft\PointOfService\LightAlarms.cs" />
+    <Compile Include="Microsoft\PointOfService\LightColors.cs" />
+    <Compile Include="Microsoft\PointOfService\Lights.cs" />
+    <Compile Include="Microsoft\PointOfService\LineDisplay.cs" />
+    <Compile Include="Microsoft\PointOfService\Logger.cs" />
+    <Compile Include="Microsoft\PointOfService\LogState.cs" />
+    <Compile Include="Microsoft\PointOfService\Management\ComExplorer.cs" />
+    <Compile Include="Microsoft\PointOfService\MapMode.cs" />
+    <Compile Include="Microsoft\PointOfService\MarkerType.cs" />
+    <Compile Include="Microsoft\PointOfService\Micr.cs" />
+    <Compile Include="Microsoft\PointOfService\MotionSensor.cs" />
+    <Compile Include="Microsoft\PointOfService\Msr.cs" />
+    <Compile Include="Microsoft\PointOfService\MsrErrorReporting.cs" />
+    <Compile Include="Microsoft\PointOfService\MsrTracks.cs" />
+    <Compile Include="Microsoft\PointOfService\OutputCompleteEventArgs.cs" />
+    <Compile Include="Microsoft\PointOfService\OutputCompleteEventHandler.cs" />
+    <Compile Include="Microsoft\PointOfService\PageModeDescriptors.cs" />
+    <Compile Include="Microsoft\PointOfService\PageModePrintControl.cs" />
+    <Compile Include="Microsoft\PointOfService\PageModePrintDirection.cs" />
+    <Compile Include="Microsoft\PointOfService\PaymentCondition.cs" />
+    <Compile Include="Microsoft\PointOfService\PaymentMedia.cs" />
+    <Compile Include="Microsoft\PointOfService\PinEntryStatus.cs" />
+    <Compile Include="Microsoft\PointOfService\PinPad.cs" />
+    <Compile Include="Microsoft\PointOfService\PinPadDisplay.cs" />
+    <Compile Include="Microsoft\PointOfService\PinPadLanguage.cs" />
+    <Compile Include="Microsoft\PointOfService\PinPadMessage.cs" />
+    <Compile Include="Microsoft\PointOfService\PinPadSystem.cs" />
+    <Compile Include="Microsoft\PointOfService\PointCardAreas.cs" />
+    <Compile Include="Microsoft\PointOfService\PointCardReadWriteState.cs" />
+    <Compile Include="Microsoft\PointOfService\PointCardReadWriteStates.cs" />
+    <Compile Include="Microsoft\PointOfService\PointCardReceiveLengths.cs" />
+    <Compile Include="Microsoft\PointOfService\PointCardRW.cs" />
+    <Compile Include="Microsoft\PointOfService\PointCardRWTracks.cs" />
+    <Compile Include="Microsoft\PointOfService\PointCardState.cs" />
+    <Compile Include="Microsoft\PointOfService\PosAssemblyAttribute.cs" />
+    <Compile Include="Microsoft\PointOfService\PosCommon.cs" />
+    <Compile Include="Microsoft\PointOfService\PosControlException.cs" />
+    <Compile Include="Microsoft\PointOfService\PosDevice.cs" />
+    <Compile Include="Microsoft\PointOfService\PosEventArgs.cs" />
+    <Compile Include="Microsoft\PointOfService\PosException.cs" />
+    <Compile Include="Microsoft\PointOfService\PosExplorer.cs" />
+    <Compile Include="Microsoft\PointOfService\PosKeyboard.cs" />
+    <Compile Include="Microsoft\PointOfService\PosLibraryException.cs" />
+    <Compile Include="Microsoft\PointOfService\PosManagementException.cs" />
+    <Compile Include="Microsoft\PointOfService\PosPower.cs" />
+    <Compile Include="Microsoft\PointOfService\PosPrinter.cs" />
+    <Compile Include="Microsoft\PointOfService\PowerNotification.cs" />
+    <Compile Include="Microsoft\PointOfService\PowerReporting.cs" />
+    <Compile Include="Microsoft\PointOfService\PowerSource.cs" />
+    <Compile Include="Microsoft\PointOfService\PowerState.cs" />
+    <Compile Include="Microsoft\PointOfService\PrinterCartridgeNotify.cs" />
+    <Compile Include="Microsoft\PointOfService\PrinterCartridgeSensors.cs" />
+    <Compile Include="Microsoft\PointOfService\PrinterCartridgeStates.cs" />
+    <Compile Include="Microsoft\PointOfService\PrinterColors.cs" />
+    <Compile Include="Microsoft\PointOfService\PrinterErrorLevel.cs" />
+    <Compile Include="Microsoft\PointOfService\PrinterLogoLocation.cs" />
+    <Compile Include="Microsoft\PointOfService\PrinterMarkFeeds.cs" />
+    <Compile Include="Microsoft\PointOfService\PrinterSide.cs" />
+    <Compile Include="Microsoft\PointOfService\PrinterStation.cs" />
+    <Compile Include="Microsoft\PointOfService\PrinterTransactionControl.cs" />
+    <Compile Include="Microsoft\PointOfService\PrintRotation.cs" />
+    <Compile Include="Microsoft\PointOfService\RangeOfCharacters.cs" />
+    <Compile Include="Microsoft\PointOfService\RemoteOrderDisplay.cs" />
+    <Compile Include="Microsoft\PointOfService\RemoteOrderDisplayEventTypes.cs" />
+    <Compile Include="Microsoft\PointOfService\RemoteOrderDisplayTransaction.cs" />
+    <Compile Include="Microsoft\PointOfService\ReportType.cs" />
+    <Compile Include="Microsoft\PointOfService\RFIDProtocols.cs" />
+    <Compile Include="Microsoft\PointOfService\RFIDReadOptions.cs" />
+    <Compile Include="Microsoft\PointOfService\RFIDScanner.cs" />
+    <Compile Include="Microsoft\PointOfService\Rotation.cs" />
+    <Compile Include="Microsoft\PointOfService\Scale.cs" />
+    <Compile Include="Microsoft\PointOfService\Scanner.cs" />
+    <Compile Include="Microsoft\PointOfService\SensorColor.cs" />
+    <Compile Include="Microsoft\PointOfService\SensorOrientation.cs" />
+    <Compile Include="Microsoft\PointOfService\SensorType.cs" />
+    <Compile Include="Microsoft\PointOfService\ServiceIndex.cs" />
+    <Compile Include="Microsoft\PointOfService\ServiceObjectAttribute.cs" />
+    <Compile Include="Microsoft\PointOfService\SignatureCapture.cs" />
+    <Compile Include="Microsoft\PointOfService\SmartCardInterfaceModes.cs" />
+    <Compile Include="Microsoft\PointOfService\SmartCardIsoEmvModes.cs" />
+    <Compile Include="Microsoft\PointOfService\SmartCardReadAction.cs" />
+    <Compile Include="Microsoft\PointOfService\SmartCardRW.cs" />
+    <Compile Include="Microsoft\PointOfService\SmartCardTransmissionProtocols.cs" />
+    <Compile Include="Microsoft\PointOfService\SmartCardWriteAction.cs" />
+    <Compile Include="Microsoft\PointOfService\Statistic.cs" />
+    <Compile Include="Microsoft\PointOfService\StatisticCategories.cs" />
+    <Compile Include="Microsoft\PointOfService\StatusNotify.cs" />
+    <Compile Include="Microsoft\PointOfService\StatusUpdateEventArgs.cs" />
+    <Compile Include="Microsoft\PointOfService\StatusUpdateEventHandler.cs" />
+    <Compile Include="Microsoft\PointOfService\SystemStateChangeReason.cs" />
+    <Compile Include="Microsoft\PointOfService\ToneIndicator.cs" />
+    <Compile Include="Microsoft\PointOfService\TotalsFileInfo.cs" />
+    <Compile Include="Microsoft\PointOfService\TransactionControl.cs" />
+    <Compile Include="Microsoft\PointOfService\TransactionLogType.cs" />
+    <Compile Include="Microsoft\PointOfService\UpsChargeStates.cs" />
+    <Compile Include="Microsoft\PointOfService\VatInfo.cs" />
+    <Compile Include="Microsoft\PointOfService\VideoAttributeCommand.cs" />
+    <Compile Include="Microsoft\PointOfService\VideoAttributes.cs" />
+    <Compile Include="Microsoft\PointOfService\VideoCursorType.cs" />
+    <Compile Include="Microsoft\PointOfService\VideoMode.cs" />
+    <Compile Include="Microsoft\PointOfService\WeightUnit.cs" />
+    <Compile Include="Microsoft\PointOfService\WriteTagSections.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup />
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
