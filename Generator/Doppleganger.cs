@@ -15,13 +15,11 @@
  * limitations under the License.
  */
 using System;
-using System.Diagnostics;
-using System.IO;
-
-using System.Reflection;
 using System.Collections;
 using System.Collections.Generic;
-using System.ComponentModel;
+using System.Diagnostics;
+using System.IO;
+using System.Reflection;
 
 namespace utils
 {
@@ -105,11 +103,12 @@ namespace utils
             get { return (padWithTabs ? padTab : padSpace); }
         }
 
-        private static void padToLevel(int padLevel)
+        private static IEnumerable<string> padToLevel(int padLevel)
         {
             for (int i = 0; i < padLevel; i++)
             {
                 Console.Write(indentFormat);
+                yield return indentFormat;
             }
         }
 
@@ -117,15 +116,17 @@ namespace utils
         /// Output the specified text.
         /// </summary>
         /// <param name="text"></param>
-        private void output(string text)
+        private IEnumerable<string> output(string text)
         {
             // Replace the embedded \n character with indented outputLevel spacing
             string[] lines = text.Split(new char[] { '\n' });
 
             foreach (string line in lines)
             {
-                padToLevel(outputLevel);
-                Console.WriteLine(line);
+                foreach (string tab in padToLevel(outputLevel))
+                    yield return tab;
+                Console.Write(line + Environment.NewLine);
+                yield return line + Environment.NewLine;
             }
         }
 
@@ -468,8 +469,19 @@ namespace utils
         /// </summary>
         /// <param name="type"></param>
         /// <param name="nestedTypes"></param>
-        private void declareClass(Type type, Type[] nestedTypes, bool forceVirtual)
+        private void declareClass(Type type, Type[] nestedTypes, bool forceVirtual, StreamWriter writer)
         {
+            Action<string> output = (o) =>
+            {
+                foreach (string line in this.output(o))
+                    writer.Write(line);
+            };
+            if (!type.IsNested)
+            {
+                outputLevel--;
+                output(string.Format("namespace {0}\n{{", type.Namespace));
+                outputLevel++;
+            }
             string classSig = "";
 
             if (type.IsClass)
@@ -545,7 +557,7 @@ namespace utils
                     && String.Compare(formatTypeName(nestedType.DeclaringType), currentTypeName) == 0)
                 {
                     // This is a nested type.
-                    declareType(nestedType, nestedTypes, forceVirtual);
+                    declareType(nestedType, nestedTypes, forceVirtual, writer);
                 }
             }
 
@@ -600,14 +612,7 @@ namespace utils
                 string fieldSig = "";
 
                 if (type.IsEnum)
-                {
-                    if (fieldNum > 0)
-                    {
-                        fieldSig += ", ";
-                    }
-
-                    fieldSig += fieldInfo.Name;
-                }
+                    fieldSig += fieldInfo.Name + ",";
                 else
                 {
                     fieldSig += "public ";
@@ -797,15 +802,15 @@ namespace utils
 
                 switch (methodInfo.Name)
                 {
-                case "op_Explicit":
-                    methodInfoSig += "explicit operator " + formatTypeName(methodInfo.ReturnType) + "(";
-                    break;
-                case "op_Implicit":
-                    methodInfoSig += "implicit operator " + formatTypeName(methodInfo.ReturnType) + "(";
-                    break;
-                default:
-                    methodInfoSig += formatTypeName(methodInfo.ReturnType) + " " + FormatMethodName(methodInfo.Name) + "(";
-                    break;
+                    case "op_Explicit":
+                        methodInfoSig += "explicit operator " + formatTypeName(methodInfo.ReturnType) + "(";
+                        break;
+                    case "op_Implicit":
+                        methodInfoSig += "implicit operator " + formatTypeName(methodInfo.ReturnType) + "(";
+                        break;
+                    default:
+                        methodInfoSig += formatTypeName(methodInfo.ReturnType) + " " + FormatMethodName(methodInfo.Name) + "(";
+                        break;
                 }
 
                 ParameterInfo[] outParams;
@@ -848,6 +853,12 @@ namespace utils
 
             outputLevel--;
             output("}");
+            if (!type.IsNested)
+            {
+                outputLevel--;
+                output("}");
+                outputLevel++;
+            }
         }
 
         private static string FormatMethodName(string inputMethodName)
@@ -873,7 +884,7 @@ namespace utils
         /// Declare a delegate type.
         /// </summary>
         /// <param name="type"></param>
-        private void declareDelegate(Type type)
+        private void declareDelegate(Type type, StreamWriter writer)
         {
             BindingFlags binding = BindingFlags.Public | BindingFlags.Instance | BindingFlags.Static | BindingFlags.DeclaredOnly;
             MethodInfo[] delegateMethods = type.GetMethods(binding);
@@ -895,15 +906,15 @@ namespace utils
         /// </summary>
         /// <param name="type"></param>
         /// <param name="nestedTypes"></param>
-        private void declareType(Type type, Type[] nestedTypes, bool forceVirtual)
+        private void declareType(Type type, Type[] nestedTypes, bool forceVirtual, StreamWriter writer)
         {
             if (type.BaseType == typeof(System.Delegate) || type.BaseType == typeof(System.MulticastDelegate))
             {
-                declareDelegate(type);
+                declareDelegate(type, writer);
             }
             else
             {
-                declareClass(type, nestedTypes, forceVirtual);
+                declareClass(type, nestedTypes, forceVirtual, writer);
             }
         }
 
@@ -956,7 +967,7 @@ namespace utils
             Type[] importlibTypes = importlib.GetExportedTypes();
             Type[] nestedTypes = filterNestedTypes(importlibTypes);
             string currentNamespace = null;
-
+            string asmName = Path.GetFileNameWithoutExtension(config.AssemblyPath);
             foreach (Type type in importlibTypes)
             {
                 if (!type.IsNested)
@@ -983,12 +994,13 @@ namespace utils
                         currentNamespace = type.Namespace;
                         if (currentNamespace != null)
                         {
+                            Directory.CreateDirectory(Path.Combine(asmName, currentNamespace.Replace('.', Path.DirectorySeparatorChar)));
                             output("namespace " + currentNamespace + "\n{");
                             outputLevel++;
                         }
                     }
-
-                    declareType(type, nestedTypes, config.ForceVirtual);
+                    using (StreamWriter writer = new StreamWriter(File.Create(Path.Combine(asmName, type.FullName.Replace('.', Path.DirectorySeparatorChar) + ".cs"))))
+                        declareType(type, nestedTypes, config.ForceVirtual, writer);
                 }
             }
 
