@@ -1,41 +1,41 @@
 namespace Microsoft.PointOfService
 {
-    public class PosKeyboard : Microsoft.PointOfService.PosCommon
+    public abstract class PosKeyboard : Microsoft.PointOfService.PosCommon
     {
         protected PosKeyboard()
         {
         }
         public const System.String StatisticKeyPressedCount = "KeyPressedCount";
-        public System.Int32 DataCount
+        public abstract System.Int32 DataCount
         {
-            get { return 0; }
+            get;
         }
-        public System.Boolean DataEventEnabled
+        public abstract System.Boolean DataEventEnabled
         {
-            get { return false; }
-            set { }
+            get;
+            set;
         }
-        public System.Boolean AutoDisable
+        public abstract System.Boolean AutoDisable
         {
-            get { return false; }
-            set { }
+            get;
+            set;
         }
-        public System.Boolean CapKeyUp
+        public abstract System.Boolean CapKeyUp
         {
-            get { return false; }
+            get;
         }
-        public Microsoft.PointOfService.KeyboardEventType EventTypes
+        public abstract Microsoft.PointOfService.KeyboardEventType EventTypes
         {
-            get { return Microsoft.PointOfService.KeyboardEventType.Down; }
-            set { }
+            get;
+            set;
         }
-        public System.Int32 PosKeyData
+        public abstract System.Int32 PosKeyData
         {
-            get { return 0; }
+            get;
         }
-        public Microsoft.PointOfService.KeyEvent PosKeyEventType
+        public abstract Microsoft.PointOfService.KeyEvent PosKeyEventType
         {
-            get { return Microsoft.PointOfService.KeyEvent.Down; }
+            get;
         }
         #pragma warning disable 67
         public event Microsoft.PointOfService.DataEventHandler DataEvent

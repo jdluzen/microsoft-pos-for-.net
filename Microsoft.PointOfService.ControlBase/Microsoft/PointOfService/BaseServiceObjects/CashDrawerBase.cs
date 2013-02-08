@@ -1,24 +1,24 @@
 namespace Microsoft.PointOfService.BaseServiceObjects
 {
-    public class CashDrawerBase : Microsoft.PointOfService.BasicServiceObjects.CashDrawerBasic, System.IDisposable
+    public abstract class CashDrawerBase : Microsoft.PointOfService.BasicServiceObjects.CashDrawerBasic, System.IDisposable
     {
         protected CashDrawerBase()
         {
         }
-        public System.Boolean DeviceEnabled
+        public override System.Boolean DeviceEnabled
         {
             get { return false; }
             set { }
         }
-        public System.Boolean CapStatus
+        public override System.Boolean CapStatus
         {
             get { return false; }
         }
-        public System.Boolean CapStatusMultiDrawerDetect
+        public override System.Boolean CapStatusMultiDrawerDetect
         {
             get { return false; }
         }
-        public System.Boolean DrawerOpened
+        public override System.Boolean DrawerOpened
         {
             get { return false; }
         }

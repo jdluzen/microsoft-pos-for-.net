@@ -1,6 +1,6 @@
 namespace Microsoft.PointOfService
 {
-    public class DevicePlugAndPlay : System.MarshalByRefObject
+    public abstract class DevicePlugAndPlay : System.MarshalByRefObject
     {
         protected DevicePlugAndPlay()
         {

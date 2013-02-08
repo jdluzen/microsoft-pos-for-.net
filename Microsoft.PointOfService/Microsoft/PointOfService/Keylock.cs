@@ -1,6 +1,6 @@
 namespace Microsoft.PointOfService
 {
-    public class Keylock : Microsoft.PointOfService.PosCommon
+    public abstract class Keylock : Microsoft.PointOfService.PosCommon
     {
         protected Keylock()
         {
@@ -11,19 +11,19 @@ namespace Microsoft.PointOfService
         public const System.Int32 PositionNormal = 2;
         public const System.Int32 PositionSupervisor = 3;
         public const System.String StatisticLockPositionChangeCount = "LockPositionChangeCount";
-        public System.Int32 KeyPosition
+        public abstract System.Int32 KeyPosition
         {
-            get { return 0; }
+            get;
         }
-        public System.Int32 PositionCount
+        public abstract System.Int32 PositionCount
         {
-            get { return 0; }
+            get;
         }
-        public Microsoft.PointOfService.KeylockType CapKeylockType
+        public virtual Microsoft.PointOfService.KeylockType CapKeylockType
         {
             get { return Microsoft.PointOfService.KeylockType.Standard; }
         }
-        public System.Byte[] ElectronicKeyValue
+        public virtual System.Byte[] ElectronicKeyValue
         {
             get { return null; }
         }

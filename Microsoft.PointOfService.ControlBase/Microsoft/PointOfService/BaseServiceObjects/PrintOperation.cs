@@ -1,6 +1,6 @@
 namespace Microsoft.PointOfService.BaseServiceObjects
 {
-    public class PrintOperation
+    public abstract class PrintOperation
     {
         protected PrintOperation()
         {

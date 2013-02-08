@@ -1,6 +1,6 @@
 namespace Microsoft.PointOfService
 {
-    public class PointCardRW : Microsoft.PointOfService.PosCommon
+    public abstract class PointCardRW : Microsoft.PointOfService.PosCommon
     {
         protected PointCardRW()
         {
@@ -20,228 +20,228 @@ namespace Microsoft.PointOfService
         public const System.Int32 ExtendedErrorRelease = 207;
         public const System.Int32 ExtendedErrorDisplay = 208;
         public const System.Int32 ExtendedErrorNoCard = 209;
-        public System.Int32 DataCount
+        public abstract System.Int32 DataCount
         {
-            get { return 0; }
+            get;
         }
-        public System.Boolean DataEventEnabled
+        public abstract System.Boolean DataEventEnabled
         {
-            get { return false; }
-            set { }
+            get;
+            set;
         }
-        public System.Int32 OutputId
+        public abstract System.Int32 OutputId
         {
-            get { return 0; }
+            get;
         }
-        public System.Boolean CapBold
+        public abstract System.Boolean CapBold
         {
-            get { return false; }
+            get;
         }
-        public System.Boolean CapCardEntranceSensor
+        public abstract System.Boolean CapCardEntranceSensor
         {
-            get { return false; }
+            get;
         }
-        public Microsoft.PointOfService.CharacterSetCapability CapCharacterSet
+        public abstract Microsoft.PointOfService.CharacterSetCapability CapCharacterSet
         {
-            get { return Microsoft.PointOfService.CharacterSetCapability.Numeric; }
+            get;
         }
-        public System.Boolean CapCleanCard
+        public abstract System.Boolean CapCleanCard
         {
-            get { return false; }
+            get;
         }
-        public System.Boolean CapClearPrint
+        public abstract System.Boolean CapClearPrint
         {
-            get { return false; }
+            get;
         }
-        public System.Boolean CapDHigh
+        public abstract System.Boolean CapDHigh
         {
-            get { return false; }
+            get;
         }
-        public System.Boolean CapDWide
+        public abstract System.Boolean CapDWide
         {
-            get { return false; }
+            get;
         }
-        public System.Boolean CapDWideDHigh
+        public abstract System.Boolean CapDWideDHigh
         {
-            get { return false; }
+            get;
         }
-        public System.Boolean CapItalic
+        public abstract System.Boolean CapItalic
         {
-            get { return false; }
+            get;
         }
-        public System.Boolean CapLeft90
+        public abstract System.Boolean CapLeft90
         {
-            get { return false; }
+            get;
         }
-        public System.Boolean CapMapCharacterSet
+        public abstract System.Boolean CapMapCharacterSet
         {
-            get { return false; }
+            get;
         }
-        public System.Boolean CapPrint
+        public abstract System.Boolean CapPrint
         {
-            get { return false; }
+            get;
         }
-        public System.Boolean CapPrintMode
+        public abstract System.Boolean CapPrintMode
         {
-            get { return false; }
+            get;
         }
-        public System.Boolean CapRight90
+        public abstract System.Boolean CapRight90
         {
-            get { return false; }
+            get;
         }
-        public System.Boolean CapRotate180
+        public abstract System.Boolean CapRotate180
         {
-            get { return false; }
+            get;
         }
-        public Microsoft.PointOfService.PointCardRWTracks CapTracksToRead
+        public abstract Microsoft.PointOfService.PointCardRWTracks CapTracksToRead
         {
-            get { return Microsoft.PointOfService.PointCardRWTracks.Track1; }
+            get;
         }
-        public Microsoft.PointOfService.PointCardRWTracks CapTracksToWrite
+        public abstract Microsoft.PointOfService.PointCardRWTracks CapTracksToWrite
         {
-            get { return Microsoft.PointOfService.PointCardRWTracks.Track1; }
+            get;
         }
-        public Microsoft.PointOfService.PointCardState CardState
+        public abstract Microsoft.PointOfService.PointCardState CardState
         {
-            get { return Microsoft.PointOfService.PointCardState.NoCard; }
+            get;
         }
-        public System.Int32 CharacterSet
+        public abstract System.Int32 CharacterSet
         {
-            get { return 0; }
-            set { }
+            get;
+            set;
         }
-        public System.Int32[] CharacterSetList
+        public abstract System.Int32[] CharacterSetList
         {
-            get { return null; }
+            get;
         }
-        public System.String[] FontTypefaceList
+        public abstract System.String[] FontTypefaceList
         {
-            get { return null; }
+            get;
         }
-        public System.Int32 LineChars
+        public abstract System.Int32 LineChars
         {
-            get { return 0; }
-            set { }
+            get;
+            set;
         }
-        public System.Int32[] LineCharsList
+        public abstract System.Int32[] LineCharsList
         {
-            get { return null; }
+            get;
         }
-        public System.Int32 LineHeight
+        public abstract System.Int32 LineHeight
         {
-            get { return 0; }
-            set { }
+            get;
+            set;
         }
-        public System.Int32 LineSpacing
+        public abstract System.Int32 LineSpacing
         {
-            get { return 0; }
-            set { }
+            get;
+            set;
         }
-        public System.Int32 LineWidth
+        public abstract System.Int32 LineWidth
         {
-            get { return 0; }
+            get;
         }
-        public System.Boolean MapCharacterSet
+        public abstract System.Boolean MapCharacterSet
         {
-            get { return false; }
-            set { }
+            get;
+            set;
         }
-        public Microsoft.PointOfService.MapMode MapMode
+        public abstract Microsoft.PointOfService.MapMode MapMode
         {
-            get { return Microsoft.PointOfService.MapMode.Dots; }
-            set { }
+            get;
+            set;
         }
-        public System.Int32 MaxLine
+        public abstract System.Int32 MaxLine
         {
-            get { return 0; }
+            get;
         }
-        public System.Int32 PrintHeight
+        public abstract System.Int32 PrintHeight
         {
-            get { return 0; }
+            get;
         }
-        public Microsoft.PointOfService.PointCardReadWriteStates ReadState
+        public abstract Microsoft.PointOfService.PointCardReadWriteStates ReadState
         {
-            get { return new Microsoft.PointOfService.PointCardReadWriteStates(); }
+            get;
         }
-        public Microsoft.PointOfService.PointCardReceiveLengths RecvLength
+        public abstract Microsoft.PointOfService.PointCardReceiveLengths RecvLength
         {
-            get { return new Microsoft.PointOfService.PointCardReceiveLengths(); }
+            get;
         }
-        public System.Int32 SidewaysMaxChars
+        public abstract System.Int32 SidewaysMaxChars
         {
-            get { return 0; }
+            get;
         }
-        public System.Int32 SidewaysMaxLines
+        public abstract System.Int32 SidewaysMaxLines
         {
-            get { return 0; }
+            get;
         }
-        public Microsoft.PointOfService.PointCardRWTracks TracksToRead
+        public abstract Microsoft.PointOfService.PointCardRWTracks TracksToRead
         {
-            get { return Microsoft.PointOfService.PointCardRWTracks.Track1; }
-            set { }
+            get;
+            set;
         }
-        public Microsoft.PointOfService.PointCardRWTracks TracksToWrite
+        public abstract Microsoft.PointOfService.PointCardRWTracks TracksToWrite
         {
-            get { return Microsoft.PointOfService.PointCardRWTracks.Track1; }
-            set { }
+            get;
+            set;
         }
-        public System.Byte[] Track1Data
+        public abstract System.Byte[] Track1Data
         {
-            get { return null; }
+            get;
         }
-        public System.Byte[] Track2Data
+        public abstract System.Byte[] Track2Data
         {
-            get { return null; }
+            get;
         }
-        public System.Byte[] Track3Data
+        public abstract System.Byte[] Track3Data
         {
-            get { return null; }
+            get;
         }
-        public System.Byte[] Track4Data
+        public abstract System.Byte[] Track4Data
         {
-            get { return null; }
+            get;
         }
-        public System.Byte[] Track5Data
+        public abstract System.Byte[] Track5Data
         {
-            get { return null; }
+            get;
         }
-        public System.Byte[] Track6Data
+        public abstract System.Byte[] Track6Data
         {
-            get { return null; }
+            get;
         }
-        public Microsoft.PointOfService.PointCardReadWriteStates WriteState
+        public abstract Microsoft.PointOfService.PointCardReadWriteStates WriteState
         {
-            get { return new Microsoft.PointOfService.PointCardReadWriteStates(); }
+            get;
         }
-        public System.Byte[] Write1Data
+        public abstract System.Byte[] Write1Data
         {
-            get { return null; }
-            set { }
+            get;
+            set;
         }
-        public System.Byte[] Write2Data
+        public abstract System.Byte[] Write2Data
         {
-            get { return null; }
-            set { }
+            get;
+            set;
         }
-        public System.Byte[] Write3Data
+        public abstract System.Byte[] Write3Data
         {
-            get { return null; }
-            set { }
+            get;
+            set;
         }
-        public System.Byte[] Write4Data
+        public abstract System.Byte[] Write4Data
         {
-            get { return null; }
-            set { }
+            get;
+            set;
         }
-        public System.Byte[] Write5Data
+        public abstract System.Byte[] Write5Data
         {
-            get { return null; }
-            set { }
+            get;
+            set;
         }
-        public System.Byte[] Write6Data
+        public abstract System.Byte[] Write6Data
         {
-            get { return null; }
-            set { }
+            get;
+            set;
         }
         #pragma warning disable 67
         public event Microsoft.PointOfService.DataEventHandler DataEvent

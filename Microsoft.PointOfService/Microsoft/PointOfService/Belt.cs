@@ -1,6 +1,6 @@
 namespace Microsoft.PointOfService
 {
-    public class Belt : Microsoft.PointOfService.PosCommon
+    public abstract class Belt : Microsoft.PointOfService.PosCommon
     {
         protected Belt()
         {
@@ -19,97 +19,97 @@ namespace Microsoft.PointOfService
         public const System.Int32 StatusSecurityFlapBackwardClosed = 22;
         public const System.Int32 StatusSecurityFlapForwardOpened = 23;
         public const System.Int32 StatusSecurityFlapForwardClosed = 24;
-        public System.Boolean AutoStopBackward
+        public abstract System.Boolean AutoStopBackward
         {
-            get { return false; }
-            set { }
+            get;
+            set;
         }
-        public System.Int32 AutoStopBackwardDelayTime
+        public abstract System.Int32 AutoStopBackwardDelayTime
         {
-            get { return 0; }
-            set { }
+            get;
+            set;
         }
-        public System.Int32 AutoStopBackwardItemCount
+        public abstract System.Int32 AutoStopBackwardItemCount
         {
-            get { return 0; }
+            get;
         }
-        public System.Boolean AutoStopForward
+        public abstract System.Boolean AutoStopForward
         {
-            get { return false; }
-            set { }
+            get;
+            set;
         }
-        public System.Int32 AutoStopForwardDelayTime
+        public abstract System.Int32 AutoStopForwardDelayTime
         {
-            get { return 0; }
-            set { }
+            get;
+            set;
         }
-        public System.Int32 AutoStopForwardItemCount
+        public abstract System.Int32 AutoStopForwardItemCount
         {
-            get { return 0; }
+            get;
         }
-        public System.Boolean CapAutoStopBackward
+        public abstract System.Boolean CapAutoStopBackward
         {
-            get { return false; }
+            get;
         }
-        public System.Boolean CapAutoStopBackwardItemCount
+        public abstract System.Boolean CapAutoStopBackwardItemCount
         {
-            get { return false; }
+            get;
         }
-        public System.Boolean CapAutoStopForward
+        public abstract System.Boolean CapAutoStopForward
         {
-            get { return false; }
+            get;
         }
-        public System.Boolean CapAutoStopForwardItemCount
+        public abstract System.Boolean CapAutoStopForwardItemCount
         {
-            get { return false; }
+            get;
         }
-        public System.Boolean CapLightBarrierBackward
+        public abstract System.Boolean CapLightBarrierBackward
         {
-            get { return false; }
+            get;
         }
-        public System.Boolean CapLightBarrierForward
+        public abstract System.Boolean CapLightBarrierForward
         {
-            get { return false; }
+            get;
         }
-        public System.Boolean CapMoveBackward
+        public abstract System.Boolean CapMoveBackward
         {
-            get { return false; }
+            get;
         }
-        public System.Boolean CapSecurityFlapBackward
+        public abstract System.Boolean CapSecurityFlapBackward
         {
-            get { return false; }
+            get;
         }
-        public System.Boolean CapSecurityFlapForward
+        public abstract System.Boolean CapSecurityFlapForward
         {
-            get { return false; }
+            get;
         }
-        public System.Int32 CapSpeedStepsBackward
+        public abstract System.Int32 CapSpeedStepsBackward
         {
-            get { return 0; }
+            get;
         }
-        public System.Int32 CapSpeedStepsForward
+        public abstract System.Int32 CapSpeedStepsForward
         {
-            get { return 0; }
+            get;
         }
-        public System.Boolean LightBarrierBackwardInterrupted
+        public abstract System.Boolean LightBarrierBackwardInterrupted
         {
-            get { return false; }
+            get;
         }
-        public System.Boolean LightBarrierForwardInterrupted
+        public abstract System.Boolean LightBarrierForwardInterrupted
         {
-            get { return false; }
+            get;
         }
-        public Microsoft.PointOfService.BeltMotionStatus MotionStatus
+        public abstract Microsoft.PointOfService.BeltMotionStatus MotionStatus
         {
-            get { return Microsoft.PointOfService.BeltMotionStatus.Forward; }
+            get;
         }
-        public System.Boolean SecurityFlapBackwardOpened
+        public abstract System.Boolean SecurityFlapBackwardOpened
         {
-            get { return false; }
+            get;
         }
-        public System.Boolean SecurityFlapForwardOpened
+        public abstract System.Boolean SecurityFlapForwardOpened
         {
-            get { return false; }
+            get;
         }
         public virtual void AdjustItemCount(Microsoft.PointOfService.BeltDirection direction, System.Int32 count)
         {

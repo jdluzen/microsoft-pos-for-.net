@@ -1,6 +1,6 @@
 namespace Microsoft.PointOfService
 {
-    public class SmartCardRW : Microsoft.PointOfService.PosCommon
+    public abstract class SmartCardRW : Microsoft.PointOfService.PosCommon
     {
         protected SmartCardRW()
         {
@@ -11,69 +11,69 @@ namespace Microsoft.PointOfService
         public const System.Int32 ExtendedErrorWrite = 202;
         public const System.Int32 ExtendedErrorTorn = 203;
         public const System.Int32 ExtendedErrorNoCard = 204;
-        public System.Int32 DataCount
+        public abstract System.Int32 DataCount
         {
-            get { return 0; }
+            get;
         }
-        public System.Boolean DataEventEnabled
+        public abstract System.Boolean DataEventEnabled
         {
-            get { return false; }
-            set { }
+            get;
+            set;
         }
-        public System.Int32 OutputId
+        public abstract System.Int32 OutputId
         {
-            get { return 0; }
+            get;
         }
-        public System.Boolean CapCardErrorDetection
+        public abstract System.Boolean CapCardErrorDetection
         {
-            get { return false; }
+            get;
         }
-        public Microsoft.PointOfService.SmartCardInterfaceModes CapInterfaceMode
+        public abstract Microsoft.PointOfService.SmartCardInterfaceModes CapInterfaceMode
         {
-            get { return Microsoft.PointOfService.SmartCardInterfaceModes.Transaction; }
+            get;
         }
-        public Microsoft.PointOfService.SmartCardIsoEmvModes CapIsoEmvMode
+        public abstract Microsoft.PointOfService.SmartCardIsoEmvModes CapIsoEmvMode
         {
-            get { return Microsoft.PointOfService.SmartCardIsoEmvModes.Iso; }
+            get;
         }
-        public System.Int32 CapSCPresentSensor
+        public abstract System.Int32 CapSCPresentSensor
         {
-            get { return 0; }
+            get;
         }
-        public System.Int32 CapSCSlots
+        public abstract System.Int32 CapSCSlots
         {
-            get { return 0; }
+            get;
         }
-        public Microsoft.PointOfService.SmartCardTransmissionProtocols CapTransmissionProtocol
+        public abstract Microsoft.PointOfService.SmartCardTransmissionProtocols CapTransmissionProtocol
         {
-            get { return Microsoft.PointOfService.SmartCardTransmissionProtocols.T0; }
+            get;
         }
-        public Microsoft.PointOfService.SmartCardInterfaceModes InterfaceMode
+        public abstract Microsoft.PointOfService.SmartCardInterfaceModes InterfaceMode
         {
-            get { return Microsoft.PointOfService.SmartCardInterfaceModes.Transaction; }
-            set { }
+            get;
+            set;
         }
-        public Microsoft.PointOfService.SmartCardIsoEmvModes IsoEmvMode
+        public abstract Microsoft.PointOfService.SmartCardIsoEmvModes IsoEmvMode
         {
-            get { return Microsoft.PointOfService.SmartCardIsoEmvModes.Iso; }
-            set { }
+            get;
+            set;
         }
-        public System.Int32 SCPresentSensor
+        public abstract System.Int32 SCPresentSensor
         {
-            get { return 0; }
+            get;
         }
-        public System.Int32 SCSlot
+        public abstract System.Int32 SCSlot
         {
-            get { return 0; }
-            set { }
+            get;
+            set;
         }
-        public System.Boolean TransactionInProgress
+        public abstract System.Boolean TransactionInProgress
         {
-            get { return false; }
+            get;
         }
-        public Microsoft.PointOfService.SmartCardTransmissionProtocols TransmissionProtocol
+        public abstract Microsoft.PointOfService.SmartCardTransmissionProtocols TransmissionProtocol
         {
-            get { return Microsoft.PointOfService.SmartCardTransmissionProtocols.T0; }
+            get;
         }
         #pragma warning disable 67
         public event Microsoft.PointOfService.DataEventHandler DataEvent

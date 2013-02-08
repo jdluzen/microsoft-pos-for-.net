@@ -1,6 +1,6 @@
 namespace Microsoft.PointOfService
 {
-    public class CoinDispenser : Microsoft.PointOfService.PosCommon
+    public abstract class CoinDispenser : Microsoft.PointOfService.PosCommon
     {
         protected CoinDispenser()
         {
@@ -9,21 +9,21 @@ namespace Microsoft.PointOfService
         public const System.Int32 StatusEmpty = 2;
         public const System.Int32 StatusNearEmpty = 3;
         public const System.Int32 StatusJam = 4;
-        public System.Boolean CapEmptySensor
+        public abstract System.Boolean CapEmptySensor
         {
-            get { return false; }
+            get;
         }
-        public System.Boolean CapJamSensor
+        public abstract System.Boolean CapJamSensor
         {
-            get { return false; }
+            get;
         }
-        public System.Boolean CapNearEmptySensor
+        public abstract System.Boolean CapNearEmptySensor
         {
-            get { return false; }
+            get;
         }
-        public Microsoft.PointOfService.CoinDispenserStatus DispenserStatus
+        public abstract Microsoft.PointOfService.CoinDispenserStatus DispenserStatus
         {
-            get { return Microsoft.PointOfService.CoinDispenserStatus.OK; }
+            get;
         }
         public virtual void AdjustCashCounts(System.Collections.Generic.IEnumerable<Microsoft.PointOfService.CashCount> cashCounts)
         {

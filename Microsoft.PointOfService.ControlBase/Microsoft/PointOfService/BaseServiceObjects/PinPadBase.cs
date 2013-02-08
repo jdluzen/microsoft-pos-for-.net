@@ -1,111 +1,111 @@
 namespace Microsoft.PointOfService.BaseServiceObjects
 {
-    public class PinPadBase : Microsoft.PointOfService.BasicServiceObjects.PinPadBasic, System.IDisposable
+    public abstract class PinPadBase : Microsoft.PointOfService.BasicServiceObjects.PinPadBasic, System.IDisposable
     {
         protected PinPadBase()
         {
         }
-        public System.String AccountNumber
+        public override System.String AccountNumber
         {
             get { return null; }
             set { }
         }
-        public System.String AdditionalSecurityInformation
+        public override System.String AdditionalSecurityInformation
         {
             get { return null; }
         }
-        public System.Decimal Amount
+        public override System.Decimal Amount
         {
             get { return new System.Decimal(); }
             set { }
         }
-        public System.Globalization.CultureInfo[] AvailableLanguagesList
+        public override System.Globalization.CultureInfo[] AvailableLanguagesList
         {
             get { return null; }
         }
-        public Microsoft.PointOfService.PinPadMessage[] AvailablePromptsList
+        public override Microsoft.PointOfService.PinPadMessage[] AvailablePromptsList
         {
             get { return null; }
         }
-        public Microsoft.PointOfService.PinPadDisplay CapDisplay
+        public override Microsoft.PointOfService.PinPadDisplay CapDisplay
         {
             get { return Microsoft.PointOfService.PinPadDisplay.Unrestricted; }
         }
-        public System.Boolean CapKeyboard
+        public override System.Boolean CapKeyboard
         {
             get { return false; }
         }
-        public Microsoft.PointOfService.PinPadLanguage CapLanguage
+        public override Microsoft.PointOfService.PinPadLanguage CapLanguage
         {
             get { return Microsoft.PointOfService.PinPadLanguage.None; }
         }
-        public System.Boolean CapMacCalculation
+        public override System.Boolean CapMacCalculation
         {
             get { return false; }
         }
-        public System.Boolean CapTone
+        public override System.Boolean CapTone
         {
             get { return false; }
         }
-        public System.String EncryptedPin
+        public override System.String EncryptedPin
         {
             get { return null; }
         }
-        public System.Int32 MaximumPinLength
+        public override System.Int32 MaximumPinLength
         {
             get { return 0; }
             set { }
         }
-        public System.String MerchantId
+        public override System.String MerchantId
         {
             get { return null; }
             set { }
         }
-        public System.Int32 MinimumPinLength
+        public override System.Int32 MinimumPinLength
         {
             get { return 0; }
             set { }
         }
-        public System.Boolean PinEntryEnabled
+        public override System.Boolean PinEntryEnabled
         {
             get { return false; }
         }
-        public Microsoft.PointOfService.PinPadMessage Prompt
+        public override Microsoft.PointOfService.PinPadMessage Prompt
         {
             get { return Microsoft.PointOfService.PinPadMessage.EnterPin; }
             set { }
         }
-        public System.Globalization.CultureInfo PromptLanguage
+        public override System.Globalization.CultureInfo PromptLanguage
         {
             get { return null; }
             set { }
         }
-        public System.String TerminalId
+        public override System.String TerminalId
         {
             get { return null; }
             set { }
         }
-        public System.Byte[] Track1Data
+        public override System.Byte[] Track1Data
         {
             get { return null; }
             set { }
         }
-        public System.Byte[] Track2Data
+        public override System.Byte[] Track2Data
         {
             get { return null; }
             set { }
         }
-        public System.Byte[] Track3Data
+        public override System.Byte[] Track3Data
         {
             get { return null; }
             set { }
         }
-        public System.Byte[] Track4Data
+        public override System.Byte[] Track4Data
         {
             get { return null; }
             set { }
         }
-        public Microsoft.PointOfService.EftTransactionType TransactionType
+        public override Microsoft.PointOfService.EftTransactionType TransactionType
         {
             get { return Microsoft.PointOfService.EftTransactionType.Debit; }
             set { }

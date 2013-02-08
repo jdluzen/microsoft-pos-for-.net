@@ -1,6 +1,6 @@
 namespace Microsoft.PointOfService
 {
-    public class ElectronicJournal : Microsoft.PointOfService.PosCommon
+    public abstract class ElectronicJournal : Microsoft.PointOfService.PosCommon
     {
         protected ElectronicJournal()
         {
@@ -25,128 +25,128 @@ namespace Microsoft.PointOfService
         public const System.String StatisticMediumRemovedCount = "MediumRemovedCount";
         public const System.String StatisticMediumSize = "MediumSize";
         public const System.String StatisticMediumFreeSpace = "MediumFreeSpace";
-        public System.Int32 DataCount
+        public abstract System.Int32 DataCount
         {
-            get { return 0; }
+            get;
         }
-        public System.Boolean DataEventEnabled
+        public abstract System.Boolean DataEventEnabled
         {
-            get { return false; }
-            set { }
+            get;
+            set;
         }
-        public System.Int32 OutputId
+        public abstract System.Int32 OutputId
         {
-            get { return 0; }
+            get;
         }
-        public System.Boolean AutoDisable
+        public abstract System.Boolean AutoDisable
         {
-            get { return false; }
-            set { }
+            get;
+            set;
         }
-        public System.Boolean AsyncMode
+        public abstract System.Boolean AsyncMode
         {
-            get { return false; }
-            set { }
+            get;
+            set;
         }
-        public System.Boolean CapAddMarker
+        public abstract System.Boolean CapAddMarker
         {
-            get { return false; }
+            get;
         }
-        public System.Boolean CapErasableMedium
+        public abstract System.Boolean CapErasableMedium
         {
-            get { return false; }
+            get;
         }
-        public System.Boolean CapInitializeMedium
+        public abstract System.Boolean CapInitializeMedium
         {
-            get { return false; }
+            get;
         }
-        public System.Boolean CapMediumIsAvailable
+        public abstract System.Boolean CapMediumIsAvailable
         {
-            get { return false; }
+            get;
         }
-        public System.Boolean CapPrintContent
+        public abstract System.Boolean CapPrintContent
         {
-            get { return false; }
+            get;
         }
-        public System.Boolean CapPrintContentFile
+        public abstract System.Boolean CapPrintContentFile
         {
-            get { return false; }
+            get;
         }
-        public System.Boolean CapRetrieveCurrentMarker
+        public abstract System.Boolean CapRetrieveCurrentMarker
         {
-            get { return false; }
+            get;
         }
-        public System.Boolean CapRetrieveMarker
+        public abstract System.Boolean CapRetrieveMarker
         {
-            get { return false; }
+            get;
         }
-        public System.Boolean CapRetrieveMarkerByDateTime
+        public abstract System.Boolean CapRetrieveMarkerByDateTime
         {
-            get { return false; }
+            get;
         }
-        public System.Boolean CapRetrieveMarkersDateTime
+        public abstract System.Boolean CapRetrieveMarkersDateTime
         {
-            get { return false; }
+            get;
         }
-        public Microsoft.PointOfService.ElectronicJournalStations CapStation
+        public abstract Microsoft.PointOfService.ElectronicJournalStations CapStation
         {
-            get { return Microsoft.PointOfService.ElectronicJournalStations.Receipt; }
+            get;
         }
-        public System.Boolean CapStorageEnabled
+        public abstract System.Boolean CapStorageEnabled
         {
-            get { return false; }
+            get;
         }
-        public System.Boolean CapSuspendPrintContent
+        public abstract System.Boolean CapSuspendPrintContent
         {
-            get { return false; }
+            get;
         }
-        public System.Boolean CapSuspendQueryContent
+        public abstract System.Boolean CapSuspendQueryContent
         {
-            get { return false; }
+            get;
         }
-        public System.Boolean CapWatermark
+        public abstract System.Boolean CapWatermark
         {
-            get { return false; }
+            get;
         }
-        public System.Boolean FlagWhenIdle
+        public abstract System.Boolean FlagWhenIdle
         {
-            get { return false; }
-            set { }
+            get;
+            set;
         }
-        public System.Decimal MediumFreeSpace
+        public abstract System.Decimal MediumFreeSpace
         {
-            get { return new System.Decimal(); }
+            get;
         }
-        public System.String MediumId
+        public abstract System.String MediumId
         {
-            get { return null; }
+            get;
         }
-        public System.Boolean MediumIsAvailable
+        public abstract System.Boolean MediumIsAvailable
         {
-            get { return false; }
+            get;
         }
-        public System.Decimal MediumSize
+        public abstract System.Decimal MediumSize
         {
-            get { return new System.Decimal(); }
+            get;
         }
-        public Microsoft.PointOfService.ElectronicJournalStations Station
+        public abstract Microsoft.PointOfService.ElectronicJournalStations Station
         {
-            get { return Microsoft.PointOfService.ElectronicJournalStations.Receipt; }
-            set { }
+            get;
+            set;
         }
-        public System.Boolean StorageEnabled
+        public abstract System.Boolean StorageEnabled
         {
-            get { return false; }
-            set { }
+            get;
+            set;
         }
-        public System.Boolean Suspended
+        public abstract System.Boolean Suspended
         {
-            get { return false; }
+            get;
         }
-        public System.Boolean Watermark
+        public abstract System.Boolean Watermark
         {
-            get { return false; }
-            set { }
+            get;
+            set;
         }
         #pragma warning disable 67
         public event Microsoft.PointOfService.DataEventHandler DataEvent

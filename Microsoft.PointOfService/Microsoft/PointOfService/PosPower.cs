@@ -1,6 +1,6 @@
 namespace Microsoft.PointOfService
 {
-    public class PosPower : Microsoft.PointOfService.PosCommon
+    public abstract class PosPower : Microsoft.PointOfService.PosCommon
     {
         protected PosPower()
         {
@@ -23,86 +23,86 @@ namespace Microsoft.PointOfService
         public const System.Int32 StatusSuspend = 26;
         public const System.Int32 StatusUserSuspend = 27;
         public const System.Int32 StatusPowerSource = 28;
-        public System.Boolean CapFanAlarm
+        public abstract System.Boolean CapFanAlarm
         {
-            get { return false; }
+            get;
         }
-        public System.Boolean CapHeatAlarm
+        public abstract System.Boolean CapHeatAlarm
         {
-            get { return false; }
+            get;
         }
-        public System.Boolean CapQuickCharge
+        public abstract System.Boolean CapQuickCharge
         {
-            get { return false; }
+            get;
         }
-        public System.Boolean CapShutdownPos
+        public abstract System.Boolean CapShutdownPos
         {
-            get { return false; }
+            get;
         }
-        public Microsoft.PointOfService.UpsChargeStates CapUpsChargeState
+        public abstract Microsoft.PointOfService.UpsChargeStates CapUpsChargeState
         {
-            get { return Microsoft.PointOfService.UpsChargeStates.Full; }
+            get;
         }
-        public System.Int32 EnforcedShutdownDelayTime
+        public abstract System.Int32 EnforcedShutdownDelayTime
+        {
+            get;
+            set;
+        }
+        public abstract System.Int32 PowerFailDelayTime
+        {
+            get;
+        }
+        public abstract System.Boolean QuickChargeMode
+        {
+            get;
+        }
+        public abstract System.Int32 QuickChargeTime
+        {
+            get;
+        }
+        public abstract Microsoft.PointOfService.UpsChargeStates UpsChargeState
+        {
+            get;
+        }
+        public virtual System.Int32 BatteryCapacityRemaining
+        {
+            get { return 0; }
+        }
+        public virtual System.Int32 BatteryCriticallyLowThreshold
         {
             get { return 0; }
             set { }
         }
-        public System.Int32 PowerFailDelayTime
-        {
-            get { return 0; }
-        }
-        public System.Boolean QuickChargeMode
-        {
-            get { return false; }
-        }
-        public System.Int32 QuickChargeTime
-        {
-            get { return 0; }
-        }
-        public Microsoft.PointOfService.UpsChargeStates UpsChargeState
-        {
-            get { return Microsoft.PointOfService.UpsChargeStates.Full; }
-        }
-        public System.Int32 BatteryCapacityRemaining
-        {
-            get { return 0; }
-        }
-        public System.Int32 BatteryCriticallyLowThreshold
+        public virtual System.Int32 BatteryLowThreshold
         {
             get { return 0; }
             set { }
         }
-        public System.Int32 BatteryLowThreshold
-        {
-            get { return 0; }
-            set { }
-        }
-        public System.Boolean CapBatteryCapacityRemaining
+        public virtual System.Boolean CapBatteryCapacityRemaining
         {
             get { return false; }
         }
-        public System.Boolean CapRestartPos
+        public virtual System.Boolean CapRestartPos
         {
             get { return false; }
         }
-        public System.Boolean CapStandbyPos
+        public virtual System.Boolean CapStandbyPos
         {
             get { return false; }
         }
-        public System.Boolean CapSuspendPos
+        public virtual System.Boolean CapSuspendPos
         {
             get { return false; }
         }
-        public System.Boolean CapVariableBatteryCriticallyLowThreshold
+        public virtual System.Boolean CapVariableBatteryCriticallyLowThreshold
         {
             get { return false; }
         }
-        public System.Boolean CapVariableBatteryLowThreshold
+        public virtual System.Boolean CapVariableBatteryLowThreshold
         {
             get { return false; }
         }
-        public Microsoft.PointOfService.PowerSource PowerSource
+        public virtual Microsoft.PointOfService.PowerSource PowerSource
         {
             get { return Microsoft.PointOfService.PowerSource.NotAvailable; }
         }

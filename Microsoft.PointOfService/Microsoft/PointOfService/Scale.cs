@@ -1,6 +1,6 @@
 namespace Microsoft.PointOfService
 {
-    public class Scale : Microsoft.PointOfService.PosCommon
+    public abstract class Scale : Microsoft.PointOfService.PosCommon
     {
         protected Scale()
         {
@@ -15,80 +15,80 @@ namespace Microsoft.PointOfService
         public const System.Int32 StatusWeightOverWeight = 14;
         public const System.Int32 StatusNotReady = 15;
         public const System.Int32 StatusWeightUnderZero = 16;
-        public System.Int32 DataCount
+        public abstract System.Int32 DataCount
         {
-            get { return 0; }
+            get;
         }
-        public System.Boolean DataEventEnabled
+        public abstract System.Boolean DataEventEnabled
+        {
+            get;
+            set;
+        }
+        public abstract System.Boolean AutoDisable
+        {
+            get;
+            set;
+        }
+        public abstract System.Boolean CapDisplay
+        {
+            get;
+        }
+        public abstract System.Boolean CapDisplayText
+        {
+            get;
+        }
+        public abstract System.Boolean CapPriceCalculating
+        {
+            get;
+        }
+        public abstract System.Boolean CapTareWeight
+        {
+            get;
+        }
+        public abstract System.Boolean CapZeroScale
+        {
+            get;
+        }
+        public abstract System.Boolean AsyncMode
+        {
+            get;
+            set;
+        }
+        public abstract System.Int32 MaxDisplayTextChars
+        {
+            get;
+        }
+        public abstract System.Decimal MaximumWeight
+        {
+            get;
+        }
+        public abstract System.Decimal SalesPrice
+        {
+            get;
+        }
+        public abstract System.Decimal TareWeight
+        {
+            get;
+            set;
+        }
+        public abstract System.Decimal UnitPrice
+        {
+            get;
+            set;
+        }
+        public abstract Microsoft.PointOfService.WeightUnit WeightUnit
+        {
+            get;
+        }
+        public virtual System.Boolean CapStatusUpdate
         {
             get { return false; }
-            set { }
         }
-        public System.Boolean AutoDisable
-        {
-            get { return false; }
-            set { }
-        }
-        public System.Boolean CapDisplay
-        {
-            get { return false; }
-        }
-        public System.Boolean CapDisplayText
-        {
-            get { return false; }
-        }
-        public System.Boolean CapPriceCalculating
-        {
-            get { return false; }
-        }
-        public System.Boolean CapTareWeight
-        {
-            get { return false; }
-        }
-        public System.Boolean CapZeroScale
-        {
-            get { return false; }
-        }
-        public System.Boolean AsyncMode
-        {
-            get { return false; }
-            set { }
-        }
-        public System.Int32 MaxDisplayTextChars
-        {
-            get { return 0; }
-        }
-        public System.Decimal MaximumWeight
+        public virtual System.Decimal ScaleLiveWeight
         {
             get { return new System.Decimal(); }
         }
-        public System.Decimal SalesPrice
-        {
-            get { return new System.Decimal(); }
-        }
-        public System.Decimal TareWeight
-        {
-            get { return new System.Decimal(); }
-            set { }
-        }
-        public System.Decimal UnitPrice
-        {
-            get { return new System.Decimal(); }
-            set { }
-        }
-        public Microsoft.PointOfService.WeightUnit WeightUnit
-        {
-            get { return Microsoft.PointOfService.WeightUnit.Gram; }
-        }
-        public System.Boolean CapStatusUpdate
-        {
-            get { return false; }
-        }
-        public System.Decimal ScaleLiveWeight
-        {
-            get { return new System.Decimal(); }
-        }
-        public Microsoft.PointOfService.StatusNotify StatusNotify
+        public virtual Microsoft.PointOfService.StatusNotify StatusNotify
         {
             get { return Microsoft.PointOfService.StatusNotify.Disabled; }
             set { }

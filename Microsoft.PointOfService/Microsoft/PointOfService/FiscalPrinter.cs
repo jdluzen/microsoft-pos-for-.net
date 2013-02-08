@@ -1,6 +1,6 @@
 namespace Microsoft.PointOfService
 {
-    public class FiscalPrinter : Microsoft.PointOfService.PosCommon
+    public abstract class FiscalPrinter : Microsoft.PointOfService.PosCommon
     {
         protected FiscalPrinter()
         {
@@ -97,421 +97,421 @@ namespace Microsoft.PointOfService
         public const System.Int32 StatusSlipCoverOpen = 64;
         public const System.Int32 StatusSlipCoverOK = 65;
         public const System.Int32 StatusIdle = 1001;
-        public System.Int32 OutputId
+        public abstract System.Int32 OutputId
         {
-            get { return 0; }
+            get;
         }
-        public System.Boolean CapAdditionalHeader
+        public abstract System.Boolean CapAdditionalHeader
         {
-            get { return false; }
+            get;
         }
-        public System.Boolean CapAdditionalLines
+        public abstract System.Boolean CapAdditionalLines
         {
-            get { return false; }
+            get;
         }
-        public System.Boolean CapAdditionalTrailer
+        public abstract System.Boolean CapAdditionalTrailer
         {
-            get { return false; }
+            get;
         }
-        public System.Boolean CapAmountAdjustment
+        public abstract System.Boolean CapAmountAdjustment
         {
-            get { return false; }
+            get;
         }
-        public System.Boolean CapChangeDue
+        public abstract System.Boolean CapChangeDue
         {
-            get { return false; }
+            get;
         }
-        public System.Boolean CapCheckTotal
+        public abstract System.Boolean CapCheckTotal
         {
-            get { return false; }
+            get;
         }
-        public System.Boolean CapCoverSensor
+        public abstract System.Boolean CapCoverSensor
         {
-            get { return false; }
+            get;
         }
-        public System.Boolean CapDoubleWidth
+        public abstract System.Boolean CapDoubleWidth
         {
-            get { return false; }
+            get;
         }
-        public System.Boolean CapDuplicateReceipt
+        public abstract System.Boolean CapDuplicateReceipt
         {
-            get { return false; }
+            get;
         }
-        public System.Boolean CapEmptyReceiptIsVoidable
+        public abstract System.Boolean CapEmptyReceiptIsVoidable
         {
-            get { return false; }
+            get;
         }
-        public System.Boolean CapFiscalReceiptStation
+        public abstract System.Boolean CapFiscalReceiptStation
         {
-            get { return false; }
+            get;
         }
-        public System.Boolean CapFiscalReceiptType
+        public abstract System.Boolean CapFiscalReceiptType
         {
-            get { return false; }
+            get;
         }
-        public System.Boolean CapFixedOutput
+        public abstract System.Boolean CapFixedOutput
         {
-            get { return false; }
+            get;
         }
-        public System.Boolean CapHasVatTable
+        public abstract System.Boolean CapHasVatTable
         {
-            get { return false; }
+            get;
         }
-        public System.Boolean CapIndependentHeader
+        public abstract System.Boolean CapIndependentHeader
         {
-            get { return false; }
+            get;
         }
-        public System.Boolean CapItemList
+        public abstract System.Boolean CapItemList
         {
-            get { return false; }
+            get;
         }
-        public System.Boolean CapJrnEmptySensor
+        public abstract System.Boolean CapJrnEmptySensor
         {
-            get { return false; }
+            get;
         }
-        public System.Boolean CapJrnNearEndSensor
+        public abstract System.Boolean CapJrnNearEndSensor
         {
-            get { return false; }
+            get;
         }
-        public System.Boolean CapJrnPresent
+        public abstract System.Boolean CapJrnPresent
         {
-            get { return false; }
+            get;
         }
-        public System.Boolean CapMultiContractor
+        public abstract System.Boolean CapMultiContractor
         {
-            get { return false; }
+            get;
         }
-        public System.Boolean CapNonFiscalMode
+        public abstract System.Boolean CapNonFiscalMode
         {
-            get { return false; }
+            get;
         }
-        public System.Boolean CapOnlyVoidLastItem
+        public abstract System.Boolean CapOnlyVoidLastItem
         {
-            get { return false; }
+            get;
         }
-        public System.Boolean CapOrderAdjustmentFirst
+        public abstract System.Boolean CapOrderAdjustmentFirst
         {
-            get { return false; }
+            get;
         }
-        public System.Boolean CapPackageAdjustment
+        public abstract System.Boolean CapPackageAdjustment
         {
-            get { return false; }
+            get;
         }
-        public System.Boolean CapPercentAdjustment
+        public abstract System.Boolean CapPercentAdjustment
         {
-            get { return false; }
+            get;
         }
-        public System.Boolean CapPositiveAdjustment
+        public abstract System.Boolean CapPositiveAdjustment
         {
-            get { return false; }
+            get;
         }
-        public System.Boolean CapPositiveSubtotalAdjustment
+        public abstract System.Boolean CapPositiveSubtotalAdjustment
         {
-            get { return false; }
+            get;
         }
-        public System.Boolean CapPostPreLine
+        public abstract System.Boolean CapPostPreLine
         {
-            get { return false; }
+            get;
         }
-        public System.Boolean CapPowerLossReport
+        public abstract System.Boolean CapPowerLossReport
         {
-            get { return false; }
+            get;
         }
-        public System.Boolean CapPredefinedPaymentLines
+        public abstract System.Boolean CapPredefinedPaymentLines
         {
-            get { return false; }
+            get;
         }
-        public System.Boolean CapReceiptNotPaid
+        public abstract System.Boolean CapReceiptNotPaid
         {
-            get { return false; }
+            get;
         }
-        public System.Boolean CapRecEmptySensor
+        public abstract System.Boolean CapRecEmptySensor
         {
-            get { return false; }
+            get;
         }
-        public System.Boolean CapRecNearEndSensor
+        public abstract System.Boolean CapRecNearEndSensor
         {
-            get { return false; }
+            get;
         }
-        public System.Boolean CapRecPresent
+        public abstract System.Boolean CapRecPresent
         {
-            get { return false; }
+            get;
         }
-        public System.Boolean CapRemainingFiscalMemory
+        public abstract System.Boolean CapRemainingFiscalMemory
         {
-            get { return false; }
+            get;
         }
-        public System.Boolean CapReservedWord
+        public abstract System.Boolean CapReservedWord
         {
-            get { return false; }
+            get;
         }
-        public System.Boolean CapSetCurrency
+        public abstract System.Boolean CapSetCurrency
         {
-            get { return false; }
+            get;
         }
-        public System.Boolean CapSetHeader
+        public abstract System.Boolean CapSetHeader
         {
-            get { return false; }
+            get;
         }
-        public System.Boolean CapSetPosId
+        public abstract System.Boolean CapSetPosId
         {
-            get { return false; }
+            get;
         }
-        public System.Boolean CapSetStoreFiscalId
+        public abstract System.Boolean CapSetStoreFiscalId
         {
-            get { return false; }
+            get;
         }
-        public System.Boolean CapSetTrailer
+        public abstract System.Boolean CapSetTrailer
         {
-            get { return false; }
+            get;
         }
-        public System.Boolean CapSetVatTable
+        public abstract System.Boolean CapSetVatTable
         {
-            get { return false; }
+            get;
         }
-        public System.Boolean CapSlpEmptySensor
+        public abstract System.Boolean CapSlpEmptySensor
         {
-            get { return false; }
+            get;
         }
-        public System.Boolean CapSlpFiscalDocument
+        public abstract System.Boolean CapSlpFiscalDocument
         {
-            get { return false; }
+            get;
         }
-        public System.Boolean CapSlpFullSlip
+        public abstract System.Boolean CapSlpFullSlip
         {
-            get { return false; }
+            get;
         }
-        public System.Boolean CapSlpNearEndSensor
+        public abstract System.Boolean CapSlpNearEndSensor
         {
-            get { return false; }
+            get;
         }
-        public System.Boolean CapSlpPresent
+        public abstract System.Boolean CapSlpPresent
         {
-            get { return false; }
+            get;
         }
-        public System.Boolean CapSlpValidation
+        public abstract System.Boolean CapSlpValidation
         {
-            get { return false; }
+            get;
         }
-        public System.Boolean CapSubAmountAdjustment
+        public abstract System.Boolean CapSubAmountAdjustment
         {
-            get { return false; }
+            get;
         }
-        public System.Boolean CapSubPercentAdjustment
+        public abstract System.Boolean CapSubPercentAdjustment
         {
-            get { return false; }
+            get;
         }
-        public System.Boolean CapSubtotal
+        public abstract System.Boolean CapSubtotal
         {
-            get { return false; }
+            get;
         }
-        public System.Boolean CapTotalizerType
+        public abstract System.Boolean CapTotalizerType
         {
-            get { return false; }
+            get;
         }
-        public System.Boolean CapTrainingMode
+        public abstract System.Boolean CapTrainingMode
         {
-            get { return false; }
+            get;
         }
-        public System.Boolean CapValidateJournal
+        public abstract System.Boolean CapValidateJournal
         {
-            get { return false; }
+            get;
         }
-        public System.Boolean CapXReport
+        public abstract System.Boolean CapXReport
         {
-            get { return false; }
+            get;
         }
-        public Microsoft.PointOfService.FiscalCurrency ActualCurrency
+        public abstract Microsoft.PointOfService.FiscalCurrency ActualCurrency
         {
-            get { return Microsoft.PointOfService.FiscalCurrency.BrazilianCruceiro; }
+            get;
         }
-        public System.String AdditionalHeader
+        public abstract System.String AdditionalHeader
         {
-            get { return null; }
-            set { }
+            get;
+            set;
         }
-        public System.String AdditionalTrailer
+        public abstract System.String AdditionalTrailer
         {
-            get { return null; }
-            set { }
+            get;
+            set;
         }
-        public System.Int32 AmountDecimalPlaces
+        public abstract System.Int32 AmountDecimalPlaces
         {
-            get { return 0; }
+            get;
         }
-        public System.Boolean AsyncMode
+        public abstract System.Boolean AsyncMode
         {
-            get { return false; }
-            set { }
+            get;
+            set;
         }
-        public System.String ChangeDue
+        public abstract System.String ChangeDue
         {
-            get { return null; }
-            set { }
+            get;
+            set;
         }
-        public System.Boolean CheckTotal
+        public abstract System.Boolean CheckTotal
         {
-            get { return false; }
-            set { }
+            get;
+            set;
         }
-        public Microsoft.PointOfService.FiscalContractorId ContractorId
+        public abstract Microsoft.PointOfService.FiscalContractorId ContractorId
         {
-            get { return Microsoft.PointOfService.FiscalContractorId.First; }
-            set { }
+            get;
+            set;
         }
-        public Microsoft.PointOfService.FiscalCountryCodes CountryCode
+        public abstract Microsoft.PointOfService.FiscalCountryCodes CountryCode
         {
-            get { return Microsoft.PointOfService.FiscalCountryCodes.Brazil; }
+            get;
         }
-        public System.Boolean CoverOpen
+        public abstract System.Boolean CoverOpen
         {
-            get { return false; }
+            get;
         }
-        public Microsoft.PointOfService.FiscalDateType DateType
+        public abstract Microsoft.PointOfService.FiscalDateType DateType
         {
-            get { return Microsoft.PointOfService.FiscalDateType.Configuration; }
-            set { }
+            get;
+            set;
         }
-        public System.Boolean DayOpened
+        public abstract System.Boolean DayOpened
         {
-            get { return false; }
+            get;
         }
-        public System.Int32 DescriptionLength
+        public abstract System.Int32 DescriptionLength
         {
-            get { return 0; }
+            get;
         }
-        public System.Boolean DuplicateReceipt
+        public abstract System.Boolean DuplicateReceipt
         {
-            get { return false; }
-            set { }
+            get;
+            set;
         }
-        public Microsoft.PointOfService.FiscalErrorLevel ErrorLevel
+        public abstract Microsoft.PointOfService.FiscalErrorLevel ErrorLevel
         {
-            get { return Microsoft.PointOfService.FiscalErrorLevel.None; }
+            get;
         }
-        public System.Int32 ErrorOutId
+        public abstract System.Int32 ErrorOutId
         {
-            get { return 0; }
+            get;
         }
-        public Microsoft.PointOfService.FiscalPrinterState ErrorState
+        public abstract Microsoft.PointOfService.FiscalPrinterState ErrorState
         {
-            get { return Microsoft.PointOfService.FiscalPrinterState.Monitor; }
+            get;
         }
-        public Microsoft.PointOfService.FiscalPrinterStations ErrorStation
+        public abstract Microsoft.PointOfService.FiscalPrinterStations ErrorStation
         {
-            get { return Microsoft.PointOfService.FiscalPrinterStations.Journal; }
+            get;
         }
-        public System.String ErrorString
+        public abstract System.String ErrorString
         {
-            get { return null; }
+            get;
         }
-        public Microsoft.PointOfService.FiscalReceiptStation FiscalReceiptStation
+        public abstract Microsoft.PointOfService.FiscalReceiptStation FiscalReceiptStation
         {
-            get { return Microsoft.PointOfService.FiscalReceiptStation.Receipt; }
-            set { }
+            get;
+            set;
         }
-        public Microsoft.PointOfService.FiscalReceiptType FiscalReceiptType
+        public abstract Microsoft.PointOfService.FiscalReceiptType FiscalReceiptType
         {
-            get { return Microsoft.PointOfService.FiscalReceiptType.CashIn; }
-            set { }
+            get;
+            set;
         }
-        public System.Boolean FlagWhenIdle
+        public abstract System.Boolean FlagWhenIdle
         {
-            get { return false; }
-            set { }
+            get;
+            set;
         }
-        public System.Boolean JrnEmpty
+        public abstract System.Boolean JrnEmpty
         {
-            get { return false; }
+            get;
         }
-        public System.Boolean JrnNearEnd
+        public abstract System.Boolean JrnNearEnd
         {
-            get { return false; }
+            get;
         }
-        public System.Int32 MessageLength
+        public abstract System.Int32 MessageLength
         {
-            get { return 0; }
+            get;
         }
-        public Microsoft.PointOfService.FiscalMessageType MessageType
+        public abstract Microsoft.PointOfService.FiscalMessageType MessageType
         {
-            get { return Microsoft.PointOfService.FiscalMessageType.Advance; }
-            set { }
+            get;
+            set;
         }
-        public System.Int32 NumHeaderLines
+        public abstract System.Int32 NumHeaderLines
         {
-            get { return 0; }
+            get;
         }
-        public System.Int32 NumTrailerLines
+        public abstract System.Int32 NumTrailerLines
         {
-            get { return 0; }
+            get;
         }
-        public System.Int32 NumVatRates
+        public abstract System.Int32 NumVatRates
         {
-            get { return 0; }
+            get;
         }
-        public System.String PostLine
+        public abstract System.String PostLine
         {
-            get { return null; }
-            set { }
+            get;
+            set;
         }
-        public System.String[] PredefinedPaymentLines
+        public abstract System.String[] PredefinedPaymentLines
         {
-            get { return null; }
+            get;
         }
-        public System.String PreLine
+        public abstract System.String PreLine
         {
-            get { return null; }
-            set { }
+            get;
+            set;
         }
-        public Microsoft.PointOfService.FiscalPrinterState PrinterState
+        public abstract Microsoft.PointOfService.FiscalPrinterState PrinterState
         {
-            get { return Microsoft.PointOfService.FiscalPrinterState.Monitor; }
+            get;
         }
-        public System.Int32 QuantityDecimalPlaces
+        public abstract System.Int32 QuantityDecimalPlaces
         {
-            get { return 0; }
+            get;
         }
-        public System.Int32 QuantityLength
+        public abstract System.Int32 QuantityLength
         {
-            get { return 0; }
+            get;
         }
-        public System.Boolean RecEmpty
+        public abstract System.Boolean RecEmpty
         {
-            get { return false; }
+            get;
         }
-        public System.Boolean RecNearEnd
+        public abstract System.Boolean RecNearEnd
         {
-            get { return false; }
+            get;
         }
-        public System.Int32 RemainingFiscalMemory
+        public abstract System.Int32 RemainingFiscalMemory
         {
-            get { return 0; }
+            get;
         }
-        public System.String ReservedWord
+        public abstract System.String ReservedWord
         {
-            get { return null; }
+            get;
         }
-        public System.Boolean SlpEmpty
+        public abstract System.Boolean SlpEmpty
         {
-            get { return false; }
+            get;
         }
-        public System.Boolean SlpNearEnd
+        public abstract System.Boolean SlpNearEnd
         {
-            get { return false; }
+            get;
         }
-        public Microsoft.PointOfService.FiscalSlipSelection SlipSelection
+        public abstract Microsoft.PointOfService.FiscalSlipSelection SlipSelection
         {
-            get { return Microsoft.PointOfService.FiscalSlipSelection.FullLength; }
-            set { }
+            get;
+            set;
         }
-        public Microsoft.PointOfService.FiscalTotalizerType TotalizerType
+        public abstract Microsoft.PointOfService.FiscalTotalizerType TotalizerType
         {
-            get { return Microsoft.PointOfService.FiscalTotalizerType.Document; }
-            set { }
+            get;
+            set;
         }
-        public System.Boolean TrainingModeActive
+        public abstract System.Boolean TrainingModeActive
         {
-            get { return false; }
+            get;
         }
         #pragma warning disable 67
         public event Microsoft.PointOfService.OutputCompleteEventHandler OutputCompleteEvent

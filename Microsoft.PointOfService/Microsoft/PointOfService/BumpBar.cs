@@ -1,85 +1,85 @@
 namespace Microsoft.PointOfService
 {
-    public class BumpBar : Microsoft.PointOfService.PosCommon
+    public abstract class BumpBar : Microsoft.PointOfService.PosCommon
     {
         protected BumpBar()
         {
         }
         public const System.Int32 DataEventKey = 1;
         public const System.String StatisticBumpCount = "BumpCount";
-        public System.Int32 DataCount
+        public abstract System.Int32 DataCount
         {
-            get { return 0; }
+            get;
         }
-        public System.Boolean DataEventEnabled
+        public abstract System.Boolean DataEventEnabled
         {
-            get { return false; }
-            set { }
+            get;
+            set;
         }
-        public System.Int32 OutputId
+        public abstract System.Int32 OutputId
         {
-            get { return 0; }
+            get;
         }
-        public System.Boolean AsyncMode
+        public abstract System.Boolean AsyncMode
         {
-            get { return false; }
-            set { }
+            get;
+            set;
         }
-        public System.Int32 AutoToneDuration
+        public abstract System.Int32 AutoToneDuration
         {
-            get { return 0; }
-            set { }
+            get;
+            set;
         }
-        public System.Int32 AutoToneFrequency
+        public abstract System.Int32 AutoToneFrequency
         {
-            get { return 0; }
-            set { }
+            get;
+            set;
         }
-        public System.Int32 BumpBarDataCount
+        public abstract System.Int32 BumpBarDataCount
         {
-            get { return 0; }
+            get;
         }
-        public System.Boolean CapTone
+        public abstract System.Boolean CapTone
         {
-            get { return false; }
+            get;
         }
-        public Microsoft.PointOfService.DeviceUnits CurrentUnitId
+        public abstract Microsoft.PointOfService.DeviceUnits CurrentUnitId
         {
-            get { return Microsoft.PointOfService.DeviceUnits.Unit1; }
-            set { }
+            get;
+            set;
         }
-        public System.String ErrorString
+        public abstract System.String ErrorString
         {
-            get { return null; }
+            get;
         }
-        public Microsoft.PointOfService.DeviceUnits ErrorUnits
+        public abstract Microsoft.PointOfService.DeviceUnits ErrorUnits
         {
-            get { return Microsoft.PointOfService.DeviceUnits.Unit1; }
+            get;
         }
-        public System.String EventString
+        public abstract System.String EventString
         {
-            get { return null; }
+            get;
         }
-        public Microsoft.PointOfService.DeviceUnits EventUnitId
+        public abstract Microsoft.PointOfService.DeviceUnits EventUnitId
         {
-            get { return Microsoft.PointOfService.DeviceUnits.Unit1; }
+            get;
         }
-        public Microsoft.PointOfService.DeviceUnits EventUnits
+        public abstract Microsoft.PointOfService.DeviceUnits EventUnits
         {
-            get { return Microsoft.PointOfService.DeviceUnits.Unit1; }
+            get;
         }
-        public System.Int32 Keys
+        public abstract System.Int32 Keys
         {
-            get { return 0; }
+            get;
         }
-        public System.Int32 Timeout
+        public abstract System.Int32 Timeout
         {
-            get { return 0; }
-            set { }
+            get;
+            set;
         }
-        public Microsoft.PointOfService.DeviceUnits UnitsOnline
+        public abstract Microsoft.PointOfService.DeviceUnits UnitsOnline
         {
-            get { return Microsoft.PointOfService.DeviceUnits.Unit1; }
+            get;
         }
         #pragma warning disable 67
         public event Microsoft.PointOfService.DataEventHandler DataEvent

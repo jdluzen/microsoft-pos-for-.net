@@ -1,142 +1,142 @@
 namespace Microsoft.PointOfService.BaseServiceObjects
 {
-    public class CheckScannerBase : Microsoft.PointOfService.BasicServiceObjects.CheckScannerBasic, System.IDisposable
+    public abstract class CheckScannerBase : Microsoft.PointOfService.BasicServiceObjects.CheckScannerBasic, System.IDisposable
     {
         protected CheckScannerBase()
         {
         }
-        public System.Boolean CapAutoGenerateFileId
+        public override System.Boolean CapAutoGenerateFileId
         {
             get { return false; }
         }
-        public System.Boolean CapAutoGenerateImageTagData
+        public override System.Boolean CapAutoGenerateImageTagData
         {
             get { return false; }
         }
-        public System.Boolean CapAutoSize
+        public override System.Boolean CapAutoSize
         {
             get { return false; }
         }
-        public Microsoft.PointOfService.CheckColors CapColor
+        public override Microsoft.PointOfService.CheckColors CapColor
         {
             get { return Microsoft.PointOfService.CheckColors.Mono; }
         }
-        public System.Boolean CapConcurrentMicr
+        public override System.Boolean CapConcurrentMicr
         {
             get { return false; }
         }
-        public System.Boolean CapDefineCropArea
+        public override System.Boolean CapDefineCropArea
         {
             get { return false; }
         }
-        public Microsoft.PointOfService.CheckImageFormats CapImageFormat
+        public override Microsoft.PointOfService.CheckImageFormats CapImageFormat
         {
             get { return Microsoft.PointOfService.CheckImageFormats.Native; }
         }
-        public System.Boolean CapImageTagData
+        public override System.Boolean CapImageTagData
         {
             get { return false; }
         }
-        public System.Boolean CapMicrDevice
+        public override System.Boolean CapMicrDevice
         {
             get { return false; }
         }
-        public System.Boolean CapStoreImageFiles
+        public override System.Boolean CapStoreImageFiles
         {
             get { return false; }
         }
-        public System.Boolean CapValidationDevice
+        public override System.Boolean CapValidationDevice
         {
             get { return false; }
         }
-        public Microsoft.PointOfService.CheckColors Color
+        public override Microsoft.PointOfService.CheckColors Color
         {
             get { return Microsoft.PointOfService.CheckColors.Mono; }
             set { }
         }
-        public System.Boolean ConcurrentMicr
+        public override System.Boolean ConcurrentMicr
         {
             get { return false; }
             set { }
         }
-        public System.Int32 CropAreaCount
+        public override System.Int32 CropAreaCount
         {
             get { return 0; }
         }
-        public System.Int32 DocumentHeight
-        {
-            get { return 0; }
-            set { }
-        }
-        public System.Int32 DocumentWidth
+        public override System.Int32 DocumentHeight
         {
             get { return 0; }
             set { }
         }
-        public System.String FileId
+        public override System.Int32 DocumentWidth
+        {
+            get { return 0; }
+            set { }
+        }
+        public override System.String FileId
         {
             get { return null; }
             set { }
         }
-        public System.Int32 FileIndex
+        public override System.Int32 FileIndex
         {
             get { return 0; }
             set { }
         }
-        public System.Drawing.Bitmap ImageData
+        public override System.Drawing.Bitmap ImageData
         {
             get { return null; }
         }
-        public Microsoft.PointOfService.CheckImageFormats ImageFormat
+        public override Microsoft.PointOfService.CheckImageFormats ImageFormat
         {
             get { return Microsoft.PointOfService.CheckImageFormats.Native; }
             set { }
         }
-        public Microsoft.PointOfService.ImageMemoryStatus ImageMemoryStatus
+        public override Microsoft.PointOfService.ImageMemoryStatus ImageMemoryStatus
         {
             get { return Microsoft.PointOfService.ImageMemoryStatus.Empty; }
         }
-        public System.String ImageTagData
+        public override System.String ImageTagData
         {
             get { return null; }
             set { }
         }
-        public Microsoft.PointOfService.MapMode MapMode
+        public override Microsoft.PointOfService.MapMode MapMode
         {
             get { return Microsoft.PointOfService.MapMode.Dots; }
             set { }
         }
-        public System.Int32 MaxCropAreas
+        public override System.Int32 MaxCropAreas
         {
             get { return 0; }
         }
-        public System.Int32 Quality
+        public override System.Int32 Quality
         {
             get { return 0; }
             set { }
         }
-        public System.Int32[] QualityList
+        public override System.Int32[] QualityList
         {
             get { return null; }
         }
-        public System.Int32 RemainingImagesEstimate
+        public override System.Int32 RemainingImagesEstimate
         {
             get { return 0; }
         }
-        public System.Boolean DeviceEnabled
+        public override System.Boolean DeviceEnabled
         {
             get { return false; }
             set { }
         }
-        public System.Boolean CapAutoContrast
+        public override System.Boolean CapAutoContrast
         {
             get { return false; }
         }
-        public System.Boolean CapContrast
+        public override System.Boolean CapContrast
         {
             get { return false; }
         }
-        public System.Int32 Contrast
+        public override System.Int32 Contrast
         {
             get { return 0; }
             set { }

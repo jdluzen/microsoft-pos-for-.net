@@ -1,6 +1,6 @@
 namespace Microsoft.PointOfService
 {
-    public class Micr : Microsoft.PointOfService.PosCommon
+    public abstract class Micr : Microsoft.PointOfService.PosCommon
     {
         protected Micr()
         {
@@ -16,59 +16,59 @@ namespace Microsoft.PointOfService
         public const System.Int32 ExtendedErrorJam = 206;
         public const System.Int32 ExtendedErrorCheckDigit = 207;
         public const System.Int32 ExtendedErrorCoverOpen = 208;
-        public System.Int32 DataCount
+        public abstract System.Int32 DataCount
         {
-            get { return 0; }
+            get;
         }
-        public System.Boolean DataEventEnabled
+        public abstract System.Boolean DataEventEnabled
         {
-            get { return false; }
-            set { }
+            get;
+            set;
         }
-        public System.Boolean AutoDisable
+        public abstract System.Boolean AutoDisable
         {
-            get { return false; }
-            set { }
+            get;
+            set;
         }
-        public System.String AccountNumber
+        public abstract System.String AccountNumber
         {
-            get { return null; }
+            get;
         }
-        public System.String Amount
+        public abstract System.String Amount
         {
-            get { return null; }
+            get;
         }
-        public System.String BankNumber
+        public abstract System.String BankNumber
         {
-            get { return null; }
+            get;
         }
-        public System.Boolean CapValidationDevice
+        public abstract System.Boolean CapValidationDevice
         {
-            get { return false; }
+            get;
         }
-        public Microsoft.PointOfService.CheckType CheckType
+        public abstract Microsoft.PointOfService.CheckType CheckType
         {
-            get { return Microsoft.PointOfService.CheckType.Personal; }
+            get;
         }
-        public Microsoft.PointOfService.CheckCountryCode CountryCode
+        public abstract Microsoft.PointOfService.CheckCountryCode CountryCode
         {
-            get { return Microsoft.PointOfService.CheckCountryCode.Usa; }
+            get;
         }
-        public System.String Epc
+        public abstract System.String Epc
         {
-            get { return null; }
+            get;
         }
-        public System.String RawData
+        public abstract System.String RawData
         {
-            get { return null; }
+            get;
         }
-        public System.String SerialNumber
+        public abstract System.String SerialNumber
         {
-            get { return null; }
+            get;
         }
-        public System.String TransitNumber
+        public abstract System.String TransitNumber
         {
-            get { return null; }
+            get;
         }
         #pragma warning disable 67
         public event Microsoft.PointOfService.DataEventHandler DataEvent

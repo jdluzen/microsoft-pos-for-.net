@@ -483,23 +483,24 @@ namespace utils
                 output(string.Format("namespace {0}\n{{", type.Namespace));
                 outputLevel++;
             }
-            string classSig = "";
-
+            string classSig = "public ";
+            if (type.IsAbstract && !type.IsInterface)
+                classSig += "abstract ";
             if (type.IsClass)
             {
-                classSig = "public class ";
+                classSig += "class ";
             }
             else if (type.IsEnum)
             {
-                classSig = "public enum ";
+                classSig += "enum ";
             }
             else if (type.IsInterface)
             {
-                classSig = "public interface ";
+                classSig += "interface ";
             }
             else if (type.IsValueType)
             {
-                classSig = "public struct ";
+                classSig += "struct ";
             }
 
             Type[] interfaceInfos = removeBaseInterfaces(type.GetInterfaces());
@@ -671,12 +672,15 @@ namespace utils
                 {
                     propSig += "public ";
                 }
-
-                if (!type.IsInterface && !type.IsValueType && forceVirtual)
+                if (!type.IsInterface)
                 {
-                    propSig += "virtual ";
+                    if (propertyInfo.GetGetMethod().IsAbstract)
+                        propSig += "abstract ";
+                    else if (propertyInfo.GetGetMethod().IsOverride())
+                        propSig += "override ";
+                    else if ((!type.IsValueType && forceVirtual) || propertyInfo.GetGetMethod().IsVirtual)
+                        propSig += "virtual ";
                 }
-
                 string propertyName = propertyInfo.Name;
 
                 if (propertyName.Equals("Item") && propertyInfo.GetIndexParameters().Length > 0)
@@ -697,11 +701,11 @@ namespace utils
                     propSig += "\n{\n";
                     if (propertyInfo.CanRead)
                     {
-                        if (!type.IsInterface)
+                        if (!type.IsInterface && !propertyInfo.GetGetMethod().IsAbstract)
                         {
                             propSig += indentFormat + "get { " + formatReturnValue(propertyInfo.PropertyType) + " }\n";
                         }
-                        else
+                        else if (propertyInfo.CanWrite || type.IsInterface || propertyInfo.GetGetMethod().IsAbstract)
                         {
                             propSig += indentFormat + "get;\n";
                         }
@@ -709,11 +713,11 @@ namespace utils
 
                     if (propertyInfo.CanWrite)
                     {
-                        if (!type.IsInterface)
+                        if (!type.IsInterface && !propertyInfo.GetSetMethod().IsAbstract)
                         {
                             propSig += indentFormat + "set { }\n";
                         }
-                        else
+                        else if (propertyInfo.CanRead || type.IsInterface || propertyInfo.GetSetMethod().IsAbstract)
                         {
                             propSig += indentFormat + "set;\n";
                         }

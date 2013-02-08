@@ -1,6 +1,6 @@
 namespace Microsoft.PointOfService
 {
-    public class PosEventArgs : System.EventArgs
+    public abstract class PosEventArgs : System.EventArgs
     {
         protected PosEventArgs()
         {

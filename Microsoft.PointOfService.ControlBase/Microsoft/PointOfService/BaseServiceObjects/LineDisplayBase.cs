@@ -1,194 +1,194 @@
 namespace Microsoft.PointOfService.BaseServiceObjects
 {
-    public class LineDisplayBase : Microsoft.PointOfService.BasicServiceObjects.LineDisplayBasic, System.IDisposable
+    public abstract class LineDisplayBase : Microsoft.PointOfService.BasicServiceObjects.LineDisplayBasic, System.IDisposable
     {
         protected LineDisplayBase()
         {
         }
-        public System.Int32 BlinkRate
+        public override System.Int32 BlinkRate
         {
             get { return 0; }
             set { }
         }
-        public Microsoft.PointOfService.DisplayBlink CapBlink
+        public override Microsoft.PointOfService.DisplayBlink CapBlink
         {
             get { return Microsoft.PointOfService.DisplayBlink.None; }
         }
-        public System.Boolean CapBlinkRate
+        public override System.Boolean CapBlinkRate
         {
             get { return false; }
         }
-        public System.Boolean CapBitmap
+        public override System.Boolean CapBitmap
         {
             get { return false; }
         }
-        public System.Boolean CapBrightness
+        public override System.Boolean CapBrightness
         {
             get { return false; }
         }
-        public Microsoft.PointOfService.CharacterSetCapability CapCharacterSet
+        public override Microsoft.PointOfService.CharacterSetCapability CapCharacterSet
         {
             get { return Microsoft.PointOfService.CharacterSetCapability.Numeric; }
         }
-        public Microsoft.PointOfService.DisplayCursors CapCursorType
+        public override Microsoft.PointOfService.DisplayCursors CapCursorType
         {
             get { return Microsoft.PointOfService.DisplayCursors.None; }
         }
-        public System.Boolean CapCustomGlyph
+        public override System.Boolean CapCustomGlyph
         {
             get { return false; }
         }
-        public System.Boolean CapDescriptors
+        public override System.Boolean CapDescriptors
         {
             get { return false; }
         }
-        public System.Boolean CapHMarquee
+        public override System.Boolean CapHMarquee
         {
             get { return false; }
         }
-        public System.Boolean CapICharWait
+        public override System.Boolean CapICharWait
         {
             get { return false; }
         }
-        public System.Boolean CapMapCharacterSet
+        public override System.Boolean CapMapCharacterSet
         {
             get { return false; }
         }
-        public Microsoft.PointOfService.DisplayReadBack CapReadBack
+        public override Microsoft.PointOfService.DisplayReadBack CapReadBack
         {
             get { return Microsoft.PointOfService.DisplayReadBack.None; }
         }
-        public Microsoft.PointOfService.DisplayReverse CapReverse
+        public override Microsoft.PointOfService.DisplayReverse CapReverse
         {
             get { return Microsoft.PointOfService.DisplayReverse.None; }
         }
-        public System.Boolean CapScreenMode
+        public override System.Boolean CapScreenMode
         {
             get { return false; }
         }
-        public System.Boolean CapVMarquee
+        public override System.Boolean CapVMarquee
         {
             get { return false; }
         }
-        public System.Int32 CharacterSet
+        public override System.Int32 CharacterSet
         {
             get { return 0; }
             set { }
         }
-        public System.Int32[] CharacterSetList
+        public override System.Int32[] CharacterSetList
         {
             get { return null; }
         }
-        public System.Int32 Columns
+        public override System.Int32 Columns
         {
             get { return 0; }
         }
-        public System.Int32 CurrentWindow
-        {
-            get { return 0; }
-            set { }
-        }
-        public System.Int32 CursorColumn
+        public override System.Int32 CurrentWindow
         {
             get { return 0; }
             set { }
         }
-        public System.Int32 CursorRow
+        public override System.Int32 CursorColumn
         {
             get { return 0; }
             set { }
         }
-        public Microsoft.PointOfService.DisplayCursors CursorType
+        public override System.Int32 CursorRow
+        {
+            get { return 0; }
+            set { }
+        }
+        public override Microsoft.PointOfService.DisplayCursors CursorType
         {
             get { return Microsoft.PointOfService.DisplayCursors.None; }
             set { }
         }
-        public System.Boolean CursorUpdate
+        public override System.Boolean CursorUpdate
         {
             get { return false; }
             set { }
         }
-        public Microsoft.PointOfService.RangeOfCharacters[] CustomGlyphList
+        public override Microsoft.PointOfService.RangeOfCharacters[] CustomGlyphList
         {
             get { return null; }
         }
-        public System.Int32 DeviceBrightness
+        public override System.Int32 DeviceBrightness
         {
             get { return 0; }
             set { }
         }
-        public System.Int32 DeviceColumns
+        public override System.Int32 DeviceColumns
         {
             get { return 0; }
         }
-        public System.Int32 DeviceDescriptors
+        public override System.Int32 DeviceDescriptors
         {
             get { return 0; }
         }
-        public System.Int32 DeviceRows
+        public override System.Int32 DeviceRows
         {
             get { return 0; }
         }
-        public System.Int32 DeviceWindows
+        public override System.Int32 DeviceWindows
         {
             get { return 0; }
         }
-        public System.Int32 GlyphHeight
+        public override System.Int32 GlyphHeight
         {
             get { return 0; }
         }
-        public System.Int32 GlyphWidth
+        public override System.Int32 GlyphWidth
         {
             get { return 0; }
         }
-        public System.Int32 InterCharacterWait
+        public override System.Int32 InterCharacterWait
         {
             get { return 0; }
             set { }
         }
-        public System.Boolean MapCharacterSet
+        public override System.Boolean MapCharacterSet
         {
             get { return false; }
             set { }
         }
-        public Microsoft.PointOfService.DisplayMarqueeFormat MarqueeFormat
+        public override Microsoft.PointOfService.DisplayMarqueeFormat MarqueeFormat
         {
             get { return Microsoft.PointOfService.DisplayMarqueeFormat.Walk; }
             set { }
         }
-        public System.Int32 MarqueeRepeatWait
+        public override System.Int32 MarqueeRepeatWait
         {
             get { return 0; }
             set { }
         }
-        public Microsoft.PointOfService.DisplayMarqueeType MarqueeType
+        public override Microsoft.PointOfService.DisplayMarqueeType MarqueeType
         {
             get { return Microsoft.PointOfService.DisplayMarqueeType.None; }
             set { }
         }
-        public System.Int32 MarqueeUnitWait
+        public override System.Int32 MarqueeUnitWait
         {
             get { return 0; }
             set { }
         }
-        public System.Int32 MaximumX
+        public override System.Int32 MaximumX
         {
             get { return 0; }
         }
-        public System.Int32 MaximumY
+        public override System.Int32 MaximumY
         {
             get { return 0; }
         }
-        public System.Int32 Rows
+        public override System.Int32 Rows
         {
             get { return 0; }
         }
-        public System.Int32 ScreenMode
+        public override System.Int32 ScreenMode
         {
             get { return 0; }
             set { }
         }
-        public Microsoft.PointOfService.DisplayScreenMode[] ScreenModeList
+        public override Microsoft.PointOfService.DisplayScreenMode[] ScreenModeList
         {
             get { return null; }
         }

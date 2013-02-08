@@ -1,6 +1,6 @@
 namespace Microsoft.PointOfService
 {
-    public class BillDispenser : Microsoft.PointOfService.PosCommon
+    public abstract class BillDispenser : Microsoft.PointOfService.PosCommon
     {
         protected BillDispenser()
         {
@@ -12,64 +12,64 @@ namespace Microsoft.PointOfService
         public const System.Int32 StatusJamOk = 32;
         public const System.Int32 StatusAsync = 91;
         public const System.Int32 ExtendedErrorOverDispense = 201;
-        public System.Boolean CapDiscrepancy
+        public abstract System.Boolean CapDiscrepancy
         {
-            get { return false; }
+            get;
         }
-        public System.Boolean CapEmptySensor
+        public abstract System.Boolean CapEmptySensor
         {
-            get { return false; }
+            get;
         }
-        public System.Boolean CapJamSensor
+        public abstract System.Boolean CapJamSensor
         {
-            get { return false; }
+            get;
         }
-        public System.Boolean CapNearEmptySensor
+        public abstract System.Boolean CapNearEmptySensor
         {
-            get { return false; }
+            get;
         }
-        public System.Boolean AsyncMode
+        public abstract System.Boolean AsyncMode
         {
-            get { return false; }
-            set { }
+            get;
+            set;
         }
-        public System.Int32 AsyncResultCode
+        public abstract System.Int32 AsyncResultCode
         {
-            get { return 0; }
+            get;
         }
-        public System.Int32 AsyncResultCodeExtended
+        public abstract System.Int32 AsyncResultCodeExtended
         {
-            get { return 0; }
+            get;
         }
-        public Microsoft.PointOfService.CashUnits CurrencyCashList
+        public abstract Microsoft.PointOfService.CashUnits CurrencyCashList
         {
-            get { return new Microsoft.PointOfService.CashUnits(); }
+            get;
         }
-        public System.String CurrencyCode
+        public abstract System.String CurrencyCode
         {
-            get { return null; }
-            set { }
+            get;
+            set;
         }
-        public System.String[] CurrencyCodeList
+        public abstract System.String[] CurrencyCodeList
         {
-            get { return null; }
+            get;
         }
-        public System.Int32 CurrentExit
+        public abstract System.Int32 CurrentExit
         {
-            get { return 0; }
-            set { }
+            get;
+            set;
         }
-        public System.Int32 DeviceExits
+        public abstract System.Int32 DeviceExits
         {
-            get { return 0; }
+            get;
         }
-        public Microsoft.PointOfService.CashChangerStatus DeviceStatus
+        public abstract Microsoft.PointOfService.CashChangerStatus DeviceStatus
         {
-            get { return Microsoft.PointOfService.CashChangerStatus.OK; }
+            get;
         }
-        public Microsoft.PointOfService.CashUnits ExitCashList
+        public abstract Microsoft.PointOfService.CashUnits ExitCashList
         {
-            get { return new Microsoft.PointOfService.CashUnits(); }
+            get;
         }
         public virtual void AdjustCashCounts(System.Collections.Generic.IEnumerable<Microsoft.PointOfService.CashCount> cashCounts)
         {

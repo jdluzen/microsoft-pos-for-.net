@@ -1,65 +1,65 @@
 namespace Microsoft.PointOfService.BaseServiceObjects
 {
-    public class RFIDScannerBase : Microsoft.PointOfService.BasicServiceObjects.RFIDScannerBasic, System.IDisposable
+    public abstract class RFIDScannerBase : Microsoft.PointOfService.BasicServiceObjects.RFIDScannerBasic, System.IDisposable
     {
         protected RFIDScannerBase()
         {
         }
-        public Microsoft.PointOfService.RFIDProtocols CapMultipleProtocols
+        public override Microsoft.PointOfService.RFIDProtocols CapMultipleProtocols
         {
             get { return Microsoft.PointOfService.RFIDProtocols.EpcClass0; }
         }
-        public System.Boolean CapDisableTag
+        public override System.Boolean CapDisableTag
         {
             get { return false; }
         }
-        public Microsoft.PointOfService.RFIDProtocols ProtocolMask
+        public override Microsoft.PointOfService.RFIDProtocols ProtocolMask
         {
             get { return Microsoft.PointOfService.RFIDProtocols.EpcClass0; }
             set { }
         }
-        public System.Byte[] CurrentTagId
+        public override System.Byte[] CurrentTagId
         {
             get { return null; }
         }
-        public System.Byte[] CurrentTagUserData
+        public override System.Byte[] CurrentTagUserData
         {
             get { return null; }
         }
-        public Microsoft.PointOfService.RFIDProtocols CurrentTagProtocol
+        public override Microsoft.PointOfService.RFIDProtocols CurrentTagProtocol
         {
             get { return Microsoft.PointOfService.RFIDProtocols.EpcClass0; }
         }
-        public System.Int32 TagCount
+        public override System.Int32 TagCount
         {
             get { return 0; }
         }
-        public System.Boolean CapContinuousRead
+        public override System.Boolean CapContinuousRead
         {
             get { return false; }
         }
-        public System.Boolean ContinuousReadMode
+        public override System.Boolean ContinuousReadMode
         {
             get { return false; }
         }
-        public System.Boolean CapReadTimer
+        public override System.Boolean CapReadTimer
         {
             get { return false; }
         }
-        public System.Int32 ReadTimerInterval
+        public override System.Int32 ReadTimerInterval
         {
             get { return 0; }
             set { }
         }
-        public Microsoft.PointOfService.WriteTagSections CapWriteTag
+        public override Microsoft.PointOfService.WriteTagSections CapWriteTag
         {
             get { return Microsoft.PointOfService.WriteTagSections.None; }
         }
-        public System.Boolean CapLockTag
+        public override System.Boolean CapLockTag
         {
             get { return false; }
         }
-        public System.String CheckHealthText
+        public override System.String CheckHealthText
         {
             get { return null; }
         }

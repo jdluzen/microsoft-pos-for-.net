@@ -1,6 +1,6 @@
 namespace Microsoft.PointOfService
 {
-    public class CashDrawer : Microsoft.PointOfService.PosCommon
+    public abstract class CashDrawer : Microsoft.PointOfService.PosCommon
     {
         protected CashDrawer()
         {
@@ -9,17 +9,17 @@ namespace Microsoft.PointOfService
         public const System.String StatisticDrawerFailedOpenCount = "DrawerFailedOpenCount";
         public const System.Int32 StatusClosed = 0;
         public const System.Int32 StatusOpen = 1;
-        public System.Boolean CapStatus
+        public abstract System.Boolean CapStatus
         {
-            get { return false; }
+            get;
         }
-        public System.Boolean CapStatusMultiDrawerDetect
+        public abstract System.Boolean CapStatusMultiDrawerDetect
         {
-            get { return false; }
+            get;
         }
-        public System.Boolean DrawerOpened
+        public abstract System.Boolean DrawerOpened
         {
-            get { return false; }
+            get;
         }
         public virtual void OpenDrawer()
         {

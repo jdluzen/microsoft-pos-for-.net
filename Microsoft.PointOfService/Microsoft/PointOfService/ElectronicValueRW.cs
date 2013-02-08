@@ -1,6 +1,6 @@
 namespace Microsoft.PointOfService
 {
-    public class ElectronicValueRW : Microsoft.PointOfService.PosCommon
+    public abstract class ElectronicValueRW : Microsoft.PointOfService.PosCommon
     {
         protected ElectronicValueRW()
         {
@@ -22,201 +22,201 @@ namespace Microsoft.PointOfService
         public const System.Int32 ExtendedErrorDailyLogOverflow = 208;
         public const System.Int32 ExtendedErrorDeficient = 209;
         public const System.Int32 ExtendedErrorOverdeposit = 210;
-        public System.Int32 DataCount
+        public abstract System.Int32 DataCount
         {
-            get { return 0; }
+            get;
         }
-        public System.Boolean DataEventEnabled
+        public abstract System.Boolean DataEventEnabled
         {
-            get { return false; }
-            set { }
+            get;
+            set;
         }
-        public System.Int32 OutputId
+        public abstract System.Int32 OutputId
         {
-            get { return 0; }
+            get;
         }
-        public System.Boolean AutoDisable
+        public abstract System.Boolean AutoDisable
         {
-            get { return false; }
-            set { }
+            get;
+            set;
         }
-        public System.String AccountNumber
+        public abstract System.String AccountNumber
         {
-            get { return null; }
+            get;
         }
-        public System.String AdditionalSecurityInformation
+        public abstract System.String AdditionalSecurityInformation
         {
-            get { return null; }
-            set { }
+            get;
+            set;
         }
-        public System.Decimal Amount
+        public abstract System.Decimal Amount
         {
-            get { return new System.Decimal(); }
-            set { }
+            get;
+            set;
         }
-        public System.String ApprovalCode
+        public abstract System.String ApprovalCode
         {
-            get { return null; }
-            set { }
+            get;
+            set;
         }
-        public System.Boolean AsyncMode
+        public abstract System.Boolean AsyncMode
         {
-            get { return false; }
-            set { }
+            get;
+            set;
         }
-        public System.Decimal Balance
+        public abstract System.Decimal Balance
         {
-            get { return new System.Decimal(); }
+            get;
         }
-        public System.Decimal BalanceOfPoint
+        public abstract System.Decimal BalanceOfPoint
         {
-            get { return new System.Decimal(); }
+            get;
         }
-        public System.Boolean CapActivateService
+        public abstract System.Boolean CapActivateService
         {
-            get { return false; }
+            get;
         }
-        public System.Boolean CapAddValue
+        public abstract System.Boolean CapAddValue
         {
-            get { return false; }
+            get;
         }
-        public System.Boolean CapCancelValue
+        public abstract System.Boolean CapCancelValue
         {
-            get { return false; }
+            get;
         }
-        public Microsoft.PointOfService.CardDetectionTypes CapCardSensor
+        public abstract Microsoft.PointOfService.CardDetectionTypes CapCardSensor
         {
-            get { return Microsoft.PointOfService.CardDetectionTypes.Entry; }
+            get;
         }
-        public Microsoft.PointOfService.CardDetectionControl CapDetectionControl
+        public abstract Microsoft.PointOfService.CardDetectionControl CapDetectionControl
         {
-            get { return Microsoft.PointOfService.CardDetectionControl.Device; }
+            get;
         }
-        public System.Boolean CapElectronicMoney
+        public abstract System.Boolean CapElectronicMoney
         {
-            get { return false; }
+            get;
         }
-        public System.Boolean CapEnumerateCardServices
+        public abstract System.Boolean CapEnumerateCardServices
         {
-            get { return false; }
+            get;
         }
-        public System.Boolean CapIndirectTransactionLog
+        public abstract System.Boolean CapIndirectTransactionLog
         {
-            get { return false; }
+            get;
         }
-        public System.Boolean CapLockTerminal
+        public abstract System.Boolean CapLockTerminal
         {
-            get { return false; }
+            get;
         }
-        public System.Boolean CapLogStatus
+        public abstract System.Boolean CapLogStatus
         {
-            get { return false; }
+            get;
         }
-        public System.Boolean CapMediumId
+        public abstract System.Boolean CapMediumId
         {
-            get { return false; }
+            get;
         }
-        public System.Boolean CapPoint
+        public abstract System.Boolean CapPoint
         {
-            get { return false; }
+            get;
         }
-        public System.Boolean CapSubtractValue
+        public abstract System.Boolean CapSubtractValue
         {
-            get { return false; }
+            get;
         }
-        public System.Boolean CapTransaction
+        public abstract System.Boolean CapTransaction
         {
-            get { return false; }
+            get;
         }
-        public System.Boolean CapTransactionLog
+        public abstract System.Boolean CapTransactionLog
         {
-            get { return false; }
+            get;
         }
-        public System.Boolean CapUnlockTerminal
+        public abstract System.Boolean CapUnlockTerminal
         {
-            get { return false; }
+            get;
         }
-        public System.Boolean CapUpdateKey
+        public abstract System.Boolean CapUpdateKey
         {
-            get { return false; }
+            get;
         }
-        public System.Boolean CapVoucher
+        public abstract System.Boolean CapVoucher
         {
-            get { return false; }
+            get;
         }
-        public System.Boolean CapWriteValue
+        public abstract System.Boolean CapWriteValue
         {
-            get { return false; }
+            get;
         }
-        public System.Collections.ObjectModel.ReadOnlyCollection<System.String> CardServiceList
+        public abstract System.Collections.ObjectModel.ReadOnlyCollection<System.String> CardServiceList
         {
-            get { return null; }
+            get;
         }
-        public System.String CurrentService
+        public abstract System.String CurrentService
         {
-            get { return null; }
-            set { }
+            get;
+            set;
         }
-        public System.Boolean DetectionControl
+        public abstract System.Boolean DetectionControl
         {
-            get { return false; }
-            set { }
+            get;
+            set;
         }
-        public Microsoft.PointOfService.DetectionState DetectionStatus
+        public abstract Microsoft.PointOfService.DetectionState DetectionStatus
         {
-            get { return Microsoft.PointOfService.DetectionState.NoCard; }
+            get;
         }
-        public System.DateTime ExpirationDate
+        public abstract System.DateTime ExpirationDate
         {
-            get { return new System.DateTime(); }
+            get;
         }
-        public System.DateTime LastUsedDate
+        public abstract System.DateTime LastUsedDate
         {
-            get { return new System.DateTime(); }
+            get;
         }
-        public Microsoft.PointOfService.LogState LogStatus
+        public abstract Microsoft.PointOfService.LogState LogStatus
         {
-            get { return Microsoft.PointOfService.LogState.Ok; }
+            get;
         }
-        public System.String MediumId
+        public abstract System.String MediumId
         {
-            get { return null; }
-            set { }
+            get;
+            set;
         }
-        public System.Decimal Point
+        public abstract System.Decimal Point
         {
-            get { return new System.Decimal(); }
-            set { }
+            get;
+            set;
         }
-        public System.Collections.ObjectModel.ReadOnlyCollection<System.String> ReaderWriterServiceList
+        public abstract System.Collections.ObjectModel.ReadOnlyCollection<System.String> ReaderWriterServiceList
         {
-            get { return null; }
+            get;
         }
-        public System.Int32 SequenceNumber
+        public abstract System.Int32 SequenceNumber
         {
-            get { return 0; }
+            get;
         }
-        public System.Decimal SettledAmount
+        public abstract System.Decimal SettledAmount
         {
-            get { return new System.Decimal(); }
+            get;
         }
-        public System.Decimal SettledPoint
+        public abstract System.Decimal SettledPoint
         {
-            get { return new System.Decimal(); }
+            get;
         }
-        public System.String TransactionLog
+        public abstract System.String TransactionLog
         {
-            get { return null; }
+            get;
         }
-        public System.String VoucherId
+        public abstract System.String VoucherId
         {
-            get { return null; }
-            set { }
+            get;
+            set;
         }
-        public System.String VoucherIdList
+        public abstract System.String VoucherIdList
         {
-            get { return null; }
-            set { }
+            get;
+            set;
         }
         #pragma warning disable 67
         public event Microsoft.PointOfService.DataEventHandler DataEvent

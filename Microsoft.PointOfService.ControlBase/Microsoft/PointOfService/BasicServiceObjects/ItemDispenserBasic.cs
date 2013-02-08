@@ -1,70 +1,70 @@
 namespace Microsoft.PointOfService.BasicServiceObjects
 {
-    public class ItemDispenserBasic : Microsoft.PointOfService.ItemDispenser, System.IDisposable
+    public abstract class ItemDispenserBasic : Microsoft.PointOfService.ItemDispenser, System.IDisposable
     {
         protected ItemDispenserBasic()
         {
         }
-        public Microsoft.PointOfService.PowerReporting CapPowerReporting
+        public override Microsoft.PointOfService.PowerReporting CapPowerReporting
         {
             get { return Microsoft.PointOfService.PowerReporting.None; }
         }
-        public System.Boolean CapStatisticsReporting
+        public override System.Boolean CapStatisticsReporting
         {
             get { return false; }
         }
-        public System.Boolean CapUpdateStatistics
+        public override System.Boolean CapUpdateStatistics
         {
             get { return false; }
         }
-        public System.Boolean Claimed
+        public override System.Boolean Claimed
         {
             get { return false; }
         }
-        public System.Boolean DeviceEnabled
-        {
-            get { return false; }
-            set { }
-        }
-        public System.Boolean FreezeEvents
+        public override System.Boolean DeviceEnabled
         {
             get { return false; }
             set { }
         }
-        public Microsoft.PointOfService.PowerNotification PowerNotify
+        public override System.Boolean FreezeEvents
+        {
+            get { return false; }
+            set { }
+        }
+        public override Microsoft.PointOfService.PowerNotification PowerNotify
         {
             get { return Microsoft.PointOfService.PowerNotification.Disabled; }
             set { }
         }
-        public Microsoft.PointOfService.PowerState PowerState
+        public override Microsoft.PointOfService.PowerState PowerState
         {
             get { return Microsoft.PointOfService.PowerState.Unknown; }
         }
-        public Microsoft.PointOfService.ControlState State
+        public override Microsoft.PointOfService.ControlState State
         {
             get { return Microsoft.PointOfService.ControlState.Closed; }
         }
-        public System.String ServiceObjectDescription
+        public override System.String ServiceObjectDescription
         {
             get { return null; }
         }
-        public System.Version ServiceObjectVersion
+        public override System.Version ServiceObjectVersion
         {
             get { return null; }
         }
-        public System.String DeviceDescription
+        public override System.String DeviceDescription
         {
             get { return null; }
         }
-        public System.String DeviceName
+        public override System.String DeviceName
         {
             get { return null; }
         }
-        public System.Boolean CapCompareFirmwareVersion
+        public override System.Boolean CapCompareFirmwareVersion
         {
             get { return false; }
         }
-        public System.Boolean CapUpdateFirmware
+        public override System.Boolean CapUpdateFirmware
         {
             get { return false; }
         }

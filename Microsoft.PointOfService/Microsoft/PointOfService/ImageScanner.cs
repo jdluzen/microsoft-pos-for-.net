@@ -1,6 +1,6 @@
 namespace Microsoft.PointOfService
 {
-    public class ImageScanner : Microsoft.PointOfService.PosCommon
+    public abstract class ImageScanner : Microsoft.PointOfService.PosCommon
     {
         protected ImageScanner()
         {
@@ -8,85 +8,85 @@ namespace Microsoft.PointOfService
         public const System.String StatisticGoodReadCount = "GoodReadCount";
         public const System.String StatisticNoReadCount = "NoReadCount";
         public const System.String StatisticSessionCount = "SessionCount";
-        public System.Int32 DataCount
+        public abstract System.Int32 DataCount
         {
-            get { return 0; }
+            get;
         }
-        public System.Boolean DataEventEnabled
+        public abstract System.Boolean DataEventEnabled
         {
-            get { return false; }
-            set { }
+            get;
+            set;
         }
-        public System.Boolean AutoDisable
+        public abstract System.Boolean AutoDisable
         {
-            get { return false; }
-            set { }
+            get;
+            set;
         }
-        public System.Boolean CapAim
+        public abstract System.Boolean CapAim
         {
-            get { return false; }
+            get;
         }
-        public System.Boolean CapDecodeData
+        public abstract System.Boolean CapDecodeData
         {
-            get { return false; }
+            get;
         }
-        public System.Boolean CapHostTriggered
+        public abstract System.Boolean CapHostTriggered
         {
-            get { return false; }
+            get;
         }
-        public System.Boolean CapIlluminate
+        public abstract System.Boolean CapIlluminate
         {
-            get { return false; }
+            get;
         }
-        public System.Boolean CapImageData
+        public abstract System.Boolean CapImageData
         {
-            get { return false; }
+            get;
         }
-        public System.Boolean CapImageQuality
+        public abstract System.Boolean CapImageQuality
         {
-            get { return false; }
+            get;
         }
-        public System.Boolean CapVideoData
+        public abstract System.Boolean CapVideoData
         {
-            get { return false; }
+            get;
         }
-        public System.Boolean AimMode
+        public abstract System.Boolean AimMode
         {
-            get { return false; }
-            set { }
+            get;
+            set;
         }
-        public System.Collections.ObjectModel.ReadOnlyCollection<System.Drawing.Bitmap> FrameData
+        public abstract System.Collections.ObjectModel.ReadOnlyCollection<System.Drawing.Bitmap> FrameData
         {
-            get { return null; }
+            get;
         }
-        public Microsoft.PointOfService.FrameType FrameType
+        public abstract Microsoft.PointOfService.FrameType FrameType
         {
-            get { return Microsoft.PointOfService.FrameType.Still; }
+            get;
         }
-        public System.Boolean IlluminateMode
+        public abstract System.Boolean IlluminateMode
         {
-            get { return false; }
-            set { }
+            get;
+            set;
         }
-        public Microsoft.PointOfService.ImageMode ImageMode
+        public abstract Microsoft.PointOfService.ImageMode ImageMode
         {
-            get { return Microsoft.PointOfService.ImageMode.DecodeOnly; }
-            set { }
+            get;
+            set;
         }
-        public Microsoft.PointOfService.ImageQuality ImageQuality
+        public abstract Microsoft.PointOfService.ImageQuality ImageQuality
         {
-            get { return Microsoft.PointOfService.ImageQuality.Low; }
-            set { }
+            get;
+            set;
         }
-        public System.Int32 VideoCount
+        public abstract System.Int32 VideoCount
         {
-            get { return 0; }
-            set { }
+            get;
+            set;
         }
-        public System.Int32 VideoRate
+        public abstract System.Int32 VideoRate
         {
-            get { return 0; }
-            set { }
+            get;
+            set;
         }
         #pragma warning disable 67
         public event Microsoft.PointOfService.DataEventHandler DataEvent

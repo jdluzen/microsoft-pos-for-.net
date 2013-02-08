@@ -1,58 +1,58 @@
 namespace Microsoft.PointOfService
 {
-    public class SignatureCapture : Microsoft.PointOfService.PosCommon
+    public abstract class SignatureCapture : Microsoft.PointOfService.PosCommon
     {
         protected SignatureCapture()
         {
         }
         public const System.String StatisticGoodSignatureReadCount = "GoodSignatureReadCount";
         public const System.String StatisticFailedSignatureReadCount = "FailedSignatureReadCount";
-        public System.Int32 DataCount
+        public abstract System.Int32 DataCount
         {
-            get { return 0; }
+            get;
         }
-        public System.Boolean DataEventEnabled
+        public abstract System.Boolean DataEventEnabled
         {
-            get { return false; }
-            set { }
+            get;
+            set;
         }
-        public System.Boolean AutoDisable
+        public abstract System.Boolean AutoDisable
         {
-            get { return false; }
-            set { }
+            get;
+            set;
         }
-        public System.Boolean CapDisplay
+        public abstract System.Boolean CapDisplay
         {
-            get { return false; }
+            get;
         }
-        public System.Boolean CapRealTimeData
+        public abstract System.Boolean CapRealTimeData
         {
-            get { return false; }
+            get;
         }
-        public System.Boolean CapUserTerminated
+        public abstract System.Boolean CapUserTerminated
         {
-            get { return false; }
+            get;
         }
-        public System.Int32 MaximumX
+        public abstract System.Int32 MaximumX
         {
-            get { return 0; }
+            get;
         }
-        public System.Int32 MaximumY
+        public abstract System.Int32 MaximumY
         {
-            get { return 0; }
+            get;
         }
-        public System.Drawing.Point[] PointArray
+        public abstract System.Drawing.Point[] PointArray
         {
-            get { return null; }
+            get;
         }
-        public System.Byte[] RawData
+        public abstract System.Byte[] RawData
         {
-            get { return null; }
+            get;
         }
-        public System.Boolean RealTimeDataEnabled
+        public abstract System.Boolean RealTimeDataEnabled
         {
-            get { return false; }
-            set { }
+            get;
+            set;
         }
         #pragma warning disable 67
         public event Microsoft.PointOfService.DataEventHandler DataEvent

@@ -1,207 +1,207 @@
 namespace Microsoft.PointOfService.BaseServiceObjects
 {
-    public class MsrBase : Microsoft.PointOfService.BasicServiceObjects.MsrBasic, System.IDisposable
+    public abstract class MsrBase : Microsoft.PointOfService.BasicServiceObjects.MsrBasic, System.IDisposable
     {
         protected MsrBase()
         {
         }
-        public System.Byte[] AdditionalSecurityInformation
+        public override System.Byte[] AdditionalSecurityInformation
         {
             get { return null; }
         }
-        public System.Byte[] CardAuthenticationData
+        public override System.Byte[] CardAuthenticationData
         {
             get { return null; }
         }
-        public System.Int32 CardAuthenticationDataLength
+        public override System.Int32 CardAuthenticationDataLength
         {
             get { return 0; }
         }
-        public Microsoft.PointOfService.EncryptionAlgorithm CapDataEncryption
+        public override Microsoft.PointOfService.EncryptionAlgorithm CapDataEncryption
         {
             get { return Microsoft.PointOfService.EncryptionAlgorithm.None; }
         }
-        public Microsoft.PointOfService.EncryptionAlgorithm DataEncryptionAlgorithm
+        public override Microsoft.PointOfService.EncryptionAlgorithm DataEncryptionAlgorithm
         {
             get { return Microsoft.PointOfService.EncryptionAlgorithm.None; }
             set { }
         }
-        public System.String AccountNumber
+        public override System.String AccountNumber
         {
             get { return null; }
         }
-        public System.String MiddleInitial
+        public override System.String MiddleInitial
         {
             get { return null; }
         }
-        public System.String FirstName
+        public override System.String FirstName
         {
             get { return null; }
         }
-        public System.String ServiceCode
+        public override System.String ServiceCode
         {
             get { return null; }
         }
-        public System.String Surname
+        public override System.String Surname
         {
             get { return null; }
         }
-        public System.String Suffix
+        public override System.String Suffix
         {
             get { return null; }
         }
-        public System.String ExpirationDate
+        public override System.String ExpirationDate
         {
             get { return null; }
         }
-        public System.String Title
+        public override System.String Title
         {
             get { return null; }
         }
-        public System.Byte[] Track1DiscretionaryData
+        public override System.Byte[] Track1DiscretionaryData
         {
             get { return null; }
         }
-        public System.Byte[] Track2DiscretionaryData
+        public override System.Byte[] Track2DiscretionaryData
         {
             get { return null; }
         }
-        public System.Byte[] Track1Data
+        public override System.Byte[] Track1Data
         {
             get { return null; }
         }
-        public System.Byte[] Track2Data
+        public override System.Byte[] Track2Data
         {
             get { return null; }
         }
-        public System.Byte[] Track3Data
+        public override System.Byte[] Track3Data
         {
             get { return null; }
         }
-        public System.Byte[] Track4Data
+        public override System.Byte[] Track4Data
         {
             get { return null; }
         }
-        public System.Byte[] Track1EncryptedData
+        public override System.Byte[] Track1EncryptedData
         {
             get { return null; }
         }
-        public System.Byte[] Track2EncryptedData
+        public override System.Byte[] Track2EncryptedData
         {
             get { return null; }
         }
-        public System.Byte[] Track3EncryptedData
+        public override System.Byte[] Track3EncryptedData
         {
             get { return null; }
         }
-        public System.Byte[] Track4EncryptedData
+        public override System.Byte[] Track4EncryptedData
         {
             get { return null; }
         }
-        public System.Int32 Track1EncryptedDataLength
+        public override System.Int32 Track1EncryptedDataLength
         {
             get { return 0; }
         }
-        public System.Int32 Track2EncryptedDataLength
+        public override System.Int32 Track2EncryptedDataLength
         {
             get { return 0; }
         }
-        public System.Int32 Track3EncryptedDataLength
+        public override System.Int32 Track3EncryptedDataLength
         {
             get { return 0; }
         }
-        public System.Int32 Track4EncryptedDataLength
+        public override System.Int32 Track4EncryptedDataLength
         {
             get { return 0; }
         }
-        public System.Boolean CapIso
+        public override System.Boolean CapIso
         {
             get { return false; }
         }
-        public System.Boolean CapJisOne
+        public override System.Boolean CapJisOne
         {
             get { return false; }
         }
-        public System.Boolean CapJisTwo
+        public override System.Boolean CapJisTwo
         {
             get { return false; }
         }
-        public System.Boolean CapTransmitSentinels
+        public override System.Boolean CapTransmitSentinels
         {
             get { return false; }
         }
-        public Microsoft.PointOfService.MsrErrorReporting ErrorReportingType
+        public override Microsoft.PointOfService.MsrErrorReporting ErrorReportingType
         {
             get { return Microsoft.PointOfService.MsrErrorReporting.Card; }
             set { }
         }
-        public Microsoft.PointOfService.MsrTracks TracksToRead
+        public override Microsoft.PointOfService.MsrTracks TracksToRead
         {
             get { return Microsoft.PointOfService.MsrTracks.None; }
             set { }
         }
-        public System.Boolean ParseDecodeData
+        public override System.Boolean ParseDecodeData
         {
             get { return false; }
             set { }
         }
-        public System.Boolean DecodeData
+        public override System.Boolean DecodeData
         {
             get { return false; }
             set { }
         }
-        public System.Boolean TransmitSentinels
+        public override System.Boolean TransmitSentinels
         {
             get { return false; }
             set { }
         }
-        public System.String CapCardAuthentication
+        public override System.String CapCardAuthentication
         {
             get { return null; }
         }
-        public Microsoft.PointOfService.DeviceAuthenticationLevel CapDeviceAuthentication
+        public override Microsoft.PointOfService.DeviceAuthenticationLevel CapDeviceAuthentication
         {
             get { return Microsoft.PointOfService.DeviceAuthenticationLevel.NotSupported; }
         }
-        public System.Boolean CapTrackDataMasking
+        public override System.Boolean CapTrackDataMasking
         {
             get { return false; }
         }
-        public System.String CardType
+        public override System.String CardType
         {
             get { return null; }
         }
-        public System.Collections.ObjectModel.ReadOnlyCollection<System.String> CardTypeList
+        public override System.Collections.ObjectModel.ReadOnlyCollection<System.String> CardTypeList
         {
             get { return null; }
         }
-        public System.Collections.ObjectModel.ReadOnlyCollection<System.String> CardPropertyList
+        public override System.Collections.ObjectModel.ReadOnlyCollection<System.String> CardPropertyList
         {
             get { return null; }
         }
-        public System.Boolean DeviceAuthenticated
+        public override System.Boolean DeviceAuthenticated
         {
             get { return false; }
         }
-        public Microsoft.PointOfService.DeviceAuthenticationProtocol DeviceAuthenticationProtocol
+        public override Microsoft.PointOfService.DeviceAuthenticationProtocol DeviceAuthenticationProtocol
         {
             get { return Microsoft.PointOfService.DeviceAuthenticationProtocol.None; }
         }
-        public System.String WriteCardType
+        public override System.String WriteCardType
         {
             get { return null; }
             set { }
         }
-        public Microsoft.PointOfService.MsrTracks CapWritableTracks
+        public override Microsoft.PointOfService.MsrTracks CapWritableTracks
         {
             get { return Microsoft.PointOfService.MsrTracks.None; }
         }
-        public Microsoft.PointOfService.MsrTracks TracksToWrite
+        public override Microsoft.PointOfService.MsrTracks TracksToWrite
         {
             get { return Microsoft.PointOfService.MsrTracks.None; }
             set { }
         }
-        public System.Int32 EncodingMaxLength
+        public override System.Int32 EncodingMaxLength
         {
             get { return 0; }
         }

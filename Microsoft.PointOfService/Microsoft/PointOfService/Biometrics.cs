@@ -1,6 +1,6 @@
 namespace Microsoft.PointOfService
 {
-    public class Biometrics : Microsoft.PointOfService.PosCommon
+    public abstract class Biometrics : Microsoft.PointOfService.PosCommon
     {
         protected Biometrics()
         {
@@ -27,84 +27,84 @@ namespace Microsoft.PointOfService
         public const System.String StatisticUnsuccessfulMatchCount = "UnsuccessfulMatchCount";
         public const System.String StatisticAverageFalseAcceptRate = "AverageFAR";
         public const System.String StatisticAverageFalseRejectRate = "AverageFRR";
-        public System.Int32 DataCount
+        public abstract System.Int32 DataCount
         {
-            get { return 0; }
+            get;
         }
-        public System.Boolean DataEventEnabled
+        public abstract System.Boolean DataEventEnabled
         {
-            get { return false; }
-            set { }
+            get;
+            set;
         }
-        public System.Boolean AutoDisable
+        public abstract System.Boolean AutoDisable
         {
-            get { return false; }
-            set { }
+            get;
+            set;
         }
-        public System.Int32 Algorithm
+        public abstract System.Int32 Algorithm
         {
-            get { return 0; }
-            set { }
+            get;
+            set;
         }
-        public System.String[] AlgorithmList
+        public abstract System.String[] AlgorithmList
         {
-            get { return null; }
+            get;
         }
-        public Microsoft.PointOfService.BiometricsInformationRecord BiometricsInformationRecord
+        public abstract Microsoft.PointOfService.BiometricsInformationRecord BiometricsInformationRecord
         {
-            get { return null; }
+            get;
         }
-        public System.Boolean CapPrematchData
+        public abstract System.Boolean CapPrematchData
         {
-            get { return false; }
+            get;
         }
-        public System.Boolean CapRawSensorData
+        public abstract System.Boolean CapRawSensorData
         {
-            get { return false; }
+            get;
         }
-        public System.Boolean CapRealTimeData
+        public abstract System.Boolean CapRealTimeData
         {
-            get { return false; }
+            get;
         }
-        public Microsoft.PointOfService.CapSensorColors CapSensorColor
+        public abstract Microsoft.PointOfService.CapSensorColors CapSensorColor
         {
-            get { return Microsoft.PointOfService.CapSensorColors.None; }
+            get;
         }
-        public Microsoft.PointOfService.CapSensorOrientations CapSensorOrientation
+        public abstract Microsoft.PointOfService.CapSensorOrientations CapSensorOrientation
         {
-            get { return Microsoft.PointOfService.CapSensorOrientations.None; }
+            get;
         }
-        public Microsoft.PointOfService.CapSensorTypes CapSensorType
+        public abstract Microsoft.PointOfService.CapSensorTypes CapSensorType
         {
-            get { return Microsoft.PointOfService.CapSensorTypes.None; }
+            get;
         }
-        public System.Boolean CapTemplateAdaptation
+        public abstract System.Boolean CapTemplateAdaptation
         {
-            get { return false; }
+            get;
         }
-        public System.Drawing.Bitmap RawSensorData
+        public abstract System.Drawing.Bitmap RawSensorData
         {
-            get { return null; }
+            get;
         }
-        public System.Boolean RealTimeDataEnabled
+        public abstract System.Boolean RealTimeDataEnabled
         {
-            get { return false; }
-            set { }
+            get;
+            set;
         }
-        public Microsoft.PointOfService.SensorColor SensorColor
+        public abstract Microsoft.PointOfService.SensorColor SensorColor
         {
-            get { return Microsoft.PointOfService.SensorColor.None; }
-            set { }
+            get;
+            set;
         }
-        public Microsoft.PointOfService.SensorOrientation SensorOrientation
+        public abstract Microsoft.PointOfService.SensorOrientation SensorOrientation
         {
-            get { return Microsoft.PointOfService.SensorOrientation.None; }
-            set { }
+            get;
+            set;
         }
-        public Microsoft.PointOfService.SensorType SensorType
+        public abstract Microsoft.PointOfService.SensorType SensorType
         {
-            get { return Microsoft.PointOfService.SensorType.Unspecified; }
-            set { }
+            get;
+            set;
         }
         #pragma warning disable 67
         public event Microsoft.PointOfService.DataEventHandler DataEvent

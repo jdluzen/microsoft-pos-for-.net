@@ -1,62 +1,62 @@
 namespace Microsoft.PointOfService
 {
-    public class ToneIndicator : Microsoft.PointOfService.PosCommon
+    public abstract class ToneIndicator : Microsoft.PointOfService.PosCommon
     {
         protected ToneIndicator()
         {
         }
         public const System.String StatisticToneSoundedCount = "ToneSoundedCount";
-        public System.Int32 OutputId
+        public abstract System.Int32 OutputId
         {
-            get { return 0; }
+            get;
         }
-        public System.Boolean CapPitch
+        public abstract System.Boolean CapPitch
         {
-            get { return false; }
+            get;
         }
-        public System.Boolean CapVolume
+        public abstract System.Boolean CapVolume
         {
-            get { return false; }
+            get;
         }
-        public System.Boolean AsyncMode
+        public abstract System.Boolean AsyncMode
         {
-            get { return false; }
-            set { }
+            get;
+            set;
         }
-        public System.Int32 InterToneWait
+        public abstract System.Int32 InterToneWait
         {
-            get { return 0; }
-            set { }
+            get;
+            set;
         }
-        public System.Int32 Tone1Duration
+        public abstract System.Int32 Tone1Duration
         {
-            get { return 0; }
-            set { }
+            get;
+            set;
         }
-        public System.Int32 Tone1Pitch
+        public abstract System.Int32 Tone1Pitch
         {
-            get { return 0; }
-            set { }
+            get;
+            set;
         }
-        public System.Int32 Tone1Volume
+        public abstract System.Int32 Tone1Volume
         {
-            get { return 0; }
-            set { }
+            get;
+            set;
         }
-        public System.Int32 Tone2Duration
+        public abstract System.Int32 Tone2Duration
         {
-            get { return 0; }
-            set { }
+            get;
+            set;
         }
-        public System.Int32 Tone2Pitch
+        public abstract System.Int32 Tone2Pitch
         {
-            get { return 0; }
-            set { }
+            get;
+            set;
         }
-        public System.Int32 Tone2Volume
+        public abstract System.Int32 Tone2Volume
         {
-            get { return 0; }
-            set { }
+            get;
+            set;
         }
         #pragma warning disable 67
         public event Microsoft.PointOfService.DeviceErrorEventHandler ErrorEvent

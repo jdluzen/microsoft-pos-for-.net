@@ -1,6 +1,6 @@
 namespace Microsoft.PointOfService
 {
-    public class CashChanger : Microsoft.PointOfService.PosCommon
+    public abstract class CashChanger : Microsoft.PointOfService.PosCommon
     {
         protected CashChanger()
         {
@@ -16,141 +16,141 @@ namespace Microsoft.PointOfService
         public const System.Int32 StatusJamOK = 32;
         public const System.Int32 StatusAsync = 91;
         public const System.Int32 ExtendedErrorOverDispense = 201;
-        public System.Int32 DataCount
+        public abstract System.Int32 DataCount
+        {
+            get;
+        }
+        public abstract System.Boolean DataEventEnabled
+        {
+            get;
+            set;
+        }
+        public abstract System.Boolean CapDeposit
+        {
+            get;
+        }
+        public abstract System.Boolean CapDepositDataEvent
+        {
+            get;
+        }
+        public abstract System.Boolean CapDiscrepancy
+        {
+            get;
+        }
+        public abstract System.Boolean CapEmptySensor
+        {
+            get;
+        }
+        public abstract System.Boolean CapFullSensor
+        {
+            get;
+        }
+        public virtual System.Boolean CapJamSensor
+        {
+            get { return false; }
+        }
+        public abstract System.Boolean CapNearEmptySensor
+        {
+            get;
+        }
+        public abstract System.Boolean CapNearFullSensor
+        {
+            get;
+        }
+        public abstract System.Boolean CapPauseDeposit
+        {
+            get;
+        }
+        public virtual System.Boolean CapRealTimeData
+        {
+            get { return false; }
+        }
+        public abstract System.Boolean CapRepayDeposit
+        {
+            get;
+        }
+        public abstract System.Boolean AsyncMode
+        {
+            get;
+            set;
+        }
+        public abstract System.Int32 AsyncResultCode
+        {
+            get;
+        }
+        public abstract System.Int32 AsyncResultCodeExtended
+        {
+            get;
+        }
+        public abstract Microsoft.PointOfService.CashUnits CurrencyCashList
+        {
+            get;
+        }
+        public abstract System.String CurrencyCode
+        {
+            get;
+            set;
+        }
+        public abstract System.String[] CurrencyCodeList
+        {
+            get;
+        }
+        public abstract System.Int32 CurrentExit
+        {
+            get;
+            set;
+        }
+        public virtual System.Int32 CurrentService
         {
             get { return 0; }
+            set { }
         }
-        public System.Boolean DataEventEnabled
+        public abstract System.Int32 DepositAmount
+        {
+            get;
+        }
+        public abstract Microsoft.PointOfService.CashUnits DepositCashList
+        {
+            get;
+        }
+        public abstract System.String[] DepositCodeList
+        {
+            get;
+        }
+        public abstract Microsoft.PointOfService.CashCount[] DepositCounts
+        {
+            get;
+        }
+        public abstract Microsoft.PointOfService.CashDepositStatus DepositStatus
+        {
+            get;
+        }
+        public abstract System.Int32 DeviceExits
+        {
+            get;
+        }
+        public abstract Microsoft.PointOfService.CashChangerStatus DeviceStatus
+        {
+            get;
+        }
+        public abstract Microsoft.PointOfService.CashUnits ExitCashList
+        {
+            get;
+        }
+        public abstract Microsoft.PointOfService.CashChangerFullStatus FullStatus
+        {
+            get;
+        }
+        public virtual System.Boolean RealTimeDataEnabled
         {
             get { return false; }
             set { }
         }
-        public System.Boolean CapDeposit
-        {
-            get { return false; }
-        }
-        public System.Boolean CapDepositDataEvent
-        {
-            get { return false; }
-        }
-        public System.Boolean CapDiscrepancy
-        {
-            get { return false; }
-        }
-        public System.Boolean CapEmptySensor
-        {
-            get { return false; }
-        }
-        public System.Boolean CapFullSensor
-        {
-            get { return false; }
-        }
-        public System.Boolean CapJamSensor
-        {
-            get { return false; }
-        }
-        public System.Boolean CapNearEmptySensor
-        {
-            get { return false; }
-        }
-        public System.Boolean CapNearFullSensor
-        {
-            get { return false; }
-        }
-        public System.Boolean CapPauseDeposit
-        {
-            get { return false; }
-        }
-        public System.Boolean CapRealTimeData
-        {
-            get { return false; }
-        }
-        public System.Boolean CapRepayDeposit
-        {
-            get { return false; }
-        }
-        public System.Boolean AsyncMode
-        {
-            get { return false; }
-            set { }
-        }
-        public System.Int32 AsyncResultCode
+        public virtual System.Int32 ServiceCount
         {
             get { return 0; }
         }
-        public System.Int32 AsyncResultCodeExtended
-        {
-            get { return 0; }
-        }
-        public Microsoft.PointOfService.CashUnits CurrencyCashList
-        {
-            get { return new Microsoft.PointOfService.CashUnits(); }
-        }
-        public System.String CurrencyCode
-        {
-            get { return null; }
-            set { }
-        }
-        public System.String[] CurrencyCodeList
-        {
-            get { return null; }
-        }
-        public System.Int32 CurrentExit
-        {
-            get { return 0; }
-            set { }
-        }
-        public System.Int32 CurrentService
-        {
-            get { return 0; }
-            set { }
-        }
-        public System.Int32 DepositAmount
-        {
-            get { return 0; }
-        }
-        public Microsoft.PointOfService.CashUnits DepositCashList
-        {
-            get { return new Microsoft.PointOfService.CashUnits(); }
-        }
-        public System.String[] DepositCodeList
-        {
-            get { return null; }
-        }
-        public Microsoft.PointOfService.CashCount[] DepositCounts
-        {
-            get { return null; }
-        }
-        public Microsoft.PointOfService.CashDepositStatus DepositStatus
-        {
-            get { return Microsoft.PointOfService.CashDepositStatus.Start; }
-        }
-        public System.Int32 DeviceExits
-        {
-            get { return 0; }
-        }
-        public Microsoft.PointOfService.CashChangerStatus DeviceStatus
-        {
-            get { return Microsoft.PointOfService.CashChangerStatus.OK; }
-        }
-        public Microsoft.PointOfService.CashUnits ExitCashList
-        {
-            get { return new Microsoft.PointOfService.CashUnits(); }
-        }
-        public Microsoft.PointOfService.CashChangerFullStatus FullStatus
-        {
-            get { return Microsoft.PointOfService.CashChangerFullStatus.OK; }
-        }
-        public System.Boolean RealTimeDataEnabled
-        {
-            get { return false; }
-            set { }
-        }
-        public System.Int32 ServiceCount
-        {
-            get { return 0; }
-        }
-        public Microsoft.PointOfService.ServiceIndex ServiceIndex
+        public virtual Microsoft.PointOfService.ServiceIndex ServiceIndex
         {
             get { return new Microsoft.PointOfService.ServiceIndex(); }
         }

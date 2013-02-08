@@ -1,6 +1,6 @@
 namespace Microsoft.PointOfService
 {
-    public class MotionSensor : Microsoft.PointOfService.PosCommon
+    public abstract class MotionSensor : Microsoft.PointOfService.PosCommon
     {
         protected MotionSensor()
         {
@@ -8,14 +8,14 @@ namespace Microsoft.PointOfService
         public const System.String StatisticMotionEventCount = "MotionEventCount";
         public const System.Int32 StatusMotionPresent = 1;
         public const System.Int32 StatusMotionAbsent = 2;
-        public System.Boolean Motion
+        public abstract System.Boolean Motion
         {
-            get { return false; }
+            get;
         }
-        public System.Int32 Timeout
+        public abstract System.Int32 Timeout
         {
-            get { return 0; }
-            set { }
+            get;
+            set;
         }
         public virtual void WaitForMotion(System.Int32 timeout)
         {

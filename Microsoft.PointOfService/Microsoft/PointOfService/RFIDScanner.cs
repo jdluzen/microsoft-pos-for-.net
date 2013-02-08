@@ -1,6 +1,6 @@
 namespace Microsoft.PointOfService
 {
-    public class RFIDScanner : Microsoft.PointOfService.PosCommon
+    public abstract class RFIDScanner : Microsoft.PointOfService.PosCommon
     {
         protected RFIDScanner()
         {
@@ -15,77 +15,77 @@ namespace Microsoft.PointOfService
         public const System.String StatisticFailedTagLockCount = "FailedTagLockCount";
         public const System.String StatisticGoodTagDisableCount = "GoodTagDisableCount";
         public const System.String StatisticFailedTagDisableCount = "FailedTagDisableCount";
-        public System.Int32 DataCount
+        public abstract System.Int32 DataCount
         {
-            get { return 0; }
+            get;
         }
-        public System.Boolean DataEventEnabled
+        public abstract System.Boolean DataEventEnabled
         {
-            get { return false; }
-            set { }
+            get;
+            set;
         }
-        public System.Boolean AutoDisable
+        public abstract System.Boolean AutoDisable
         {
-            get { return false; }
-            set { }
+            get;
+            set;
         }
-        public System.Int32 OutputId
+        public abstract System.Int32 OutputId
         {
-            get { return 0; }
+            get;
         }
-        public Microsoft.PointOfService.RFIDProtocols CapMultipleProtocols
+        public abstract Microsoft.PointOfService.RFIDProtocols CapMultipleProtocols
         {
-            get { return Microsoft.PointOfService.RFIDProtocols.EpcClass0; }
+            get;
         }
-        public System.Boolean CapDisableTag
+        public abstract System.Boolean CapDisableTag
         {
-            get { return false; }
+            get;
         }
-        public Microsoft.PointOfService.RFIDProtocols ProtocolMask
+        public abstract Microsoft.PointOfService.RFIDProtocols ProtocolMask
         {
-            get { return Microsoft.PointOfService.RFIDProtocols.EpcClass0; }
-            set { }
+            get;
+            set;
         }
-        public System.Byte[] CurrentTagId
+        public abstract System.Byte[] CurrentTagId
         {
-            get { return null; }
+            get;
         }
-        public System.Byte[] CurrentTagUserData
+        public abstract System.Byte[] CurrentTagUserData
         {
-            get { return null; }
+            get;
         }
-        public Microsoft.PointOfService.RFIDProtocols CurrentTagProtocol
+        public abstract Microsoft.PointOfService.RFIDProtocols CurrentTagProtocol
         {
-            get { return Microsoft.PointOfService.RFIDProtocols.EpcClass0; }
+            get;
         }
-        public System.Int32 TagCount
+        public abstract System.Int32 TagCount
         {
-            get { return 0; }
+            get;
         }
-        public System.Boolean CapContinuousRead
+        public abstract System.Boolean CapContinuousRead
         {
-            get { return false; }
+            get;
         }
-        public System.Boolean ContinuousReadMode
+        public abstract System.Boolean ContinuousReadMode
         {
-            get { return false; }
+            get;
         }
-        public System.Boolean CapReadTimer
+        public abstract System.Boolean CapReadTimer
         {
-            get { return false; }
+            get;
         }
-        public System.Int32 ReadTimerInterval
+        public abstract System.Int32 ReadTimerInterval
         {
-            get { return 0; }
-            set { }
+            get;
+            set;
         }
-        public Microsoft.PointOfService.WriteTagSections CapWriteTag
+        public abstract Microsoft.PointOfService.WriteTagSections CapWriteTag
         {
-            get { return Microsoft.PointOfService.WriteTagSections.None; }
+            get;
         }
-        public System.Boolean CapLockTag
+        public abstract System.Boolean CapLockTag
         {
-            get { return false; }
+            get;
         }
         #pragma warning disable 67
         public event Microsoft.PointOfService.DataEventHandler DataEvent

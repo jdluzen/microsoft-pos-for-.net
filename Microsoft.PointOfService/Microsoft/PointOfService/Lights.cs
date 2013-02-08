@@ -1,25 +1,25 @@
 namespace Microsoft.PointOfService
 {
-    public class Lights : Microsoft.PointOfService.PosCommon
+    public abstract class Lights : Microsoft.PointOfService.PosCommon
     {
         protected Lights()
         {
         }
-        public Microsoft.PointOfService.LightAlarms CapAlarm
+        public abstract Microsoft.PointOfService.LightAlarms CapAlarm
         {
-            get { return Microsoft.PointOfService.LightAlarms.None; }
+            get;
         }
-        public System.Boolean CapBlink
+        public abstract System.Boolean CapBlink
         {
-            get { return false; }
+            get;
         }
-        public Microsoft.PointOfService.LightColors CapColor
+        public abstract Microsoft.PointOfService.LightColors CapColor
         {
-            get { return Microsoft.PointOfService.LightColors.Primary; }
+            get;
         }
-        public System.Int32 MaxLights
+        public abstract System.Int32 MaxLights
         {
-            get { return 0; }
+            get;
         }
         public virtual void SwitchOff(System.Int32 lightNumber)
         {

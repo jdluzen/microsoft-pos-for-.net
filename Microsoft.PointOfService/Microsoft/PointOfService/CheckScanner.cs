@@ -1,6 +1,6 @@
 namespace Microsoft.PointOfService
 {
-    public class CheckScanner : Microsoft.PointOfService.PosCommon
+    public abstract class CheckScanner : Microsoft.PointOfService.PosCommon
     {
         protected CheckScanner()
         {
@@ -16,147 +16,147 @@ namespace Microsoft.PointOfService
         public const System.Int32 ExtendedErrorNoRoom = 203;
         public const System.Int32 GetRawImageData = 1000;
         public const System.Int32 StatusScanComplete = 11;
-        public System.Int32 DataCount
+        public abstract System.Int32 DataCount
         {
-            get { return 0; }
+            get;
         }
-        public System.Boolean DataEventEnabled
+        public abstract System.Boolean DataEventEnabled
         {
-            get { return false; }
-            set { }
+            get;
+            set;
         }
-        public System.Boolean AutoDisable
+        public abstract System.Boolean AutoDisable
         {
-            get { return false; }
-            set { }
+            get;
+            set;
         }
-        public System.Boolean CapAutoGenerateFileId
+        public abstract System.Boolean CapAutoGenerateFileId
         {
-            get { return false; }
+            get;
         }
-        public System.Boolean CapAutoGenerateImageTagData
+        public abstract System.Boolean CapAutoGenerateImageTagData
         {
-            get { return false; }
+            get;
         }
-        public System.Boolean CapAutoSize
+        public abstract System.Boolean CapAutoSize
         {
-            get { return false; }
+            get;
         }
-        public Microsoft.PointOfService.CheckColors CapColor
+        public abstract Microsoft.PointOfService.CheckColors CapColor
         {
-            get { return Microsoft.PointOfService.CheckColors.Mono; }
+            get;
         }
-        public System.Boolean CapConcurrentMicr
+        public abstract System.Boolean CapConcurrentMicr
         {
-            get { return false; }
+            get;
         }
-        public System.Boolean CapDefineCropArea
+        public abstract System.Boolean CapDefineCropArea
         {
-            get { return false; }
+            get;
         }
-        public Microsoft.PointOfService.CheckImageFormats CapImageFormat
+        public abstract Microsoft.PointOfService.CheckImageFormats CapImageFormat
         {
-            get { return Microsoft.PointOfService.CheckImageFormats.Native; }
+            get;
         }
-        public System.Boolean CapImageTagData
+        public abstract System.Boolean CapImageTagData
         {
-            get { return false; }
+            get;
         }
-        public System.Boolean CapMicrDevice
+        public abstract System.Boolean CapMicrDevice
         {
-            get { return false; }
+            get;
         }
-        public System.Boolean CapStoreImageFiles
+        public abstract System.Boolean CapStoreImageFiles
         {
-            get { return false; }
+            get;
         }
-        public System.Boolean CapValidationDevice
+        public abstract System.Boolean CapValidationDevice
         {
-            get { return false; }
+            get;
         }
-        public Microsoft.PointOfService.CheckColors Color
+        public abstract Microsoft.PointOfService.CheckColors Color
         {
-            get { return Microsoft.PointOfService.CheckColors.Mono; }
-            set { }
+            get;
+            set;
         }
-        public System.Boolean ConcurrentMicr
+        public abstract System.Boolean ConcurrentMicr
         {
-            get { return false; }
-            set { }
+            get;
+            set;
         }
-        public System.Int32 CropAreaCount
+        public abstract System.Int32 CropAreaCount
         {
-            get { return 0; }
+            get;
         }
-        public System.Int32 DocumentHeight
+        public abstract System.Int32 DocumentHeight
         {
-            get { return 0; }
-            set { }
+            get;
+            set;
         }
-        public System.Int32 DocumentWidth
+        public abstract System.Int32 DocumentWidth
         {
-            get { return 0; }
-            set { }
+            get;
+            set;
         }
-        public System.String FileId
+        public abstract System.String FileId
         {
-            get { return null; }
-            set { }
+            get;
+            set;
         }
-        public System.Int32 FileIndex
+        public abstract System.Int32 FileIndex
         {
-            get { return 0; }
-            set { }
+            get;
+            set;
         }
-        public System.Drawing.Bitmap ImageData
+        public abstract System.Drawing.Bitmap ImageData
         {
-            get { return null; }
+            get;
         }
-        public Microsoft.PointOfService.CheckImageFormats ImageFormat
+        public abstract Microsoft.PointOfService.CheckImageFormats ImageFormat
         {
-            get { return Microsoft.PointOfService.CheckImageFormats.Native; }
-            set { }
+            get;
+            set;
         }
-        public Microsoft.PointOfService.ImageMemoryStatus ImageMemoryStatus
+        public abstract Microsoft.PointOfService.ImageMemoryStatus ImageMemoryStatus
         {
-            get { return Microsoft.PointOfService.ImageMemoryStatus.Empty; }
+            get;
         }
-        public System.String ImageTagData
+        public abstract System.String ImageTagData
         {
-            get { return null; }
-            set { }
+            get;
+            set;
         }
-        public Microsoft.PointOfService.MapMode MapMode
+        public abstract Microsoft.PointOfService.MapMode MapMode
         {
-            get { return Microsoft.PointOfService.MapMode.Dots; }
-            set { }
+            get;
+            set;
         }
-        public System.Int32 MaxCropAreas
+        public abstract System.Int32 MaxCropAreas
         {
-            get { return 0; }
+            get;
         }
-        public System.Int32 Quality
+        public abstract System.Int32 Quality
         {
-            get { return 0; }
-            set { }
+            get;
+            set;
         }
-        public System.Int32[] QualityList
+        public abstract System.Int32[] QualityList
         {
-            get { return null; }
+            get;
         }
-        public System.Int32 RemainingImagesEstimate
+        public abstract System.Int32 RemainingImagesEstimate
         {
-            get { return 0; }
+            get;
         }
-        public System.Boolean CapAutoContrast
-        {
-            get { return false; }
-        }
-        public System.Boolean CapContrast
+        public virtual System.Boolean CapAutoContrast
         {
             get { return false; }
         }
-        public System.Int32 Contrast
+        public virtual System.Boolean CapContrast
+        {
+            get { return false; }
+        }
+        public virtual System.Int32 Contrast
         {
             get { return 0; }
             set { }

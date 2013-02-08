@@ -1,6 +1,6 @@
 namespace Microsoft.PointOfService
 {
-    public class ItemDispenser : Microsoft.PointOfService.PosCommon
+    public abstract class ItemDispenser : Microsoft.PointOfService.PosCommon
     {
         protected ItemDispenser()
         {
@@ -9,29 +9,29 @@ namespace Microsoft.PointOfService
         public const System.Int32 StatusEmpty = 12;
         public const System.Int32 StatusNearEmpty = 13;
         public const System.Int32 StatusJam = 14;
-        public System.Boolean CapEmptySensor
+        public abstract System.Boolean CapEmptySensor
         {
-            get { return false; }
+            get;
         }
-        public System.Boolean CapIndividualSlotStatus
+        public abstract System.Boolean CapIndividualSlotStatus
         {
-            get { return false; }
+            get;
         }
-        public System.Boolean CapJamSensor
+        public abstract System.Boolean CapJamSensor
         {
-            get { return false; }
+            get;
         }
-        public System.Boolean CapNearEmptySensor
+        public abstract System.Boolean CapNearEmptySensor
         {
-            get { return false; }
+            get;
         }
-        public Microsoft.PointOfService.ItemDispenserStatus DispenserStatus
+        public abstract Microsoft.PointOfService.ItemDispenserStatus DispenserStatus
         {
-            get { return Microsoft.PointOfService.ItemDispenserStatus.Ok; }
+            get;
         }
-        public System.Int32 MaxSlots
+        public abstract System.Int32 MaxSlots
         {
-            get { return 0; }
+            get;
         }
         public virtual void AdjustItemCount(System.Int32 itemCount, System.Int32 slotNumber)
         {

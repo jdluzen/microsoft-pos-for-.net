@@ -1,6 +1,6 @@
 namespace Microsoft.PointOfService
 {
-    public class RemoteOrderDisplay : Microsoft.PointOfService.PosCommon
+    public abstract class RemoteOrderDisplay : Microsoft.PointOfService.PosCommon
     {
         protected RemoteOrderDisplay()
         {
@@ -14,134 +14,134 @@ namespace Microsoft.PointOfService
         public const System.Int32 CharacterSetUnicode = 997;
         public const System.Int32 CharacterSetAscii = 998;
         public const System.Int32 CharacterSetAnsi = 999;
-        public System.Int32 DataCount
+        public abstract System.Int32 DataCount
         {
-            get { return 0; }
+            get;
         }
-        public System.Boolean DataEventEnabled
+        public abstract System.Boolean DataEventEnabled
         {
-            get { return false; }
-            set { }
+            get;
+            set;
         }
-        public System.Int32 OutputId
+        public abstract System.Int32 OutputId
         {
-            get { return 0; }
+            get;
         }
-        public System.Boolean CapMapCharacterSet
+        public abstract System.Boolean CapMapCharacterSet
         {
-            get { return false; }
+            get;
         }
-        public System.Boolean CapSelectCharacterSet
+        public abstract System.Boolean CapSelectCharacterSet
         {
-            get { return false; }
+            get;
         }
-        public System.Boolean CapTone
+        public abstract System.Boolean CapTone
         {
-            get { return false; }
+            get;
         }
-        public System.Boolean CapTouch
+        public abstract System.Boolean CapTouch
         {
-            get { return false; }
+            get;
         }
-        public System.Boolean CapTransaction
+        public abstract System.Boolean CapTransaction
         {
-            get { return false; }
+            get;
         }
-        public System.Boolean AsyncMode
+        public abstract System.Boolean AsyncMode
         {
-            get { return false; }
-            set { }
+            get;
+            set;
         }
-        public System.Int32 AutoToneDuration
+        public abstract System.Int32 AutoToneDuration
         {
-            get { return 0; }
-            set { }
+            get;
+            set;
         }
-        public System.Int32 AutoToneFrequency
+        public abstract System.Int32 AutoToneFrequency
         {
-            get { return 0; }
-            set { }
+            get;
+            set;
         }
-        public System.Int32 CharacterSet
+        public abstract System.Int32 CharacterSet
         {
-            get { return 0; }
+            get;
         }
-        public System.Int32[] CharacterSetList
+        public abstract System.Int32[] CharacterSetList
         {
-            get { return null; }
+            get;
         }
-        public System.Int32 Clocks
+        public abstract System.Int32 Clocks
         {
-            get { return 0; }
+            get;
         }
-        public Microsoft.PointOfService.DeviceUnits CurrentUnitId
+        public abstract Microsoft.PointOfService.DeviceUnits CurrentUnitId
         {
-            get { return Microsoft.PointOfService.DeviceUnits.Unit1; }
-            set { }
+            get;
+            set;
         }
-        public System.String ErrorString
+        public abstract System.String ErrorString
         {
-            get { return null; }
+            get;
         }
-        public Microsoft.PointOfService.DeviceUnits ErrorUnits
+        public abstract Microsoft.PointOfService.DeviceUnits ErrorUnits
         {
-            get { return Microsoft.PointOfService.DeviceUnits.Unit1; }
+            get;
         }
-        public System.String EventString
+        public abstract System.String EventString
         {
-            get { return null; }
+            get;
         }
-        public Microsoft.PointOfService.RemoteOrderDisplayEventTypes EventType
+        public abstract Microsoft.PointOfService.RemoteOrderDisplayEventTypes EventType
         {
-            get { return Microsoft.PointOfService.RemoteOrderDisplayEventTypes.TouchUp; }
-            set { }
+            get;
+            set;
         }
-        public Microsoft.PointOfService.DeviceUnits EventUnitId
+        public abstract Microsoft.PointOfService.DeviceUnits EventUnitId
         {
-            get { return Microsoft.PointOfService.DeviceUnits.Unit1; }
+            get;
         }
-        public Microsoft.PointOfService.DeviceUnits EventUnits
+        public abstract Microsoft.PointOfService.DeviceUnits EventUnits
         {
-            get { return Microsoft.PointOfService.DeviceUnits.Unit1; }
+            get;
         }
-        public System.Boolean MapCharacterSet
+        public abstract System.Boolean MapCharacterSet
         {
-            get { return false; }
-            set { }
+            get;
+            set;
         }
-        public System.Int32 SystemClocks
+        public abstract System.Int32 SystemClocks
         {
-            get { return 0; }
+            get;
         }
-        public System.Int32 SystemVideoSaveBuffers
+        public abstract System.Int32 SystemVideoSaveBuffers
         {
-            get { return 0; }
+            get;
         }
-        public System.Int32 Timeout
+        public abstract System.Int32 Timeout
         {
-            get { return 0; }
-            set { }
+            get;
+            set;
         }
-        public Microsoft.PointOfService.DeviceUnits UnitsOnline
+        public abstract Microsoft.PointOfService.DeviceUnits UnitsOnline
         {
-            get { return Microsoft.PointOfService.DeviceUnits.Unit1; }
+            get;
         }
-        public System.Int32 VideoDataCount
+        public abstract System.Int32 VideoDataCount
         {
-            get { return 0; }
+            get;
         }
-        public System.Int32 VideoMode
+        public abstract System.Int32 VideoMode
         {
-            get { return 0; }
-            set { }
+            get;
+            set;
         }
-        public Microsoft.PointOfService.VideoMode[] VideoModesList
+        public abstract Microsoft.PointOfService.VideoMode[] VideoModesList
         {
-            get { return null; }
+            get;
         }
-        public System.Int32 VideoSaveBuffers
+        public abstract System.Int32 VideoSaveBuffers
         {
-            get { return 0; }
+            get;
         }
         #pragma warning disable 67
         public event Microsoft.PointOfService.DataEventHandler DataEvent

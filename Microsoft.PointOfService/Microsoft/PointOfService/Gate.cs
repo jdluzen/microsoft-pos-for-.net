@@ -1,6 +1,6 @@
 namespace Microsoft.PointOfService
 {
-    public class Gate : Microsoft.PointOfService.PosCommon
+    public abstract class Gate : Microsoft.PointOfService.PosCommon
     {
         protected Gate()
         {
@@ -9,13 +9,13 @@ namespace Microsoft.PointOfService
         public const System.Int32 StatusOpen = 12;
         public const System.Int32 StatusBlocked = 13;
         public const System.Int32 StatusMalfunction = 14;
-        public System.Boolean CapGateStatus
+        public abstract System.Boolean CapGateStatus
         {
-            get { return false; }
+            get;
         }
-        public Microsoft.PointOfService.GateStatus GateStatus
+        public abstract Microsoft.PointOfService.GateStatus GateStatus
         {
-            get { return Microsoft.PointOfService.GateStatus.Closed; }
+            get;
         }
         public virtual void OpenGate()
         {

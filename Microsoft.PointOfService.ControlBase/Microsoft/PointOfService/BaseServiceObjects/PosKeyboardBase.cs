@@ -1,24 +1,24 @@
 namespace Microsoft.PointOfService.BaseServiceObjects
 {
-    public class PosKeyboardBase : Microsoft.PointOfService.BasicServiceObjects.PosKeyboardBasic, System.IDisposable
+    public abstract class PosKeyboardBase : Microsoft.PointOfService.BasicServiceObjects.PosKeyboardBasic, System.IDisposable
     {
         protected PosKeyboardBase()
         {
         }
-        public System.Boolean CapKeyUp
+        public override System.Boolean CapKeyUp
         {
             get { return false; }
         }
-        public Microsoft.PointOfService.KeyboardEventType EventTypes
+        public override Microsoft.PointOfService.KeyboardEventType EventTypes
         {
             get { return Microsoft.PointOfService.KeyboardEventType.Down; }
             set { }
         }
-        public System.Int32 PosKeyData
+        public override System.Int32 PosKeyData
         {
             get { return 0; }
         }
-        public Microsoft.PointOfService.KeyEvent PosKeyEventType
+        public override Microsoft.PointOfService.KeyEvent PosKeyEventType
         {
             get { return Microsoft.PointOfService.KeyEvent.Down; }
         }

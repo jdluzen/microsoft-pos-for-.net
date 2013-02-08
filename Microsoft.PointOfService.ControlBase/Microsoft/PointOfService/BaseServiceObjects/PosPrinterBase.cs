@@ -1,531 +1,531 @@
 namespace Microsoft.PointOfService.BaseServiceObjects
 {
-    public class PosPrinterBase : Microsoft.PointOfService.BasicServiceObjects.PosPrinterBasic, System.IDisposable
+    public abstract class PosPrinterBase : Microsoft.PointOfService.BasicServiceObjects.PosPrinterBasic, System.IDisposable
     {
         protected PosPrinterBase()
         {
         }
-        public System.Boolean DeviceEnabled
+        public override System.Boolean DeviceEnabled
         {
             get { return false; }
             set { }
         }
-        public Microsoft.PointOfService.CharacterSetCapability CapCharacterSet
+        public override Microsoft.PointOfService.CharacterSetCapability CapCharacterSet
         {
             get { return Microsoft.PointOfService.CharacterSetCapability.Numeric; }
         }
-        public System.Boolean CapConcurrentJrnRec
+        public override System.Boolean CapConcurrentJrnRec
         {
             get { return false; }
         }
-        public System.Boolean CapConcurrentJrnSlp
+        public override System.Boolean CapConcurrentJrnSlp
         {
             get { return false; }
         }
-        public System.Boolean CapConcurrentRecSlp
+        public override System.Boolean CapConcurrentRecSlp
         {
             get { return false; }
         }
-        public System.Boolean CapCoverSensor
+        public override System.Boolean CapCoverSensor
         {
             get { return false; }
         }
-        public System.Boolean CapMapCharacterSet
+        public override System.Boolean CapMapCharacterSet
         {
             get { return false; }
         }
-        public System.Boolean CapTransaction
+        public override System.Boolean CapTransaction
         {
             get { return false; }
         }
-        public System.Boolean AsyncMode
+        public override System.Boolean AsyncMode
         {
             get { return false; }
             set { }
         }
-        public Microsoft.PointOfService.PrinterCartridgeNotify CartridgeNotify
+        public override Microsoft.PointOfService.PrinterCartridgeNotify CartridgeNotify
         {
             get { return Microsoft.PointOfService.PrinterCartridgeNotify.Disabled; }
             set { }
         }
-        public System.Int32 CharacterSet
+        public override System.Int32 CharacterSet
         {
             get { return 0; }
             set { }
         }
-        public System.Int32[] CharacterSetList
+        public override System.Int32[] CharacterSetList
         {
             get { return null; }
         }
-        public System.Boolean CoverOpen
+        public override System.Boolean CoverOpen
         {
             get { return false; }
         }
-        public Microsoft.PointOfService.PrinterErrorLevel ErrorLevel
+        public override Microsoft.PointOfService.PrinterErrorLevel ErrorLevel
         {
             get { return Microsoft.PointOfService.PrinterErrorLevel.None; }
         }
-        public Microsoft.PointOfService.PrinterStation ErrorStation
+        public override Microsoft.PointOfService.PrinterStation ErrorStation
         {
             get { return Microsoft.PointOfService.PrinterStation.None; }
         }
-        public System.String ErrorString
+        public override System.String ErrorString
         {
             get { return null; }
         }
-        public System.Boolean FlagWhenIdle
+        public override System.Boolean FlagWhenIdle
         {
             get { return false; }
             set { }
         }
-        public System.String[] FontTypefaceList
+        public override System.String[] FontTypefaceList
         {
             get { return null; }
         }
-        public System.Boolean MapCharacterSet
+        public override System.Boolean MapCharacterSet
         {
             get { return false; }
             set { }
         }
-        public Microsoft.PointOfService.MapMode MapMode
+        public override Microsoft.PointOfService.MapMode MapMode
         {
             get { return Microsoft.PointOfService.MapMode.Dots; }
             set { }
         }
-        public Microsoft.PointOfService.Rotation RotateSpecial
+        public override Microsoft.PointOfService.Rotation RotateSpecial
         {
             get { return Microsoft.PointOfService.Rotation.Normal; }
             set { }
         }
-        public System.Boolean CapConcurrentPageMode
+        public override System.Boolean CapConcurrentPageMode
         {
             get { return false; }
         }
-        public System.Boolean CapRecPageMode
+        public override System.Boolean CapRecPageMode
         {
             get { return false; }
         }
-        public System.Boolean CapSlpPageMode
+        public override System.Boolean CapSlpPageMode
         {
             get { return false; }
         }
-        public Microsoft.PointOfService.PrinterStation PageModeStation
+        public override Microsoft.PointOfService.PrinterStation PageModeStation
         {
             get { return Microsoft.PointOfService.PrinterStation.None; }
             set { }
         }
-        public System.Drawing.Point PageModeArea
+        public override System.Drawing.Point PageModeArea
         {
             get { return new System.Drawing.Point(); }
         }
-        public Microsoft.PointOfService.PageModeDescriptors PageModeDescriptor
+        public override Microsoft.PointOfService.PageModeDescriptors PageModeDescriptor
         {
             get { return Microsoft.PointOfService.PageModeDescriptors.None; }
         }
-        public System.Int32 PageModeHorizontalPosition
+        public override System.Int32 PageModeHorizontalPosition
         {
             get { return 0; }
             set { }
         }
-        public System.Int32 PageModeVerticalPosition
+        public override System.Int32 PageModeVerticalPosition
         {
             get { return 0; }
             set { }
         }
-        public System.Drawing.Rectangle PageModePrintArea
+        public override System.Drawing.Rectangle PageModePrintArea
         {
             get { return new System.Drawing.Rectangle(); }
             set { }
         }
-        public Microsoft.PointOfService.PageModePrintDirection PageModePrintDirection
+        public override Microsoft.PointOfService.PageModePrintDirection PageModePrintDirection
         {
             get { return Microsoft.PointOfService.PageModePrintDirection.None; }
             set { }
         }
-        public System.Boolean CapJrn2Color
+        public override System.Boolean CapJrn2Color
         {
             get { return false; }
         }
-        public System.Boolean CapJrnBold
+        public override System.Boolean CapJrnBold
         {
             get { return false; }
         }
-        public Microsoft.PointOfService.PrinterCartridgeSensors CapJrnCartridgeSensor
+        public override Microsoft.PointOfService.PrinterCartridgeSensors CapJrnCartridgeSensor
         {
             get { return Microsoft.PointOfService.PrinterCartridgeSensors.None; }
         }
-        public Microsoft.PointOfService.PrinterColors CapJrnColor
+        public override Microsoft.PointOfService.PrinterColors CapJrnColor
         {
             get { return Microsoft.PointOfService.PrinterColors.None; }
         }
-        public System.Boolean CapJrnDHigh
+        public override System.Boolean CapJrnDHigh
         {
             get { return false; }
         }
-        public System.Boolean CapJrnDWide
+        public override System.Boolean CapJrnDWide
         {
             get { return false; }
         }
-        public System.Boolean CapJrnDWideDHigh
+        public override System.Boolean CapJrnDWideDHigh
         {
             get { return false; }
         }
-        public System.Boolean CapJrnEmptySensor
+        public override System.Boolean CapJrnEmptySensor
         {
             get { return false; }
         }
-        public System.Boolean CapJrnItalic
+        public override System.Boolean CapJrnItalic
         {
             get { return false; }
         }
-        public System.Boolean CapJrnNearEndSensor
+        public override System.Boolean CapJrnNearEndSensor
         {
             get { return false; }
         }
-        public System.Boolean CapJrnPresent
+        public override System.Boolean CapJrnPresent
         {
             get { return false; }
         }
-        public System.Boolean CapJrnUnderline
+        public override System.Boolean CapJrnUnderline
         {
             get { return false; }
         }
-        public Microsoft.PointOfService.PrinterCartridgeStates JrnCartridgeState
+        public override Microsoft.PointOfService.PrinterCartridgeStates JrnCartridgeState
         {
             get { return Microsoft.PointOfService.PrinterCartridgeStates.Unknown; }
         }
-        public Microsoft.PointOfService.PrinterColors JrnCurrentCartridge
+        public override Microsoft.PointOfService.PrinterColors JrnCurrentCartridge
         {
             get { return Microsoft.PointOfService.PrinterColors.None; }
             set { }
         }
-        public System.Boolean JrnEmpty
+        public override System.Boolean JrnEmpty
         {
             get { return false; }
         }
-        public System.Boolean JrnLetterQuality
+        public override System.Boolean JrnLetterQuality
         {
             get { return false; }
             set { }
         }
-        public System.Int32 JrnLineChars
+        public override System.Int32 JrnLineChars
         {
             get { return 0; }
             set { }
         }
-        public System.Int32[] JrnLineCharsList
+        public override System.Int32[] JrnLineCharsList
         {
             get { return null; }
         }
-        public System.Int32 JrnLineHeight
+        public override System.Int32 JrnLineHeight
         {
             get { return 0; }
             set { }
         }
-        public System.Int32 JrnLineSpacing
+        public override System.Int32 JrnLineSpacing
         {
             get { return 0; }
             set { }
         }
-        public System.Int32 JrnLineWidth
+        public override System.Int32 JrnLineWidth
         {
             get { return 0; }
         }
-        public System.Boolean JrnNearEnd
+        public override System.Boolean JrnNearEnd
         {
             get { return false; }
         }
-        public System.Boolean CapRec2Color
+        public override System.Boolean CapRec2Color
         {
             get { return false; }
         }
-        public System.Boolean CapRecBarCode
+        public override System.Boolean CapRecBarCode
         {
             get { return false; }
         }
-        public System.Boolean CapRecBitmap
+        public override System.Boolean CapRecBitmap
         {
             get { return false; }
         }
-        public System.Boolean CapRecBold
+        public override System.Boolean CapRecBold
         {
             get { return false; }
         }
-        public Microsoft.PointOfService.PrinterCartridgeSensors CapRecCartridgeSensor
+        public override Microsoft.PointOfService.PrinterCartridgeSensors CapRecCartridgeSensor
         {
             get { return Microsoft.PointOfService.PrinterCartridgeSensors.None; }
         }
-        public Microsoft.PointOfService.PrinterColors CapRecColor
+        public override Microsoft.PointOfService.PrinterColors CapRecColor
         {
             get { return Microsoft.PointOfService.PrinterColors.None; }
         }
-        public System.Boolean CapRecDHigh
+        public override System.Boolean CapRecDHigh
         {
             get { return false; }
         }
-        public System.Boolean CapRecDWide
+        public override System.Boolean CapRecDWide
         {
             get { return false; }
         }
-        public System.Boolean CapRecDWideDHigh
+        public override System.Boolean CapRecDWideDHigh
         {
             get { return false; }
         }
-        public System.Boolean CapRecEmptySensor
+        public override System.Boolean CapRecEmptySensor
         {
             get { return false; }
         }
-        public System.Boolean CapRecItalic
+        public override System.Boolean CapRecItalic
         {
             get { return false; }
         }
-        public System.Boolean CapRecLeft90
+        public override System.Boolean CapRecLeft90
         {
             get { return false; }
         }
-        public Microsoft.PointOfService.PrinterMarkFeeds CapRecMarkFeed
+        public override Microsoft.PointOfService.PrinterMarkFeeds CapRecMarkFeed
         {
             get { return Microsoft.PointOfService.PrinterMarkFeeds.None; }
         }
-        public System.Boolean CapRecNearEndSensor
+        public override System.Boolean CapRecNearEndSensor
         {
             get { return false; }
         }
-        public System.Boolean CapRecPaperCut
+        public override System.Boolean CapRecPaperCut
         {
             get { return false; }
         }
-        public System.Boolean CapRecPresent
+        public override System.Boolean CapRecPresent
         {
             get { return false; }
         }
-        public System.Boolean CapRecRight90
+        public override System.Boolean CapRecRight90
         {
             get { return false; }
         }
-        public System.Boolean CapRecRotate180
+        public override System.Boolean CapRecRotate180
         {
             get { return false; }
         }
-        public System.Boolean CapRecStamp
+        public override System.Boolean CapRecStamp
         {
             get { return false; }
         }
-        public System.Boolean CapRecUnderline
+        public override System.Boolean CapRecUnderline
         {
             get { return false; }
         }
-        public Microsoft.PointOfService.Rotation[] RecBarCodeRotationList
+        public override Microsoft.PointOfService.Rotation[] RecBarCodeRotationList
         {
             get { return null; }
         }
-        public Microsoft.PointOfService.Rotation[] RecBitmapRotationList
+        public override Microsoft.PointOfService.Rotation[] RecBitmapRotationList
         {
             get { return null; }
         }
-        public Microsoft.PointOfService.PrinterCartridgeStates RecCartridgeState
+        public override Microsoft.PointOfService.PrinterCartridgeStates RecCartridgeState
         {
             get { return Microsoft.PointOfService.PrinterCartridgeStates.Unknown; }
         }
-        public Microsoft.PointOfService.PrinterColors RecCurrentCartridge
+        public override Microsoft.PointOfService.PrinterColors RecCurrentCartridge
         {
             get { return Microsoft.PointOfService.PrinterColors.None; }
             set { }
         }
-        public System.Boolean RecEmpty
+        public override System.Boolean RecEmpty
         {
             get { return false; }
         }
-        public System.Boolean RecLetterQuality
+        public override System.Boolean RecLetterQuality
         {
             get { return false; }
             set { }
         }
-        public System.Int32 RecLineChars
+        public override System.Int32 RecLineChars
         {
             get { return 0; }
             set { }
         }
-        public System.Int32[] RecLineCharsList
+        public override System.Int32[] RecLineCharsList
         {
             get { return null; }
         }
-        public System.Int32 RecLineHeight
+        public override System.Int32 RecLineHeight
         {
             get { return 0; }
             set { }
         }
-        public System.Int32 RecLineSpacing
+        public override System.Int32 RecLineSpacing
         {
             get { return 0; }
             set { }
         }
-        public System.Int32 RecLinesToPaperCut
+        public override System.Int32 RecLinesToPaperCut
         {
             get { return 0; }
         }
-        public System.Int32 RecLineWidth
+        public override System.Int32 RecLineWidth
         {
             get { return 0; }
         }
-        public System.Boolean RecNearEnd
+        public override System.Boolean RecNearEnd
         {
             get { return false; }
         }
-        public System.Int32 RecSidewaysMaxChars
+        public override System.Int32 RecSidewaysMaxChars
         {
             get { return 0; }
         }
-        public System.Int32 RecSidewaysMaxLines
+        public override System.Int32 RecSidewaysMaxLines
         {
             get { return 0; }
         }
-        public System.Boolean CapSlp2Color
+        public override System.Boolean CapSlp2Color
         {
             get { return false; }
         }
-        public System.Boolean CapSlpBarCode
+        public override System.Boolean CapSlpBarCode
         {
             get { return false; }
         }
-        public System.Boolean CapSlpBitmap
+        public override System.Boolean CapSlpBitmap
         {
             get { return false; }
         }
-        public System.Boolean CapSlpBold
+        public override System.Boolean CapSlpBold
         {
             get { return false; }
         }
-        public System.Boolean CapSlpBothSidesPrint
+        public override System.Boolean CapSlpBothSidesPrint
         {
             get { return false; }
         }
-        public Microsoft.PointOfService.PrinterCartridgeSensors CapSlpCartridgeSensor
+        public override Microsoft.PointOfService.PrinterCartridgeSensors CapSlpCartridgeSensor
         {
             get { return Microsoft.PointOfService.PrinterCartridgeSensors.None; }
         }
-        public Microsoft.PointOfService.PrinterColors CapSlpColor
+        public override Microsoft.PointOfService.PrinterColors CapSlpColor
         {
             get { return Microsoft.PointOfService.PrinterColors.None; }
         }
-        public System.Boolean CapSlpDHigh
+        public override System.Boolean CapSlpDHigh
         {
             get { return false; }
         }
-        public System.Boolean CapSlpDWide
+        public override System.Boolean CapSlpDWide
         {
             get { return false; }
         }
-        public System.Boolean CapSlpDWideDHigh
+        public override System.Boolean CapSlpDWideDHigh
         {
             get { return false; }
         }
-        public System.Boolean CapSlpEmptySensor
+        public override System.Boolean CapSlpEmptySensor
         {
             get { return false; }
         }
-        public System.Boolean CapSlpFullSlip
+        public override System.Boolean CapSlpFullSlip
         {
             get { return false; }
         }
-        public System.Boolean CapSlpItalic
+        public override System.Boolean CapSlpItalic
         {
             get { return false; }
         }
-        public System.Boolean CapSlpLeft90
+        public override System.Boolean CapSlpLeft90
         {
             get { return false; }
         }
-        public System.Boolean CapSlpNearEndSensor
+        public override System.Boolean CapSlpNearEndSensor
         {
             get { return false; }
         }
-        public System.Boolean CapSlpPresent
+        public override System.Boolean CapSlpPresent
         {
             get { return false; }
         }
-        public System.Boolean CapSlpRight90
+        public override System.Boolean CapSlpRight90
         {
             get { return false; }
         }
-        public System.Boolean CapSlpRotate180
+        public override System.Boolean CapSlpRotate180
         {
             get { return false; }
         }
-        public System.Boolean CapSlpUnderline
+        public override System.Boolean CapSlpUnderline
         {
             get { return false; }
         }
-        public Microsoft.PointOfService.Rotation[] SlpBarCodeRotationList
+        public override Microsoft.PointOfService.Rotation[] SlpBarCodeRotationList
         {
             get { return null; }
         }
-        public Microsoft.PointOfService.Rotation[] SlpBitmapRotationList
+        public override Microsoft.PointOfService.Rotation[] SlpBitmapRotationList
         {
             get { return null; }
         }
-        public Microsoft.PointOfService.PrinterCartridgeStates SlpCartridgeState
+        public override Microsoft.PointOfService.PrinterCartridgeStates SlpCartridgeState
         {
             get { return Microsoft.PointOfService.PrinterCartridgeStates.Unknown; }
         }
-        public Microsoft.PointOfService.PrinterColors SlpCurrentCartridge
+        public override Microsoft.PointOfService.PrinterColors SlpCurrentCartridge
         {
             get { return Microsoft.PointOfService.PrinterColors.None; }
             set { }
         }
-        public System.Boolean SlpEmpty
+        public override System.Boolean SlpEmpty
         {
             get { return false; }
         }
-        public System.Boolean SlpLetterQuality
+        public override System.Boolean SlpLetterQuality
         {
             get { return false; }
             set { }
         }
-        public System.Int32 SlpLineChars
+        public override System.Int32 SlpLineChars
         {
             get { return 0; }
             set { }
         }
-        public System.Int32[] SlpLineCharsList
+        public override System.Int32[] SlpLineCharsList
         {
             get { return null; }
         }
-        public System.Int32 SlpLineHeight
+        public override System.Int32 SlpLineHeight
         {
             get { return 0; }
             set { }
         }
-        public System.Int32 SlpLinesNearEndToEnd
+        public override System.Int32 SlpLinesNearEndToEnd
         {
             get { return 0; }
         }
-        public System.Int32 SlpLineSpacing
+        public override System.Int32 SlpLineSpacing
         {
             get { return 0; }
             set { }
         }
-        public System.Int32 SlpLineWidth
+        public override System.Int32 SlpLineWidth
         {
             get { return 0; }
         }
-        public System.Int32 SlpMaxLines
+        public override System.Int32 SlpMaxLines
         {
             get { return 0; }
         }
-        public System.Boolean SlpNearEnd
+        public override System.Boolean SlpNearEnd
         {
             get { return false; }
         }
-        public Microsoft.PointOfService.PrinterSide SlpPrintSide
+        public override Microsoft.PointOfService.PrinterSide SlpPrintSide
         {
             get { return Microsoft.PointOfService.PrinterSide.Unknown; }
         }
-        public System.Int32 SlpSidewaysMaxChars
+        public override System.Int32 SlpSidewaysMaxChars
         {
             get { return 0; }
         }
-        public System.Int32 SlpSidewaysMaxLines
+        public override System.Int32 SlpSidewaysMaxLines
         {
             get { return 0; }
         }

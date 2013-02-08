@@ -1,6 +1,6 @@
 namespace Microsoft.PointOfService
 {
-    public class PosException : System.Exception, System.Runtime.Serialization.ISerializable, System.Runtime.InteropServices._Exception
+    public abstract class PosException : System.Exception, System.Runtime.Serialization.ISerializable, System.Runtime.InteropServices._Exception
     {
         protected PosException()
         {

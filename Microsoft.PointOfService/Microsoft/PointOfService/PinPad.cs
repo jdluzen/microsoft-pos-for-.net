@@ -1,6 +1,6 @@
 namespace Microsoft.PointOfService
 {
-    public class PinPad : Microsoft.PointOfService.PosCommon
+    public abstract class PinPad : Microsoft.PointOfService.PosCommon
     {
         protected PinPad()
         {
@@ -8,119 +8,119 @@ namespace Microsoft.PointOfService
         public const System.Int32 ExtendedErrorBadKey = 201;
         public const System.String StatisticValidPINEntryCount = "ValidPINEntryCount";
         public const System.String StatisticInvalidPINEntryCount = "InvalidPINEntryCount";
-        public System.Int32 DataCount
+        public abstract System.Int32 DataCount
         {
-            get { return 0; }
+            get;
         }
-        public System.Boolean DataEventEnabled
+        public abstract System.Boolean DataEventEnabled
         {
-            get { return false; }
-            set { }
+            get;
+            set;
         }
-        public Microsoft.PointOfService.PinPadDisplay CapDisplay
+        public abstract Microsoft.PointOfService.PinPadDisplay CapDisplay
         {
-            get { return Microsoft.PointOfService.PinPadDisplay.Unrestricted; }
+            get;
         }
-        public System.Boolean CapKeyboard
+        public abstract System.Boolean CapKeyboard
         {
-            get { return false; }
+            get;
         }
-        public Microsoft.PointOfService.PinPadLanguage CapLanguage
+        public abstract Microsoft.PointOfService.PinPadLanguage CapLanguage
         {
-            get { return Microsoft.PointOfService.PinPadLanguage.None; }
+            get;
         }
-        public System.Boolean CapMacCalculation
+        public abstract System.Boolean CapMacCalculation
         {
-            get { return false; }
+            get;
         }
-        public System.Boolean CapTone
+        public abstract System.Boolean CapTone
         {
-            get { return false; }
+            get;
         }
-        public System.String AccountNumber
+        public abstract System.String AccountNumber
         {
-            get { return null; }
-            set { }
+            get;
+            set;
         }
-        public System.String AdditionalSecurityInformation
+        public abstract System.String AdditionalSecurityInformation
         {
-            get { return null; }
+            get;
         }
-        public System.Decimal Amount
+        public abstract System.Decimal Amount
         {
-            get { return new System.Decimal(); }
-            set { }
+            get;
+            set;
         }
-        public System.Globalization.CultureInfo[] AvailableLanguagesList
+        public abstract System.Globalization.CultureInfo[] AvailableLanguagesList
         {
-            get { return null; }
+            get;
         }
-        public Microsoft.PointOfService.PinPadMessage[] AvailablePromptsList
+        public abstract Microsoft.PointOfService.PinPadMessage[] AvailablePromptsList
         {
-            get { return null; }
+            get;
         }
-        public System.String EncryptedPin
+        public abstract System.String EncryptedPin
         {
-            get { return null; }
+            get;
         }
-        public System.Int32 MaximumPinLength
+        public abstract System.Int32 MaximumPinLength
         {
-            get { return 0; }
-            set { }
+            get;
+            set;
         }
-        public System.String MerchantId
+        public abstract System.String MerchantId
         {
-            get { return null; }
-            set { }
+            get;
+            set;
         }
-        public System.Int32 MinimumPinLength
+        public abstract System.Int32 MinimumPinLength
         {
-            get { return 0; }
-            set { }
+            get;
+            set;
         }
-        public System.Boolean PinEntryEnabled
+        public abstract System.Boolean PinEntryEnabled
         {
-            get { return false; }
+            get;
         }
-        public Microsoft.PointOfService.PinPadMessage Prompt
+        public abstract Microsoft.PointOfService.PinPadMessage Prompt
         {
-            get { return Microsoft.PointOfService.PinPadMessage.EnterPin; }
-            set { }
+            get;
+            set;
         }
-        public System.Globalization.CultureInfo PromptLanguage
+        public abstract System.Globalization.CultureInfo PromptLanguage
         {
-            get { return null; }
-            set { }
+            get;
+            set;
         }
-        public System.String TerminalId
+        public abstract System.String TerminalId
         {
-            get { return null; }
-            set { }
+            get;
+            set;
         }
-        public System.Byte[] Track1Data
+        public abstract System.Byte[] Track1Data
         {
-            get { return null; }
-            set { }
+            get;
+            set;
         }
-        public System.Byte[] Track2Data
+        public abstract System.Byte[] Track2Data
         {
-            get { return null; }
-            set { }
+            get;
+            set;
         }
-        public System.Byte[] Track3Data
+        public abstract System.Byte[] Track3Data
         {
-            get { return null; }
-            set { }
+            get;
+            set;
         }
-        public System.Byte[] Track4Data
+        public abstract System.Byte[] Track4Data
         {
-            get { return null; }
-            set { }
+            get;
+            set;
         }
-        public Microsoft.PointOfService.EftTransactionType TransactionType
+        public abstract Microsoft.PointOfService.EftTransactionType TransactionType
         {
-            get { return Microsoft.PointOfService.EftTransactionType.Debit; }
-            set { }
+            get;
+            set;
         }
         #pragma warning disable 67
         public event Microsoft.PointOfService.DataEventHandler DataEvent

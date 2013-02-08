@@ -1,6 +1,6 @@
 namespace Microsoft.PointOfService
 {
-    public class BillAcceptor : Microsoft.PointOfService.PosCommon
+    public abstract class BillAcceptor : Microsoft.PointOfService.PosCommon
     {
         protected BillAcceptor()
         {
@@ -10,72 +10,72 @@ namespace Microsoft.PointOfService
         public const System.Int32 StatusFullOk = 23;
         public const System.Int32 StatusJam = 31;
         public const System.Int32 StatusJamOk = 32;
-        public System.Int32 DataCount
+        public abstract System.Int32 DataCount
         {
-            get { return 0; }
+            get;
         }
-        public System.Boolean DataEventEnabled
+        public abstract System.Boolean DataEventEnabled
         {
-            get { return false; }
-            set { }
+            get;
+            set;
         }
-        public System.Boolean CapDiscrepancy
+        public abstract System.Boolean CapDiscrepancy
         {
-            get { return false; }
+            get;
         }
-        public System.Boolean CapFullSensor
+        public abstract System.Boolean CapFullSensor
         {
-            get { return false; }
+            get;
         }
-        public System.Boolean CapJamSensor
+        public abstract System.Boolean CapJamSensor
         {
-            get { return false; }
+            get;
         }
-        public System.Boolean CapNearFullSensor
+        public abstract System.Boolean CapNearFullSensor
         {
-            get { return false; }
+            get;
         }
-        public System.Boolean CapPauseDeposit
+        public abstract System.Boolean CapPauseDeposit
         {
-            get { return false; }
+            get;
         }
-        public System.Boolean CapRealTimeData
+        public abstract System.Boolean CapRealTimeData
         {
-            get { return false; }
+            get;
         }
-        public System.String CurrencyCode
+        public abstract System.String CurrencyCode
         {
-            get { return null; }
-            set { }
+            get;
+            set;
         }
-        public System.Int32 DepositAmount
+        public abstract System.Int32 DepositAmount
         {
-            get { return 0; }
+            get;
         }
-        public Microsoft.PointOfService.CashUnits DepositCashList
+        public abstract Microsoft.PointOfService.CashUnits DepositCashList
         {
-            get { return new Microsoft.PointOfService.CashUnits(); }
+            get;
         }
-        public System.String[] DepositCodeList
+        public abstract System.String[] DepositCodeList
         {
-            get { return null; }
+            get;
         }
-        public Microsoft.PointOfService.CashCount[] DepositCounts
+        public abstract Microsoft.PointOfService.CashCount[] DepositCounts
         {
-            get { return null; }
+            get;
         }
-        public Microsoft.PointOfService.DepositStatus DepositStatus
+        public abstract Microsoft.PointOfService.DepositStatus DepositStatus
         {
-            get { return Microsoft.PointOfService.DepositStatus.Start; }
+            get;
         }
-        public Microsoft.PointOfService.CashChangerFullStatus FullStatus
+        public abstract Microsoft.PointOfService.CashChangerFullStatus FullStatus
         {
-            get { return Microsoft.PointOfService.CashChangerFullStatus.OK; }
+            get;
         }
-        public System.Boolean RealTimeDataEnabled
+        public abstract System.Boolean RealTimeDataEnabled
         {
-            get { return false; }
-            set { }
+            get;
+            set;
         }
         #pragma warning disable 67
         public event Microsoft.PointOfService.DataEventHandler DataEvent

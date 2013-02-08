@@ -1,8 +1,8 @@
 namespace Microsoft.PointOfService
 {
-    public class Msr : Microsoft.PointOfService.PosCommon
+    public abstract class Msr : Microsoft.PointOfService.PosCommon
     {
-        public class BankCardProperties
+        public abstract class BankCardProperties
         {
             protected BankCardProperties()
             {
@@ -16,7 +16,7 @@ namespace Microsoft.PointOfService
             public const System.String Surname = "Surname";
             public const System.String Title = "Title";
         }
-        public class AamvaCardProperties
+        public abstract class AamvaCardProperties
         {
             protected AamvaCardProperties()
             {
@@ -73,216 +73,216 @@ namespace Microsoft.PointOfService
         public const System.Int32 StatusDeviceDeauthenticated = 12;
         public const System.String CardTypeBank = "BANK";
         public const System.String CardTypeAamva = "AAMVA";
-        public System.Int32 DataCount
+        public abstract System.Int32 DataCount
         {
-            get { return 0; }
+            get;
         }
-        public System.Boolean DataEventEnabled
+        public abstract System.Boolean DataEventEnabled
         {
-            get { return false; }
-            set { }
+            get;
+            set;
         }
-        public System.Boolean AutoDisable
+        public abstract System.Boolean AutoDisable
         {
-            get { return false; }
-            set { }
+            get;
+            set;
         }
-        public Microsoft.PointOfService.EncryptionAlgorithm CapDataEncryption
-        {
-            get { return Microsoft.PointOfService.EncryptionAlgorithm.None; }
-        }
-        public Microsoft.PointOfService.EncryptionAlgorithm DataEncryptionAlgorithm
+        public virtual Microsoft.PointOfService.EncryptionAlgorithm CapDataEncryption
         {
             get { return Microsoft.PointOfService.EncryptionAlgorithm.None; }
+        }
+        public virtual Microsoft.PointOfService.EncryptionAlgorithm DataEncryptionAlgorithm
+        {
+            get { return Microsoft.PointOfService.EncryptionAlgorithm.None; }
             set { }
         }
-        public System.Byte[] AdditionalSecurityInformation
+        public virtual System.Byte[] AdditionalSecurityInformation
         {
             get { return null; }
         }
-        public System.Byte[] Track1EncryptedData
+        public virtual System.Byte[] Track1EncryptedData
         {
             get { return null; }
         }
-        public System.Int32 Track1EncryptedDataLength
+        public virtual System.Int32 Track1EncryptedDataLength
         {
             get { return 0; }
         }
-        public System.Byte[] Track2EncryptedData
+        public virtual System.Byte[] Track2EncryptedData
         {
             get { return null; }
         }
-        public System.Int32 Track2EncryptedDataLength
+        public virtual System.Int32 Track2EncryptedDataLength
         {
             get { return 0; }
         }
-        public System.Byte[] Track3EncryptedData
+        public virtual System.Byte[] Track3EncryptedData
         {
             get { return null; }
         }
-        public System.Int32 Track3EncryptedDataLength
+        public virtual System.Int32 Track3EncryptedDataLength
         {
             get { return 0; }
         }
-        public System.Byte[] Track4EncryptedData
+        public virtual System.Byte[] Track4EncryptedData
         {
             get { return null; }
         }
-        public System.Int32 Track4EncryptedDataLength
+        public virtual System.Int32 Track4EncryptedDataLength
         {
             get { return 0; }
         }
-        public System.Boolean CapTrackDataMasking
+        public virtual System.Boolean CapTrackDataMasking
         {
             get { return false; }
         }
-        public System.String CapCardAuthentication
+        public virtual System.String CapCardAuthentication
         {
             get { return null; }
         }
-        public System.Byte[] CardAuthenticationData
+        public virtual System.Byte[] CardAuthenticationData
         {
             get { return null; }
         }
-        public System.Int32 CardAuthenticationDataLength
+        public virtual System.Int32 CardAuthenticationDataLength
         {
             get { return 0; }
         }
-        public Microsoft.PointOfService.DeviceAuthenticationLevel CapDeviceAuthentication
+        public virtual Microsoft.PointOfService.DeviceAuthenticationLevel CapDeviceAuthentication
         {
             get { return Microsoft.PointOfService.DeviceAuthenticationLevel.NotSupported; }
         }
-        public Microsoft.PointOfService.DeviceAuthenticationProtocol DeviceAuthenticationProtocol
+        public virtual Microsoft.PointOfService.DeviceAuthenticationProtocol DeviceAuthenticationProtocol
         {
             get { return Microsoft.PointOfService.DeviceAuthenticationProtocol.None; }
         }
-        public System.Boolean DeviceAuthenticated
+        public virtual System.Boolean DeviceAuthenticated
         {
             get { return false; }
         }
-        public System.Collections.ObjectModel.ReadOnlyCollection<System.String> CardPropertyList
+        public virtual System.Collections.ObjectModel.ReadOnlyCollection<System.String> CardPropertyList
         {
             get { return null; }
         }
-        public System.String CardType
+        public virtual System.String CardType
         {
             get { return null; }
         }
-        public System.Collections.ObjectModel.ReadOnlyCollection<System.String> CardTypeList
+        public virtual System.Collections.ObjectModel.ReadOnlyCollection<System.String> CardTypeList
         {
             get { return null; }
         }
-        public System.String WriteCardType
+        public virtual System.String WriteCardType
         {
             get { return null; }
             set { }
         }
-        public System.Boolean CapIso
+        public abstract System.Boolean CapIso
         {
-            get { return false; }
+            get;
         }
-        public System.Boolean CapJisOne
+        public abstract System.Boolean CapJisOne
         {
-            get { return false; }
+            get;
         }
-        public System.Boolean CapJisTwo
+        public abstract System.Boolean CapJisTwo
         {
-            get { return false; }
+            get;
         }
-        public System.Boolean CapTransmitSentinels
+        public abstract System.Boolean CapTransmitSentinels
         {
-            get { return false; }
+            get;
         }
-        public System.String AccountNumber
+        public abstract System.String AccountNumber
         {
-            get { return null; }
+            get;
         }
-        public System.Boolean DecodeData
+        public abstract System.Boolean DecodeData
         {
-            get { return false; }
-            set { }
+            get;
+            set;
         }
-        public Microsoft.PointOfService.MsrErrorReporting ErrorReportingType
+        public abstract Microsoft.PointOfService.MsrErrorReporting ErrorReportingType
         {
-            get { return Microsoft.PointOfService.MsrErrorReporting.Card; }
-            set { }
+            get;
+            set;
         }
-        public System.String ExpirationDate
+        public abstract System.String ExpirationDate
         {
-            get { return null; }
+            get;
         }
-        public System.String FirstName
+        public abstract System.String FirstName
         {
-            get { return null; }
+            get;
         }
-        public System.String MiddleInitial
+        public abstract System.String MiddleInitial
         {
-            get { return null; }
+            get;
         }
-        public System.Boolean ParseDecodeData
+        public abstract System.Boolean ParseDecodeData
         {
-            get { return false; }
-            set { }
+            get;
+            set;
         }
-        public System.String ServiceCode
+        public abstract System.String ServiceCode
         {
-            get { return null; }
+            get;
         }
-        public System.String Suffix
+        public abstract System.String Suffix
         {
-            get { return null; }
+            get;
         }
-        public System.String Surname
+        public abstract System.String Surname
         {
-            get { return null; }
+            get;
         }
-        public System.String Title
+        public abstract System.String Title
         {
-            get { return null; }
+            get;
         }
-        public System.Byte[] Track1Data
+        public abstract System.Byte[] Track1Data
         {
-            get { return null; }
+            get;
         }
-        public System.Byte[] Track1DiscretionaryData
+        public abstract System.Byte[] Track1DiscretionaryData
         {
-            get { return null; }
+            get;
         }
-        public System.Byte[] Track2Data
+        public abstract System.Byte[] Track2Data
         {
-            get { return null; }
+            get;
         }
-        public System.Byte[] Track2DiscretionaryData
+        public abstract System.Byte[] Track2DiscretionaryData
         {
-            get { return null; }
+            get;
         }
-        public System.Byte[] Track3Data
+        public abstract System.Byte[] Track3Data
         {
-            get { return null; }
+            get;
         }
-        public System.Byte[] Track4Data
+        public abstract System.Byte[] Track4Data
         {
-            get { return null; }
+            get;
         }
-        public Microsoft.PointOfService.MsrTracks TracksToRead
+        public abstract Microsoft.PointOfService.MsrTracks TracksToRead
         {
-            get { return Microsoft.PointOfService.MsrTracks.None; }
-            set { }
+            get;
+            set;
         }
-        public System.Boolean TransmitSentinels
+        public abstract System.Boolean TransmitSentinels
         {
-            get { return false; }
-            set { }
+            get;
+            set;
         }
-        public System.Int32 EncodingMaxLength
+        public virtual System.Int32 EncodingMaxLength
         {
             get { return 0; }
         }
-        public Microsoft.PointOfService.MsrTracks CapWritableTracks
+        public virtual Microsoft.PointOfService.MsrTracks CapWritableTracks
         {
             get { return Microsoft.PointOfService.MsrTracks.None; }
         }
-        public Microsoft.PointOfService.MsrTracks TracksToWrite
+        public virtual Microsoft.PointOfService.MsrTracks TracksToWrite
         {
             get { return Microsoft.PointOfService.MsrTracks.None; }
             set { }

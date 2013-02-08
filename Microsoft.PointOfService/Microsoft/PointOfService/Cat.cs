@@ -1,6 +1,6 @@
 namespace Microsoft.PointOfService
 {
-    public class Cat : Microsoft.PointOfService.PosCommon
+    public abstract class Cat : Microsoft.PointOfService.PosCommon
     {
         protected Cat()
         {
@@ -12,155 +12,155 @@ namespace Microsoft.PointOfService
         public const System.Int32 ExtendedErrorDailyLogOverflow = 200;
         public const System.Int32 ExtendedErrorDeficient = 201;
         public const System.Int32 ExtendedErrorOverDeposit = 202;
-        public System.Int32 OutputId
+        public abstract System.Int32 OutputId
         {
-            get { return 0; }
+            get;
         }
-        public System.Boolean CapAdditionalSecurityInformation
+        public abstract System.Boolean CapAdditionalSecurityInformation
         {
-            get { return false; }
+            get;
         }
-        public System.Boolean CapAuthorizeCompletion
+        public abstract System.Boolean CapAuthorizeCompletion
         {
-            get { return false; }
+            get;
         }
-        public System.Boolean CapAuthorizePreSales
+        public abstract System.Boolean CapAuthorizePreSales
         {
-            get { return false; }
+            get;
         }
-        public System.Boolean CapAuthorizeRefund
+        public abstract System.Boolean CapAuthorizeRefund
         {
-            get { return false; }
+            get;
         }
-        public System.Boolean CapAuthorizeVoid
+        public abstract System.Boolean CapAuthorizeVoid
         {
-            get { return false; }
+            get;
         }
-        public System.Boolean CapAuthorizeVoidPreSales
+        public abstract System.Boolean CapAuthorizeVoidPreSales
         {
-            get { return false; }
+            get;
         }
-        public System.Boolean CapCenterResultCode
+        public abstract System.Boolean CapCenterResultCode
         {
-            get { return false; }
+            get;
         }
-        public System.Boolean CapCheckCard
+        public abstract System.Boolean CapCheckCard
         {
-            get { return false; }
+            get;
         }
-        public Microsoft.PointOfService.CatLogs CapDailyLog
+        public abstract Microsoft.PointOfService.CatLogs CapDailyLog
         {
-            get { return Microsoft.PointOfService.CatLogs.None; }
+            get;
         }
-        public System.Boolean CapInstallments
+        public abstract System.Boolean CapInstallments
         {
-            get { return false; }
+            get;
         }
-        public System.Boolean CapPaymentDetail
+        public abstract System.Boolean CapPaymentDetail
         {
-            get { return false; }
+            get;
         }
-        public System.Boolean CapTaxOthers
+        public abstract System.Boolean CapTaxOthers
         {
-            get { return false; }
+            get;
         }
-        public System.Boolean CapTransactionNumber
+        public abstract System.Boolean CapTransactionNumber
         {
-            get { return false; }
+            get;
         }
-        public System.Boolean CapTrainingMode
+        public abstract System.Boolean CapTrainingMode
         {
-            get { return false; }
+            get;
         }
-        public System.String AccountNumber
+        public abstract System.String AccountNumber
         {
-            get { return null; }
+            get;
         }
-        public System.String AdditionalSecurityInformation
+        public abstract System.String AdditionalSecurityInformation
         {
-            get { return null; }
-            set { }
+            get;
+            set;
         }
-        public System.String ApprovalCode
+        public abstract System.String ApprovalCode
         {
-            get { return null; }
+            get;
         }
-        public System.Boolean AsyncMode
+        public abstract System.Boolean AsyncMode
         {
-            get { return false; }
-            set { }
+            get;
+            set;
         }
-        public System.String CardCompanyId
+        public abstract System.String CardCompanyId
         {
-            get { return null; }
+            get;
         }
-        public System.String CenterResultCode
+        public abstract System.String CenterResultCode
         {
-            get { return null; }
+            get;
         }
-        public System.String DailyLog
+        public abstract System.String DailyLog
         {
-            get { return null; }
+            get;
         }
-        public Microsoft.PointOfService.PaymentCondition PaymentCondition
+        public abstract Microsoft.PointOfService.PaymentCondition PaymentCondition
         {
-            get { return Microsoft.PointOfService.PaymentCondition.Lump; }
+            get;
         }
-        public System.String PaymentDetail
+        public abstract System.String PaymentDetail
         {
-            get { return null; }
+            get;
         }
-        public Microsoft.PointOfService.PaymentMedia PaymentMedia
+        public abstract Microsoft.PointOfService.PaymentMedia PaymentMedia
         {
-            get { return Microsoft.PointOfService.PaymentMedia.Unspecified; }
-            set { }
+            get;
+            set;
         }
-        public System.Int32 SequenceNumber
+        public abstract System.Int32 SequenceNumber
         {
-            get { return 0; }
+            get;
         }
-        public System.String SlipNumber
+        public abstract System.String SlipNumber
         {
-            get { return null; }
+            get;
         }
-        public System.Boolean TrainingMode
+        public abstract System.Boolean TrainingMode
         {
-            get { return false; }
-            set { }
+            get;
+            set;
         }
-        public System.String TransactionNumber
+        public abstract System.String TransactionNumber
         {
-            get { return null; }
+            get;
         }
-        public Microsoft.PointOfService.CreditTransactionType TransactionType
+        public abstract Microsoft.PointOfService.CreditTransactionType TransactionType
         {
-            get { return Microsoft.PointOfService.CreditTransactionType.Sales; }
+            get;
         }
-        public System.Decimal Balance
+        public virtual System.Decimal Balance
         {
             get { return new System.Decimal(); }
         }
-        public System.Boolean CapCashDeposit
+        public virtual System.Boolean CapCashDeposit
         {
             get { return false; }
         }
-        public System.Boolean CapLockTerminal
+        public virtual System.Boolean CapLockTerminal
         {
             get { return false; }
         }
-        public System.Boolean CapLogStatus
+        public virtual System.Boolean CapLogStatus
         {
             get { return false; }
         }
-        public System.Boolean CapUnlockTerminal
+        public virtual System.Boolean CapUnlockTerminal
         {
             get { return false; }
         }
-        public Microsoft.PointOfService.DealingLogStatus LogStatus
+        public virtual Microsoft.PointOfService.DealingLogStatus LogStatus
         {
             get { return Microsoft.PointOfService.DealingLogStatus.Ok; }
         }
-        public System.Decimal SettledAmount
+        public virtual System.Decimal SettledAmount
         {
             get { return new System.Decimal(); }
         }

@@ -1,39 +1,39 @@
 namespace Microsoft.PointOfService
 {
-    public class HardTotals : Microsoft.PointOfService.PosCommon
+    public abstract class HardTotals : Microsoft.PointOfService.PosCommon
     {
         protected HardTotals()
         {
         }
         public const System.Int32 ExtendedErrorNoRoom = 201;
         public const System.Int32 ExtendedErrorValidation = 202;
-        public System.Boolean CapErrorDetection
+        public abstract System.Boolean CapErrorDetection
         {
-            get { return false; }
+            get;
         }
-        public System.Boolean CapSingleFile
+        public abstract System.Boolean CapSingleFile
         {
-            get { return false; }
+            get;
         }
-        public System.Boolean CapTransactions
+        public abstract System.Boolean CapTransactions
         {
-            get { return false; }
+            get;
         }
-        public System.Int32 FreeData
+        public abstract System.Int32 FreeData
         {
-            get { return 0; }
+            get;
         }
-        public System.Int32 NumberOfFiles
+        public abstract System.Int32 NumberOfFiles
         {
-            get { return 0; }
+            get;
         }
-        public System.Int32 TotalsSize
+        public abstract System.Int32 TotalsSize
         {
-            get { return 0; }
+            get;
         }
-        public System.Boolean TransactionInProgress
+        public abstract System.Boolean TransactionInProgress
         {
-            get { return false; }
+            get;
         }
         public virtual void BeginTrans()
         {

@@ -1,57 +1,57 @@
 namespace Microsoft.PointOfService
 {
-    public class DeviceInfo
+    public abstract class DeviceInfo
     {
         protected DeviceInfo()
         {
         }
-        public System.String ServiceObjectName
+        public abstract System.String ServiceObjectName
         {
-            get { return null; }
+            get;
         }
-        public System.String Description
+        public abstract System.String Description
         {
-            get { return null; }
+            get;
         }
-        public System.String Type
+        public abstract System.String Type
         {
-            get { return null; }
+            get;
         }
-        public Microsoft.PointOfService.DeviceCompatibilities Compatibility
+        public abstract Microsoft.PointOfService.DeviceCompatibilities Compatibility
         {
-            get { return Microsoft.PointOfService.DeviceCompatibilities.Opos; }
+            get;
         }
-        public System.Version UposVersion
+        public abstract System.Version UposVersion
         {
-            get { return null; }
+            get;
         }
-        public System.String HardwareDescription
+        public abstract System.String HardwareDescription
         {
-            get { return null; }
+            get;
         }
-        public System.String HardwarePath
+        public abstract System.String HardwarePath
         {
-            get { return null; }
+            get;
         }
-        public System.String HardwareId
+        public abstract System.String HardwareId
         {
-            get { return null; }
+            get;
         }
-        public System.String[] LogicalNames
+        public abstract System.String[] LogicalNames
         {
-            get { return null; }
+            get;
         }
-        public System.String ManufacturerName
+        public abstract System.String ManufacturerName
         {
-            get { return null; }
+            get;
         }
-        public System.Version ServiceObjectVersion
+        public abstract System.Version ServiceObjectVersion
         {
-            get { return null; }
+            get;
         }
-        public System.Boolean IsDefault
+        public abstract System.Boolean IsDefault
         {
-            get { return false; }
+            get;
         }
         public System.Boolean IsDeviceInfoOf(Microsoft.PointOfService.PosCommon serviceObject)
         {

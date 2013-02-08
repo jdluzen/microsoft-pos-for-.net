@@ -1,41 +1,41 @@
 namespace Microsoft.PointOfService
 {
-    public class Scanner : Microsoft.PointOfService.PosCommon
+    public abstract class Scanner : Microsoft.PointOfService.PosCommon
     {
         protected Scanner()
         {
         }
         public const System.String StatisticGoodScanCount = "GoodScanCount";
-        public System.Int32 DataCount
+        public abstract System.Int32 DataCount
         {
-            get { return 0; }
+            get;
         }
-        public System.Boolean DataEventEnabled
+        public abstract System.Boolean DataEventEnabled
         {
-            get { return false; }
-            set { }
+            get;
+            set;
         }
-        public System.Boolean AutoDisable
+        public abstract System.Boolean AutoDisable
         {
-            get { return false; }
-            set { }
+            get;
+            set;
         }
-        public System.Boolean DecodeData
+        public abstract System.Boolean DecodeData
         {
-            get { return false; }
-            set { }
+            get;
+            set;
         }
-        public System.Byte[] ScanData
+        public abstract System.Byte[] ScanData
         {
-            get { return null; }
+            get;
         }
-        public System.Byte[] ScanDataLabel
+        public abstract System.Byte[] ScanDataLabel
         {
-            get { return null; }
+            get;
         }
-        public Microsoft.PointOfService.BarCodeSymbology ScanDataType
+        public abstract Microsoft.PointOfService.BarCodeSymbology ScanDataType
         {
-            get { return Microsoft.PointOfService.BarCodeSymbology.Upca; }
+            get;
         }
         #pragma warning disable 67
         public event Microsoft.PointOfService.DataEventHandler DataEvent
