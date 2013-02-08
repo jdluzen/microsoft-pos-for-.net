@@ -1016,16 +1016,16 @@ namespace utils
         /// Get the standard assembly copyright attribute meta-data string.
         /// </summary>
         /// <returns></returns>
-        protected static string getApacheCopyrightAttribute()
+        /*protected static string getApacheCopyrightAttribute()
         {
             return "[assembly: System.Reflection.AssemblyCopyrightAttribute(\"Copyright © Apache Software Foundation (ASF) " + DateTime.Now.Year + "\")]";
-        }
+        }*/
 
         /// <summary>
         /// An explanatory _note to be prefixed to the description of the generated assembly source.
         /// </summary>
-        protected readonly string assemblyDescriptionAttributeMarkup =
-                "This file is a doppleganger of the original assembly.  This assembly only exposes the public API to be used in a testing compilation environment.  ";
+        //protected readonly string assemblyDescriptionAttributeMarkup =
+        //        "This file is a doppleganger of the original assembly.  This assembly only exposes the public API to be used in a testing compilation environment.  ";
 
         /// <summary>
         /// Should the specified attribute type be generated in the doppleganger source?
@@ -1058,86 +1058,94 @@ namespace utils
         /// the real strong named assembly before final deployment.
         /// </summary>
         /// <param name="importlib"></param>
-        protected void generateAssemblyInfo(Assembly importlib)
+        protected void generateAssemblyInfo(Assembly importlib, DopplegangerConfiguration config)
         {
             IList<CustomAttributeData> attributes = CustomAttributeData.GetCustomAttributes(importlib);
-            bool hasDescriptionAttribute = false;
-
-            output(getApacheCopyrightAttribute());
+            //bool hasDescriptionAttribute = false;
+            string asmName = Path.GetFileNameWithoutExtension(config.AssemblyPath);
+            Directory.CreateDirectory(Path.Combine(asmName, "Properties"));
+            //output(getApacheCopyrightAttribute());
 
             AssemblyName assemblyName = importlib.GetName();
-
-            output("[assembly: System.Reflection.AssemblyVersionAttribute(\"" + assemblyName.Version + "\")]");
-
-            foreach (CustomAttributeData attribute in attributes)
+            using (StreamWriter writer = new StreamWriter(File.Create(Path.Combine(asmName, "Properties", "AssemblyInfo.cs"))))
             {
-                if (!shouldGenerateAttribute(attribute.Constructor.DeclaringType))
+                Action<string> output = (s) =>
                 {
-                    continue;
-                }
+                    foreach (string line in this.output(s))
+                        writer.Write(line);
+                };
+                output("[assembly: System.Reflection.AssemblyVersionAttribute(\"" + assemblyName.Version + "\")]");
 
-                string attributeSig = ("[assembly: " + attribute.Constructor.DeclaringType.FullName);
-
-                if (attribute.ConstructorArguments.Count > 0)
+                foreach (CustomAttributeData attribute in attributes)
                 {
-                    int argumentIndex = 0;
-
-                    attributeSig += "(";
-                    foreach (CustomAttributeTypedArgument argument in attribute.ConstructorArguments)
+                    if (!shouldGenerateAttribute(attribute.Constructor.DeclaringType))
                     {
-                        string fieldDelim = getFieldDelim(argument.ArgumentType);
+                        continue;
+                    }
 
-                        if (argumentIndex > 0)
-                        {
-                            attributeSig += ", ";
-                        }
+                    string attributeSig = ("[assembly: " + attribute.Constructor.DeclaringType.FullName);
 
-                        attributeSig += fieldDelim;
-                        if (argument.ArgumentType.IsEnum)
+                    if (attribute.ConstructorArguments.Count > 0)
+                    {
+                        int argumentIndex = 0;
+
+                        attributeSig += "(";
+                        foreach (CustomAttributeTypedArgument argument in attribute.ConstructorArguments)
                         {
-                            if (argument.Value != null)
+                            string fieldDelim = getFieldDelim(argument.ArgumentType);
+
+                            if (argumentIndex > 0)
                             {
-                                foreach (object val in Enum.GetValues(argument.ArgumentType))
-                                {
-                                    if (val == argument.Value)
-                                    {
-                                        string name = Enum.GetName(argument.ArgumentType, val);
+                                attributeSig += ", ";
+                            }
 
-                                        attributeSig += argument.ArgumentType + name;
+                            attributeSig += fieldDelim;
+                            if (argument.ArgumentType.IsEnum)
+                            {
+                                if (argument.Value != null)
+                                {
+                                    foreach (object val in Enum.GetValues(argument.ArgumentType))
+                                    {
+                                        if (val == argument.Value)
+                                        {
+                                            string name = Enum.GetName(argument.ArgumentType, val);
+
+                                            attributeSig += argument.ArgumentType + name;
+                                        }
                                     }
                                 }
                             }
-                        }
-                        else if (argument.ArgumentType == typeof(bool))
-                        {
-                            attributeSig += argument.Value.ToString().ToLower();
-                        }
-                        else
-                        {
-                            if (attribute.Constructor.DeclaringType == typeof(AssemblyDescriptionAttribute))
+                            else if (argument.ArgumentType == typeof(bool))
                             {
-                                attributeSig += assemblyDescriptionAttributeMarkup;
-                                hasDescriptionAttribute = true;
+                                attributeSig += argument.Value.ToString().ToLower();
+                            }
+                            else
+                            {
+                                if (attribute.Constructor.DeclaringType == typeof(AssemblyDescriptionAttribute))
+                                {
+                                    //attributeSig += assemblyDescriptionAttributeMarkup;
+                                    //hasDescriptionAttribute = true;
+                                }
+
+                                attributeSig += argument.Value;
                             }
 
-                            attributeSig += argument.Value;
+                            attributeSig += fieldDelim;
+                            argumentIndex++;
                         }
 
-                        attributeSig += fieldDelim;
-                        argumentIndex++;
+                        attributeSig += ")";
                     }
 
-                    attributeSig += ")";
+                    attributeSig += "]";
+                    output(attributeSig);
                 }
 
-                attributeSig += "]";
-                output(attributeSig);
-            }
-
-            if (!hasDescriptionAttribute)
-            {
-                output("[assembly: System.Reflection.AssemblyDescriptionAttribute(\""
-                       + assemblyDescriptionAttributeMarkup + "\")]");
+                /*if (!hasDescriptionAttribute)
+                {
+                    output("[assembly: System.Reflection.AssemblyDescriptionAttribute(\""
+                           + assemblyDescriptionAttributeMarkup + "\")]");
+                }*/
             }
         }
 
@@ -1226,7 +1234,7 @@ namespace utils
 
             if (!config.DisableAssemblyInfo)
             {
-                generateAssemblyInfo(importlib);
+                generateAssemblyInfo(importlib, config);
             }
 
             generateTypes(importlib, config);
