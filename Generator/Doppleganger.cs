@@ -587,7 +587,7 @@ namespace utils
                         constructorSig += formatOutParams(outParams);
                     }
 
-                    constructorSig += "}";
+                    constructorSig += "}\n";
                 }
 
                 output(constructorSig);
@@ -698,16 +698,16 @@ namespace utils
 
                 if (propertyInfo.CanRead || propertyInfo.CanWrite)
                 {
-                    propSig += "\n{\n";
+                    propSig += " {";
                     if (propertyInfo.CanRead)
                     {
                         if (!type.IsInterface && !propertyInfo.GetGetMethod().IsAbstract)
                         {
-                            propSig += indentFormat + "get { " + formatReturnValue(propertyInfo.PropertyType) + " }\n";
+                            propSig += " get { " + formatReturnValue(propertyInfo.PropertyType) + " }";
                         }
                         else if (propertyInfo.CanWrite || type.IsInterface || propertyInfo.GetGetMethod().IsAbstract)
                         {
-                            propSig += indentFormat + "get;\n";
+                            propSig += " get;";
                         }
                     }
 
@@ -715,15 +715,15 @@ namespace utils
                     {
                         if (!type.IsInterface && !propertyInfo.GetSetMethod().IsAbstract)
                         {
-                            propSig += indentFormat + "set { }\n";
+                            propSig += " set { }";
                         }
                         else if (propertyInfo.CanRead || type.IsInterface || propertyInfo.GetSetMethod().IsAbstract)
                         {
-                            propSig += indentFormat + "set;\n";
+                            propSig += " set; ";
                         }
                     }
 
-                    propSig += "}";
+                    propSig += " }";
                 }
                 else
                 {
@@ -748,13 +748,18 @@ namespace utils
                     eventSig += "public ";
                 }
 
+                if (eventInfo.GetAddMethod().IsAbstract)
+                    eventSig += "abstract ";
+                else if (eventInfo.GetAddMethod().IsOverride())
+                    eventSig += "override ";
+
                 eventSig += "event " + formatTypeName(eventInfo.EventHandlerType) + " " + eventInfo.Name;
 
                 // Determine if this event has add/remove accessors defined.
                 // If there is a private field defined for this event, then there are no accessors
                 bool addAccessors = true;
 
-                if (type.IsInterface)
+                if (type.IsInterface || eventInfo.GetAddMethod().IsAbstract)
                 {
                     // Interfaces cannot have accessors
                     addAccessors = false;
@@ -846,7 +851,7 @@ namespace utils
                         methodInfoSig += indentFormat + returnVal + "\n";
                     }
 
-                    methodInfoSig += "}";
+                    methodInfoSig += "}\n";
                 }
 
                 output(methodInfoSig);

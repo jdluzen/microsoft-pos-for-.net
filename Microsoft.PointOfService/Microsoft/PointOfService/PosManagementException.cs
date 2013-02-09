@@ -5,11 +5,14 @@ namespace Microsoft.PointOfService
         public PosManagementException()
         {
         }
+        
         public PosManagementException(System.String message)
         {
         }
+        
         public PosManagementException(System.String message, System.Exception e)
         {
         }
+        
     }
 }

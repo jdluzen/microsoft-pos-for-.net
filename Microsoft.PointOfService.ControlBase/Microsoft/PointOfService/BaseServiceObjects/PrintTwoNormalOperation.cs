@@ -5,13 +5,7 @@ namespace Microsoft.PointOfService.BaseServiceObjects
         protected PrintTwoNormalOperation()
         {
         }
-        public System.String Data1
-        {
-            get { return null; }
-        }
-        public System.String Data2
-        {
-            get { return null; }
-        }
+        public System.String Data1 { get { return null; } }
+        public System.String Data2 { get { return null; } }
     }
 }

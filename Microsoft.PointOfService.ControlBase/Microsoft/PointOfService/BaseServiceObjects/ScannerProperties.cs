@@ -5,20 +5,8 @@ namespace Microsoft.PointOfService.BaseServiceObjects
         protected ScannerProperties()
         {
         }
-        public Microsoft.PointOfService.BarCodeSymbology ScanDataType
-        {
-            get { return Microsoft.PointOfService.BarCodeSymbology.Upca; }
-            set { }
-        }
-        public System.Byte[] ScanData
-        {
-            get { return null; }
-            set { }
-        }
-        public System.Byte[] ScanDataLabel
-        {
-            get { return null; }
-            set { }
-        }
+        public Microsoft.PointOfService.BarCodeSymbology ScanDataType { get { return Microsoft.PointOfService.BarCodeSymbology.Upca; } set { } }
+        public System.Byte[] ScanData { get { return null; } set { } }
+        public System.Byte[] ScanDataLabel { get { return null; } set { } }
     }
 }

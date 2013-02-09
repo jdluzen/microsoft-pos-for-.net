@@ -5,13 +5,7 @@ namespace Microsoft.PointOfService.BaseServiceObjects
         protected LineDisplayBitmap()
         {
         }
-        public System.Drawing.Bitmap Bitmap
-        {
-            get { return null; }
-        }
-        public System.String FileName
-        {
-            get { return null; }
-        }
+        public System.Drawing.Bitmap Bitmap { get { return null; } }
+        public System.String FileName { get { return null; } }
     }
 }

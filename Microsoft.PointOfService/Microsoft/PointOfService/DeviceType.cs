@@ -5,6 +5,7 @@ namespace Microsoft.PointOfService
         public DeviceType()
         {
         }
+        
         public const System.String Belt = "Belt";
         public const System.String BillAcceptor = "BillAcceptor";
         public const System.String BillDispenser = "BillDispenser";

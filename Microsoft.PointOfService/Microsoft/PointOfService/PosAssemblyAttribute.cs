@@ -5,12 +5,10 @@ namespace Microsoft.PointOfService
         public PosAssemblyAttribute(System.String manufacturerName)
         {
         }
+        
         protected PosAssemblyAttribute()
         {
         }
-        public System.String ManufacturerName
-        {
-            get { return null; }
-        }
+        public System.String ManufacturerName { get { return null; } }
     }
 }

@@ -5,9 +5,6 @@ namespace Microsoft.PointOfService.BaseServiceObjects
         protected PageModePrintOperation()
         {
         }
-        public Microsoft.PointOfService.BaseServiceObjects.PageModePrintCollection Collection
-        {
-            get { return null; }
-        }
+        public Microsoft.PointOfService.BaseServiceObjects.PageModePrintCollection Collection { get { return null; } }
     }
 }

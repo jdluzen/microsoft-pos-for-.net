@@ -5,9 +5,6 @@ namespace Microsoft.PointOfService.BaseServiceObjects
         protected ClearPrintAreaOperation()
         {
         }
-        public System.Drawing.Rectangle PageModePrintArea
-        {
-            get { return new System.Drawing.Rectangle(); }
-        }
+        public System.Drawing.Rectangle PageModePrintArea { get { return new System.Drawing.Rectangle(); } }
     }
 }

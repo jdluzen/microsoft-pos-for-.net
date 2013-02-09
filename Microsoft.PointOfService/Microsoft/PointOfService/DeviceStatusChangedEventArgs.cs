@@ -5,12 +5,10 @@ namespace Microsoft.PointOfService
         public DeviceStatusChangedEventArgs(Microsoft.PointOfService.Device device)
         {
         }
+        
         protected DeviceStatusChangedEventArgs()
         {
         }
-        public Microsoft.PointOfService.Device Device
-        {
-            get { return null; }
-        }
+        public Microsoft.PointOfService.Device Device { get { return null; } }
     }
 }

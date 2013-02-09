@@ -5,9 +5,6 @@ namespace Microsoft.PointOfService.BaseServiceObjects
         protected MarkFeedOperation()
         {
         }
-        public Microsoft.PointOfService.PrinterMarkFeeds Type
-        {
-            get { return Microsoft.PointOfService.PrinterMarkFeeds.None; }
-        }
+        public Microsoft.PointOfService.PrinterMarkFeeds Type { get { return Microsoft.PointOfService.PrinterMarkFeeds.None; } }
     }
 }

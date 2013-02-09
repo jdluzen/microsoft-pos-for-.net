@@ -5,16 +5,15 @@ namespace Microsoft.PointOfService
         public DataEventArgs(System.Int32 status)
         {
         }
+        
         protected DataEventArgs()
         {
         }
-        public System.Int32 Status
-        {
-            get { return 0; }
-        }
+        public System.Int32 Status { get { return 0; } }
         public override System.String ToString()
         {
             return null;
         }
+        
     }
 }

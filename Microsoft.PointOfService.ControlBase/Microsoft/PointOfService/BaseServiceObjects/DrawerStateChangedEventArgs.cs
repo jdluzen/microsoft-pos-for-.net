@@ -5,9 +5,6 @@ namespace Microsoft.PointOfService.BaseServiceObjects
         protected DrawerStateChangedEventArgs()
         {
         }
-        public System.Boolean DrawerOpened
-        {
-            get { return false; }
-        }
+        public System.Boolean DrawerOpened { get { return false; } }
     }
 }

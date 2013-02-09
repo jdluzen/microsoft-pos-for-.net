@@ -16,89 +16,46 @@ namespace Microsoft.PointOfService
         public const System.Int32 ExtendedErrorJam = 206;
         public const System.Int32 ExtendedErrorCheckDigit = 207;
         public const System.Int32 ExtendedErrorCoverOpen = 208;
-        public abstract System.Int32 DataCount
-        {
-            get;
-        }
-        public abstract System.Boolean DataEventEnabled
-        {
-            get;
-            set;
-        }
-        public abstract System.Boolean AutoDisable
-        {
-            get;
-            set;
-        }
-        public abstract System.String AccountNumber
-        {
-            get;
-        }
-        public abstract System.String Amount
-        {
-            get;
-        }
-        public abstract System.String BankNumber
-        {
-            get;
-        }
-        public abstract System.Boolean CapValidationDevice
-        {
-            get;
-        }
-        public abstract Microsoft.PointOfService.CheckType CheckType
-        {
-            get;
-        }
-        public abstract Microsoft.PointOfService.CheckCountryCode CountryCode
-        {
-            get;
-        }
-        public abstract System.String Epc
-        {
-            get;
-        }
-        public abstract System.String RawData
-        {
-            get;
-        }
-        public abstract System.String SerialNumber
-        {
-            get;
-        }
-        public abstract System.String TransitNumber
-        {
-            get;
-        }
+        public abstract System.Int32 DataCount { get; }
+        public abstract System.Boolean DataEventEnabled { get; set;  }
+        public abstract System.Boolean AutoDisable { get; set;  }
+        public abstract System.String AccountNumber { get; }
+        public abstract System.String Amount { get; }
+        public abstract System.String BankNumber { get; }
+        public abstract System.Boolean CapValidationDevice { get; }
+        public abstract Microsoft.PointOfService.CheckType CheckType { get; }
+        public abstract Microsoft.PointOfService.CheckCountryCode CountryCode { get; }
+        public abstract System.String Epc { get; }
+        public abstract System.String RawData { get; }
+        public abstract System.String SerialNumber { get; }
+        public abstract System.String TransitNumber { get; }
         #pragma warning disable 67
-        public event Microsoft.PointOfService.DataEventHandler DataEvent
-        {
-            add { }
-            remove { }
-        }
+        public abstract event Microsoft.PointOfService.DataEventHandler DataEvent;
         #pragma warning disable 67
-        public event Microsoft.PointOfService.DeviceErrorEventHandler ErrorEvent
-        {
-            add { }
-            remove { }
-        }
+        public abstract event Microsoft.PointOfService.DeviceErrorEventHandler ErrorEvent;
         public virtual void ClearInput()
         {
         }
+        
         public virtual void ClearInputProperties()
         {
         }
+        
         public virtual void BeginInsertion(System.Int32 timeout)
         {
         }
+        
         public virtual void BeginRemoval(System.Int32 timeout)
         {
         }
+        
         public virtual void EndInsertion()
         {
         }
+        
         public virtual void EndRemoval()
         {
         }
+        
     }
 }

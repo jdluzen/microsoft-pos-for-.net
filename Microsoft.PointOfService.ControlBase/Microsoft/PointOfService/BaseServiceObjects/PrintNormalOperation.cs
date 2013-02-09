@@ -5,9 +5,6 @@ namespace Microsoft.PointOfService.BaseServiceObjects
         protected PrintNormalOperation()
         {
         }
-        public System.String Data
-        {
-            get { return null; }
-        }
+        public System.String Data { get { return null; } }
     }
 }

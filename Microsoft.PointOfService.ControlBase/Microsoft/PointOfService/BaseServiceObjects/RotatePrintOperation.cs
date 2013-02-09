@@ -5,9 +5,6 @@ namespace Microsoft.PointOfService.BaseServiceObjects
         protected RotatePrintOperation()
         {
         }
-        public Microsoft.PointOfService.BaseServiceObjects.RotatePrintCollection Collection
-        {
-            get { return null; }
-        }
+        public Microsoft.PointOfService.BaseServiceObjects.RotatePrintCollection Collection { get { return null; } }
     }
 }

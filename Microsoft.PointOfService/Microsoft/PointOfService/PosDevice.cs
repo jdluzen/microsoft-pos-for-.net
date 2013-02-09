@@ -5,9 +5,7 @@ namespace Microsoft.PointOfService
         public PosDevice()
         {
         }
-        public Microsoft.PointOfService.DeviceCompatibilities Compatibility
-        {
-            get { return Microsoft.PointOfService.DeviceCompatibilities.Opos; }
-        }
+        
+        public Microsoft.PointOfService.DeviceCompatibilities Compatibility { get { return Microsoft.PointOfService.DeviceCompatibilities.Opos; } }
     }
 }

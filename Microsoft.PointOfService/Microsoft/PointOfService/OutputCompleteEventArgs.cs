@@ -5,16 +5,15 @@ namespace Microsoft.PointOfService
         public OutputCompleteEventArgs(System.Int32 outputId)
         {
         }
+        
         protected OutputCompleteEventArgs()
         {
         }
-        public System.Int32 OutputId
-        {
-            get { return 0; }
-        }
+        public System.Int32 OutputId { get { return 0; } }
         public override System.String ToString()
         {
             return null;
         }
+        
     }
 }

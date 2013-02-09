@@ -5,25 +5,9 @@ namespace Microsoft.PointOfService.BaseServiceObjects
         protected PosKeyboardProperties()
         {
         }
-        public System.Boolean CapKeyUp
-        {
-            get { return false; }
-            set { }
-        }
-        public Microsoft.PointOfService.KeyboardEventType EventTypes
-        {
-            get { return Microsoft.PointOfService.KeyboardEventType.Down; }
-            set { }
-        }
-        public System.Int32 PosKeyData
-        {
-            get { return 0; }
-            set { }
-        }
-        public Microsoft.PointOfService.KeyEvent PosKeyEventType
-        {
-            get { return Microsoft.PointOfService.KeyEvent.Down; }
-            set { }
-        }
+        public System.Boolean CapKeyUp { get { return false; } set { } }
+        public Microsoft.PointOfService.KeyboardEventType EventTypes { get { return Microsoft.PointOfService.KeyboardEventType.Down; } set { } }
+        public System.Int32 PosKeyData { get { return 0; } set { } }
+        public Microsoft.PointOfService.KeyEvent PosKeyEventType { get { return Microsoft.PointOfService.KeyEvent.Down; } set { } }
     }
 }

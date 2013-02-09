@@ -5,9 +5,11 @@ namespace Microsoft.PointOfService.Management
         public ComExplorer()
         {
         }
+        
         public virtual System.Boolean IsPosDevice(System.String hardwareId)
         {
             return false;
         }
+        
     }
 }

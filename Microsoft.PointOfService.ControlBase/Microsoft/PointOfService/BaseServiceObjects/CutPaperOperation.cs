@@ -5,9 +5,6 @@ namespace Microsoft.PointOfService.BaseServiceObjects
         protected CutPaperOperation()
         {
         }
-        public System.Int32 Percentage
-        {
-            get { return 0; }
-        }
+        public System.Int32 Percentage { get { return 0; } }
     }
 }
